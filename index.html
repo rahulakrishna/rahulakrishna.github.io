@@ -31,31 +31,49 @@
 	<meta name="generator" content="Geany 1.25" />
 	<meta name="generator" content="Sublime Text 3"/>
 	<meta name="generator" content="Webstorm 11"/>
-   <meta name="author" content="Rahul A. Krishna"/>
+   	<meta name="author" content="Rahul A. Krishna"/>
 	<script src="jquery/jquery.min.js"></script>
-   <script src="bootstrap/js/bootstrap.min.js"></script>
-	<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css">
+	<script src="materialize/js/materialize.min.js"></script>
+	<link rel="stylesheet" href="materialize/css/materialize.min.css">
 	<link rel="stylesheet" type="text/css" href="style.css">
-	
+
+	<script>
+		$(document).ready(function(){
+			$('.parallax').parallax();
+		});
+
+
+	</script>
+
 </head>
 
-<body>
-	<div class="page-header text-center"><h1>Rahul Krishna</h1><p>Frontend Dev</p></div>
-
-	<div class="container">
-		<div class="row">
-			<div class="col-md-4 card-container">
-				<div class="card">Hi, My name is Rahul Krishna.</div>
-			</div>
-			<div class="col-md-4 card-container">
-				<div class="card">I create web pages</div>
-			</div>
-			<div class="col-md-4 card-container">
-				<div class="card">And this will be my Portfolio</div>
-			</div>
-
-		</div>
+<div>
+<div class="parallax-container">
+	<div class="parallax"><img src="img/bg.jpg"></div>
+</div>
+<div class="center white-text page-title"><h1>Rahul Krishna</h1><h5>Frontend Dev</h5></div>
+<div class="cards">
+	<div class="row">
+	<div class="col m12 s12 l12"><div class="card purple custom-card"><span class="card-title">Hello! My name is Rahul.</span>
+		<p>
+			I am currently pursuing a B.S in Computer Science from <a href="http://vit.ac.in">VIT</a>.<br>
+			I create webpages.<br>
+			You can read about some of my projects in this page.
+		</p></div></div>
 	</div>
+
+	<div class="row">
+		<div class="col m12 l4"><div class="card red"><div class="card-image"><img src="img/soda.png"> <div class="card-title backg">Soda Softwares</div> </div>
+			The website for Soda Softwares. Relies heavily on the background image and Google fonts.
+		</div> </div>
+		<div class="col m12 l4"><div class="card red"><div class="card-image"><img src="img/ammu.png"> <div class="card-title backg">A Letter to Ammu!</div> </div>
+			The website to be used as a love letter. Utilizes Google's material color palette and jQuery animations.
+		</div> </div>
+		<div class="col m12 l4"><div class="card red"><div class="card-image"><img src="img/material.png"> <div class="card-title backg">CSS Zen Garden</div> </div>
+			My fork of the CSS Zen Garden Project. Uses Material color palette and Roboto font. Responsiveness under progres.
+		</div> </div>
+	</div>
+</div>
 </body>
 
 </html>
