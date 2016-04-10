@@ -1,0 +1,59 @@
+html,body{
+    width: 100%; height: 100%;
+}
+.page-title{
+    font-size: 32px; position: absolute; top: 300px; width: 100%; display: inline;
+}
+
+.fixed-title{
+    position: fixed; top: 100px;
+}
+
+.cards-container{
+    position: relative;
+}
+
+
+
+.page-bg{
+    position: fixed; top: 0px; left: 0px;height: 100%; width: 100%; display: none; visibility: visible; background: url("bg.jpg") no-repeat 0px; background-size: cover;
+}
+
+.page-bg img{
+    width: 100%; height: 100%; display: none;
+}
+@media (min-width: 800px) {
+
+    #cyclelist {
+        list-style-type: none;
+        width: 100%;
+        position: absolute;
+        left: 0px;
+        margin-left: 0;
+        padding-left: 0;
+    }
+
+    #cyclelist li {
+        opacity: 0;
+        position: absolute;
+        left: 0px;
+        display: inline;
+        padding-left: 10px;
+        text-align: center; width: 100%;
+    }
+}
+
+@media (max-width: 800px) {
+    #cyclelist {
+        margin-left: 0; padding-left: 0; width: 100%; text-align: center;
+    }
+
+    #cyclelist li {
+        opacity:0;
+        position: absolute;
+        padding-left: 10px;
+        width: 100%;
+        text-align: center;
+    }
+}
+
