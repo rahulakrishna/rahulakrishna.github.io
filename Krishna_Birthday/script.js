@@ -5,8 +5,6 @@
 $(document).ready(function () {
     var window_height=$(window).height();
     var window_width=$(window).width();
-
-
     $('.cards-container').css("top",window_height+300);
 
     $(window).bind("scroll",function () {
@@ -14,12 +12,10 @@ $(document).ready(function () {
             $('.page-bg').fadeIn(2000,function () {
 
             });
-
         }
         else {
             $('.page-bg').fadeOut(2000);
         }
-
         if ($(window).scrollTop()>200){
             $('.page-title').addClass('fixed-title');
         }
@@ -27,7 +23,6 @@ $(document).ready(function () {
             $('.page-title').removeClass('fixed-title');
         }
     });
-
         //Cyclethru text function.
         var j = 0;
         var delay = 2000; //millisecond delay between cycles
@@ -41,8 +36,11 @@ $(document).ready(function () {
                     cycleThru();
                 });
         };
-
         cycleThru();
-        //End of cyclethru
+        //End of cyclethruc
+
+
+    $('.slider').slider({full_width: true});
+
 
 });
