@@ -43,7 +43,7 @@ $(document).ready(function () {
         //End of cyclethruc
 
 
-    $('.slider').slider({full_width: true, indicators:false, height:550});
+    $('.slider').slider({full_width: true, indicators:false, height:window_height-100});
 
 
 });
