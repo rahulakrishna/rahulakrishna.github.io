@@ -1,0 +1,23 @@
+[
+	{
+		"id":"katpadi1",
+		"name":"John Doe",
+		"location":"Katpadi Main Road, Vellore, Tamil Nadu",
+		"imageUrl":"images/street.jpg",
+		"cleaned":"Feb 14 2016"
+	},
+	{
+		"id":"katpadi2",
+		"name":"John Doe",
+		"location":"Katpadi Main Road, Vellore, Tamil Nadu",
+		"imageUrl":"images/street.jpg",
+		"cleaned":"Feb 14 2016"
+	},
+	{
+		"id":"katpadi3",
+		"name":"John Doe",
+		"location":"Katpadi Main Road, Vellore, Tamil Nadu",
+		"imageUrl":"images/street.jpg",
+		"cleaned":"Feb 14 2016"
+	}
+]
