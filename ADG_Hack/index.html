@@ -1,5 +1,5 @@
-<!DOCTYPE html ng-app="adgApp">
-<html> 
+<!DOCTYPE html>
+<html ng-app="adgApp">
 <head>
 	<title>My Clean India</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -8,13 +8,10 @@
     <script src="bootstrap/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="style.css">
     <script src="script.js"></script>
-    <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
-
-    <meta name="theme-color" content="#27ae60" />
-    <!-- Windows Phone -->
-    <meta name="msapplication-navbutton-color" content="#27ae60">
-    <!-- iOS Safari -->
-    <meta name="apple-mobile-web-app-status-bar-style" content="#27ae60">
+    <script src="angular/angular/angular.min.js"></script>
+    <script src="angular/angular-route/angular-route.min.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/controller.js"></script>
 
 </head>
 <body>
@@ -49,47 +46,9 @@
 <div class="container-fluid main-image-container">
     <div class="main-image"></div>
 </div>
-
 <div class="content-container container-fluid">
-    <div class="cards-container">
-        <div class="row">
-            <div class="col-md-4 col-xs-12 card-container">
-                <div class="card">
-                    <h3 class="posted">Posted by <span style="color: #27ae60; font-size: 26px"> Name</span></h3>
-                    <hr>
-                    <div class="location row">
-                        <div class="col-md-1 col-xs-1"><img src="images/location.png"></div><div class="col-md-10 col-xs-10 location-name">Katpadi Main Road, Vellore, Tamil Nadu</div>
-                    </div>
-                    <div class="card-image"><img src="images/street.jpg"></div>
-                    <div class="cleaned-date text-center">Cleaned on Feb 14</div>
-                </div>
-            </div>
-            <div class="col-md-4 col-xs-12 card-container">
-                <div class="card">
-                    <h3 class="posted">Posted by <span style="color: #27ae60; font-size: 26px"> Name</span></h3>
-                    <hr>
-                    <div class="location row">
-                        <div class="col-md-1 col-xs-1"><img src="images/location.png"></div><div class="col-md-10 col-xs-10 location-name">Katpadi Main Road, Vellore, Tamil Nadu</div>
-                    </div>
-                    <div class="card-image"><img src="images/street.jpg"></div>
-                    <div class="cleaned-date text-center">Cleaned on Feb 14</div>
-                </div>
-            </div>
-            <div class="col-md-4 col-xs-12 card-container">
-                <div class="card">
-                    <h3 class="posted">Posted by <span style="color: #27ae60; font-size: 26px"> Name</span></h3>
-                    <hr>
-                    <div class="location row">
-                        <div class="col-md-1 col-xs-1"><img src="images/location.png"></div><div class="col-md-10 col-xs-10 location-name">Katpadi Main Road, Vellore, Tamil Nadu</div>
-                    </div>
-                    <div class="card-image"><img src="images/street.jpg"></div>
-                    <div class="cleaned-date text-center">Cleaned on Feb 14</div>
-                </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+<div ng-view="">
+</div>
 </div>
 </body>
 </html>

@@ -1,0 +1,22 @@
+
+
+    <div class="cards-container">
+        <div class="row">
+            <div ng-repeat="complete in completed">
+            <div class="col-md-4 col-xs-12 card-container">
+                <div class="card">
+                    <h3 class="posted">Posted by <span style="color: #27ae60; font-size: 20px">{{complete.name}}</span></h3>
+                    <hr>
+                    <div class="location row">
+                        <div class="col-md-1 col-xs-1"><img src="images/location.png"></div><div class="col-md-10 col-xs-10 location-name">{{complete.location}}</div>
+                    </div>
+                    <div class="card-image"><img ng-src="{{complete.imageUrl}}"></div>
+                    <div class="cleaned-date text-center">Cleaned on {{complete.cleaned}}</div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    </div>
+
+
