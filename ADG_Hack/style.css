@@ -14,7 +14,7 @@
 }
 
 .content-container{
-     background:#22e675; top: 100%; position: absolute; width: 100%;
+     background:#22e675;  position: relative; width: 100%;
 }
 
 .cards-container{
@@ -239,9 +239,43 @@ hr {
 /*Homepage Animation*/
 .main-image{
     width: 100%; text-align: center;
-    position: relative;bottom:-300px;
+    position: relative; bottom:-300px;
 }
 
 .main-image img{
     width: 50%;
+}
+
+@media (max-width: 600px) {
+    .main-image{
+        bottom: -320px;
+    }
+    .main-image img{
+        width: 100%;
+    }
+}
+
+.earth_heart img{
+    width: 100px; position: absolute; top: 25%; left: 48%;
+}
+
+.earth_location1 img,.earth_location2 img{
+    width: 100px;
+}
+
+@media (max-width: 600px) {
+    .earth_heart img{
+        width: 50px; position: absolute; top: 25%; left: 42%;
+    }
+
+    .earth_location1 img,.earth_location2 img{
+        width: 50px;
+    }
+}
+.earth_location1 img{
+    position: absolute; top: 150px; left: 30%;
+}
+
+.earth_location2 img{
+    position: absolute; top: 200px; left: 60%;
 }
