@@ -1,5 +1,5 @@
 *{
-    font-family: 'Montserrat', sans-serif; font-size: 36px; font-weight:400;
+    font-family: Montserrat; font-size: 36px; font-weight:400;
 }
 
 .navbar{
@@ -14,7 +14,7 @@
 }
 
 .content-container{
-     background: #27ae60;
+     background:#22e675; top: 100%; position: absolute; width: 100%;
 }
 
 .cards-container{
@@ -191,12 +191,13 @@ card-panel {
 /*End of cards*/
 
 .cleaned-date{
-    font-size: 18px; padding: 10px; color:#27ae60;
+    font-size: 18px; padding: 10px; color:#22e675;
 }
 
 .posted{
     padding: 10px;
     margin-left: 10px;
+    font-size: 20px;
 }
 hr {
 
@@ -210,4 +211,37 @@ hr {
 
 .card .card-image  {
     height: 250px; overflow: hidden;
+}
+.custom-style-for-right-nav li{
+    font-size: 14px;
+    padding: 10px;
+}
+
+.login{
+    color: #22e675;
+}
+
+.get-involved{
+    background: #22e675;
+    color: #ffffff;
+
+}
+
+.custom-brand{
+    font-size: 26px;
+}
+
+.custom-navbar{
+    border: 0;
+    background: #ffffff;
+}
+
+/*Homepage Animation*/
+.main-image{
+    width: 100%; text-align: center;
+    position: relative;bottom:-300px;
+}
+
+.main-image img{
+    width: 50%;
 }
