@@ -1,6 +1,6 @@
 {
 	"id":"1",
-	"img":"../static/images/profile.jpg",
+	"img":"../static/images/john.jpg",
 	"fname":"John",
 	"lname":"Doe",
 	"email":"johndoe@example.com",
