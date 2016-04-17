@@ -3,21 +3,21 @@
 		"id":"katpadi1",
 		"name":"Rahul Krishna",
 		"location":"Katpadi Main Road, Vellore, Tamil Nadu",
-		"imageUrl":"../static/images/street.jpg",
+		"imageUrl":"images/street.jpg",
 		"cleaned":"Feb 14 2016"
 	},
 	{
 		"id":"katpadi2",
 		"name":"Rajat Mukati",
 		"location":"Manali, Himachal Pradesh, India",
-		"imageUrl":"../static/images/manali.jpg",
+		"imageUrl":"images/manali.jpg",
 		"cleaned":"Mar 27 2016"
 	},
 	{
 		"id":"katpadi3",
-		"name":"Shubham Bhardwaj",
+		"name":"Shubham Bharadwaj",
 		"location":"Siberia, Siberia",
-		"imageUrl":"../static/images/siberia.jpg",
+		"imageUrl":"images/siberia.jpg",
 		"cleaned":"Apr 12 2016"
 	}
 ]
