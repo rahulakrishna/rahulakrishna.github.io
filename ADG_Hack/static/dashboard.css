@@ -1,0 +1,85 @@
+*{
+    font-family: Montserrat;
+}
+.profile{
+    background: #22e675;  height:350px; border-bottom: #159e4f solid 5px; margin: auto; position: relative;
+}
+
+.profile-details{
+    position: relative; top: 50px; width: 200px; margin: auto;
+}
+
+.profile-details img{
+    width: 100px;
+}
+
+.profile-details .name{
+    color: #ffffff; font-size: 20px;
+}
+
+.profile-details .email{
+    color: #159e4f;
+}
+
+.counter{
+    display: inline-flex;
+}
+
+.counter .badges{
+    padding: 10px;
+}
+
+.counter .reports{
+    padding: 10px;
+}
+
+.no{
+    font-size: 36px; color: #159e4f;
+}
+
+.desc{
+    padding-top: -20px; color: #ffffff;
+}
+
+.top-right{
+    position: absolute; right: 10px; top: 20px;
+}
+
+.settings{
+    background: #ffffff; color: #22e675; padding: 10px; border-radius: 20px;
+}
+
+.logout{
+    background: #ffffff; color: #22e675; padding: 10px; border-radius: 20px; padding-left: 20px; padding-right: 20px;
+}
+
+.content{
+    position: relative; top: 50px;
+}
+
+.report{
+    background: #22e675; padding: 10px; border-radius: 50px; padding-left: 100px; padding-right: 100px; border: #159e4f solid 2px; color: #ffffff; position: relative;
+    top:20px;
+}
+
+@media(max-width: 600px){
+    .report{
+        padding: 10px;
+    }
+}
+
+.places{
+    position: relative; top: 80px; text-align: left;
+}
+
+.place{
+    border: #a0a0a0 solid 1px; padding: 10px; font-size: 12px; margin: 10px;
+}
+
+.details-button{
+    background: #22e675; position: absolute; right: 20px; top: 20%; padding: 10px; border-radius: 50px; border: #159e4f solid 1px; color: #ffffff; padding-left: 30px; padding-right: 30px;
+}
+
+#location{
+    width: 100%; padding: 10px;
+}

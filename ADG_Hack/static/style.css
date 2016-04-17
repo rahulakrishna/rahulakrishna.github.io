@@ -1,5 +1,5 @@
 *{
-    font-family: Montserrat; font-size: 36px; font-weight:400;
+    font-family: Montserrat; font-weight:400;
 }
 
 .navbar{
@@ -9,12 +9,20 @@
     font-size: 36px; color: #000000 !important;
 }
 
+.desc{
+    position: relative; background:#22e675; text-align: center;top:0px; z-index: 2;
+}
+
+.desc-text{
+    color: #ffffff;  padding-top: 50px; padding-bottom: 50px; font-family: Lato; font-size: 28px;
+}
+
 .main-image-container{
     position: relative; height: 100%;
 }
 
 .content-container{
-     background:#22e675;  position: relative; width: 100%;
+    background:#ffffff; position: relative; width: 100%;
 }
 
 .cards-container{
@@ -55,6 +63,13 @@
     width: 90%; padding: 0; margin: 0;
 }
 
+.recent-container{
+     text-align: center;
+}
+
+.recent-container .recent{
+    font-size: 20px; background: #22e675; padding: 10px; color: #ffffff;
+}
 
 /*Cards*/
 
@@ -72,6 +87,7 @@ card-panel {
     background-color: #fff;
     transition: box-shadow .25s;
     border-radius: 2px;
+    box-shadow: 0 0 2px 0;
 }
 
 .card .card-title {
@@ -210,7 +226,7 @@ hr {
 }
 
 .card .card-image  {
-    height: 250px; overflow: hidden;
+    height: 200px; overflow: hidden;
 }
 .custom-style-for-right-nav li{
     font-size: 14px;
@@ -218,12 +234,15 @@ hr {
 }
 
 .login{
-    color: #22e675;
+    color: #22e675 !important;
 }
 
 .get-involved{
     background: #22e675;
-    color: #ffffff;
+    color: #ffffff !important;
+}
+
+a{
 
 }
 
@@ -278,4 +297,14 @@ hr {
 
 .earth_location2 img{
     position: absolute; top: 200px; left: 60%;
+}
+
+.main-txt{
+    position: relative; top: -150px;
+}
+
+/*End of Homepage animations*/
+
+footer{
+    background: #2c2a2a; width: 100%; position: relative; height: 20%;
 }

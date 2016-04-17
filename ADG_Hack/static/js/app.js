@@ -7,7 +7,7 @@ adgApp.config(['$routeProvider',
     function ($routeProvider) {
         $routeProvider.
         when('/',{
-            templateUrl:'partials/completed.html',
+            templateUrl:'template/partials/completed.html',
             controller:'CompletedCtrl'
         }).otherwise({
             redirectTo:'/'
