@@ -16,7 +16,7 @@ html,body{
 
 
 .page-bg{
-    position: fixed; top: 0px; left: 0px;height: 100%; width: 100%; display: none; visibility: visible; background: url("bg.jpg") no-repeat 0px; background-size: cover;
+    position: fixed; top: 0px; left: 0px;height: 100%; width: 100%; display: none; visibility: visible; background: url("../images/background/bg.jpg") no-repeat 0px; background-size: cover;
 }
 
 .page-bg img{
