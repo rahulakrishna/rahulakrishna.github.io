@@ -13,68 +13,60 @@
     <link rel="stylesheet" href="static/css/animate.css">
     <title>Lorem ipsum dolor sit amet,</title>
 </head>
-
 <body>
-<div class="page-bg"></div>
-<div class="center page-title" ng-controller="cycleCtrl">
-    Lorem ipsum dolor,<div ng-repeat="description in describe"><ul id="cyclelist"><li id="{{description.id}}">{{description.value}}.</li> </ul></div>
-</div>
-
-<div class="container">
-<div class="cards-container" >
-    <div ng-controller="cardsCtrl">
-    <div class="row">
-        <div ng-repeat="card in cards1">
-    <div class="col m4">
-        <div class="card blue">
-            <div class="card-image"><img ng-src="{{card.image}}">
-                <div class="card-title">{{card.title}}</div>
-            </div>
-            <div class="card-content">{{card.cardcontent}}</div>
+    <div class="page-bg"></div>
+        <div class="center page-title" ng-controller="cycleCtrl">
+            Lorem ipsum dolor,<div ng-repeat="description in describe"><ul id="cyclelist"><li id="{{description.id}}">{{description.value}}.</li> </ul></div>
         </div>
-    </div>
-        </div>
-        </div>
-        </div>
-
-        <div ng-controller="nextCardsCtrl">
-`
-        <div class="row">
-        <div ng-repeat="card in cards2">
-                    <div class="col m4">
-                <div class="card blue">
-                    <div class="card-image"><img ng-src="{{card.image}}">
-                        <div class="card-title">{{card.title}}</div>
+        <div class="container">
+            <div class="cards-container" >
+                <div ng-controller="cardsCtrl">
+                    <div class="row">
+                        <div ng-repeat="card in cards1">
+                            <div class="col m4">
+                                <div class="card blue">
+                                    <div class="card-image"><img ng-src="{{card.image}}">
+                                        <div class="card-title">{{card.title}}</div>
+                                    </div>
+                                    <div class="card-content">{{card.cardcontent}}</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
+        <div ng-controller="nextCardsCtrl">
+            <div class="row">
+                <div ng-repeat="card in cards2">
+                    <div class="col m4">
+                        <div class="card blue">
+                            <div class="card-image"><img ng-src="{{card.image}}">
+                                <div class="card-title">{{card.title}}</div>
+                            </div>
                         <div class="card-content">{{card.cardcontent}}</div>
+                        </div>
                     </div>
                 </div>
-            </div></div>
-
-        </div>
-
-    <div class="row">
-        <div class="col m6">
-            <div class="card m12 purple">
-                <div class="card-image"><img src="static/images/card_images/train.jpg"><div class="card-title">Ut enim ad minim!</div> </div>
-                <div class="card-content">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                    tempor incididunt ut labore et dolore magna aliqua.</div>
             </div>
         </div>
-        <div class="col m6">
-            <div class="card m12 purple">
-                <div class="card-image"><img src="static/images/card_images/smile.jpg"><div class="card-title">Ut enim ad minim!</div> </div>
-                <div class="card-content">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+        <div class="row">
+            <div class="col m6">
+                <div class="card m12 purple">
+                    <div class="card-image"><img src="static/images/card_images/train.jpg"><div class="card-title">Ut enim ad minim!</div> </div>
+                        <div class="card-content">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
                     tempor incididunt ut labore et dolore magna aliqua.</div>
+                </div>
+            </div>
+            <div class="col m6">
+                <div class="card m12 purple">
+                    <div class="card-image"><img src="static/images/card_images/smile.jpg"><div class="card-title">Ut enim ad minim!</div> </div>
+                        <div class="card-content">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                    tempor incididunt ut labore et dolore magna aliqua.</div>
+                </div>
             </div>
         </div>
     </div>
-</div>
-
-
-
-    <div class="row carousel-container transparent">
-        <div class="col m12 s12"><br></div>
+<div class="row carousel-container transparent">
+    <div class="col m12 s12"><br></div>
         <div class="col m12 s12">
             <div class="slider">
                 <ul class="slides">
@@ -107,18 +99,11 @@
                         </div>
                     </li>
                 </ul>
-
                 <span class="left-indicator hide-on-med-and-down" onclick="$('.slider').slider('prev');"><span class="mdi-navigation-arrow-back"></span> </span>
                 <span class="right-indicator hide-on-med-and-down" onclick="$('.slider').slider('next');"><span class="mdi-navigation-arrow-forward"></span> </span>
-
             </div>
         </div>
     </div>
-
-
 </div>
-
-
-
 </body>
 </html>
