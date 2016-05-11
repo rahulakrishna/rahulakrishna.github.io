@@ -12,14 +12,14 @@
 	<meta name="apple-mobile-web-app-status-bar-style" content="#e51c23">
 	<link rel="icon" href="favicon.ico" type="icon/ico">
 	<style type="text/css">
-		*{
-			font-family: 'Source Code Pro';
+		body{
+			font-family: 'Source Code Pro'; color:#202020;
 		}
 		.content{
-			position: relative;top:50px;
+			position: relative;
 		}
 		.custom-card{
-			height: 100% !important; box-shadow: 0 0 0 0; font-weight: bold; color:#292929;
+			height: 100% !important; box-shadow: 0 0 0 0; font-weight: bold;  border: #202020 solid 5px;
 		}
 
 		.card-container{
@@ -29,7 +29,56 @@
 		.card{
 
 		}
+
+		.custom-black-text{
+			background: rgba(0,0,0,0.5); width: 100%;
+		}
+
+		.card-image:hover img{
+			transform: scale(1.2);
+			transition-duration: 1s;;
+		}
+
+		.card-image img{
+			transition-duration: 1s;
+			transform: scale(1.05);
+		}
+
+		.card-image:hover{
+			overflow: hidden;
+		}
+
+		.card-image{
+			overflow: hidden;
+		}
+
+		.done,.do{
+
+		}
+
 	</style>
+	<script src="Krishna_Birthday/static/js/jquery-1.12.3.min.js"></script>
+	<script src="materialize/js/materialize.min.js"></script>
+	<script>
+	$(document).ready(function () {
+		var donecards_height=$('.donecards').height();
+		$('.donecards .donecard').css({
+			height: donecards_height
+		});
+
+		var docards_height=$('.docards').height();
+		$('.docards .docard').css({
+			height: docards_height
+		});
+
+		var main_height=$('.card-container').height();
+		$('.card-container .custom-card').css({
+			height: main_height
+		});
+
+		console.log(main_height);
+	});
+	</script>
 </head>
 <body>
 <h3 class="center title-bar">RAHUL KRISHNA</h3>
@@ -97,6 +146,73 @@
 			</div>
 		</div>
 	</div>
+	</div>
+
+	<div class="col m12 yellow done">
+		<div class="center"><h1>I've done</h1></div>
+		<div class="container">
+			<div class="row">
+				<div class="col m4 s12 donecards">
+					<div class="card donecard">
+
+						<a href="http://rahulakrishna.github.io"><div class="card-image"><img src="images/rkbgit.png"><div class="card-title custom-black-text">This website</div></div></a>
+						<div class="card-content"><div class="row"><br><a class="btn col m12 s12" href="https://github.com/rahulakrishna/rahulakrishna.github.io/blob/master/index.html">Github</a> </div></div>
+					</div>
+				</div>
+				<div class="col m4 s12 donecards">
+					<div class="card donecard">
+						<a href="http://rahulakrishna.github.io/ADG_Hack"><div class="card-image"><img src="images/rkbadg.png"><div class="card-title custom-black-text">MyCleanIndia</div></div></a>
+						<div class="card-content"><div class="row"><a class="btn col m12 s12" href="https://github.com/rahulakrishna/rahulakrishna.github.io/blob/master/ADG_Hack/index.html">Github</a><br><br><a class="btn col m12 s12" href="http://rahulakrishna.github.io/ADG_Hack">Website</a> </div>
+					</div>
+				</div>
+				</div>
+				<div class="col m4 s12 donecards">
+					<div class="card donecard">
+						<div class="card-image"><img src="images/rkbkrs.png"><div class="card-title custom-black-text">Coming soon</div></div>
+						<div class="card-content"><div class="row"><a class="btn col m12 s12 disabled">Github</a><br><br><a class="btn col m12 s12 disabled">Website</a> </div></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="col m12 blue do">
+		<div class="center"><h1>I do</h1></div>
+		<div class="container">
+		<div class="row">
+			<div class="col m3 docards">
+				<div class="card docard yellow">
+					<div class="card-title">
+						Responsiveness
+					</div>
+					<div class="card-content">Using Bootstrap, Materialize and Foundation.</div>
+				</div>
+			</div>
+			<div class="col m3 docards">
+				<div class="card docard yellow">
+					<div class="card-title">
+						Animations
+					</div>
+					<div class="card-content">Using jQuery, Animate and even custom.</div>
+				</div>
+			</div>
+			<div class="col m3 docards">
+				<div class="card docard yellow">
+					<div class="card-title">
+						Core Frontend
+					</div>
+					<div class="card-content">Using Angular. React on the way.</div>
+				</div>
+			</div>
+			<div class="col m3 docards">
+				<div class="card docard yellow">
+					<div class="card-title">
+						Collaboration
+					</div>
+					<div class="card-content">On Github, Bitbucket and anything I can get my hands on.</div>
+				</div>
+			</div>
+		</div>
 	</div>
 </body>
 </html>
