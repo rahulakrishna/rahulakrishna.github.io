@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AngularReact</title>
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/react/react.js"></script>
+    <script src="bower_components/react/react-dom.js"></script>
+
+    <script src="browser.min.js"></script>
+    <script src="ngReact.js"></script>
+    <script src="app.js" type="text/babel"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../materialize/css/materialize.css">
+    <script src="../materialize/js/materialize.js"></script>
+    <style>
+        *{
+            font-family: Montserrat;
+        }
+    </style>
+</head>
+<body ng-controller="phoneCtrl">
+    <div class="row">
+        <div class="col m8 push-m2">
+            <div class="card grey">
+                <div class="card-title">List of all phones rendered through ng-repeat.</div>
+                <div ng-repeat="phone in phones" class="card-content center">
+                    {{phone}}
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col m8 push-m2">
+            <div class="card teal">
+                <div class="card-title">Here we'll try rendering through React</div>
+                <phonelist phones="phones"/>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

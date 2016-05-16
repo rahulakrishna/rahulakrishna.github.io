@@ -20,3 +20,11 @@ krisAppControllers.controller('nextCardsCtrl',['$scope','$http',
 			$scope.cards2=data;
 		});
 	}]);
+
+krisAppControllers.controller('sliderCtrl',['$scope','$http',
+	function ($scope,$http) {
+		$http.get('template/data/slider.json').success(function (data) {
+			$scope.slides=data;
+		})
+	}
+]);
