@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="33f8f25c-f90a-46b1-8be5-448fe50edd59" name="Default" comment="" />
+    <list default="true" id="33f8f25c-f90a-46b1-8be5-448fe50edd59" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ngReact/index.html" afterPath="$PROJECT_DIR$/ngReact/index.html" />
+    </list>
     <ignored path="rahulakrishna.github.io.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -66,8 +68,8 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/ngReact/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="353">
-              <caret line="35" column="54" selection-start-line="35" selection-start-column="54" selection-end-line="35" selection-end-column="54" />
+            <state relative-caret-position="234">
+              <caret line="13" column="19" selection-start-line="13" selection-start-column="19" selection-end-line="13" selection-end-column="19" />
               <folding />
             </state>
           </provider>
@@ -343,7 +345,7 @@
       <workItem from="1463225728078" duration="47000" />
       <workItem from="1463285275506" duration="419000" />
       <workItem from="1463293926757" duration="9750000" />
-      <workItem from="1463397212307" duration="1578000" />
+      <workItem from="1463397212307" duration="1622000" />
     </task>
     <task id="LOCAL-00001" summary="If this doesn't work! We have a serious bug!">
       <created>1462985224781</created>
@@ -363,7 +365,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="41001000" />
+    <option name="totallyTimeSpent" value="41045000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="27" width="1366" height="741" extended-state="1" />
@@ -756,8 +758,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/ngReact/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="353">
-          <caret line="35" column="54" selection-start-line="35" selection-start-column="54" selection-end-line="35" selection-end-column="54" />
+        <state relative-caret-position="234">
+          <caret line="13" column="19" selection-start-line="13" selection-start-column="19" selection-end-line="13" selection-end-column="19" />
           <folding />
         </state>
       </provider>
