@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="33f8f25c-f90a-46b1-8be5-448fe50edd59" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ngReact/index.html" afterPath="$PROJECT_DIR$/ngReact/index.html" />
-    </list>
+    <list default="true" id="33f8f25c-f90a-46b1-8be5-448fe50edd59" name="Default" comment="" />
     <ignored path="rahulakrishna.github.io.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -345,7 +343,7 @@
       <workItem from="1463225728078" duration="47000" />
       <workItem from="1463285275506" duration="419000" />
       <workItem from="1463293926757" duration="9750000" />
-      <workItem from="1463397212307" duration="573000" />
+      <workItem from="1463397212307" duration="1287000" />
     </task>
     <task id="LOCAL-00001" summary="If this doesn't work! We have a serious bug!">
       <created>1462985224781</created>
@@ -365,7 +363,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="39996000" />
+    <option name="totallyTimeSpent" value="40710000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="27" width="1366" height="741" extended-state="1" />

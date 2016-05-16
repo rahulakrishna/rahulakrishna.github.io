@@ -8,7 +8,7 @@ var app = angular.module('app', ['react']);
       return (
         <div className="card-content center">
           {this.props.phones.map(function (item) {
-            return <div>{item}</div>
+            return <div><br/><span> <b>{item.name}</b><br/> {item.snippet}</span></div>
           })}
         </div>
       );
