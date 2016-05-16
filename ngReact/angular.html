@@ -19,18 +19,16 @@
     </style>
 </head>
 <body ng-controller="phoneCtrl">
-    <div class="row">
-        <div class="col m8 push-m2">
-            <div class="card blue">
-                <div class="card-title">
-                    ngReact
-                </div>
-                <div class="card-panel center">
-                    <a class="btn" href="angular.html">Angular</a>
-                    <a class="btn" href="react.html">React</a>
-                </div>
+<div class="row">
+    <div class="col m8 push-m2">
+        <div class="card grey">
+            <div class="card-title">Angular Rendering (Using ng-repeat):</div>
+            <div ng-repeat="phone in phones" class="card-content center">
+                <b>{{phone.name}}</b><br>
+                {{phone.snippet}}
             </div>
         </div>
     </div>
+</div>
 </body>
 </html>
