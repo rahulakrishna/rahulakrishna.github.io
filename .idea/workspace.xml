@@ -2,8 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="33f8f25c-f90a-46b1-8be5-448fe50edd59" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ngReact/angular.html" afterPath="$PROJECT_DIR$/ngReact/angular.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ngReact/react.html" afterPath="$PROJECT_DIR$/ngReact/react.html" />
     </list>
     <ignored path="rahulakrishna.github.io.iws" />
@@ -55,21 +53,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="angular.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="angular.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ngReact/angular.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="515">
-              <caret line="42" column="7" selection-start-line="42" selection-start-column="7" selection-end-line="42" selection-end-column="7" />
+            <state relative-caret-position="209">
+              <caret line="25" column="12" selection-start-line="25" selection-start-column="12" selection-end-line="25" selection-end-column="12" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="react.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="react.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/ngReact/react.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="515">
-              <caret line="38" column="7" selection-start-line="38" selection-start-column="7" selection-end-line="38" selection-end-column="7" />
+            <state relative-caret-position="180">
+              <caret line="12" column="12" selection-start-line="12" selection-start-column="12" selection-end-line="12" selection-end-column="12" />
               <folding />
             </state>
           </provider>
@@ -156,8 +154,8 @@
         <option value="$PROJECT_DIR$/Greetings/static/js/app.js" />
         <option value="$PROJECT_DIR$/Greetings/template/partials/view.html" />
         <option value="$PROJECT_DIR$/ngReact/index.html" />
-        <option value="$PROJECT_DIR$/ngReact/react.html" />
         <option value="$PROJECT_DIR$/ngReact/angular.html" />
+        <option value="$PROJECT_DIR$/ngReact/react.html" />
       </list>
     </option>
   </component>
@@ -348,7 +346,7 @@
       <workItem from="1463285275506" duration="419000" />
       <workItem from="1463293926757" duration="9750000" />
       <workItem from="1463397212307" duration="2700000" />
-      <workItem from="1463478062299" duration="55000" />
+      <workItem from="1463478062299" duration="225000" />
     </task>
     <task id="LOCAL-00001" summary="If this doesn't work! We have a serious bug!">
       <created>1462985224781</created>
@@ -368,7 +366,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="42178000" />
+    <option name="totallyTimeSpent" value="42348000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="27" width="1366" height="741" extended-state="1" />
@@ -747,18 +745,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ngReact/react.html">
+    <entry file="file://$PROJECT_DIR$/ngReact/angular.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="515">
-          <caret line="38" column="7" selection-start-line="38" selection-start-column="7" selection-end-line="38" selection-end-column="7" />
+        <state relative-caret-position="209">
+          <caret line="25" column="12" selection-start-line="25" selection-start-column="12" selection-end-line="25" selection-end-column="12" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ngReact/angular.html">
+    <entry file="file://$PROJECT_DIR$/ngReact/react.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="515">
-          <caret line="42" column="7" selection-start-line="42" selection-start-column="7" selection-end-line="42" selection-end-column="7" />
+        <state relative-caret-position="180">
+          <caret line="12" column="12" selection-start-line="12" selection-start-column="12" selection-end-line="12" selection-end-column="12" />
           <folding />
         </state>
       </provider>
