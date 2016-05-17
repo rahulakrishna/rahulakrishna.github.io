@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="33f8f25c-f90a-46b1-8be5-448fe50edd59" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ngReact/react.html" afterPath="$PROJECT_DIR$/ngReact/react.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ngReact/app.js" afterPath="$PROJECT_DIR$/ngReact/app.js" />
     </list>
     <ignored path="rahulakrishna.github.io.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -48,7 +49,9 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="252">
               <caret line="14" column="4" selection-start-line="4" selection-start-column="4" selection-end-line="14" selection-end-column="4" />
-              <folding />
+              <folding>
+                <marker date="1463407469405" expanded="true" signature="21:770" placeholder="..." />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -58,16 +61,38 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="209">
               <caret line="25" column="12" selection-start-line="25" selection-start-column="12" selection-end-line="25" selection-end-column="12" />
-              <folding />
+              <folding>
+                <marker date="1463478120825" expanded="true" signature="902:1391" placeholder="..." />
+                <marker date="1463478120825" expanded="true" signature="920:1383" placeholder="..." />
+                <marker date="1463478120825" expanded="true" signature="957:1376" placeholder="..." />
+                <marker date="1463478120825" expanded="true" signature="980:1365" placeholder="..." />
+                <marker date="1463478120825" expanded="true" signature="1125:1350" placeholder="..." />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="react.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="react.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ngReact/react.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="180">
               <caret line="12" column="12" selection-start-line="12" selection-start-column="12" selection-end-line="12" selection-end-column="12" />
+              <folding>
+                <marker date="1463478285747" expanded="true" signature="28:865" placeholder="..." />
+                <marker date="1463478285747" expanded="true" signature="898:1109" placeholder="..." />
+                <marker date="1463478285747" expanded="true" signature="916:1100" placeholder="..." />
+                <marker date="1463478285747" expanded="true" signature="953:1093" placeholder="..." />
+                <marker date="1463478285747" expanded="true" signature="976:1082" placeholder="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="app.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/ngReact/app.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="512">
+              <caret line="47" column="0" selection-start-line="47" selection-start-column="0" selection-end-line="47" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -91,16 +116,6 @@
               <folding>
                 <element signature="e#0#39#0" expanded="false" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="slider.json" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Greetings/template/data/slider.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -156,6 +171,7 @@
         <option value="$PROJECT_DIR$/ngReact/index.html" />
         <option value="$PROJECT_DIR$/ngReact/angular.html" />
         <option value="$PROJECT_DIR$/ngReact/react.html" />
+        <option value="$PROJECT_DIR$/ngReact/app.js" />
       </list>
     </option>
   </component>
@@ -346,7 +362,7 @@
       <workItem from="1463285275506" duration="419000" />
       <workItem from="1463293926757" duration="9750000" />
       <workItem from="1463397212307" duration="2700000" />
-      <workItem from="1463478062299" duration="225000" />
+      <workItem from="1463478062299" duration="284000" />
     </task>
     <task id="LOCAL-00001" summary="If this doesn't work! We have a serious bug!">
       <created>1462985224781</created>
@@ -366,7 +382,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="42348000" />
+    <option name="totallyTimeSpent" value="42407000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="27" width="1366" height="741" extended-state="1" />
@@ -429,13 +445,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/materialize/css/materialize.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60264">
@@ -741,7 +750,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="252">
           <caret line="14" column="4" selection-start-line="4" selection-start-column="4" selection-end-line="14" selection-end-column="4" />
-          <folding />
+          <folding>
+            <marker date="1463407469405" expanded="true" signature="21:770" placeholder="..." />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -749,7 +760,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="209">
           <caret line="25" column="12" selection-start-line="25" selection-start-column="12" selection-end-line="25" selection-end-column="12" />
-          <folding />
+          <folding>
+            <marker date="1463478120825" expanded="true" signature="902:1391" placeholder="..." />
+            <marker date="1463478120825" expanded="true" signature="920:1383" placeholder="..." />
+            <marker date="1463478120825" expanded="true" signature="957:1376" placeholder="..." />
+            <marker date="1463478120825" expanded="true" signature="980:1365" placeholder="..." />
+            <marker date="1463478120825" expanded="true" signature="1125:1350" placeholder="..." />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -757,6 +774,20 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
           <caret line="12" column="12" selection-start-line="12" selection-start-column="12" selection-end-line="12" selection-end-column="12" />
+          <folding>
+            <marker date="1463478285747" expanded="true" signature="28:865" placeholder="..." />
+            <marker date="1463478285747" expanded="true" signature="898:1109" placeholder="..." />
+            <marker date="1463478285747" expanded="true" signature="916:1100" placeholder="..." />
+            <marker date="1463478285747" expanded="true" signature="953:1093" placeholder="..." />
+            <marker date="1463478285747" expanded="true" signature="976:1082" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ngReact/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="512">
+          <caret line="47" column="0" selection-start-line="47" selection-start-column="0" selection-end-line="47" selection-end-column="0" />
           <folding />
         </state>
       </provider>
