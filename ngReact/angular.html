@@ -15,17 +15,26 @@
     <style>
         *{
             font-family: Montserrat;
+            color: #3D3332;
+        }
+        .angular-card:nth-child(2n+1){
+            background: #58D3D1;
+        }
+        .angular-card:nth-child(2n){
+            background: #58D3D1;
         }
     </style>
 </head>
 <body ng-controller="phoneCtrl">
 <div class="row">
-    <div class="col m8 push-m2">
-        <div class="card grey s12">
+    <div class="col m6 push-m3 s12">
+        <div class="">
             <div class="card-title">Angular Rendering (Using ng-repeat):</div>
-            <div ng-repeat="phone in phones" class="card-content center">
-                <b>{{phone.name}}</b><br>
-                {{phone.snippet}}
+            <div ng-repeat="phone in phones" class="col m12 s12">
+                <div class="card angular-card">
+                    <div class="card-content">{{phone.snippet}}</div>
+                    <div class="card-title">{{phone.name}}</div>
+                </div>
             </div>
         </div>
     </div>

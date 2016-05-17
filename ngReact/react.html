@@ -13,19 +13,27 @@
     <link rel="stylesheet" href="../materialize/css/materialize.css">
     <script src="../materialize/js/materialize.js"></script>
     <style>
-    *{
+        *{
             font-family: Montserrat;
+            color: #3D3332;
+        }
+        .react-card:nth-child(2n+1){
+            background: #FFD7B7;
+        }
+        .react-card:nth-child(2n){
+            background: #58D3D1;
         }
     </style>
 </head>
 <body ng-controller="phoneCtrl">
 <div class="row">
-    <div class="col m8 push-m2">
-        <div class="card teal s12">
-            <div class="card-title">React Rendering: </div>
+    <div class="col m6 push-m3 s12">
+        <div class="">
+            <div class="">React Rendering: </div>
             <phonelist phones="phones"/>
         </div>
     </div>
 </div>
+
 </body>
 </html>
