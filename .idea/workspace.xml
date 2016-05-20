@@ -2,9 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="33f8f25c-f90a-46b1-8be5-448fe50edd59" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ngReact/angular.html" afterPath="$PROJECT_DIR$/ngReact/angular.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ngReact/app.js" afterPath="$PROJECT_DIR$/ngReact/app.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ngReact/data.json" afterPath="$PROJECT_DIR$/ngReact/data.json" />
     </list>
     <ignored path="rahulakrishna.github.io.iws" />
@@ -66,7 +63,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="app.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="app.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ngReact/app.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="432">
@@ -76,11 +73,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="data.json" pinned="false" current-in-tab="false">
+      <file leaf-file-name="data.json" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/ngReact/data.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="515">
+              <caret line="167" column="186" selection-start-line="167" selection-start-column="186" selection-end-line="167" selection-end-column="186" />
               <folding />
             </state>
           </provider>
@@ -156,9 +153,9 @@
         <option value="$PROJECT_DIR$/Greetings/template/partials/view.html" />
         <option value="$PROJECT_DIR$/ngReact/index.html" />
         <option value="$PROJECT_DIR$/ngReact/react.html" />
-        <option value="$PROJECT_DIR$/ngReact/data.json" />
         <option value="$PROJECT_DIR$/ngReact/angular.html" />
         <option value="$PROJECT_DIR$/ngReact/app.js" />
+        <option value="$PROJECT_DIR$/ngReact/data.json" />
       </list>
     </option>
   </component>
@@ -350,7 +347,7 @@
       <workItem from="1463293926757" duration="9750000" />
       <workItem from="1463397212307" duration="2700000" />
       <workItem from="1463478062299" duration="1769000" />
-      <workItem from="1463761608260" duration="525000" />
+      <workItem from="1463761608260" duration="959000" />
     </task>
     <task id="LOCAL-00001" summary="If this doesn't work! We have a serious bug!">
       <created>1462985224781</created>
@@ -370,7 +367,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="44417000" />
+    <option name="totallyTimeSpent" value="44851000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="27" width="1366" height="741" extended-state="1" />
@@ -750,18 +747,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ngReact/data.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/ngReact/app.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="432">
           <caret line="24" column="275" selection-start-line="24" selection-start-column="275" selection-end-line="24" selection-end-column="275" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ngReact/data.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="515">
+          <caret line="167" column="186" selection-start-line="167" selection-start-column="186" selection-end-line="167" selection-end-column="186" />
           <folding />
         </state>
       </provider>
