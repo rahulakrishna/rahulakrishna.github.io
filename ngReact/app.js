@@ -29,13 +29,16 @@ var PhoneList = React.createClass({
   }
 });
 
+
+/*ReactDOM.render(<PhoneList phones="phones"/>,
+document.getElementById('content')
+);*/
+
 app.controller('phoneCtrl', ['$scope', '$http', function ($scope, $http) {
   $http.get('data.json').success(function (data) {
     $scope.phones = data;
-    $scope.fuck=data;
   })
 }]);
-
 app.directive('phonelist',function (reactDirective) {
   return reactDirective(PhoneList);
 });
@@ -43,5 +46,6 @@ app.directive('phonelist',function (reactDirective) {
 app.directive('phonename',function (reactDirective) {
   return reactDirective(Phone);
 });
+
 
 angular.bootstrap(document,['app']);
