@@ -2,12 +2,70 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="33f8f25c-f90a-46b1-8be5-448fe50edd59" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/data.json" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/_locales/ar/messages.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/_locales/bg/messages.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/_locales/bn/messages.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/_locales/ca/messages.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/_locales/cs/messages.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/_locales/da/messages.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/_locales/de/messages.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/_locales/el/messages.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/_locales/en-GB/messages.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/_locales/en/messages.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/_locales/es-419/messages.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/_locales/es/messages.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/_locales/et/messages.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/_locales/fa/messages.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/_locales/fi/messages.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/_locales/fil/messages.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/_locales/fr/messages.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/_locales/gu/messages.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/_locales/hi/messages.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/_locales/hr/messages.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/_locales/hu/messages.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/_locales/id/messages.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/_locales/it/messages.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/_locales/iw/messages.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/_locales/ja/messages.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/_locales/kn/messages.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/_locales/ko/messages.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/_locales/lt/messages.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/_locales/lv/messages.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/_locales/ml/messages.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/_locales/mr/messages.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/_locales/ms/messages.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/_locales/nl/messages.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/_locales/no/messages.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/_locales/pl/messages.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/_locales/pt-BR/messages.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/_locales/pt-PT/messages.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/_locales/ro/messages.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/_locales/ru/messages.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/_locales/sk/messages.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/_locales/sl/messages.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/_locales/sr/messages.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/_locales/sv/messages.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/_locales/ta/messages.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/_locales/te/messages.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/_locales/th/messages.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/_locales/tr/messages.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/_locales/uk/messages.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/_locales/vi/messages.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/_locales/zh-CN/messages.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/_locales/zh-TW/messages.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/background_main.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/config.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/designer_view.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/exported_app_view.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/filesystem.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/hostell.pdf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/manifest.json" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ngReact/angular.html" afterPath="$PROJECT_DIR$/ngReact/angular.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ngReact/app.js" afterPath="$PROJECT_DIR$/ngReact/app.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ngReact/data.json" afterPath="$PROJECT_DIR$/ngReact/data.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ngReact/index.html" afterPath="$PROJECT_DIR$/ngReact/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ngReact/react.html" afterPath="$PROJECT_DIR$/ngReact/react.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ADG_Hack/index.html" afterPath="$PROJECT_DIR$/ADG_Hack/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ADG_Hack/static/js/dash_app.js" afterPath="$PROJECT_DIR$/ADG_Hack/static/js/dash_app.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ngReact/quote.html" afterPath="$PROJECT_DIR$/ngReact/quote.html" />
     </list>
     <ignored path="rahulakrishna.github.io.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -28,101 +86,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="view.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Greetings/template/partials/view.html">
+      <file leaf-file-name="data.json" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/data.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="15" column="149" selection-start-line="15" selection-start-column="149" selection-end-line="15" selection-end-column="149" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ngReact/index.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="72">
-              <caret line="4" column="101" selection-start-line="4" selection-start-column="101" selection-end-line="4" selection-end-column="101" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="angular.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ngReact/angular.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="72">
-              <caret line="4" column="101" selection-start-line="4" selection-start-column="101" selection-end-line="4" selection-end-column="101" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="react.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/ngReact/react.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="335">
-              <caret line="32" column="47" selection-start-line="32" selection-start-column="47" selection-end-line="32" selection-end-column="47" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="app.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ngReact/app.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="414">
-              <caret line="23" column="39" selection-start-line="23" selection-start-column="39" selection-end-line="23" selection-end-column="39" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="data.json" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ngReact/data.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="18018">
-              <caret line="1001" column="1" selection-start-line="1001" selection-start-column="1" selection-end-line="1001" selection-end-column="1" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="phones.json" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ngReact/phones.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="phones1.json" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ngReact/phones1.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="script.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Greetings/static/js/script.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="522">
-              <caret line="29" column="8" selection-start-line="29" selection-start-column="8" selection-end-line="29" selection-end-column="8" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="app.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Greetings/static/js/app.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="198">
-              <caret line="11" column="57" selection-start-line="11" selection-start-column="57" selection-end-line="11" selection-end-column="57" />
+            <state relative-caret-position="126">
+              <caret line="7" column="1" selection-start-line="7" selection-start-column="1" selection-end-line="7" selection-end-column="1" />
               <folding />
             </state>
           </provider>
@@ -161,6 +129,7 @@
         <option value="$PROJECT_DIR$/ngReact/app.js" />
         <option value="$PROJECT_DIR$/ngReact/data.json" />
         <option value="$PROJECT_DIR$/ngReact/react.html" />
+        <option value="$PROJECT_DIR$/data.json" />
       </list>
     </option>
   </component>
@@ -216,6 +185,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
@@ -245,13 +215,78 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="ngReact" />
+              <option name="myItemId" value="ADG_Hack" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="rahulakrishna.github.io" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="rahulakrishna.github.io" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ADG_Hack" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="static" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="rahulakrishna.github.io" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="rahulakrishna.github.io" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ADG_Hack" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="static" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="angular" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="rahulakrishna.github.io" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="rahulakrishna.github.io" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ADG_Hack" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="static" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="angular" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="angular" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -262,7 +297,7 @@
     <property name="full.screen.before.presentation.mode" value="false" />
     <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.Font" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
-    <property name="last_opened_file_path" value="$USER_HOME$/Works/react/comment/react-tutorial" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../BRSRC/BROSource" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
   </component>
   <component name="RunManager">
@@ -354,6 +389,10 @@
       <workItem from="1463478062299" duration="1769000" />
       <workItem from="1463761608260" duration="4709000" />
       <workItem from="1463794252307" duration="1189000" />
+      <workItem from="1463890745395" duration="88000" />
+      <workItem from="1463899315685" duration="2137000" />
+      <workItem from="1464347120615" duration="1252000" />
+      <workItem from="1464367045023" duration="35000" />
     </task>
     <task id="LOCAL-00001" summary="If this doesn't work! We have a serious bug!">
       <created>1462985224781</created>
@@ -373,13 +412,13 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="49790000" />
+    <option name="totallyTimeSpent" value="53302000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="27" width="1366" height="741" extended-state="1" />
+    <frame x="0" y="27" width="1366" height="741" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.23082651" sideWeight="0.6299342" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23082651" sideWeight="0.6299342" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32894737" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
@@ -436,48 +475,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/materialize/css/materialize.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60264">
-          <caret line="3348" column="9" selection-start-line="3348" selection-start-column="1" selection-end-line="3348" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/materialize/css/materialize.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60264">
-          <caret line="3348" column="9" selection-start-line="3348" selection-start-column="1" selection-end-line="3348" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/materialize/css/materialize.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60264">
-          <caret line="3348" column="9" selection-start-line="3348" selection-start-column="1" selection-end-line="3348" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -619,27 +616,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ADG_Hack/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1440">
-          <caret line="80" column="31" selection-start-line="80" selection-start-column="31" selection-end-line="80" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ADG_Hack/static/js/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ADG_Hack/static/js/controller.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/ADG_Hack/static/js/location.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="612">
@@ -679,7 +655,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="522">
           <caret line="29" column="8" selection-start-line="29" selection-start-column="8" selection-end-line="29" selection-end-column="8" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -687,7 +662,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
           <caret line="15" column="149" selection-start-line="15" selection-start-column="149" selection-end-line="15" selection-end-column="149" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -695,7 +669,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -703,7 +676,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="198">
           <caret line="11" column="57" selection-start-line="11" selection-start-column="57" selection-end-line="11" selection-end-column="57" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -711,15 +683,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="72">
           <caret line="4" column="101" selection-start-line="4" selection-start-column="101" selection-end-line="4" selection-end-column="101" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ngReact/angular.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="4" column="101" selection-start-line="4" selection-start-column="101" selection-end-line="4" selection-end-column="101" />
-          <folding />
+        <state relative-caret-position="108">
+          <caret line="6" column="59" selection-start-line="6" selection-start-column="59" selection-end-line="6" selection-end-column="59" />
         </state>
       </provider>
     </entry>
@@ -727,7 +697,55 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="335">
           <caret line="32" column="47" selection-start-line="32" selection-start-column="47" selection-end-line="32" selection-end-column="47" />
-          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ADG_Hack/template/partials/user_profile.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="12" column="31" selection-start-line="12" selection-start-column="31" selection-end-line="12" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ADG_Hack/static/js/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="10" column="26" selection-start-line="10" selection-start-column="26" selection-end-line="10" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ADG_Hack/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="75" column="0" selection-start-line="75" selection-start-column="0" selection-end-line="75" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ADG_Hack/static/js/controller.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="5" column="7" selection-start-line="5" selection-start-column="7" selection-end-line="5" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ADG_Hack/template/data/homepage_projects.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ADG_Hack/static/js/dash_controller.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ADG_Hack/static/js/dash_app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="7" column="18" selection-start-line="7" selection-start-column="18" selection-end-line="7" selection-end-column="18" />
         </state>
       </provider>
     </entry>
@@ -735,7 +753,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="414">
           <caret line="23" column="39" selection-start-line="23" selection-start-column="39" selection-end-line="23" selection-end-column="39" />
-          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ngReact/data.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="947">
+          <caret line="1001" column="1" selection-start-line="1001" selection-start-column="1" selection-end-line="1001" selection-end-column="1" />
         </state>
       </provider>
     </entry>
@@ -743,14 +767,20 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ngReact/data.json">
+    <entry file="file://$PROJECT_DIR$/ADG_Hack/static/angular/angular/angular.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="18018">
-          <caret line="1001" column="1" selection-start-line="1001" selection-start-column="1" selection-end-line="1001" selection-end-column="1" />
+        <state relative-caret-position="-32346">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="7" column="1" selection-start-line="7" selection-start-column="1" selection-end-line="7" selection-end-column="1" />
           <folding />
         </state>
       </provider>

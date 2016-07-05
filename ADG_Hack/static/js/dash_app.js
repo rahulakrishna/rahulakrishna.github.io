@@ -10,6 +10,6 @@ adgDashApp.config(['$routeProvider',function($routeProvider) {
 		controller:'profileCtrl'
 	}).
 	otherwise({
-		redirectTo:'/einstein'
+		redirectTo:'/john'
 	});
 }]);

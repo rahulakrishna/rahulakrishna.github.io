@@ -31,12 +31,15 @@
     <div class="col m6 push-m3 s12">
         <div class="">
             <div class="card-title">Angular Rendering (Using ng-repeat):</div>
+
             <div ng-repeat="phone in phones" class="col m12 s12">
                 <div class="card angular-card">
                     <div class="card-content">{{phone.desc}}</div>
                     <div class="card-title">{{phone.first_name}} {{phone.last_name}} <small>{{phone.ip_address}}</small></div>
                 </div>
             </div>
+
+
         </div>
     </div>
 </div>
@@ -53,10 +56,9 @@
 })();
 
 $(document).ready(function(){
-$('#hello').innerHTML=endTime-startTime;    
+$('#hello').innerHTML=endTime-startTime;
 });
 
 </script>
 </body>
 </html>
-
