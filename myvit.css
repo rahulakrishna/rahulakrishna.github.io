@@ -1,0 +1,39 @@
+body{
+	background: #92c0fe; font-family: Lato;
+}
+
+.box{
+	background: #fff; margin: 20px; padding: 50px; box-shadow: 0 0 10px 0 #a0a0a0; margin-bottom: 50px;
+}
+
+.title{
+	font-size:24px; margin-top: 25px; font-weight: 700; font-family: 'Nunito', sans-serif;
+}
+
+.logo{
+	width: 20%;
+}
+
+.custom-blue-text{
+	color: #92c0fe;
+}
+	
+	@media(min-width: 600px){
+		.content{
+			margin: 50px; font-weight: 400;
+			margin-left: 100px; margin-right: 100px;
+		}
+	}
+
+.end{
+	margin: 50px; font-weight: 700; font-size: 17px; font-family: Raleway;
+}
+
+	@media(min-width: 600px){
+		.footer{
+			width: 5%;
+		}
+	}
+		.footer{
+			width: 10%;
+		}
