@@ -1,0 +1,120 @@
+"*":
+  _dart:
+    _firstRun: true
+    _version: "1.0.1"
+  "activate-power-mode":
+    autoToggle: false
+    playAudio:
+      enabled: true
+    plugins:
+      playAudio: true
+      screenShake: true
+  "atom-ide-ui":
+    "atom-ide-code-format":
+      formatOnSave: true
+    "atom-ide-diagnostics-ui":
+      autoVisibility: true
+      showDiagnosticTraces: true
+      showDirectoryColumn: true
+    "atom-ide-terminal":
+      fontFamily: "Fira Code, courier-new, courier, monospace"
+    use:
+      "atom-ide-diagnostics": "never"
+      "atom-ide-diagnostics-ui": "never"
+  "atom-radiant-player": {}
+  "atom-spotify2":
+    showEqualizer: true
+  "atom-toolbar":
+    visible: false
+  "autocomplete-plus":
+    autoActivationDelay: 500
+  "better-git-blame":
+    searchInLayerEnabled: false
+  carbon:
+    autoAdjustWidth: false
+  "color-tabs": {}
+  core:
+    closeDeletedFileTabs: true
+    disabledPackages: [
+      "minimap-autohide"
+    ]
+    followSymlinks: false
+    ignoredNames: [
+      ".git"
+      ".hg"
+      ".svn"
+      ".DS_Store"
+      "._*"
+      "Thumbs.db"
+      "desktop.ini"
+      "node_modules"
+    ]
+    packagesWithKeymapsDisabled: [
+      "intentions"
+    ]
+    telemetryConsent: "limited"
+    themes: [
+      "one-dark-ui"
+      "material-syntax"
+    ]
+    titleBar: "hidden"
+  "crazy-formatter":
+    changeIndentation: true
+    fixPadding: false
+  dart:
+    configureErrorsView: "errors+warnings"
+    formatOnSave: true
+    hoverTooltip: true
+    sdkLocation: "/Users/rahulakrishna/flutter/bin/cache/dart-sdk"
+    showOutlineView: false
+  editor:
+    fontFamily: "Dank Mono, Fira Code"
+    fontSize: 13
+    showIndentGuide: true
+    showInvisibles: true
+  "exception-reporting":
+    userId: "506acfb5-1104-4222-baca-166e7a68dd60"
+  fonts:
+    fontFamily: "Verily Serif Mono"
+  "ide-typescript":
+    diagnosticsEnabled: false
+  "linter-tslint":
+    fixOnSave: true
+  "linter-ui-default":
+    panelHeight: 441
+    statusBarPosition: "Right"
+  minimap:
+    plugins:
+      bookmarks: true
+      bookmarksDecorationsZIndex: 0
+      linter: true
+      linterDecorationsZIndex: 0
+      "minimap-autohide": true
+      "minimap-autohideDecorationsZIndex": 0
+      pigments: true
+      pigmentsDecorationsZIndex: 0
+  "my-github-profile":
+    githubToken: "5244f8eced147c49d65f104916286843203a7d97"
+    githubUsername: "rahulakrishna"
+    statusbarNumber: "notifications"
+  pigments:
+    extendAutocompleteToColorValue: true
+    extendAutocompleteToVariables: true
+  "prettier-atom":
+    formatOnSaveOptions:
+      enabled: true
+      showInStatusBar: true
+    useEslint: true
+  "regular-notifications":
+    NotificationText: "Drink Water"
+  todo:
+    a_pattern: "TODO\\:."
+  "tree-view":
+    hideVcsIgnoredFiles: true
+  wakatime:
+    apikey: "Saved in your ~/.wakatime.cfg file"
+  welcome:
+    showOnStartup: false
+  zentabs:
+    manualMode: true
+    neverCloseDirty: true
