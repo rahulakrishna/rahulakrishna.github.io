@@ -1,0 +1,21 @@
+I"1<h4 id="the-problem-with-dropdowns">The problem with Dropdowns</h4>
+
+<ol>
+  <li>People use them in a certain way and build them in that way.</li>
+  <li>There’s huge limitations to customising dropdowns</li>
+</ol>
+
+<h3 id="the-default-html-way-of-creating-a-dropdown">The default HTML way of creating a dropdown</h3>
+
+<h4 id="code">Code</h4>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;select&gt;
+  &lt;option&gt;First Option&lt;/option&gt;
+  &lt;option&gt;Second Option&lt;/option&gt;
+&lt;/select&gt;
+</code></pre></div></div>
+
+<h4 id="result">Result</h4>
+
+<h5 id="we-need-to-create-a-codepencodesandbox-where-all-the-mouse-events-are-captured-and-logged">We need to create a codepen/codesandbox where all the mouse events are captured and logged</h5>
+:ET
