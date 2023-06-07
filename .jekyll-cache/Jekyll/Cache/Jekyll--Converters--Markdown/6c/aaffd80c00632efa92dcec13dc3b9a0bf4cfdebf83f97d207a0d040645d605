@@ -1,0 +1,24 @@
+I"ª<h4 id="the-problem-with-dropdowns">The problem with Dropdowns</h4>
+
+<ol>
+  <li>People use them in a certain way and build them in that way.</li>
+  <li>Thereâ€™s huge limitations to customising dropdowns</li>
+</ol>
+
+<h3 id="the-default-html-way-of-creating-a-dropdown">The default HTML way of creating a dropdown</h3>
+
+<h4 id="code">Code</h4>
+
+<section id="code">
+  <p class="codepen" data-height="300" data-default-tab="html,result" data-slug-hash="mdMZpow" data-user="rahulakrishna" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
+  <span>See the Pen <a href="https://codepen.io/rahulakrishna/pen/mdMZpow">
+  Untitled</a> by Rahul Krishna (<a href="https://codepen.io/rahulakrishna">@rahulakrishna</a>)
+  on <a href="https://codepen.io">CodePen</a>.</span>
+</p>
+  <script async="" src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
+
+</section>
+<h4 id="result">Result</h4>
+
+<h5 id="we-need-to-create-a-codepencodesandbox-where-all-the-mouse-events-are-captured-and-logged">We need to create a codepen/codesandbox where all the mouse events are captured and logged</h5>
+:ET
