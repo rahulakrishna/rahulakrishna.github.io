@@ -1,30 +1,41 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2021-11-24T23:01:59+05:30</updated><id>http://localhost:4000/feed.xml</id><title type="html">Rahul Krishna</title><subtitle>Frontend Engineer.</subtitle><entry><title type="html">Build an accessible dropdown in React</title><link href="http://localhost:4000/jekyll/update/2020/08/09/build-an-accessible-dropdown-in-react.html" rel="alternate" type="text/html" title="Build an accessible dropdown in React" /><published>2020-08-09T00:13:44+05:30</published><updated>2020-08-09T00:13:44+05:30</updated><id>http://localhost:4000/jekyll/update/2020/08/09/build-an-accessible-dropdown-in-react</id><content type="html" xml:base="http://localhost:4000/jekyll/update/2020/08/09/build-an-accessible-dropdown-in-react.html">&lt;h3 id=&quot;the-problem-with-dropdowns&quot;&gt;The problem with Dropdowns&lt;/h3&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2023-06-07T09:11:19+05:30</updated><id>http://localhost:4000/feed.xml</id><title type="html">Rahul Krishna</title><subtitle>Frontend Engineer.</subtitle><entry><title type="html">React Tips for Future</title><link href="http://localhost:4000/jekyll/update/2023/05/07/react-tips-for-future.html" rel="alternate" type="text/html" title="React Tips for Future" /><published>2023-05-07T09:16:44+05:30</published><updated>2023-05-07T09:16:44+05:30</updated><id>http://localhost:4000/jekyll/update/2023/05/07/react-tips-for-future</id><content type="html" xml:base="http://localhost:4000/jekyll/update/2023/05/07/react-tips-for-future.html">&lt;h3 id=&quot;1-do-not-over-use-useeffect&quot;&gt;1. Do not over-use useEffect&lt;/h3&gt;
 
-&lt;ul&gt;
-  &lt;li&gt;Accessibility
-    &lt;ul&gt;
-      &lt;li&gt;A dropdown needs to be selected via keyboard and mouse. On top of that it should support any accessibility devices&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Appearance
-    &lt;ul&gt;
-      &lt;li&gt;The plain dropdown might not go with the rest of the design system&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
+&lt;hr /&gt;
 
-&lt;h3 id=&quot;the-default-html-way-of-creating-a-dropdown&quot;&gt;The default HTML way of creating a dropdown&lt;/h3&gt;
+&lt;p&gt;For developers, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;useEffect&lt;/code&gt; is often seen as a replacement for &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;componentDidMount&lt;/code&gt;. However, strictly speaking, it is not. The name suggests that it is a place to manage side-effects, but that is not entirely accurate.&lt;/p&gt;
 
-&lt;section id=&quot;code&quot;&gt;
-  &lt;p class=&quot;codepen&quot; data-height=&quot;300&quot; data-default-tab=&quot;html,result&quot; data-slug-hash=&quot;mdMZpow&quot; data-user=&quot;rahulakrishna&quot; style=&quot;height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;&quot;&gt;
-  &lt;span&gt;See the Pen &lt;a href=&quot;https://codepen.io/rahulakrishna/pen/mdMZpow&quot;&gt;
-  Untitled&lt;/a&gt; by Rahul Krishna (&lt;a href=&quot;https://codepen.io/rahulakrishna&quot;&gt;@rahulakrishna&lt;/a&gt;)
-  on &lt;a href=&quot;https://codepen.io&quot;&gt;CodePen&lt;/a&gt;.&lt;/span&gt;
-&lt;/p&gt;
-  &lt;script async=&quot;&quot; src=&quot;https://cpwebassets.codepen.io/assets/embed/ei.js&quot;&gt;&lt;/script&gt;
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;useEffect&lt;/code&gt; is actually a way to synchronize local state with an external store. This means that &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;useEffect&lt;/code&gt; is a purely asynchronous method, with unpredictable performance implications. Think of &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;useEffect&lt;/code&gt; as a reliable henchman, who will eventually step in and complete your task, but not always on schedule.&lt;/p&gt;
 
-&lt;/section&gt;
+&lt;p&gt;Interestingly, updating state during rendering, which was once discouraged in the era of components, is now preferred over &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;useEffect&lt;/code&gt;.&lt;/p&gt;
 
-&lt;h3 id=&quot;the-straight-forward-react-way-of-creating-a-dropdown&quot;&gt;The straight-forward React way of creating a dropdown&lt;/h3&gt;
+&lt;h3 id=&quot;2-data-fetching-has-too-many-hidden-traps-do-not-re-invent-the-wheel-here&quot;&gt;2. Data fetching has too many hidden traps. Do not re-invent the wheel here&lt;/h3&gt;
 
-&lt;h5 id=&quot;we-need-to-create-a-codepencodesandbox-where-all-the-mouse-events-are-captured-and-logged&quot;&gt;We need to create a codepen/codesandbox where all the mouse events are captured and logged&lt;/h5&gt;</content><author><name></name></author><category term="jekyll" /><category term="update" /><summary type="html">The problem with Dropdowns</summary></entry></feed>
+&lt;hr /&gt;
+
+&lt;p&gt;Data fetching may appear straightforward at first. You are asynchronously fetching data from the remote and setting it in state. However, there are numerous hidden traps that must be taken into account, including caching, deduping, and performance, to name a few.&lt;/p&gt;
+
+&lt;p&gt;Do not think of data fetching as simply “making an API call.” Rather, think of it as syncing your local store with an external store. While &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;useEffect&lt;/code&gt; may seem like a perfect solution for this, it is best to use libraries specifically designed for this purpose, such as &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;react-query&lt;/code&gt;.&lt;/p&gt;
+
+&lt;h3 id=&quot;3-use-a-framework&quot;&gt;3. Use a framework&lt;/h3&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;With confidence, I must say that React is currently outdated. While using a library instead of committing to a framework used to be seen as an advantage, it is now a serious cause for confusion later on. It is recommended to use frameworks built on top of React such as NextJS and Remix.&lt;/p&gt;
+
+&lt;h3 id=&quot;4-think-about-styling&quot;&gt;4. Think about styling&lt;/h3&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;Use Tailwind. The biggest advantage is not only the extensive list of built-in classes but also the exceptional quality of the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;tailwind.config.js&lt;/code&gt; file. By strictly adhering to the use of classes, you can significantly enhance the organization of the application.&lt;/p&gt;
+
+&lt;h3 id=&quot;5-do-not-make-accommodations-for-product-teams-inconsistencies-in-code&quot;&gt;5. Do not make accommodations for product team’s inconsistencies in code&lt;/h3&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;This task can be challenging; however, when a product decides to go with a new table design for a solution that is already in place, there are two options to consider. One is to conditionally render the new style in the existing table, while the other is to create two different solutions for the same scenario inside the code. It is imperative to avoid both scenarios and ensure the protection of your code by enforcing a single, unified solution for each problem.&lt;/p&gt;
+
+&lt;h3 id=&quot;6-colours-need-names&quot;&gt;6. Colours need names&lt;/h3&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;When writing code, it is important to avoid using &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;#ffffff&lt;/code&gt;. Instead, utilize the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;text-white&lt;/code&gt; class from tailwind. This ensures that when new colors are introduced by the design/product, the responsibility lies with them to come up with a name. Rather than relying on &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;#ff2345&lt;/code&gt;, it is recommended to use &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;text-primary-red&lt;/code&gt; in the code.&lt;/p&gt;</content><author><name></name></author><category term="jekyll" /><category term="update" /><summary type="html">1. Do not over-use useEffect</summary></entry></feed>
