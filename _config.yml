@@ -29,11 +29,15 @@ github_username: rahulakrishna
 mastodon:
 - username: _thisdot
   instance: mastodon.social
+external_links:
+  enabled: true
+  rel: me
 
 # Build settings
 theme: minima
 plugins:
   - jekyll-feed
+  - jekyll-link-attributes
 # Exclude from processing.
 # The following items will not be processed, by default.
 # Any item listed under the `exclude:` key here will be automatically added to
