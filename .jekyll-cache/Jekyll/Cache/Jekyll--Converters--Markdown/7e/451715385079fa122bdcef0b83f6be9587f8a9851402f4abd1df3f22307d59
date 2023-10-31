@@ -1,90 +1,34 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-<!-- Begin Jekyll SEO tag v2.6.1 -->
-<title>Memory Leak in Google Maps | Rahul Krishna</title>
-<meta name="generator" content="Jekyll v4.1.1">
-<meta property="og:title" content="Memory Leak in Google Maps">
-<meta property="og:locale" content="en_US">
-<meta name="description" content="Premise">
-<meta property="og:description" content="Premise">
-<link rel="canonical" href="http://localhost:4000/blog/2023/10/21/memory-leak-in-google-maps.html">
-<meta property="og:url" content="http://localhost:4000/blog/2023/10/21/memory-leak-in-google-maps.html">
-<meta property="og:site_name" content="Rahul Krishna">
-<meta property="og:type" content="article">
-<meta property="article:published_time" content="2023-10-21T00:48:44+05:30">
-<script type="application/ld+json">
-{"datePublished":"2023-10-21T00:48:44+05:30","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/blog/2023/10/21/memory-leak-in-google-maps.html"},"url":"http://localhost:4000/blog/2023/10/21/memory-leak-in-google-maps.html","description":"Premise","@type":"BlogPosting","headline":"Memory Leak in Google Maps","dateModified":"2023-10-21T00:48:44+05:30","@context":"https://schema.org"}</script>
-<!-- End Jekyll SEO tag -->
-<link rel="stylesheet" href="/assets/main.css">
-<link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="Rahul Krishna">
-</head>
-<body>
-<header class="site-header" role="banner">
+I"�s<p>Date: October 21, 2023</p>
 
-  <div class="wrapper">
-<a class="site-title" rel="author" href="/">Rahul Krishna</a><nav class="site-nav">
-        <input type="checkbox" id="nav-trigger" class="nav-trigger">
-        <label for="nav-trigger">
-          <span class="menu-icon">
-            <svg viewbox="0 0 18 15" width="18px" height="15px">
-              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"></path>
-            </svg>
-          </span>
-        </label>
+<h3 id="premise">Premise</h3>
 
-        <div class="trigger"><a class="page-link" href="/about/">About</a></div>
-      </nav>
-</div>
-</header>
-<main class="page-content" aria-label="Content">
-      <div class="wrapper">
-        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+<hr />
 
-  <header class="post-header">
-    <h1 class="post-title p-name" itemprop="name headline">Memory Leak in Google Maps</h1>
-    <p class="post-meta">
-      <time class="dt-published" datetime="2023-10-21T00:48:44+05:30" itemprop="datePublished">Oct 21, 2023
-      </time></p>
-  </header>
-
-  <div class="post-content e-content" itemprop="articleBody">
-    <h3 id="premise">Premise</h3>
-
-<hr>
-
-<p><img src="https://thisdot.notion.site/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2Feb53edbf-045d-426c-aa09-d626c2816f18%2F0a0376ef-1fed-43b9-b795-a0838c2dc18a%2FUntitled.png?table=block&amp;id=5dbb1e64-43ed-4918-8607-981ca6a374a1&amp;spaceId=eb53edbf-045d-426c-aa09-d626c2816f18&amp;width=2000&amp;userId=&amp;cache=v2" alt="Untitled"></p>
+<p><img src="https://thisdot.notion.site/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2Feb53edbf-045d-426c-aa09-d626c2816f18%2F0a0376ef-1fed-43b9-b795-a0838c2dc18a%2FUntitled.png?table=block&amp;id=5dbb1e64-43ed-4918-8607-981ca6a374a1&amp;spaceId=eb53edbf-045d-426c-aa09-d626c2816f18&amp;width=2000&amp;userId=&amp;cache=v2" alt="Untitled" /></p>
 
 <p>We need to render a map like this using <code class="language-plaintext highlighter-rouge">google-map-react</code> . But rendering large data points makes the page unresponsive for a while and subsequent actions become slower indicating a memory leak occuring.</p>
 
-<p><img src="https://thisdot.notion.site/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2Feb53edbf-045d-426c-aa09-d626c2816f18%2F0e323202-b790-4d19-9f30-e80445bcea0f%2FUntitled.png?table=block&amp;id=30bf63d9-45c4-4bbe-b5d0-b6d31ee4bff2&amp;spaceId=eb53edbf-045d-426c-aa09-d626c2816f18&amp;width=770&amp;userId=&amp;cache=v2" alt="Untitled"></p>
+<p><img src="https://thisdot.notion.site/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2Feb53edbf-045d-426c-aa09-d626c2816f18%2F0e323202-b790-4d19-9f30-e80445bcea0f%2FUntitled.png?table=block&amp;id=30bf63d9-45c4-4bbe-b5d0-b6d31ee4bff2&amp;spaceId=eb53edbf-045d-426c-aa09-d626c2816f18&amp;width=770&amp;userId=&amp;cache=v2" alt="Untitled" /></p>
 
 <p>This is the code used. The only cleanup happening was setting <code class="language-plaintext highlighter-rouge">data</code> to <code class="language-plaintext highlighter-rouge">null</code>.</p>
 
 <h3 id="the-issue">The issue</h3>
 
-<hr>
+<hr />
 
 <p>There are three issues present here.</p>
 
 <ol>
-  <li>
-<strong>Destroying Google Maps instance never frees up memory.</strong> This is a long standing issue within the Google Maps Javascript Library. This meant that after visiting the page, around 600MB of memory was never freed. The issue was first reported in Google’s Bug Tracker in 2011 and the latest comment in that was in February 2023! A 12 year old bug!</li>
-  <li>
-<strong>A line consists of three drawings.</strong> A “trip line” should ideally be one stroke, but here we were making three drawings. One <code class="language-plaintext highlighter-rouge">Polyline</code>, and two <code class="language-plaintext highlighter-rouge">Markers</code>. Somehow, drawing the marker seems to be slower and hogs up the resources.</li>
-  <li>
-<strong>The <code class="language-plaintext highlighter-rouge">Polylines</code> could be made into an Overlay.</strong> Instead of creating the classes inside the Google Maps, we can make a separate <code class="language-plaintext highlighter-rouge">Polyline</code> component and handle all it’s memory issues there.</li>
+  <li><strong>Destroying Google Maps instance never frees up memory.</strong> This is a long standing issue within the Google Maps Javascript Library. This meant that after visiting the page, around 600MB of memory was never freed. The issue was first reported in Google’s Bug Tracker in 2011 and the latest comment in that was in February 2023! A 12 year old bug!</li>
+  <li><strong>A line consists of three drawings.</strong> A “trip line” should ideally be one stroke, but here we were making three drawings. One <code class="language-plaintext highlighter-rouge">Polyline</code>, and two <code class="language-plaintext highlighter-rouge">Markers</code>. Somehow, drawing the marker seems to be slower and hogs up the resources.</li>
+  <li><strong>The <code class="language-plaintext highlighter-rouge">Polylines</code> could be made into an Overlay.</strong> Instead of creating the classes inside the Google Maps, we can make a separate <code class="language-plaintext highlighter-rouge">Polyline</code> component and handle all it’s memory issues there.</li>
 </ol>
 
 <h3 id="the-fix-for-google-maps-memory-leak">The fix for Google Maps memory leak</h3>
 
-<hr>
+<hr />
 
-<p><img src="https://thisdot.notion.site/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2Feb53edbf-045d-426c-aa09-d626c2816f18%2Ff108918c-c184-41f9-b6a7-2af7273ea800%2FUntitled.png?table=block&amp;id=80c8accc-556f-495f-813f-82e5ae28c497&amp;spaceId=eb53edbf-045d-426c-aa09-d626c2816f18&amp;width=2000&amp;userId=&amp;cache=v2" alt="Untitled"></p>
+<p><img src="https://thisdot.notion.site/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2Feb53edbf-045d-426c-aa09-d626c2816f18%2Ff108918c-c184-41f9-b6a7-2af7273ea800%2FUntitled.png?table=block&amp;id=80c8accc-556f-495f-813f-82e5ae28c497&amp;spaceId=eb53edbf-045d-426c-aa09-d626c2816f18&amp;width=2000&amp;userId=&amp;cache=v2" alt="Untitled" /></p>
 
 <p>But we can try to Introduce a function to manually delete all of Google Map’s event listeners.</p>
 
@@ -174,11 +118,11 @@
 <span class="p">}</span>
 </code></pre></div></div>
 
-<p>Credit to this commenter: <a href="https://issuetracker.google.com/issues/35821412#comment53" rel="me" target="_blank">https://issuetracker.google.com/issues/35821412#comment53</a></p>
+<p>Credit to this commenter: <a href="https://issuetracker.google.com/issues/35821412#comment53">https://issuetracker.google.com/issues/35821412#comment53</a></p>
 
 <p>This resolves the memory issue to an extent.</p>
 
-<p><img src="https://thisdot.notion.site/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2Feb53edbf-045d-426c-aa09-d626c2816f18%2Ffe42a452-2cc2-427c-968f-82db2d143156%2FUntitled.png?table=block&amp;id=0d8af477-8bce-4572-aab4-45dd1c0d31e0&amp;spaceId=eb53edbf-045d-426c-aa09-d626c2816f18&amp;width=1150&amp;userId=&amp;cache=v2" alt="The flow observed is. Landing page → Page with Trips View → Page with another Google Map → Page without Google Map"></p>
+<p><img src="https://thisdot.notion.site/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2Feb53edbf-045d-426c-aa09-d626c2816f18%2Ffe42a452-2cc2-427c-968f-82db2d143156%2FUntitled.png?table=block&amp;id=0d8af477-8bce-4572-aab4-45dd1c0d31e0&amp;spaceId=eb53edbf-045d-426c-aa09-d626c2816f18&amp;width=1150&amp;userId=&amp;cache=v2" alt="The flow observed is. Landing page → Page with Trips View → Page with another Google Map → Page without Google Map" /></p>
 
 <p>The flow observed is. Landing page → Page with Trips View → Page with another Google Map → Page without Google Map</p>
 
@@ -186,7 +130,7 @@
 
 <h3 id="the-fix-for-three-drawings">The fix for three drawings</h3>
 
-<hr>
+<hr />
 
 <p>This one happens to be very simple. While creating a <code class="language-plaintext highlighter-rouge">Polyline</code>, just specify an icon and set the <code class="language-plaintext highlighter-rouge">repeat</code> value as <code class="language-plaintext highlighter-rouge">100%</code>.</p>
 
@@ -205,15 +149,15 @@
 <span class="p">});</span>
 </code></pre></div></div>
 
-<p>We can even make the <code class="language-plaintext highlighter-rouge">icon</code> a <code class="language-plaintext highlighter-rouge">SymbolPath.FORWARD_PATH</code> (Reference: <a href="https://developers.google.com/maps/documentation/javascript/reference/marker#SymbolPath" rel="me" target="_blank">https://developers.google.com/maps/documentation/javascript/reference/marker#SymbolPath</a>) indicating the trip direction as well!</p>
+<p>We can even make the <code class="language-plaintext highlighter-rouge">icon</code> a <code class="language-plaintext highlighter-rouge">SymbolPath.FORWARD_PATH</code> (Reference: <a href="https://developers.google.com/maps/documentation/javascript/reference/marker#SymbolPath">https://developers.google.com/maps/documentation/javascript/reference/marker#SymbolPath</a>) indicating the trip direction as well!</p>
 
 <h3 id="making-the-polylines-an-overlay">Making the Polylines an Overlay</h3>
 
-<hr>
+<hr />
 
 <p>Now all of the computations happen inside the <code class="language-plaintext highlighter-rouge">onGoogleApiLoaded</code> method of <code class="language-plaintext highlighter-rouge">google-map-react</code>.</p>
 
-<p><img src="https://thisdot.notion.site/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2Feb53edbf-045d-426c-aa09-d626c2816f18%2Fc21921e8-55ab-43f5-988b-7b687e7d6640%2FUntitled.png?table=block&amp;id=adc3f881-36c7-434c-8519-eefa45454bcc&amp;spaceId=eb53edbf-045d-426c-aa09-d626c2816f18&amp;width=2000&amp;userId=&amp;cache=v2" alt="Untitled"></p>
+<p><img src="https://thisdot.notion.site/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2Feb53edbf-045d-426c-aa09-d626c2816f18%2Fc21921e8-55ab-43f5-988b-7b687e7d6640%2FUntitled.png?table=block&amp;id=adc3f881-36c7-434c-8519-eefa45454bcc&amp;spaceId=eb53edbf-045d-426c-aa09-d626c2816f18&amp;width=2000&amp;userId=&amp;cache=v2" alt="Untitled" /></p>
 
 <p>First thing, we make this function do nothing but set a state called <code class="language-plaintext highlighter-rouge">map</code>. This is for us to later set the <code class="language-plaintext highlighter-rouge">PolyLine</code> on to the map.</p>
 
@@ -270,58 +214,19 @@
 
 <p>Now inside the component,</p>
 
-<p><img src="https://thisdot.notion.site/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2Feb53edbf-045d-426c-aa09-d626c2816f18%2F06f2f061-7282-4b42-b7bf-05a516c6948a%2FUntitled.png?table=block&amp;id=fb0f015d-24d0-4dda-b856-b0f1071b8920&amp;spaceId=eb53edbf-045d-426c-aa09-d626c2816f18&amp;width=2000&amp;userId=&amp;cache=v2" alt="Untitled"></p>
+<p><img src="https://thisdot.notion.site/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2Feb53edbf-045d-426c-aa09-d626c2816f18%2F06f2f061-7282-4b42-b7bf-05a516c6948a%2FUntitled.png?table=block&amp;id=fb0f015d-24d0-4dda-b856-b0f1071b8920&amp;spaceId=eb53edbf-045d-426c-aa09-d626c2816f18&amp;width=2000&amp;userId=&amp;cache=v2" alt="Untitled" /></p>
 
 <p>Finally, as a sibling to <code class="language-plaintext highlighter-rouge">GoogleMapReact</code> we introduce the <code class="language-plaintext highlighter-rouge">Polyline</code> component.</p>
 
-<p><img src="https://thisdot.notion.site/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2Feb53edbf-045d-426c-aa09-d626c2816f18%2F1b6f3ecc-80c9-4b1e-8d59-243dc478a655%2FUntitled.png?table=block&amp;id=fd6242dd-8dd0-4275-9be4-3c536257d5e6&amp;spaceId=eb53edbf-045d-426c-aa09-d626c2816f18&amp;width=770&amp;userId=&amp;cache=v2" alt="Untitled"></p>
+<p><img src="https://thisdot.notion.site/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2Feb53edbf-045d-426c-aa09-d626c2816f18%2F1b6f3ecc-80c9-4b1e-8d59-243dc478a655%2FUntitled.png?table=block&amp;id=fd6242dd-8dd0-4275-9be4-3c536257d5e6&amp;spaceId=eb53edbf-045d-426c-aa09-d626c2816f18&amp;width=770&amp;userId=&amp;cache=v2" alt="Untitled" /></p>
 
 <h3 id="final-result">Final Result</h3>
 
-<hr>
+<hr />
 
 <p>Maps look way more meaningful</p>
 
-<p><img src="https://thisdot.notion.site/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2Feb53edbf-045d-426c-aa09-d626c2816f18%2F31bb1d16-a928-4993-940d-dba7f906cfe8%2FUntitled.png?table=block&amp;id=2614941e-393c-448d-b6cc-87fa477d10e6&amp;spaceId=eb53edbf-045d-426c-aa09-d626c2816f18&amp;width=2000&amp;userId=&amp;cache=v2" alt="Untitled"></p>
+<p><img src="https://thisdot.notion.site/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2Feb53edbf-045d-426c-aa09-d626c2816f18%2F31bb1d16-a928-4993-940d-dba7f906cfe8%2FUntitled.png?table=block&amp;id=2614941e-393c-448d-b6cc-87fa477d10e6&amp;spaceId=eb53edbf-045d-426c-aa09-d626c2816f18&amp;width=2000&amp;userId=&amp;cache=v2" alt="Untitled" /></p>
 
 <p>The memory consumption which went from <code class="language-plaintext highlighter-rouge">500MB</code> to <code class="language-plaintext highlighter-rouge">367MB</code> after memory cleanup, went down to <code class="language-plaintext highlighter-rouge">140MB</code> after removing the marker drawings!</p>
-
-  </div>
-<a class="u-url" href="/blog/2023/10/21/memory-leak-in-google-maps.html" hidden></a>
-</article>
-
-      </div>
-    </main><footer class="site-footer h-card">
-  <data class="u-url" href="/"></data>
-
-  <div class="wrapper">
-
-    <h2 class="footer-heading">Rahul Krishna</h2>
-
-    <div class="footer-col-wrapper">
-      <div class="footer-col footer-col-1">
-        <ul class="contact-list">
-          <li class="p-name">Rahul Krishna</li>
-<li><a class="u-email" href="mailto:rkbalu524@gmail.com">rkbalu524@gmail.com</a></li>
-</ul>
-      </div>
-
-      <div class="footer-col footer-col-2">
-<ul class="social-media-list">
-<li><a href="https://github.com/rahulakrishna" rel="me" target="_blank"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#github"></use></svg> <span class="username">rahulakrishna</span></a></li>
-<li><a href="https://mastodon.social/@_thisdot" rel="me" target="_blank"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#mastodon"></use></svg> <span class="username">_thisdot</span></a></li>
-<li><a href="https://www.twitter.com/_thisdot" rel="me" target="_blank"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#twitter"></use></svg> <span class="username">_thisdot</span></a></li>
-</ul>
-</div>
-
-      <div class="footer-col footer-col-3">
-        <p>Frontend Engineer.</p>
-      </div>
-    </div>
-
-  </div>
-
-</footer>
-</body>
-
-</html>
+:ET

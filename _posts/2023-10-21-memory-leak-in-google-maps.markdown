@@ -5,10 +5,6 @@ date: 2023-10-21 00:48:44 +0530
 categories: blog
 ---
 
-# Memory Leak in Google Maps
-
-Date: October 21, 2023
-
 ### Premise
 
 ---

@@ -5,10 +5,6 @@ date: 2023-10-31 17:35:44 +0530
 categories: blog
 ---
 
-# Stash as a Commit
-
-Date: October 31, 2023
-
 ### What is a Stash?
 
 ---
