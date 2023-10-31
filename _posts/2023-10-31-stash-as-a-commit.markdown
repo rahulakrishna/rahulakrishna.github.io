@@ -77,7 +77,7 @@ Let’s say you’re in `feature-branch-1` and you need to switch branches to `m
 
 Here’s the alternative commit method in Atom.
 
-[https://www.loom.com/share/3b5ae799bb104aa5891ed51a92d5f6ca?sid=22e04793-241b-4213-aacd-a82d668dce49](https://www.loom.com/share/3b5ae799bb104aa5891ed51a92d5f6ca?sid=22e04793-241b-4213-aacd-a82d668dce49)
+<div style="position: relative; padding-bottom: 60.30150753768844%; height: 0;"><iframe src="https://www.loom.com/embed/1823d6c60e0646d5a8f26022267ea0cf?sid=6c6af21e-9e4d-46e5-aca9-1359e96a78b3" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe></div>
 
 ### What about VS Code?
 
@@ -95,7 +95,7 @@ A lot more cluttered than my Atom. But it also does a lot more than Atom!
 
 ---
 
-[https://www.loom.com/share/a1fa5c8bebd74fb889ae26dbbfcf63ee?sid=386b9b4e-44e3-4eec-80ab-1e5987b35dad](https://www.loom.com/share/a1fa5c8bebd74fb889ae26dbbfcf63ee?sid=386b9b4e-44e3-4eec-80ab-1e5987b35dad)
+<div style="position: relative; padding-bottom: 58.91980360065466%; height: 0;"><iframe src="https://www.loom.com/embed/a1fa5c8bebd74fb889ae26dbbfcf63ee?sid=e00e01da-5fc6-4b6a-95eb-a9c3912e3e95" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe></div>
 
 ### The Advantage
 

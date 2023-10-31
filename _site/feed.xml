@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2023-10-31T18:02:00+05:30</updated><id>http://localhost:4000/feed.xml</id><title type="html">Rahul Krishna</title><subtitle>Frontend Engineer.</subtitle><entry><title type="html">Stash as a Commit</title><link href="http://localhost:4000/blog/2023/10/31/stash-as-a-commit.html" rel="alternate" type="text/html" title="Stash as a Commit" /><published>2023-10-31T17:35:44+05:30</published><updated>2023-10-31T17:35:44+05:30</updated><id>http://localhost:4000/blog/2023/10/31/stash-as-a-commit</id><content type="html" xml:base="http://localhost:4000/blog/2023/10/31/stash-as-a-commit.html">&lt;h1 id=&quot;stash-as-a-commit&quot;&gt;Stash as a Commit&lt;/h1&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2023-10-31T18:07:40+05:30</updated><id>http://localhost:4000/feed.xml</id><title type="html">Rahul Krishna</title><subtitle>Frontend Engineer.</subtitle><entry><title type="html">Stash as a Commit</title><link href="http://localhost:4000/blog/2023/10/31/stash-as-a-commit.html" rel="alternate" type="text/html" title="Stash as a Commit" /><published>2023-10-31T17:35:44+05:30</published><updated>2023-10-31T17:35:44+05:30</updated><id>http://localhost:4000/blog/2023/10/31/stash-as-a-commit</id><content type="html" xml:base="http://localhost:4000/blog/2023/10/31/stash-as-a-commit.html">&lt;h1 id=&quot;stash-as-a-commit&quot;&gt;Stash as a Commit&lt;/h1&gt;
 
 &lt;p&gt;Date: October 31, 2023&lt;/p&gt;
 
@@ -70,7 +70,7 @@ content/post/2023-10-20-some-miscellaneous-git-facts.markdown | 40 +++++++++++++
 
 &lt;p&gt;Here’s the alternative commit method in Atom.&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&quot;https://www.loom.com/share/3b5ae799bb104aa5891ed51a92d5f6ca?sid=22e04793-241b-4213-aacd-a82d668dce49&quot;&gt;https://www.loom.com/share/3b5ae799bb104aa5891ed51a92d5f6ca?sid=22e04793-241b-4213-aacd-a82d668dce49&lt;/a&gt;&lt;/p&gt;
+&lt;div style=&quot;position: relative; padding-bottom: 60.30150753768844%; height: 0;&quot;&gt;&lt;iframe src=&quot;https://www.loom.com/embed/1823d6c60e0646d5a8f26022267ea0cf?sid=6c6af21e-9e4d-46e5-aca9-1359e96a78b3&quot; frameborder=&quot;0&quot; webkitallowfullscreen=&quot;&quot; mozallowfullscreen=&quot;&quot; allowfullscreen=&quot;&quot; style=&quot;position: absolute; top: 0; left: 0; width: 100%; height: 100%;&quot;&gt;&lt;/iframe&gt;&lt;/div&gt;
 
 &lt;h3 id=&quot;what-about-vs-code&quot;&gt;What about VS Code?&lt;/h3&gt;
 
@@ -88,7 +88,7 @@ content/post/2023-10-20-some-miscellaneous-git-facts.markdown | 40 +++++++++++++
 
 &lt;hr /&gt;
 
-&lt;p&gt;&lt;a href=&quot;https://www.loom.com/share/a1fa5c8bebd74fb889ae26dbbfcf63ee?sid=386b9b4e-44e3-4eec-80ab-1e5987b35dad&quot;&gt;https://www.loom.com/share/a1fa5c8bebd74fb889ae26dbbfcf63ee?sid=386b9b4e-44e3-4eec-80ab-1e5987b35dad&lt;/a&gt;&lt;/p&gt;
+&lt;div style=&quot;position: relative; padding-bottom: 58.91980360065466%; height: 0;&quot;&gt;&lt;iframe src=&quot;https://www.loom.com/embed/a1fa5c8bebd74fb889ae26dbbfcf63ee?sid=e00e01da-5fc6-4b6a-95eb-a9c3912e3e95&quot; frameborder=&quot;0&quot; webkitallowfullscreen=&quot;&quot; mozallowfullscreen=&quot;&quot; allowfullscreen=&quot;&quot; style=&quot;position: absolute; top: 0; left: 0; width: 100%; height: 100%;&quot;&gt;&lt;/iframe&gt;&lt;/div&gt;
 
 &lt;h3 id=&quot;the-advantage&quot;&gt;The Advantage&lt;/h3&gt;
 
