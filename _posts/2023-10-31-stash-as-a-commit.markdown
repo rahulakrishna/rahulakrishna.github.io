@@ -93,6 +93,12 @@ A lot more cluttered than my Atom. But it also does a lot more than Atom!
 
 <div style="position: relative; padding-bottom: 58.91980360065466%; height: 0;"><iframe src="https://www.loom.com/embed/a1fa5c8bebd74fb889ae26dbbfcf63ee?sid=e00e01da-5fc6-4b6a-95eb-a9c3912e3e95" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe></div>
 
+### Bonus: If you really want to do it on the command line
+
+---
+
+<div style="position: relative; padding-bottom: 74.34052757793765%; height: 0;"><iframe src="https://www.loom.com/embed/70c3d90ac8a64c2aaae010394174a8bb?sid=5674d81a-c4e8-4438-aaea-ec7200ae4212" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe></div>
+
 ### The Advantage
 
 ---
