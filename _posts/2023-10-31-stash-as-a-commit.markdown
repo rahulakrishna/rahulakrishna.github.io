@@ -73,7 +73,7 @@ Let’s say you’re in `feature-branch-1` and you need to switch branches to `m
 
 Here’s the alternative commit method in Atom.
 
-<div style="position: relative; padding-bottom: 60.30150753768844%; height: 0;"><iframe src="https://www.loom.com/embed/1823d6c60e0646d5a8f26022267ea0cf?sid=6c6af21e-9e4d-46e5-aca9-1359e96a78b3" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe></div>
+<div style="position: relative; padding-bottom: 60.30150753768844%; height: 0;"><iframe src="https://www.loom.com/embed/3b5ae799bb104aa5891ed51a92d5f6ca?sid=55db5932-acf4-4c6f-89c3-b1eca8610ee7" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe></div>
 
 ### What about VS Code?
 
