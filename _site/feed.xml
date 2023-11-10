@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2023-10-31T18:10:56+05:30</updated><id>http://localhost:4000/feed.xml</id><title type="html">Rahul Krishna</title><subtitle>Frontend Engineer.</subtitle><entry><title type="html">Stash as a Commit</title><link href="http://localhost:4000/blog/2023/10/31/stash-as-a-commit.html" rel="alternate" type="text/html" title="Stash as a Commit" /><published>2023-10-31T17:35:44+05:30</published><updated>2023-10-31T17:35:44+05:30</updated><id>http://localhost:4000/blog/2023/10/31/stash-as-a-commit</id><content type="html" xml:base="http://localhost:4000/blog/2023/10/31/stash-as-a-commit.html">&lt;h3 id=&quot;what-is-a-stash&quot;&gt;What is a Stash?&lt;/h3&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2023-11-10T11:33:12+05:30</updated><id>http://localhost:4000/feed.xml</id><title type="html">Rahul Krishna</title><subtitle>Frontend Engineer.</subtitle><entry><title type="html">Stash as a Commit</title><link href="http://localhost:4000/blog/2023/10/31/stash-as-a-commit.html" rel="alternate" type="text/html" title="Stash as a Commit" /><published>2023-10-31T17:35:44+05:30</published><updated>2023-10-31T17:35:44+05:30</updated><id>http://localhost:4000/blog/2023/10/31/stash-as-a-commit</id><content type="html" xml:base="http://localhost:4000/blog/2023/10/31/stash-as-a-commit.html">&lt;h3 id=&quot;what-is-a-stash&quot;&gt;What is a Stash?&lt;/h3&gt;
 
 &lt;hr /&gt;
 
@@ -66,7 +66,7 @@ content/post/2023-10-20-some-miscellaneous-git-facts.markdown | 40 +++++++++++++
 
 &lt;p&gt;Here’s the alternative commit method in Atom.&lt;/p&gt;
 
-&lt;div style=&quot;position: relative; padding-bottom: 60.30150753768844%; height: 0;&quot;&gt;&lt;iframe src=&quot;https://www.loom.com/embed/1823d6c60e0646d5a8f26022267ea0cf?sid=6c6af21e-9e4d-46e5-aca9-1359e96a78b3&quot; frameborder=&quot;0&quot; webkitallowfullscreen=&quot;&quot; mozallowfullscreen=&quot;&quot; allowfullscreen=&quot;&quot; style=&quot;position: absolute; top: 0; left: 0; width: 100%; height: 100%;&quot;&gt;&lt;/iframe&gt;&lt;/div&gt;
+&lt;div style=&quot;position: relative; padding-bottom: 60.30150753768844%; height: 0;&quot;&gt;&lt;iframe src=&quot;https://www.loom.com/embed/3b5ae799bb104aa5891ed51a92d5f6ca?sid=55db5932-acf4-4c6f-89c3-b1eca8610ee7&quot; frameborder=&quot;0&quot; webkitallowfullscreen=&quot;&quot; mozallowfullscreen=&quot;&quot; allowfullscreen=&quot;&quot; style=&quot;position: absolute; top: 0; left: 0; width: 100%; height: 100%;&quot;&gt;&lt;/iframe&gt;&lt;/div&gt;
 
 &lt;h3 id=&quot;what-about-vs-code&quot;&gt;What about VS Code?&lt;/h3&gt;
 
@@ -85,6 +85,12 @@ content/post/2023-10-20-some-miscellaneous-git-facts.markdown | 40 +++++++++++++
 &lt;hr /&gt;
 
 &lt;div style=&quot;position: relative; padding-bottom: 58.91980360065466%; height: 0;&quot;&gt;&lt;iframe src=&quot;https://www.loom.com/embed/a1fa5c8bebd74fb889ae26dbbfcf63ee?sid=e00e01da-5fc6-4b6a-95eb-a9c3912e3e95&quot; frameborder=&quot;0&quot; webkitallowfullscreen=&quot;&quot; mozallowfullscreen=&quot;&quot; allowfullscreen=&quot;&quot; style=&quot;position: absolute; top: 0; left: 0; width: 100%; height: 100%;&quot;&gt;&lt;/iframe&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;bonus-if-you-really-want-to-do-it-on-the-command-line&quot;&gt;Bonus: If you really want to do it on the command line&lt;/h3&gt;
+
+&lt;hr /&gt;
+
+&lt;div style=&quot;position: relative; padding-bottom: 74.34052757793765%; height: 0;&quot;&gt;&lt;iframe src=&quot;https://www.loom.com/embed/70c3d90ac8a64c2aaae010394174a8bb?sid=5674d81a-c4e8-4438-aaea-ec7200ae4212&quot; frameborder=&quot;0&quot; webkitallowfullscreen=&quot;&quot; mozallowfullscreen=&quot;&quot; allowfullscreen=&quot;&quot; style=&quot;position: absolute; top: 0; left: 0; width: 100%; height: 100%;&quot;&gt;&lt;/iframe&gt;&lt;/div&gt;
 
 &lt;h3 id=&quot;the-advantage&quot;&gt;The Advantage&lt;/h3&gt;
 
