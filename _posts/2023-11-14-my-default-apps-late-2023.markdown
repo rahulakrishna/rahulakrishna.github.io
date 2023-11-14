@@ -5,8 +5,6 @@ date: 2023-11-14 11:55:44 +0530
 categories: blog
 ---
 
-# My App Defaults (Late 2023)
-
 📨 Mail Client: Apple Mail
 
 📮 Mail Server: GMail
