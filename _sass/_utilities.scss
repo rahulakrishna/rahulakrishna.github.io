@@ -35,7 +35,7 @@
   padding-bottom: 1px;
 
   &:hover {
-    color: $color-primary-link;
+    color: var(--color-primary-link);
     text-decoration: none;
     border-bottom: 2px dotted;
   }
@@ -61,13 +61,13 @@
 
 
 /* Theme color utilities */
-.header-background { background-color: $color-background; }
-.header-border { border-color: $color-foreground; }
-.header-title { color: $color-title; }
-.header-text { color: $color-foreground; }
-.header-social { fill: $color-foreground; }
-.header-link:hover { color: $color-nav-link !important; } // used for navigation links on homepage
-.text-accent { color: $color-text-accent; } // used for date in post list and home link
+.header-background { background-color: var(--color-background); }
+.header-border { border-color: var(--color-foreground); }
+.header-title { color: var(--color-title); }
+.header-text { color: var(--color-foreground); }
+.header-social { fill: var(--color-foreground); }
+.header-link:hover { color: var(--color-nav-link) !important; } // used for navigation links on homepage
+.text-accent { color: var(---color-text-accent); } // used for date in post list and home link
 
 /* Layout utilities */
 .container { max-width: $container-width; }

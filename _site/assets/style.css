@@ -6,7 +6,7 @@ input, select, textarea, button { font-family: inherit; font-size: inherit; line
 body, h1, h2, h3, h4, h5, h6, p, blockquote, pre, hr, dl, dd, ol, ul, figure { margin: 0; padding: 0; }
 
 /** Basic styling */
-body { font-family: Athelas, Palatino, Georgia, serif; font-size: 16px; line-height: 1.5; color: #2B2826; background-color: #fff; }
+body { font-family: Athelas, Palatino, Georgia, serif; font-size: 16px; line-height: 1.5; color: var(--color-body-text); background-color: var(--color-background); }
 
 p { margin-top: 0; margin-bottom: 0.5em; }
 
@@ -26,11 +26,11 @@ h6, .h6 { font-size: 12px; text-transform: uppercase; letter-spacing: 0.02em; }
 
 a { color: inherit; text-decoration: none; padding-bottom: 1px; border-bottom: 1px solid currentColor; }
 
-a:hover { color: #2B2826; text-decoration: none; border-bottom: 1px dotted; }
+a:hover { color: var(--color-primary-link); text-decoration: none; border-bottom: 1px dotted; }
 
-pre { border-left: 8px solid #D7D5D1; margin: 32px 0; padding-left: 16px; width: 75%; overflow-x: auto; }
+pre { border-left: 8px solid var(--color-border); margin: 32px 0; padding-left: 16px; width: 75%; overflow-x: auto; }
 
-code { color: #423F38; font-size: 16px; padding: 1px 4px; }
+code { color: var(--color-code); font-size: 16px; padding: 1px 4px; }
 
 .prose p, .prose ol, .prose ul { font-size: 24px; margin-bottom: 1em; width: 100%; }
 
@@ -42,13 +42,13 @@ code { color: #423F38; font-size: 16px; padding: 1px 4px; }
 
 .prose img { max-width: 100%; }
 
-.prose blockquote { line-height: 1.375; padding-left: 20px; margin: 40px 0 40px -16px; border-left: 8px solid #D7D5D1; font-style: italic; }
+.prose blockquote { line-height: 1.375; padding-left: 20px; margin: 40px 0 40px -16px; border-left: 8px solid var(--color-border); font-style: italic; }
 
 .prose blockquote p { font-size: 24px; }
 
 @media (min-width: 52em) { .prose blockquote { padding-left: 32px; margin: 64px 0 64px -40px; max-width: 110%; } .prose blockquote p { font-size: 32px; } }
 
-.prose hr { color: #2B2826; border-style: solid; border-width: thin; margin-top: 0.5em; margin-bottom: 0.5em; }
+.prose hr { color: var(--color-body-text); border-style: solid; border-width: thin; margin-top: 0.5em; margin-bottom: 0.5em; }
 
 .prose dt { font-weight: bold; font-style: italic; line-height: 1.25; }
 
@@ -58,11 +58,11 @@ code { color: #423F38; font-size: 16px; padding: 1px 4px; }
 
 .prose table th { font-weight: bold; text-align: left; }
 
-.prose table th, .prose table td { padding: 16px 32px 16px 2px; border-top: 1px solid #2B2826; border-bottom: 1px solid #2B2826; }
+.prose table th, .prose table td { padding: 16px 32px 16px 2px; border-top: 1px solid var(--color-body-text); border-bottom: 1px solid var(--color-body-text); }
 
-.prose table tr { border-top: 1px solid #2B2826; }
+.prose table tr { border-top: 1px solid var(--color-body-text); }
 
-.prose table tr th { border-top: 2px solid #2B2826; border-bottom: 2px solid #2B2826; }
+.prose table tr th { border-top: 2px solid var(--color-body-text); border-bottom: 2px solid var(--color-body-text); }
 
 /* Type utilities */
 .h0 { font-size: 48px; line-height: 1.0125; margin-top: 0.85em; word-wrap: break-word; }
@@ -77,7 +77,7 @@ code { color: #423F38; font-size: 16px; padding: 1px 4px; }
 
 .link-primary { font-weight: bold; text-decoration: none; border-bottom: 2px solid currentColor; padding-bottom: 1px; }
 
-.link-primary:hover { color: #2B2826; text-decoration: none; border-bottom: 2px dotted; }
+.link-primary:hover { color: var(--color-primary-link); text-decoration: none; border-bottom: 2px dotted; }
 
 .bold { font-weight: bold; }
 
@@ -101,19 +101,19 @@ code { color: #423F38; font-size: 16px; padding: 1px 4px; }
 .border-0 { border: 0; }
 
 /* Theme color utilities */
-.header-background { background-color: #fff; }
+.header-background { background-color: var(--color-background); }
 
-.header-border { border-color: #2B2826; }
+.header-border { border-color: var(--color-foreground); }
 
-.header-title { color: #2B2826; }
+.header-title { color: var(--color-title); }
 
-.header-text { color: #2B2826; }
+.header-text { color: var(--color-foreground); }
 
-.header-social { fill: #2B2826; }
+.header-social { fill: var(--color-foreground); }
 
-.header-link:hover { color: #2B2826 !important; }
+.header-link:hover { color: var(--color-nav-link) !important; }
 
-.text-accent { color: #423F38; }
+.text-accent { color: var(---color-text-accent); }
 
 /* Layout utilities */
 .container { max-width: 52em; }
