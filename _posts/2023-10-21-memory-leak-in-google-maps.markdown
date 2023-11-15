@@ -2,7 +2,7 @@
 layout: post
 title: "Memory Leak in Google Maps"
 date: 2023-10-21 00:48:44 +0530
-categories: note
+categories: notes
 ---
 
 ### Premise

@@ -2,7 +2,7 @@
 layout: post
 title: "Stash as a Commit"
 date: 2023-10-31 17:35:44 +0530
-categories: note
+categories: notes
 ---
 
 ### What is a Stash?

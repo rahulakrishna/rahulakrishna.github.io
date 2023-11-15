@@ -2,7 +2,7 @@
 layout: post
 title: "React Tips for Future"
 date: 2023-06-07 09:16:44 +0530
-categories: note
+categories: notes
 ---
 
 ### 1. Do not over-use useEffect
