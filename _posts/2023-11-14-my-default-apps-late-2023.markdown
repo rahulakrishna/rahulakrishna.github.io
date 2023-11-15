@@ -2,7 +2,7 @@
 layout: post
 title: "My App Defaults (Late 2023)"
 date: 2023-11-14 11:55:44 +0530
-categories: blog
+categories: note
 ---
 
 📨 Mail Client: Apple Mail

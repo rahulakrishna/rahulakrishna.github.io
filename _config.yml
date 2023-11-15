@@ -18,10 +18,11 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: Rahul Krishna's Blog
+title: Rahul Krishna's Notes
 email: rkbalu524@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
-  Principal Software Engineer at Bridgestone Americas
+  Principal Software Engineer at Bridgestone Americas.
+  I occasionally convert my Notion Docs to markdown and publish them here.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://rahulkrrrishna.xyz" # the base hostname & protocol for your site, e.g. http://example.com
 maintainer: "Rahul Krishna"
