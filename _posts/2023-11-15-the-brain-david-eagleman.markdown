@@ -2,36 +2,36 @@
 layout: post
 title: "Book Notes: The Brain: The Story of You (by David Eagleman)"
 date: 2023-11-15 20:00:44 +0530
-categories: notes, book-notes
+categories: notes
 ---
 
 # 🎬 Action Items
 
 ---
 
-1. Consciousness. It's a good thing that most of the things we do day-to-day are unconscious actions. However, we can cater to a different us in the future and make it impossibly obvious for that person. The idea aligns well with other productivity books like Atomic Habits and Allen Carr's Easy Way to Stop Smoking
+1. The concept of consciousness: The majority of our daily activities are conducted unconsciously, which is beneficial. However, we can strategically plan for our future selves and make our intentions exceedingly clear. This concept aligns with productivity literature such as Atomic Habits and Allen Carr's Easy Way to Stop Smoking.
 
 # 🚀 The Book in 3 Sentences
 
 ---
 
-1. Explores the philosophical and biological aspects of the brain and the whole idea of consciousness
-2. Explores "reality" and how we can have different versions of reality
-3. Explores how consciousness has very little effect on most day to day activities conducted by the brain
+1. The book delves into the philosophical and biological aspects of the brain, focusing on the concept of consciousness.
+2. It examines the notion of "reality" and the possibility of multiple realities.
+3. It explores how consciousness has minimal influence on the majority of daily activities conducted by the brain.
 
 # 🎨 Impressions
 
 ---
 
-Very intriguing. Eagleman is a neuroscientist and has seen his fair share of the quirky brain-related issues in his time.
+The book is highly intriguing. Eagleman, a neuroscientist, brings his extensive experience with unique brain-related phenomena to the table.
 
 ## How I Discovered It
 
-A PhD student, who went on to finish her doctorate in the medical field, suggested this book to me while I discussed Why We Sleep with her
+This book was recommended to me by a PhD student who has since completed her doctorate in the medical field. The recommendation came during a discussion about the book Why We Sleep.
 
 ## Who Should Read It?
 
-Maybe you don't need this book if you're already a neuroscientist. But the overwhelmingly abundant reviews this book garnered from the scientific community claims that Eagleman simplifies complicated neuroscientific concepts for the layperson and if you're interested in that then you should read this book.
+While neuroscientists may already be familiar with the concepts presented, the book has received high praise from the scientific community for Eagleman's ability to simplify complex neuroscientific concepts for the general reader. If you have an interest in neuroscience, this book is recommended.
 
 # ☘️ How the Book Changed Me
 
@@ -42,8 +42,8 @@ Maybe you don't need this book if you're already a neuroscientist. But the overw
 
 </aside>
 
-- Understanding consciousness as a CEO of our brain is honestly life changing. We often think that everything we do is the result of our thought process, but in reality, it is not. Consciousness initiates a thought. What happens to it is not much in our control, this is very interesting. Eagleman does go into ways of using our consciousness to influence unconscious actions, which I found very powerful. Henceforth, I will appreciate and be more aware of the unconscious actions that I commit every day, like picking up a coffee mug or just lying down on a couch. And try to use these autopilot mechanisms to my advantage.
-- Understanding reality as being unique to everyone is huge (Also very close to the Indian spiritual idea of _Maya_, where everything is considered an illusion). It encourages you to become more aware of how others are feeling and cater to their reality because what they see from their shoes through their eyes is completely different from what you see.
+- The book's portrayal of consciousness as the CEO of our brain has had a profound impact on me. We often believe that our actions are the result of our thought processes, but this is not always the case. Consciousness initiates a thought, but its subsequent journey is largely out of our control. This concept is fascinating. Eagleman provides strategies for using our consciousness to influence unconscious actions, which I found to be a powerful tool. Moving forward, I will strive to be more aware of the unconscious actions I perform daily, such as picking up a coffee mug or reclining on a couch, and attempt to leverage these autopilot mechanisms to my advantage.
+- The idea that reality is unique to each individual is significant (this aligns closely with the Indian spiritual concept of Maya, where everything is considered an illusion). This understanding encourages greater empathy and consideration for others' perspectives, as their perception of reality, viewed through their unique lens, differs from our own.
 
 # ✍️ My Top 4 Quotes
 
