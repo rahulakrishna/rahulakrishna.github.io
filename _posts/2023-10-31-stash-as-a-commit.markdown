@@ -99,18 +99,70 @@ A lot more cluttered than my Atom. But it also does a lot more than Atom!
 
 <div style="position: relative; padding-bottom: 74.34052757793765%; height: 0;"><iframe src="https://www.loom.com/embed/70c3d90ac8a64c2aaae010394174a8bb?sid=5674d81a-c4e8-4438-aaea-ec7200ae4212" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe></div>
 
-### The Advantage
+### The Rationale Behind Preferring Commit Over Stash
 
 ---
 
-The real advantage is that a stash commit is local to a branch. This is ideal if you’re often working on multiple features and need to stash something to switch branches (often to master to create a new branch). So when you come back you see the stash commit and you’re back where you left it. Sometimes, when a week later when you revisit a branch, remembering that you stashed some code is not clear.
+For individuals accustomed to the command-line interface of Git, the concept of committing instead of stashing may seem unconventional. However, when one's Git workflow is seamlessly integrated into their Integrated Development Environment (IDE), particularly Visual Studio Code, this approach becomes highly beneficial.
 
-### The case for stash
+#### The User Interface of Atom
+
+The user interface of Atom is commendable, particularly due to its tri-pane design that consistently displays the File Explorer, Code, and Git.
+
+![The Atom UI with File Explorer, Code Area and Git/Github Panel](https://thisdot.notion.site/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2Feb53edbf-045d-426c-aa09-d626c2816f18%2F30eb89c7-3a26-44ee-b2f2-68ee6c0aa485%2FUntitled.png?table=block&id=d8d6eda7-64ee-407a-80bc-5008f3df3411&spaceId=eb53edbf-045d-426c-aa09-d626c2816f18&width=2000&userId=&cache=v2)
+
+The Atom UI with File Explorer, Code Area and Git/Github Panel
+
+This design is advantageous as it continually updates a list of changes made to files on the right side of the screen, providing a general overview of the magnitude of your modifications. This visibility encourages experimental changes, which can be easily cherry-picked or discarded.
+
+![Atom Git Pane](https://thisdot.notion.site/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2Feb53edbf-045d-426c-aa09-d626c2816f18%2Fa0cac6ea-b1a1-4188-88f2-bcd93e7ae264%2FUntitled.png?table=block&id=a43d04df-ecd0-4ece-bb34-c6249ef0ace4&spaceId=eb53edbf-045d-426c-aa09-d626c2816f18&width=2000&userId=&cache=v2)
+
+Atom Git Pane
+
+### The Workflow in Atom
 
 ---
 
-- `git stash` actually frees your branch of changes for use at a later time. Which is necessary if you don’t have a branch to do a `stash commit`.
-- If you have a piece of code that you often need, but can’t commit. `git stash` is the way to go.
+Consider a scenario where you are working on `feature-branch-1` and need to switch to the `master` branch. Typically, you would stash your changes in `feature-branch-1`. However, Atom provides an alternative commit method.
+
+<div style="position: relative; padding-bottom: 60.30150753768844%; height: 0;"><iframe src="https://www.loom.com/embed/3b5ae799bb104aa5891ed51a92d5f6ca?sid=55db5932-acf4-4c6f-89c3-b1eca8610ee7" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe></div>
+
+### Visual Studio Code: A Comparison
+
+---
+
+By default, Visual Studio Code does not offer the same layout as Atom. However, this is arguably advantageous, and a similar workflow to Atom can be achieved in Visual Studio Code. This can be done by enabling a Secondary Side Bar and moving your "Source Control" and "Commits" to the second pane.
+
+![Untitled](https://thisdot.notion.site/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2Feb53edbf-045d-426c-aa09-d626c2816f18%2F883485c0-262f-459b-ae7c-fb679142d8ff%2FUntitled.png?table=block&id=8c888b7c-77bb-4b97-89f1-3ebeb297a110&spaceId=eb53edbf-045d-426c-aa09-d626c2816f18&width=2000&userId=&cache=v2)
+
+![A lot more cluttered than my Atom. But it also does a lot more than Atom!](https://thisdot.notion.site/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2Feb53edbf-045d-426c-aa09-d626c2816f18%2F842b7ef4-deb7-4304-8063-0af1ad02e19f%2FUntitled.png?table=block&id=99e468ec-9c5b-4861-9f49-0643fd5bb392&spaceId=eb53edbf-045d-426c-aa09-d626c2816f18&width=2000&userId=&cache=v2)
+
+A lot more cluttered than my Atom. But it also does a lot more than Atom!
+
+### The Workflow in Visual Studio Code
+
+---
+
+<div style="position: relative; padding-bottom: 58.91980360065466%; height: 0;"><iframe src="https://www.loom.com/embed/a1fa5c8bebd74fb889ae26dbbfcf63ee?sid=e00e01da-5fc6-4b6a-95eb-a9c3912e3e95" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe></div>
+
+### Additional: Command Line Approach
+
+---
+
+<div style="position: relative; padding-bottom: 74.34052757793765%; height: 0;"><iframe src="https://www.loom.com/embed/70c3d90ac8a64c2aaae010394174a8bb?sid=5674d81a-c4e8-4438-aaea-ec7200ae4212" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe></div>
+
+### The Merits of Stash Commit
+
+---
+
+The primary advantage of a stash commit is that it is local to a branch. This is particularly useful when working on multiple features and needing to stash changes to switch branches (often to master to create a new branch). Upon returning, the stash commit is visible, allowing you to resume where you left off. This is especially helpful when revisiting a branch after a significant period, as remembering that you stashed some code may not be evident.
+
+### The Argument for Stash
+
+---
+
+- `git stash` effectively clears your branch of changes for later use, which is necessary if you do not have a branch to perform a `stash commit`.
+- If you have a piece of code that is frequently needed but cannot be committed, `git stash` is the preferred method.
 
 ### References
 
