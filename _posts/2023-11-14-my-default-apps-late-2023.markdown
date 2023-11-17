@@ -43,7 +43,7 @@ categories: notes
 
 🍴 Meal Planning: Notion
 
-💰 Budgeting and Personal Finance: Notion
+💰 Budgeting and Personal Finance: Numbers
 
 📰 News: NetNewsWire / HACK for Hacker News
 
