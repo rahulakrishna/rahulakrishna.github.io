@@ -8,13 +8,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <title>Memory Leak in Google Maps</title>
+  <meta property="og:title" content="Memory Leak in Google Maps">
   <meta name="description" content="Premise">
+  <meta name="og:description" content="Memory Leak in Google Maps">
 
   
   
   <link rel="stylesheet" href="/colors.css">
   <link rel="stylesheet" href="http://localhost:4000/assets/style.css">
-  
+
   <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
   <link rel="shortcut icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
 
@@ -27,20 +29,19 @@
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-QVMX6MWER8"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
+    function gtag() { dataLayer.push(arguments); }
     gtag('js', new Date());
 
     gtag('config', 'G-QVMX6MWER8');
   </script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/atom-one-dark.min.css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
-  
+
   <!-- and it's easy to individually load additional languages -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/go.min.js"></script>
-  
+
   <script>hljs.highlightAll();</script>
 </head>
-
   
   <!-- font-smoothing is only applied on dark themes -->
   <body class="font-smoothing">
@@ -110,7 +111,7 @@
 
 <p><img src="https://thisdot.notion.site/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2Feb53edbf-045d-426c-aa09-d626c2816f18%2F0a0376ef-1fed-43b9-b795-a0838c2dc18a%2FUntitled.png?table=block&amp;id=5dbb1e64-43ed-4918-8607-981ca6a374a1&amp;spaceId=eb53edbf-045d-426c-aa09-d626c2816f18&amp;width=2000&amp;userId=&amp;cache=v2" alt="Untitled"></p>
 
-<p>We need to render a map like this using <code class="language-plaintext highlighter-rouge">google-map-react</code> . But rendering large data points makes the page unresponsive for a while and subsequent actions become slower indicating a memory leak occuring.</p>
+<p>n order to visualize geospatial data, we are employing the google-map-react library. However, we have encountered a performance issue when rendering a substantial volume of data points. This issue manifests as a temporary unresponsiveness of the page, followed by a noticeable slowdown in subsequent operations. These symptoms suggest the presence of a memory leak.</p>
 
 <p><img src="https://thisdot.notion.site/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2Feb53edbf-045d-426c-aa09-d626c2816f18%2F0e323202-b790-4d19-9f30-e80445bcea0f%2FUntitled.png?table=block&amp;id=30bf63d9-45c4-4bbe-b5d0-b6d31ee4bff2&amp;spaceId=eb53edbf-045d-426c-aa09-d626c2816f18&amp;width=770&amp;userId=&amp;cache=v2" alt="Untitled"></p>
 
@@ -124,11 +125,11 @@
 
 <ol>
   <li>
-<strong>Destroying Google Maps instance never frees up memory.</strong> This is a long standing issue within the Google Maps Javascript Library. This meant that after visiting the page, around 600MB of memory was never freed. The issue was first reported in Google’s Bug Tracker in 2011 and the latest comment in that was in February 2023! A 12 year old bug!</li>
+<strong>Destroying Google Maps instance never frees up memory.</strong> The persistent memory leak issue within the Google Maps JavaScript Library has been a significant concern for developers. Upon visiting the page, approximately 600MB of memory remains unfreed, leading to potential performance degradation. This problem was initially documented in Google’s Bug Tracker in 2011, and the most recent update was in February 2023, indicating that this issue has persisted for over a decade.</li>
   <li>
-<strong>A line consists of three drawings.</strong> A “trip line” should ideally be one stroke, but here we were making three drawings. One <code class="language-plaintext highlighter-rouge">Polyline</code>, and two <code class="language-plaintext highlighter-rouge">Markers</code>. Somehow, drawing the marker seems to be slower and hogs up the resources.</li>
+<strong>A line consists of three drawings.</strong> In an optimal scenario, the ‘trip line’ should be represented by a single stroke. However, in the current implementation, we are generating three separate drawings: one Polyline and two Markers. It has been observed that the process of rendering the Markers is particularly resource-intensive, leading to a noticeable decrease in performance.</li>
   <li>
-<strong>The <code class="language-plaintext highlighter-rouge">Polylines</code> could be made into an Overlay.</strong> Instead of creating the classes inside the Google Maps, we can make a separate <code class="language-plaintext highlighter-rouge">Polyline</code> component and handle all it’s memory issues there.</li>
+<strong>The <code class="language-plaintext highlighter-rouge">Polylines</code> could be made into an Overlay.</strong> In lieu of instantiating classes within the Google Maps environment, we propose the development of a distinct Polyline component. This approach would allow us to isolate and effectively manage any associated memory-related issues within this separate component.</li>
 </ol>
 
 <h3 id="the-fix-for-google-maps-memory-leak">The fix for Google Maps memory leak</h3>

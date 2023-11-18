@@ -1,0 +1,60 @@
+I"<h3 id="the-case-for-default-applications">The Case for Default Applications</h3>
+
+<hr />
+
+<p>Simple default applications often surpass complex specialized solutions due to their ease of use, efficiency, and reliability. They offer a user-friendly experience, are optimized for common use cases, and prioritize simplicity and functionality, making them more efficient and effective for everyday tasks.</p>
+
+<h3 id="what-do-we-expect-from-budget">What do we expect from Budget?</h3>
+
+<hr />
+
+<p><img src="/images/budgeting-tool/budget-sheets.png" alt="Budget Sheets" /></p>
+
+<p>We expect two sheets. One to allocate resources and the other to record transactions. Ideally we create the “Budget” sheet once in the beginning of the month and then on only make changes in the “Transactions” sheet. We expect the changes in “Transactions” sheet to automatically update the “Budget” sheet</p>
+
+<h3 id="doing-this-in-numbers"><strong>Doing this in Numbers</strong></h3>
+
+<hr />
+
+<p>Thankfully all of this is done in a pre-build default template in Numbers!</p>
+
+<p><img src="/images/budgeting-tool/new-sheet.png" alt="Untitled" /></p>
+
+<p>Let’s confirm how this works:</p>
+
+<div style="position: relative; padding-bottom: 69.09788867562379%; height: 0;"><iframe src="https://www.loom.com/embed/4f1d948d002444f4af89b7c38867875e?sid=c6293f23-7f98-42df-bac1-eb559a37670b" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen="" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe></div>
+
+<h3 id="on-to-the-shortcut">On to the Shortcut</h3>
+
+<hr />
+
+<p>Once you get the hang of Shortcuts you understand how inanely powerful iOS is. It’s literally IFTTT but built into the OS!</p>
+
+<p>Here is the shortcut to add a transaction to the sheet</p>
+
+<p><img src="/images/budgeting-tool/shortcut.png" alt="Shortcut" /></p>
+
+<p>Link to Shortcut: https://www.icloud.com/shortcuts/ada47167d0974ad78f0664ba7dc3dbac</p>
+
+<h3 id="before-test">Before Test</h3>
+
+<hr />
+
+<p>Here are the screenshots of cleaned up Numbers sheet before we start adding Transactions</p>
+
+<p><img src="https://prod-files-secure.s3.us-west-2.amazonaws.com/eb53edbf-045d-426c-aa09-d626c2816f18/9a00dc3b-2a5b-4231-b9ea-3174f728d9b9/Untitled.png" alt="Untitled" /></p>
+
+<p><img src="https://prod-files-secure.s3.us-west-2.amazonaws.com/eb53edbf-045d-426c-aa09-d626c2816f18/99ed0f73-4c4f-4437-b93d-e08dd99b9171/Untitled.png" alt="Untitled" /></p>
+
+<h3 id="shortcut-in-action-on-macos">Shortcut in Action on macOS</h3>
+
+<hr />
+
+<p>https://www.loom.com/share/8a8b8b854b114e3a9f294c015f777208?sid=8a75a1c6-7de9-47a2-944c-a44dea836deb</p>
+
+<h3 id="shortcut-in-action---ios">Shortcut in Action - iOS</h3>
+
+<hr />
+
+<p>https://www.loom.com/share/f1ec1f9998d2414ab0aafc9fa54d1c46?sid=2ce84ea2-3ec3-4c0e-bf03-c74dc6e80c89</p>
+:ET

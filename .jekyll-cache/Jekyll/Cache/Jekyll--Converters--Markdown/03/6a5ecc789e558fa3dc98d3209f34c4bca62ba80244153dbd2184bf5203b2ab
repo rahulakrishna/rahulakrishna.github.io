@@ -1,0 +1,82 @@
+I"�<h3 id="the-case-for-default-applications">The Case for Default Applications</h3>
+
+<hr />
+
+<p>Simple default applications often surpass complex specialized solutions due to their ease of use, efficiency, and reliability. They offer a user-friendly experience, are optimized for common use cases, and prioritize simplicity and functionality, making them more efficient and effective for everyday tasks.</p>
+
+<h3 id="prerequisite">Prerequisite</h3>
+
+<hr />
+
+<div style="float: right;">
+<img src="/images/budgeting-tool/numbers-icon.png" alt="Numbers Icon" />
+<br />
+<img src="/images/budgeting-tool/shortcuts-icon.png" alt="Shortcuts icon" />
+</div>
+
+<ul>
+  <li>
+    <p>An Apple Device - (iPhone, Mac or iPad)</p>
+  </li>
+  <li>
+    <p>Numbers - Default App - (<a href="https://apps.apple.com/us/app/numbers/id361304891">iOS, iPadOS</a>. <a href="https://apps.apple.com/us/app/numbers/id409203825">macOS</a>)</p>
+  </li>
+  <li>
+    <p>Shortcuts - Default App - (<a href="https://apps.apple.com/us/app/shortcuts/id915249334">iOS, iPadOS</a>)</p>
+  </li>
+</ul>
+
+<h3 id="what-do-we-expect-from-budget">What do we expect from Budget?</h3>
+
+<hr />
+
+<p><img src="/images/budgeting-tool/budget-sheets.png" alt="Budget Sheets" /></p>
+
+<p>The proposed budgeting tool will incorporate two distinct sheets: a ‘Budget’ sheet for resource allocation and a ‘Transactions’ sheet for recording financial transactions. The ‘Budget’ sheet is intended to be established at the commencement of each month, with subsequent modifications primarily occurring within the ‘Transactions’ sheet. It is anticipated that updates to the ‘Transactions’ sheet will automatically reflect in the ‘Budget’ sheet, ensuring real-time accuracy of the budgeting data.</p>
+
+<h3 id="doing-this-in-numbers"><strong>Doing this in Numbers</strong></h3>
+
+<hr />
+
+<p>Fortunately, all these functionalities are incorporated within a pre-constructed default template in Numbers, providing a seamless user experience.</p>
+
+<p><img src="/images/budgeting-tool/new-sheet.png" alt="New Sheet" /></p>
+
+<p>Let’s proceed to validate the functionality of this process:</p>
+
+<div style="position: relative; padding-bottom: 69.09788867562379%; height: 0;"><iframe src="https://www.loom.com/embed/4f1d948d002444f4af89b7c38867875e?sid=c6293f23-7f98-42df-bac1-eb559a37670b" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen="" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe></div>
+
+<h3 id="on-to-the-shortcut">On to the Shortcut</h3>
+
+<hr />
+
+<p>Upon mastering the utilization of Shortcuts, one can truly comprehend the immense capabilities inherent within the iOS operating system. It essentially integrates the functionality of IFTTT directly into the operating system itself.</p>
+
+<p>Below is the shortcut designed to append a transaction to the sheet:</p>
+
+<p><img src="/images/budgeting-tool/shortcut.png" alt="Shortcut" /></p>
+
+<p>Link to <a href="https://www.icloud.com/shortcuts/ada47167d0974ad78f0664ba7dc3dbac">Shortcut</a></p>
+
+<h3 id="before-test">Before Test</h3>
+
+<hr />
+
+<p>Here are the screenshots of cleaned up Numbers sheet before we start adding Transactions</p>
+
+<p><img src="/images/budgeting-tool/cleaned-numbers.png" alt="Cleaned Numbers" /></p>
+
+<p><img src="/images/budgeting-tool/cleaned-transactions-sheet.png" alt="Cleaned Transactions Sheet" /></p>
+
+<h3 id="shortcut-in-action-on-macos">Shortcut in Action on macOS</h3>
+
+<hr />
+
+<div style="position: relative; padding-bottom: 62.5%; height: 0;"><iframe src="https://www.loom.com/embed/8a8b8b854b114e3a9f294c015f777208?sid=00d3e64f-8006-4387-afa5-fe270cf4c55c" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen="" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe></div>
+
+<h3 id="shortcut-in-action---ios">Shortcut in Action - iOS</h3>
+
+<hr />
+
+<div style="position: relative; padding-bottom: 216.4785553047404%; height: 0;"><iframe src="https://www.loom.com/embed/f1ec1f9998d2414ab0aafc9fa54d1c46?sid=727d0f61-2661-479a-a27a-1d91d8aef529" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen="" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe></div>
+:ET
