@@ -8,13 +8,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <title>Stash as a Commit</title>
+  <meta property="og:title" content="Stash as a Commit">
   <meta name="description" content="What is a Stash?">
+  <meta name="og:description" content="Stash as a Commit">
 
   
   
   <link rel="stylesheet" href="/colors.css">
   <link rel="stylesheet" href="http://localhost:4000/assets/style.css">
-  
+
   <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
   <link rel="shortcut icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
 
@@ -27,20 +29,19 @@
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-QVMX6MWER8"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
+    function gtag() { dataLayer.push(arguments); }
     gtag('js', new Date());
 
     gtag('config', 'G-QVMX6MWER8');
   </script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/atom-one-dark.min.css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
-  
+
   <!-- and it's easy to individually load additional languages -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/go.min.js"></script>
-  
+
   <script>hljs.highlightAll();</script>
 </head>
-
   
   <!-- font-smoothing is only applied on dark themes -->
   <body class="font-smoothing">
@@ -200,20 +201,72 @@ content/post/2023-10-20-some-miscellaneous-git-facts.markdown | 40 +++++++++++++
 
 <div style="position: relative; padding-bottom: 74.34052757793765%; height: 0;"><iframe src="https://www.loom.com/embed/70c3d90ac8a64c2aaae010394174a8bb?sid=5674d81a-c4e8-4438-aaea-ec7200ae4212" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen="" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe></div>
 
-<h3 id="the-advantage">The Advantage</h3>
+<h3 id="the-rationale-behind-preferring-commit-over-stash">The Rationale Behind Preferring Commit Over Stash</h3>
 
 <hr>
 
-<p>The real advantage is that a stash commit is local to a branch. This is ideal if you’re often working on multiple features and need to stash something to switch branches (often to master to create a new branch). So when you come back you see the stash commit and you’re back where you left it. Sometimes, when a week later when you revisit a branch, remembering that you stashed some code is not clear.</p>
+<p>For individuals accustomed to the command-line interface of Git, the concept of committing instead of stashing may seem unconventional. However, when one’s Git workflow is seamlessly integrated into their Integrated Development Environment (IDE), particularly Visual Studio Code, this approach becomes highly beneficial.</p>
 
-<h3 id="the-case-for-stash">The case for stash</h3>
+<h4 id="the-user-interface-of-atom">The User Interface of Atom</h4>
+
+<p>The user interface of Atom is commendable, particularly due to its tri-pane design that consistently displays the File Explorer, Code, and Git.</p>
+
+<p><img src="https://thisdot.notion.site/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2Feb53edbf-045d-426c-aa09-d626c2816f18%2F30eb89c7-3a26-44ee-b2f2-68ee6c0aa485%2FUntitled.png?table=block&amp;id=d8d6eda7-64ee-407a-80bc-5008f3df3411&amp;spaceId=eb53edbf-045d-426c-aa09-d626c2816f18&amp;width=2000&amp;userId=&amp;cache=v2" alt="The Atom UI with File Explorer, Code Area and Git/Github Panel"></p>
+
+<p>The Atom UI with File Explorer, Code Area and Git/Github Panel</p>
+
+<p>This design is advantageous as it continually updates a list of changes made to files on the right side of the screen, providing a general overview of the magnitude of your modifications. This visibility encourages experimental changes, which can be easily cherry-picked or discarded.</p>
+
+<p><img src="https://thisdot.notion.site/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2Feb53edbf-045d-426c-aa09-d626c2816f18%2Fa0cac6ea-b1a1-4188-88f2-bcd93e7ae264%2FUntitled.png?table=block&amp;id=a43d04df-ecd0-4ece-bb34-c6249ef0ace4&amp;spaceId=eb53edbf-045d-426c-aa09-d626c2816f18&amp;width=2000&amp;userId=&amp;cache=v2" alt="Atom Git Pane"></p>
+
+<p>Atom Git Pane</p>
+
+<h3 id="the-workflow-in-atom">The Workflow in Atom</h3>
+
+<hr>
+
+<p>Consider a scenario where you are working on <code class="language-plaintext highlighter-rouge">feature-branch-1</code> and need to switch to the <code class="language-plaintext highlighter-rouge">master</code> branch. Typically, you would stash your changes in <code class="language-plaintext highlighter-rouge">feature-branch-1</code>. However, Atom provides an alternative commit method.</p>
+
+<div style="position: relative; padding-bottom: 60.30150753768844%; height: 0;"><iframe src="https://www.loom.com/embed/3b5ae799bb104aa5891ed51a92d5f6ca?sid=55db5932-acf4-4c6f-89c3-b1eca8610ee7" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen="" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe></div>
+
+<h3 id="visual-studio-code-a-comparison">Visual Studio Code: A Comparison</h3>
+
+<hr>
+
+<p>By default, Visual Studio Code does not offer the same layout as Atom. However, this is arguably advantageous, and a similar workflow to Atom can be achieved in Visual Studio Code. This can be done by enabling a Secondary Side Bar and moving your “Source Control” and “Commits” to the second pane.</p>
+
+<p><img src="https://thisdot.notion.site/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2Feb53edbf-045d-426c-aa09-d626c2816f18%2F883485c0-262f-459b-ae7c-fb679142d8ff%2FUntitled.png?table=block&amp;id=8c888b7c-77bb-4b97-89f1-3ebeb297a110&amp;spaceId=eb53edbf-045d-426c-aa09-d626c2816f18&amp;width=2000&amp;userId=&amp;cache=v2" alt="Untitled"></p>
+
+<p><img src="https://thisdot.notion.site/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2Feb53edbf-045d-426c-aa09-d626c2816f18%2F842b7ef4-deb7-4304-8063-0af1ad02e19f%2FUntitled.png?table=block&amp;id=99e468ec-9c5b-4861-9f49-0643fd5bb392&amp;spaceId=eb53edbf-045d-426c-aa09-d626c2816f18&amp;width=2000&amp;userId=&amp;cache=v2" alt="A lot more cluttered than my Atom. But it also does a lot more than Atom!"></p>
+
+<p>A lot more cluttered than my Atom. But it also does a lot more than Atom!</p>
+
+<h3 id="the-workflow-in-visual-studio-code">The Workflow in Visual Studio Code</h3>
+
+<hr>
+
+<div style="position: relative; padding-bottom: 58.91980360065466%; height: 0;"><iframe src="https://www.loom.com/embed/a1fa5c8bebd74fb889ae26dbbfcf63ee?sid=e00e01da-5fc6-4b6a-95eb-a9c3912e3e95" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen="" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe></div>
+
+<h3 id="additional-command-line-approach">Additional: Command Line Approach</h3>
+
+<hr>
+
+<div style="position: relative; padding-bottom: 74.34052757793765%; height: 0;"><iframe src="https://www.loom.com/embed/70c3d90ac8a64c2aaae010394174a8bb?sid=5674d81a-c4e8-4438-aaea-ec7200ae4212" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen="" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe></div>
+
+<h3 id="the-merits-of-stash-commit">The Merits of Stash Commit</h3>
+
+<hr>
+
+<p>The primary advantage of a stash commit is that it is local to a branch. This is particularly useful when working on multiple features and needing to stash changes to switch branches (often to master to create a new branch). Upon returning, the stash commit is visible, allowing you to resume where you left off. This is especially helpful when revisiting a branch after a significant period, as remembering that you stashed some code may not be evident.</p>
+
+<h3 id="the-argument-for-stash">The Argument for Stash</h3>
 
 <hr>
 
 <ul>
   <li>
-<code class="language-plaintext highlighter-rouge">git stash</code> actually frees your branch of changes for use at a later time. Which is necessary if you don’t have a branch to do a <code class="language-plaintext highlighter-rouge">stash commit</code>.</li>
-  <li>If you have a piece of code that you often need, but can’t commit. <code class="language-plaintext highlighter-rouge">git stash</code> is the way to go.</li>
+<code class="language-plaintext highlighter-rouge">git stash</code> effectively clears your branch of changes for later use, which is necessary if you do not have a branch to perform a <code class="language-plaintext highlighter-rouge">stash commit</code>.</li>
+  <li>If you have a piece of code that is frequently needed but cannot be committed, <code class="language-plaintext highlighter-rouge">git stash</code> is the preferred method.</li>
 </ul>
 
 <h3 id="references">References</h3>
