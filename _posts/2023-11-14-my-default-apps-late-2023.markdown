@@ -27,7 +27,7 @@ categories: notes
 
 🌐 Browser: Safari
 
-💬 Chat: iMessage, WhatsApp
+💬 Chat: iMessage
 
 🔖 Bookmarks: Notion
 
