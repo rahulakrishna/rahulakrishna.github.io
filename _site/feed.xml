@@ -1,4 +1,92 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2023-11-18T11:11:41+05:30</updated><id>http://localhost:4000/feed.xml</id><title type="html">Rahul Krishna’s Notes</title><subtitle>Principal Software Engineer at Bridgestone Americas. I occasionally convert my Notion Docs to markdown and publish them here.</subtitle><entry><title type="html">Book Notes: The Brain: The Story of You (by David Eagleman)</title><link href="http://localhost:4000/notes/books/2023/11/15/the-brain-david-eagleman.html" rel="alternate" type="text/html" title="Book Notes: The Brain: The Story of You (by David Eagleman)" /><published>2023-11-15T20:00:44+05:30</published><updated>2023-11-15T20:00:44+05:30</updated><id>http://localhost:4000/notes/books/2023/11/15/the-brain-david-eagleman</id><content type="html" xml:base="http://localhost:4000/notes/books/2023/11/15/the-brain-david-eagleman.html">&lt;h1 id=&quot;-action-items&quot;&gt;🎬 Action Items&lt;/h1&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2023-11-20T12:59:00+05:30</updated><id>http://localhost:4000/feed.xml</id><title type="html">Field Notes</title><subtitle>Hello I'm a Principal Software Engineer at Bridgestone Americas. I occasionally convert my Notion Docs to markdown and publish them here.</subtitle><entry><title type="html">Budgeting Tool with Numbers + Shortcuts</title><link href="http://localhost:4000/notes/2023/11/18/simple-budgeting-tool-with-numbers-shortcuts.html" rel="alternate" type="text/html" title="Budgeting Tool with Numbers + Shortcuts" /><published>2023-11-18T11:15:00+05:30</published><updated>2023-11-18T11:15:00+05:30</updated><id>http://localhost:4000/notes/2023/11/18/simple-budgeting-tool-with-numbers-shortcuts</id><content type="html" xml:base="http://localhost:4000/notes/2023/11/18/simple-budgeting-tool-with-numbers-shortcuts.html">&lt;h3 id=&quot;the-case-for-default-applications&quot;&gt;The Case for Default Applications&lt;/h3&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;Simple default applications often surpass complex specialized solutions due to their ease of use, efficiency, and reliability. They offer a user-friendly experience, are optimized for common use cases, and prioritize simplicity and functionality, making them more efficient and effective for everyday tasks.&lt;/p&gt;
+
+&lt;h3 id=&quot;prerequisite&quot;&gt;Prerequisite&lt;/h3&gt;
+
+&lt;hr /&gt;
+
+&lt;div style=&quot;float: right;&quot;&gt;
+&lt;img src=&quot;/images/budgeting-tool/numbers-icon.png&quot; alt=&quot;Numbers Icon&quot; /&gt;
+&lt;br /&gt;
+&lt;img src=&quot;/images/budgeting-tool/shortcuts-icon.png&quot; alt=&quot;Shortcuts icon&quot; /&gt;
+&lt;/div&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;An Apple Device - (iPhone, Mac or iPad)&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Numbers - Default App - (&lt;a href=&quot;https://apps.apple.com/us/app/numbers/id361304891&quot;&gt;iOS, iPadOS&lt;/a&gt;. &lt;a href=&quot;https://apps.apple.com/us/app/numbers/id409203825&quot;&gt;macOS&lt;/a&gt;)&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Shortcuts - Default App - (&lt;a href=&quot;https://apps.apple.com/us/app/shortcuts/id915249334&quot;&gt;iOS, iPadOS&lt;/a&gt;)&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;what-do-we-expect-from-budget&quot;&gt;What do we expect from Budget?&lt;/h3&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/budgeting-tool/budget-sheets.png&quot; alt=&quot;Budget Sheets&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;The proposed budgeting tool will incorporate two distinct sheets: a ‘Budget’ sheet for resource allocation and a ‘Transactions’ sheet for recording financial transactions. The ‘Budget’ sheet is intended to be established at the commencement of each month, with subsequent modifications primarily occurring within the ‘Transactions’ sheet. It is anticipated that updates to the ‘Transactions’ sheet will automatically reflect in the ‘Budget’ sheet, ensuring real-time accuracy of the budgeting data.&lt;/p&gt;
+
+&lt;h3 id=&quot;doing-this-in-numbers&quot;&gt;&lt;strong&gt;Doing this in Numbers&lt;/strong&gt;&lt;/h3&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;Fortunately, all these functionalities are incorporated within a pre-constructed default template in Numbers, providing a seamless user experience.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/budgeting-tool/new-sheet.png&quot; alt=&quot;New Sheet&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Let’s proceed to validate the functionality of this process:&lt;/p&gt;
+
+&lt;div style=&quot;position: relative; padding-bottom: 69.09788867562379%; height: 0;&quot;&gt;&lt;iframe src=&quot;https://www.loom.com/embed/4f1d948d002444f4af89b7c38867875e?sid=c6293f23-7f98-42df-bac1-eb559a37670b&quot; frameborder=&quot;0&quot; webkitallowfullscreen=&quot;&quot; mozallowfullscreen=&quot;&quot; allowfullscreen=&quot;&quot; style=&quot;position: absolute; top: 0; left: 0; width: 100%; height: 100%;&quot;&gt;&lt;/iframe&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;on-to-the-shortcut&quot;&gt;On to the Shortcut&lt;/h3&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;Upon mastering the utilization of Shortcuts, one can truly comprehend the immense capabilities inherent within the iOS operating system. It essentially integrates the functionality of IFTTT directly into the operating system itself.&lt;/p&gt;
+
+&lt;p&gt;Below is the shortcut designed to append a transaction to the sheet:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/budgeting-tool/shortcut.png&quot; alt=&quot;Shortcut&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Link to &lt;a href=&quot;https://www.icloud.com/shortcuts/ada47167d0974ad78f0664ba7dc3dbac&quot;&gt;Shortcut&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;before-test&quot;&gt;Before Test&lt;/h3&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;Here are the screenshots of cleaned up Numbers sheet before we start adding Transactions&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/budgeting-tool/cleaned-numbers.png&quot; alt=&quot;Cleaned Numbers&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/budgeting-tool/cleaned-transactions-sheet.png&quot; alt=&quot;Cleaned Transactions Sheet&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;shortcut-in-action-on-macos&quot;&gt;Shortcut in Action on macOS&lt;/h3&gt;
+
+&lt;hr /&gt;
+
+&lt;div style=&quot;position: relative; padding-bottom: 62.5%; height: 0;&quot;&gt;&lt;iframe src=&quot;https://www.loom.com/embed/8a8b8b854b114e3a9f294c015f777208?sid=00d3e64f-8006-4387-afa5-fe270cf4c55c&quot; frameborder=&quot;0&quot; webkitallowfullscreen=&quot;&quot; mozallowfullscreen=&quot;&quot; allowfullscreen=&quot;&quot; style=&quot;position: absolute; top: 0; left: 0; width: 100%; height: 100%;&quot;&gt;&lt;/iframe&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;shortcut-in-action---ios&quot;&gt;Shortcut in Action - iOS&lt;/h3&gt;
+
+&lt;hr /&gt;
+
+&lt;div style=&quot;position: relative; padding-bottom: 216.4785553047404%; height: 0;&quot;&gt;&lt;iframe src=&quot;https://www.loom.com/embed/f1ec1f9998d2414ab0aafc9fa54d1c46?sid=727d0f61-2661-479a-a27a-1d91d8aef529&quot; frameborder=&quot;0&quot; webkitallowfullscreen=&quot;&quot; mozallowfullscreen=&quot;&quot; allowfullscreen=&quot;&quot; style=&quot;position: absolute; top: 0; left: 0; width: 100%; height: 100%;&quot;&gt;&lt;/iframe&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;references&quot;&gt;References&lt;/h3&gt;
+
+&lt;hr /&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;macmostvideo on Youtube - &lt;b&gt;Using Shortcuts To Add Data To a Numbers Spreadsheet&lt;/b&gt; - &lt;a href=&quot;https://www.youtube.com/watch?v=EJedH7pZLg0&quot;&gt;https://www.youtube.com/watch?v=EJedH7pZLg0&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content><author><name></name></author><category term="notes" /><category term="personal" /><summary type="html">The Case for Default Applications</summary></entry><entry><title type="html">Book Notes: The Brain: The Story of You (by David Eagleman)</title><link href="http://localhost:4000/notes/books/2023/11/15/the-brain-david-eagleman.html" rel="alternate" type="text/html" title="Book Notes: The Brain: The Story of You (by David Eagleman)" /><published>2023-11-15T20:00:44+05:30</published><updated>2023-11-15T20:00:44+05:30</updated><id>http://localhost:4000/notes/books/2023/11/15/the-brain-david-eagleman</id><content type="html" xml:base="http://localhost:4000/notes/books/2023/11/15/the-brain-david-eagleman.html">&lt;h1 id=&quot;-action-items&quot;&gt;🎬 Action Items&lt;/h1&gt;
 
 &lt;hr /&gt;
 
@@ -81,7 +169,7 @@
 
 &lt;p&gt;🌐 Browser: Safari&lt;/p&gt;
 
-&lt;p&gt;💬 Chat: iMessage, WhatsApp&lt;/p&gt;
+&lt;p&gt;💬 Chat: iMessage&lt;/p&gt;
 
 &lt;p&gt;🔖 Bookmarks: Notion&lt;/p&gt;
 

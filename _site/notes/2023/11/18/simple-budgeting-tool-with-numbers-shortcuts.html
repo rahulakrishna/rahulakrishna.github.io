@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Budgeting Tool with Numbers + Shortcuts</title>
+  <meta property="og:title" content="Budgeting Tool with Numbers + Shortcuts">
+  <meta name="description" content="The Case for Default Applications">
+  <meta name="og:description" content="Budgeting Tool with Numbers + Shortcuts">
+
+  
+  
+  <link rel="stylesheet" href="/colors.css">
+  <link rel="stylesheet" href="http://localhost:4000/assets/style.css">
+
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+  <link rel="shortcut icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+
+
+  <link rel="canonical" href="http://localhost:4000/notes/2023/11/18/simple-budgeting-tool-with-numbers-shortcuts.html">
+  <link rel="alternate" type="application/rss+xml" title="Field Notes" href="http://localhost:4000/feed.xml">
+
+  <script async defer src="https://buttons.github.io/buttons.js"></script>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-QVMX6MWER8"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-QVMX6MWER8');
+  </script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/atom-one-dark.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+
+  <!-- and it's easy to individually load additional languages -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/go.min.js"></script>
+
+  <script>hljs.highlightAll();</script>
+</head>
+  
+  <!-- font-smoothing is only applied on dark themes -->
+  <body class="font-smoothing">
+
+    <header class="px-2 clearfix">
+  <!-- <div class="left-lg absolute-lg left-0 top-0 sm-width-full mt-2">
+    <a class="no-underline-hover px-1" href="/">
+      <span class="inline-block h4 hide-sm ml-2">&#x261c;</span>
+    </a>
+    <a class="italic no-underline" href="/">
+       home
+    </a>
+  </div> -->
+  <div class="right-lg absolute-lg right-0 top-0">
+    <ul class="mt-1 mt-lg-2 mr-2 mr-lg-3">
+      <li class="inline-block block-lg text-right ml-1 ml-lg-0">
+        <a class="italic h4 bold no-underline" href="/">
+          <!-- Field Notes -->
+          Home
+        </a>
+      </li>
+      
+      
+      
+      
+      <li class="inline-block block-lg text-right ml-1 ml-lg-0">
+        <a class="italic no-underline h4" href="/about/">
+          About
+        </a>
+      </li>
+      
+      
+      
+      
+      
+      <li class="inline-block block-lg text-right ml-1 ml-lg-0">
+        <a class="italic no-underline h4" href="/resume/">
+          Resume
+        </a>
+      </li>
+      
+      
+      
+      
+      
+      
+    </ul>
+  </div>
+</header>
+
+    <div>
+      <article class="container mx-auto px-2" itemscope itemtype="http://schema.org/BlogPosting">
+  <div class="mt-4 mb-2 clearfix header-text">
+    <h1 class="h0 inline-block py-2 mt-4 header-title">Budgeting Tool with Numbers + Shortcuts</h1>
+    <div class="clearfix mb-4 py-1">
+      <p class="h4 lh-condensed"><time datetime="2023-11-18T11:15:00+05:30" itemprop="datePublished">Nov 18, 2023</time></p>
+      <div class="col-1 sm-width-full border-top-thick">
+      </div>
+    </div>
+  </div>
+
+  <div class="prose py-4" itemprop="articleBody">
+      <h3 id="the-case-for-default-applications">The Case for Default Applications</h3>
+
+<hr>
+
+<p>Simple default applications often surpass complex specialized solutions due to their ease of use, efficiency, and reliability. They offer a user-friendly experience, are optimized for common use cases, and prioritize simplicity and functionality, making them more efficient and effective for everyday tasks.</p>
+
+<h3 id="prerequisite">Prerequisite</h3>
+
+<hr>
+
+<div style="float: right;">
+<img src="/images/budgeting-tool/numbers-icon.png" alt="Numbers Icon">
+<br>
+<img src="/images/budgeting-tool/shortcuts-icon.png" alt="Shortcuts icon">
+</div>
+
+<ul>
+  <li>
+    <p>An Apple Device - (iPhone, Mac or iPad)</p>
+  </li>
+  <li>
+    <p>Numbers - Default App - (<a href="https://apps.apple.com/us/app/numbers/id361304891" rel="me" target="_blank">iOS, iPadOS</a>. <a href="https://apps.apple.com/us/app/numbers/id409203825" rel="me" target="_blank">macOS</a>)</p>
+  </li>
+  <li>
+    <p>Shortcuts - Default App - (<a href="https://apps.apple.com/us/app/shortcuts/id915249334" rel="me" target="_blank">iOS, iPadOS</a>)</p>
+  </li>
+</ul>
+
+<h3 id="what-do-we-expect-from-budget">What do we expect from Budget?</h3>
+
+<hr>
+
+<p><img src="/images/budgeting-tool/budget-sheets.png" alt="Budget Sheets"></p>
+
+<p>The proposed budgeting tool will incorporate two distinct sheets: a ‘Budget’ sheet for resource allocation and a ‘Transactions’ sheet for recording financial transactions. The ‘Budget’ sheet is intended to be established at the commencement of each month, with subsequent modifications primarily occurring within the ‘Transactions’ sheet. It is anticipated that updates to the ‘Transactions’ sheet will automatically reflect in the ‘Budget’ sheet, ensuring real-time accuracy of the budgeting data.</p>
+
+<h3 id="doing-this-in-numbers"><strong>Doing this in Numbers</strong></h3>
+
+<hr>
+
+<p>Fortunately, all these functionalities are incorporated within a pre-constructed default template in Numbers, providing a seamless user experience.</p>
+
+<p><img src="/images/budgeting-tool/new-sheet.png" alt="New Sheet"></p>
+
+<p>Let’s proceed to validate the functionality of this process:</p>
+
+<div style="position: relative; padding-bottom: 69.09788867562379%; height: 0;"><iframe src="https://www.loom.com/embed/4f1d948d002444f4af89b7c38867875e?sid=c6293f23-7f98-42df-bac1-eb559a37670b" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen="" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe></div>
+
+<h3 id="on-to-the-shortcut">On to the Shortcut</h3>
+
+<hr>
+
+<p>Upon mastering the utilization of Shortcuts, one can truly comprehend the immense capabilities inherent within the iOS operating system. It essentially integrates the functionality of IFTTT directly into the operating system itself.</p>
+
+<p>Below is the shortcut designed to append a transaction to the sheet:</p>
+
+<p><img src="/images/budgeting-tool/shortcut.png" alt="Shortcut"></p>
+
+<p>Link to <a href="https://www.icloud.com/shortcuts/ada47167d0974ad78f0664ba7dc3dbac" rel="me" target="_blank">Shortcut</a></p>
+
+<h3 id="before-test">Before Test</h3>
+
+<hr>
+
+<p>Here are the screenshots of cleaned up Numbers sheet before we start adding Transactions</p>
+
+<p><img src="/images/budgeting-tool/cleaned-numbers.png" alt="Cleaned Numbers"></p>
+
+<p><img src="/images/budgeting-tool/cleaned-transactions-sheet.png" alt="Cleaned Transactions Sheet"></p>
+
+<h3 id="shortcut-in-action-on-macos">Shortcut in Action on macOS</h3>
+
+<hr>
+
+<div style="position: relative; padding-bottom: 62.5%; height: 0;"><iframe src="https://www.loom.com/embed/8a8b8b854b114e3a9f294c015f777208?sid=00d3e64f-8006-4387-afa5-fe270cf4c55c" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen="" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe></div>
+
+<h3 id="shortcut-in-action---ios">Shortcut in Action - iOS</h3>
+
+<hr>
+
+<div style="position: relative; padding-bottom: 216.4785553047404%; height: 0;"><iframe src="https://www.loom.com/embed/f1ec1f9998d2414ab0aafc9fa54d1c46?sid=727d0f61-2661-479a-a27a-1d91d8aef529" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen="" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe></div>
+
+<h3 id="references">References</h3>
+
+<hr>
+
+<ul>
+  <li>macmostvideo on Youtube - <b>Using Shortcuts To Add Data To a Numbers Spreadsheet</b> - <a href="https://www.youtube.com/watch?v=EJedH7pZLg0" rel="me" target="_blank">https://www.youtube.com/watch?v=EJedH7pZLg0</a>
+</li>
+</ul>
+
+  </div>
+</article>
+
+<div class="container mx-auto px-2 py-2 clearfix">
+  <!-- Use if you want to show previous and next for all posts. -->
+
+
+
+<div class="col-4 sm-width-full left mr-lg-4 mt-3">
+  <a class="no-underline-hover py-1 block" href="http://localhost:4000/notes/books/2023/11/15/the-brain-david-eagleman.html">
+    <span class="h5 bold">Previous</span>
+    <p class="bold h3 link-primary mb-1">Book Notes: The Brain: The Story of You (by David Eagleman)</p>
+
+  </a>
+</div>
+
+
+</div>
+
+    </div>
+
+    <div class="container mx-auto clearfix mt-2 mt-lg-4 px-2">
+  <div class="border-top-thick">
+    <p class="col-8 sm-width-full left py-2 mb-0">
+      This project is maintained by <a class="text-accent" href="https://github.com/rahulakrishna" rel="me" target="_blank">rahulakrishna</a> on GitHub. You can find me on Mastodon <a rel="me" href="https://mastodon.social/@_thisdot" target="_blank">@_thisdot@mastodon.social</a></p>
+
+
+    <ul class="list-reset right clearfix sm-width-full py-2 mb-2 mb-lg-0">
+      <li class="inline-block">
+        <a class="github-button" href="https://github.com/rahulakrishna/" data-icon="octicon-star" data-count-href="rahulakrishna//stargazers" data-count-api="/repos/rahulakrishna/#stargazers_count" data-count-aria-label="# stargazers on GitHub" aria-label="Star rahulakrishna/ on GitHub" rel="me" target="_blank">Star</a>
+      </li>
+    </ul>
+  </div>
+</div>
+
+  </body>
+
+</html>

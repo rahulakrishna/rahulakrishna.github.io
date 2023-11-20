@@ -19,9 +19,10 @@
 # in the templates via {{ site.myvariable }}.
 
 title: Field Notes
+subtitle: By Rahul Krishna
 email: rkbalu524@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
-  Hello I'm Rahul Krishna. Principal Software Engineer at Bridgestone Americas.
+  Hello I'm a Principal Software Engineer at Bridgestone Americas.
   I occasionally convert my Notion Docs to markdown and publish them here.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://rahulkrrrishna.xyz" # the base hostname & protocol for your site, e.g. http://example.com

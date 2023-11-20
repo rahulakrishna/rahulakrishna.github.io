@@ -1,11 +1,11 @@
 <!-- Renders post date, title, and snippet of text. -->
 <li class="prose">
-  <div style="display: flex; flex-direction: row; align-items: center;">
+  <div style="" class="lg-row sm-column">
 
     <a class="link-primary" title="{{ post.url | prepend: site.baseurl }}"
       href="{{ post.url | prepend: site.baseurl }}">{{
       post.title }}</a>
-    &nbsp;-&nbsp;
+    <span class="spacer">&nbsp;-&nbsp;</span>
     <a class="no-underline-hover h5 block" title="{{ post.url | prepend: site.baseurl }}"
       href="{{ post.url | prepend: site.baseurl }}">{{ post.date | date: "%b %-d, %Y" }}</a>
   </div>
