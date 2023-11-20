@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "React Tips for Future"
+author: "Rahul Krishna"
 date: 2023-06-07 09:16:44 +0530
 categories: notes
 ---

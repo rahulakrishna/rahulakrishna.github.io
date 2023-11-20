@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Budgeting Tool with Numbers + Shortcuts"
+author: "Rahul Krishna"
 date: 2023-11-18 11:15:00 +0530
 categories: [notes]
 tags: [personal]

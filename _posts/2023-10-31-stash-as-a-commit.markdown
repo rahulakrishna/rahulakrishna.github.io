@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Stash as a Commit"
+author: "Rahul Krishna"
 date: 2023-10-31 17:35:44 +0530
 categories: notes
 ---

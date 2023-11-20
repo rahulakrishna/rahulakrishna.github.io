@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Memory Leak in Google Maps"
+author: "Rahul Krishna"
 date: 2023-10-21 00:48:44 +0530
 categories: notes
 ---

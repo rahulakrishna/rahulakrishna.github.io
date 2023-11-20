@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Book Notes: The Brain: The Story of You (by David Eagleman)"
+author: "Rahul Krishna"
 date: 2023-11-15 20:00:44 +0530
 categories: [notes, books]
 tags: [book, review, science]
