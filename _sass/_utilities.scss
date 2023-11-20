@@ -422,6 +422,11 @@
     flex-direction: row;
     align-items: center;
   }
+  .new-line-on-mobile {
+    br {
+      display: none;
+    }
+  }
 }
 
 @media (max-width: $breakpoint-lg) {
@@ -434,6 +439,14 @@
     align-items: flex-start;
     .spacer {
       display: none;
+    }
+  }
+  .new-line-on-mobile {
+    line-break: strict;
+  }
+  .home-posts-feed {
+    .link-primary {
+      width: 100%;
     }
   }
 }
