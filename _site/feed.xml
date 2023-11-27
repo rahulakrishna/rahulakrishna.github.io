@@ -1,4 +1,6 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2023-11-20T13:16:17+05:30</updated><id>http://localhost:4000/feed.xml</id><title type="html">Field Notes</title><subtitle>Hello I'm a Principal Software Engineer at Bridgestone Americas. I occasionally convert my Notion Docs to markdown and publish them here.</subtitle><entry><title type="html">Budgeting Tool with Numbers + Shortcuts</title><link href="http://localhost:4000/notes/2023/11/18/simple-budgeting-tool-with-numbers-shortcuts.html" rel="alternate" type="text/html" title="Budgeting Tool with Numbers + Shortcuts" /><published>2023-11-18T11:15:00+05:30</published><updated>2023-11-18T11:15:00+05:30</updated><id>http://localhost:4000/notes/2023/11/18/simple-budgeting-tool-with-numbers-shortcuts</id><content type="html" xml:base="http://localhost:4000/notes/2023/11/18/simple-budgeting-tool-with-numbers-shortcuts.html">&lt;h3 id=&quot;the-case-for-default-applications&quot;&gt;The Case for Default Applications&lt;/h3&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2023-11-27T11:58:26+05:30</updated><id>http://localhost:4000/feed.xml</id><title type="html">Field Notes</title><subtitle>Hello I'm a Principal Software Engineer at Bridgestone Americas. I occasionally convert my Notion Docs to markdown and publish them here.</subtitle><entry><title type="html">Illusion of Touch</title><link href="http://localhost:4000/notes/2023/11/27/illusion-of-touch.html" rel="alternate" type="text/html" title="Illusion of Touch" /><published>2023-11-27T11:15:00+05:30</published><updated>2023-11-27T11:15:00+05:30</updated><id>http://localhost:4000/notes/2023/11/27/illusion-of-touch</id><content type="html" xml:base="http://localhost:4000/notes/2023/11/27/illusion-of-touch.html">&lt;h3 id=&quot;til&quot;&gt;TIL&lt;/h3&gt;
+
+&lt;p&gt;It’s physically impossible to touch anything because we’re made up of atoms. When we get too close to an object, our electrons and the electrons of that object will repel each other. However, our brain interprets the sensation of those repulsion forces as the illusion of “touch” even though they never actually touch.&lt;/p&gt;</content><author><name>Rahul Krishna</name></author><category term="notes" /><category term="til" /><summary type="html">TIL</summary></entry><entry><title type="html">Budgeting Tool with Numbers + Shortcuts</title><link href="http://localhost:4000/notes/2023/11/18/simple-budgeting-tool-with-numbers-shortcuts.html" rel="alternate" type="text/html" title="Budgeting Tool with Numbers + Shortcuts" /><published>2023-11-18T11:15:00+05:30</published><updated>2023-11-18T11:15:00+05:30</updated><id>http://localhost:4000/notes/2023/11/18/simple-budgeting-tool-with-numbers-shortcuts</id><content type="html" xml:base="http://localhost:4000/notes/2023/11/18/simple-budgeting-tool-with-numbers-shortcuts.html">&lt;h3 id=&quot;the-case-for-default-applications&quot;&gt;The Case for Default Applications&lt;/h3&gt;
 
 &lt;hr /&gt;
 
@@ -232,60 +234,6 @@ content/post/2023-10-20-some-miscellaneous-git-facts.markdown | 40 +++++++++++++
 
   &lt;p&gt;Apparently older commits in the stash are stored in the reflog.&lt;/p&gt;
 &lt;/blockquote&gt;
-
-&lt;h3 id=&quot;why-cant-we-just-commit-instead-of-stashing&quot;&gt;Why can’t we just commit instead of stashing?&lt;/h3&gt;
-
-&lt;hr /&gt;
-
-&lt;p&gt;For those used to the idea of git from command line, this may seem like a strange idea. But if your git workflow is well integrated into your IDE (I must admit, I have only VS Code in mind here), then this is such a good idea.&lt;/p&gt;
-
-&lt;h4 id=&quot;the-atom-ui&quot;&gt;The Atom UI&lt;/h4&gt;
-
-&lt;p&gt;I absolutely adored the Atom UI. The best part to me was the three pane design that put File Explorer, Code and Git in view always.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://thisdot.notion.site/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2Feb53edbf-045d-426c-aa09-d626c2816f18%2F30eb89c7-3a26-44ee-b2f2-68ee6c0aa485%2FUntitled.png?table=block&amp;amp;id=d8d6eda7-64ee-407a-80bc-5008f3df3411&amp;amp;spaceId=eb53edbf-045d-426c-aa09-d626c2816f18&amp;amp;width=2000&amp;amp;userId=&amp;amp;cache=v2&quot; alt=&quot;The Atom UI with File Explorer, Code Area and Git/Github Panel&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;The Atom UI with File Explorer, Code Area and Git/Github Panel&lt;/p&gt;
-
-&lt;p&gt;This is good because as you went making changes in files, it kept adding a list item in the right side of the screen and you had a general idea how big your changes were becoming. Putting this upfront meant a little extra motivation to go and make experimental changes anywhere which never left your view and you could just go and cherry-pick or discard everything!&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://thisdot.notion.site/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2Feb53edbf-045d-426c-aa09-d626c2816f18%2Fa0cac6ea-b1a1-4188-88f2-bcd93e7ae264%2FUntitled.png?table=block&amp;amp;id=a43d04df-ecd0-4ece-bb34-c6249ef0ace4&amp;amp;spaceId=eb53edbf-045d-426c-aa09-d626c2816f18&amp;amp;width=2000&amp;amp;userId=&amp;amp;cache=v2&quot; alt=&quot;Atom Git Pane&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Atom Git Pane&lt;/p&gt;
-
-&lt;h3 id=&quot;the-flow-in-atom&quot;&gt;The Flow in Atom&lt;/h3&gt;
-
-&lt;hr /&gt;
-
-&lt;p&gt;Let’s say you’re in &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;feature-branch-1&lt;/code&gt; and you need to switch branches to &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;master&lt;/code&gt;. Naturally, you’ll stash your changes in &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;feature-branch-1&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;Here’s the alternative commit method in Atom.&lt;/p&gt;
-
-&lt;div style=&quot;position: relative; padding-bottom: 60.30150753768844%; height: 0;&quot;&gt;&lt;iframe src=&quot;https://www.loom.com/embed/3b5ae799bb104aa5891ed51a92d5f6ca?sid=55db5932-acf4-4c6f-89c3-b1eca8610ee7&quot; frameborder=&quot;0&quot; webkitallowfullscreen=&quot;&quot; mozallowfullscreen=&quot;&quot; allowfullscreen=&quot;&quot; style=&quot;position: absolute; top: 0; left: 0; width: 100%; height: 100%;&quot;&gt;&lt;/iframe&gt;&lt;/div&gt;
-
-&lt;h3 id=&quot;what-about-vs-code&quot;&gt;What about VS Code?&lt;/h3&gt;
-
-&lt;hr /&gt;
-
-&lt;p&gt;VS Code doesn’t come with the same layout by default. It’s for the better and you can have the same Atom-like workflow in VS Code. Just enable a Secondary Side Bar and drag your “Source Control” and “Commits” to the second pane.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://thisdot.notion.site/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2Feb53edbf-045d-426c-aa09-d626c2816f18%2F883485c0-262f-459b-ae7c-fb679142d8ff%2FUntitled.png?table=block&amp;amp;id=8c888b7c-77bb-4b97-89f1-3ebeb297a110&amp;amp;spaceId=eb53edbf-045d-426c-aa09-d626c2816f18&amp;amp;width=2000&amp;amp;userId=&amp;amp;cache=v2&quot; alt=&quot;Untitled&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://thisdot.notion.site/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2Feb53edbf-045d-426c-aa09-d626c2816f18%2F842b7ef4-deb7-4304-8063-0af1ad02e19f%2FUntitled.png?table=block&amp;amp;id=99e468ec-9c5b-4861-9f49-0643fd5bb392&amp;amp;spaceId=eb53edbf-045d-426c-aa09-d626c2816f18&amp;amp;width=2000&amp;amp;userId=&amp;amp;cache=v2&quot; alt=&quot;A lot more cluttered than my Atom. But it also does a lot more than Atom!&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;A lot more cluttered than my Atom. But it also does a lot more than Atom!&lt;/p&gt;
-
-&lt;h3 id=&quot;the-same-flow-in-vs-code&quot;&gt;The Same Flow in VS Code&lt;/h3&gt;
-
-&lt;hr /&gt;
-
-&lt;div style=&quot;position: relative; padding-bottom: 58.91980360065466%; height: 0;&quot;&gt;&lt;iframe src=&quot;https://www.loom.com/embed/a1fa5c8bebd74fb889ae26dbbfcf63ee?sid=e00e01da-5fc6-4b6a-95eb-a9c3912e3e95&quot; frameborder=&quot;0&quot; webkitallowfullscreen=&quot;&quot; mozallowfullscreen=&quot;&quot; allowfullscreen=&quot;&quot; style=&quot;position: absolute; top: 0; left: 0; width: 100%; height: 100%;&quot;&gt;&lt;/iframe&gt;&lt;/div&gt;
-
-&lt;h3 id=&quot;bonus-if-you-really-want-to-do-it-on-the-command-line&quot;&gt;Bonus: If you really want to do it on the command line&lt;/h3&gt;
-
-&lt;hr /&gt;
-
-&lt;div style=&quot;position: relative; padding-bottom: 74.34052757793765%; height: 0;&quot;&gt;&lt;iframe src=&quot;https://www.loom.com/embed/70c3d90ac8a64c2aaae010394174a8bb?sid=5674d81a-c4e8-4438-aaea-ec7200ae4212&quot; frameborder=&quot;0&quot; webkitallowfullscreen=&quot;&quot; mozallowfullscreen=&quot;&quot; allowfullscreen=&quot;&quot; style=&quot;position: absolute; top: 0; left: 0; width: 100%; height: 100%;&quot;&gt;&lt;/iframe&gt;&lt;/div&gt;
 
 &lt;h3 id=&quot;the-rationale-behind-preferring-commit-over-stash&quot;&gt;The Rationale Behind Preferring Commit Over Stash&lt;/h3&gt;
 

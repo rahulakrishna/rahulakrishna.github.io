@@ -7,4 +7,6 @@ categories: [notes]
 tags: [til]
 ---
 
+### TIL
+
 It's physically impossible to touch anything because we're made up of atoms. When we get too close to an object, our electrons and the electrons of that object will repel each other. However, our brain interprets the sensation of those repulsion forces as the illusion of "touch" even though they never actually touch.
