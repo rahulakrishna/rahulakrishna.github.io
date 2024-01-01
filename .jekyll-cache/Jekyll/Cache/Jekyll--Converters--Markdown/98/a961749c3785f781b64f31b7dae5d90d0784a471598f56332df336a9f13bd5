@@ -1,0 +1,212 @@
+I"tB<h1 id="why-react-query">Why React Query?</h1>
+
+<aside>
+💡 This is aimed at the need to use a library like `react-query` over fetching data using a built-in custom-hook like `useEffect`. This is not to state that `react-query` is better than alternatives like `SWR`, `Apollo`, etc.
+
+</aside>
+
+<h3 id="what-is-react-query">What is React Query?</h3>
+
+<hr />
+
+<p>React Query is a powerful data-fetching and caching library for React applications. It provides a simple and intuitive API to manage and synchronise data between your UI components and your server. With React Query, you can easily handle complex data fetching scenarios, such as pagination, caching, and real-time updates, while keeping your UI responsive and efficient. It is widely used in modern React applications to simplify data management and improve performance.</p>
+
+<h3 id="query-basics">Query Basics</h3>
+
+<hr />
+
+<p>React Query is not an axios alternative. If we were to think of a familiar alternative, React Query is like using <code class="language-plaintext highlighter-rouge">Redux + Redux Thunk</code> for making API calls.</p>
+
+<p><strong>**</strong>**<strong>**</strong>Redux + Redux Thunk Logic<strong>**</strong>**<strong>**</strong></p>
+
+<div class="language-jsx highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="mi">1</span><span class="p">.</span> <span class="nx">make</span> <span class="nx">an</span> <span class="nx">api</span> <span class="nx">call</span>
+<span class="mi">2</span><span class="p">.</span> <span class="nx">update</span> <span class="nx">the</span> <span class="nx">redux</span> <span class="o">**</span><span class="nx">store</span><span class="o">**</span>
+<span class="mi">3</span><span class="p">.</span> <span class="nx">every</span> <span class="nx">place</span> <span class="nx">that</span> <span class="nx">uses</span> <span class="nx">the</span> <span class="nx">store</span> <span class="nx">state</span> <span class="nx">gets</span> <span class="nx">updated</span>
+</code></pre></div></div>
+
+<p><strong>**</strong>**<strong>**</strong>React Query Logic<strong>**</strong>**<strong>**</strong></p>
+
+<div class="language-jsx highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="mi">1</span><span class="p">.</span> <span class="nx">make</span> <span class="nx">an</span> <span class="nx">api</span> <span class="nx">call</span>
+<span class="mi">2</span><span class="p">.</span> <span class="nx">it</span> <span class="nx">automatically</span> <span class="nx">updates</span> <span class="nx">the</span> <span class="nx">react</span><span class="o">-</span><span class="nx">query</span> <span class="nx">store</span>
+<span class="mi">3</span><span class="p">.</span> <span class="nx">every</span> <span class="nx">place</span> <span class="nx">that</span> <span class="nx">uses</span> <span class="nx">the</span> <span class="nx">store</span> <span class="nx">state</span> <span class="nx">gets</span> <span class="nx">updated</span>
+</code></pre></div></div>
+
+<h3 id="redux-like-store">Redux like Store</h3>
+
+<hr />
+
+<p>Consider Profile:</p>
+
+<p><img src="Why%20React%20Query%20e53ee0d94e2b4e079b376aef4fe8d10e/Untitled.png" alt="Untitled" /></p>
+
+<p>This data should ideally be in sync with the nav bar:</p>
+
+<p><img src="Why%20React%20Query%20e53ee0d94e2b4e079b376aef4fe8d10e/Untitled%201.png" alt="Untitled" /></p>
+
+<p>To do this the normal way, you’d have to design and create a state inside your redux store. Write action dispatchers to update the store. And fetch the same data in both places.</p>
+
+<p>But with <code class="language-plaintext highlighter-rouge">react-query</code> we can:</p>
+
+<p><img src="Why%20React%20Query%20e53ee0d94e2b4e079b376aef4fe8d10e/Untitled%202.png" alt="Untitled" /></p>
+
+<p><img src="Why%20React%20Query%20e53ee0d94e2b4e079b376aef4fe8d10e/Untitled%203.png" alt="Untitled" /></p>
+
+<p>Fetch data using the same <code class="language-plaintext highlighter-rouge">queryKey</code> in both the places and both these places will always be in sync.</p>
+
+<aside>
+💡 React Query is not an alternative to Axios. So the logic to get data (aka `queryFn` is completely within our hands). It can be any function that returns a promise.
+
+</aside>
+
+<h3 id="throwing-errors">Throwing Errors</h3>
+
+<hr />
+
+<div class="language-jsx highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">getDriverData</span> <span class="o">=</span> <span class="k">async</span> <span class="p">(</span><span class="nx">id</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+	<span class="k">await</span> <span class="nx">axios</span><span class="p">.</span><span class="kd">get</span><span class="p">(</span><span class="dl">'</span><span class="s1">/drivers</span><span class="dl">'</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="kd">const</span> <span class="nx">getVehicleData</span> <span class="o">=</span> <span class="k">async</span> <span class="p">(</span><span class="nx">id</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+	<span class="k">await</span> <span class="nx">axios</span><span class="p">.</span><span class="kd">get</span><span class="p">(</span><span class="dl">'</span><span class="s1">/vehicles</span><span class="dl">'</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="kd">const</span> <span class="nx">getReconstructionData</span> <span class="o">=</span> <span class="p">(</span><span class="nx">id</span><span class="p">,</span> <span class="nx">driverId</span><span class="p">,</span> <span class="nx">vehicleId</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+	<span class="kd">const</span> <span class="nx">driverData</span> <span class="o">=</span> <span class="k">await</span> <span class="nx">getDriverData</span><span class="p">(</span><span class="nx">driverId</span><span class="p">);</span>
+	<span class="kd">const</span> <span class="nx">vehicleData</span> <span class="o">=</span> <span class="k">await</span> <span class="nx">getVehicleData</span><span class="p">(</span><span class="nx">vehicleId</span><span class="p">);</span>
+
+	<span class="kd">const</span> <span class="nx">data</span> <span class="o">=</span> <span class="k">await</span> <span class="nx">axios</span><span class="p">.</span><span class="kd">get</span><span class="p">(</span><span class="dl">'</span><span class="s1">/reconstruction-data</span><span class="dl">'</span><span class="p">);</span>
+
+	<span class="k">return</span> <span class="p">{</span>
+		<span class="nx">driverData</span><span class="p">,</span>
+		<span class="nx">vehicleData</span><span class="p">,</span>
+		<span class="nx">data</span>
+	<span class="p">}</span>
+<span class="p">}</span>
+
+<span class="kd">const</span> <span class="nx">Component</span> <span class="o">=</span> <span class="p">({</span> <span class="nx">id</span><span class="p">,</span> <span class="nx">driverId</span><span class="p">,</span> <span class="nx">vehicleId</span> <span class="p">})</span> <span class="o">=&gt;</span> <span class="p">{</span>
+	<span class="kd">const</span> <span class="p">{</span> <span class="nx">data</span><span class="p">,</span> <span class="nx">loading</span><span class="p">,</span> <span class="nx">error</span> <span class="p">}</span> <span class="o">=</span> <span class="nx">useQuery</span><span class="p">({</span>
+		<span class="na">queryKey</span><span class="p">:</span> <span class="p">[</span><span class="dl">'</span><span class="s1">get-reconstruction-data</span><span class="dl">'</span><span class="p">,</span> <span class="nx">id</span><span class="p">,</span> <span class="nx">driverId</span><span class="p">,</span> <span class="nx">vehicleId</span><span class="p">],</span>
+		<span class="na">queryFn</span><span class="p">:</span> <span class="nx">getReconstructionData</span><span class="p">(</span><span class="nx">id</span><span class="p">,</span> <span class="nx">driverId</span><span class="p">,</span> <span class="nx">vehicleId</span><span class="p">)</span>
+	<span class="p">});</span>
+	<span class="k">if</span> <span class="p">(</span><span class="nx">error</span><span class="p">)</span> <span class="p">{</span>
+		<span class="k">return</span> <span class="nx">error</span><span class="p">.</span><span class="nx">message</span><span class="p">;</span>
+	<span class="p">}</span>
+	<span class="k">return</span> <span class="p">(</span>
+		<span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;</span><span class="si">{</span><span class="nx">data</span><span class="p">.</span><span class="nx">map</span><span class="p">(...)</span><span class="si">}</span><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+	<span class="p">)</span>
+
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p><img src="Why%20React%20Query%20e53ee0d94e2b4e079b376aef4fe8d10e/Untitled%204.png" alt="Untitled" /></p>
+
+<aside>
+💡 Above example is not all `react-query`. `axios` does a good job at ********************************throwing errors******************************** when you just return `axios()`. What `react-query` is doing is removing the responsibility of **************catching************** those errors.
+
+Because every time a `throw new Error('reason')` occurs, the page would break. But if it happens inside the `queryFn`, react-query gracefully captures it and returns it as a string inside `error.message`.
+
+</aside>
+
+<h3 id="cancellation">Cancellation</h3>
+
+<hr />
+
+<p>The <code class="language-plaintext highlighter-rouge">queryFn</code> by default has a <code class="language-plaintext highlighter-rouge">signal</code> argument that you can pass.</p>
+
+<p><img src="Why%20React%20Query%20e53ee0d94e2b4e079b376aef4fe8d10e/Untitled%205.png" alt="Untitled" /></p>
+
+<h3 id="blocking-queries-until-something-changes">Blocking Queries until something changes</h3>
+
+<hr />
+
+<p>i.e,</p>
+
+<div class="language-jsx highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="p">[</span><span class="nx">data</span><span class="p">,</span> <span class="nx">setData</span><span class="p">]</span> <span class="o">=</span> <span class="nx">useState</span><span class="p">([]);</span>
+<span class="kd">const</span> <span class="p">[</span><span class="nx">prelimData</span><span class="p">,</span> <span class="nx">setPrelimData</span><span class="p">]</span> <span class="o">=</span> <span class="nx">useState</span><span class="p">(</span><span class="kc">null</span><span class="p">);</span>
+<span class="nx">useEffect</span><span class="p">(()</span> <span class="o">=&gt;</span> <span class="p">{</span>
+  <span class="k">if</span> <span class="p">(</span><span class="nx">prelimData</span><span class="p">?.</span><span class="nx">toggled</span><span class="p">)</span> <span class="p">{</span>
+    <span class="c1">// make an api call and update the data state</span>
+  <span class="p">}</span>
+<span class="p">},</span> <span class="p">[</span><span class="nx">prelimData</span><span class="p">?.</span><span class="nx">toggled</span><span class="p">]);</span>
+<span class="nx">useEffect</span><span class="p">(()</span> <span class="o">=&gt;</span> <span class="p">{</span>
+  <span class="c1">// make an api call and update the toggled state</span>
+<span class="p">},</span> <span class="p">[]);</span>
+</code></pre></div></div>
+
+<p>this is 3 effect runs for 2 api calls.</p>
+
+<div class="language-jsx highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="p">{</span> <span class="na">data</span><span class="p">:</span> <span class="nx">prelimData</span><span class="p">,</span> <span class="na">error</span><span class="p">:</span> <span class="nx">prelimDataError</span><span class="p">,</span> <span class="na">loading</span><span class="p">:</span> <span class="nx">prelimDataLoading</span> <span class="p">}</span> <span class="o">=</span>
+	<span class="nx">useQuery</span><span class="p">({</span>
+		<span class="na">queryKey</span><span class="p">:</span> <span class="p">[</span><span class="dl">'</span><span class="s1">prelim-data</span><span class="dl">'</span><span class="p">]</span>
+		<span class="na">queryFn</span><span class="p">:</span> <span class="k">async</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="p">{}</span>
+	<span class="p">})</span>
+
+<span class="kd">const</span> <span class="p">{</span> <span class="nx">data</span><span class="p">,</span> <span class="nx">error</span><span class="p">,</span> <span class="nx">loading</span> <span class="p">}</span> <span class="o">=</span> <span class="nx">useQuery</span><span class="p">({</span>
+	<span class="na">queryKey</span><span class="p">:</span> <span class="p">[</span><span class="dl">'</span><span class="s1">actual-data</span><span class="dl">'</span><span class="p">],</span>
+	<span class="na">queryFn</span><span class="p">:</span> <span class="k">async</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="p">{},</span>
+	<span class="na">enabled</span><span class="p">:</span> <span class="nx">prelimData</span><span class="p">?.</span><span class="nx">toggled</span>
+<span class="p">})</span>
+</code></pre></div></div>
+
+<h3 id="loading-vs-fetching">Loading vs Fetching</h3>
+
+<hr />
+
+<p>It’s a good UX practice to differentiate Loading and Fetching.</p>
+
+<p>Loading state is when we don’t yet have data.</p>
+
+<p>Once we have data, for subsequent fetches, we should ideally show fetching state</p>
+
+<p><strong>**</strong>****<strong>**</strong>Examples from some well designed apps<strong>**</strong>****<strong>**</strong></p>
+
+<p><img src="Why%20React%20Query%20e53ee0d94e2b4e079b376aef4fe8d10e/Untitled%206.png" alt="YouTube Loading State" /></p>
+
+<p>YouTube Loading State</p>
+
+<p><img src="Why%20React%20Query%20e53ee0d94e2b4e079b376aef4fe8d10e/Untitled%207.png" alt="YouTube Fetching State" /></p>
+
+<p>YouTube Fetching State</p>
+
+<p><img src="Why%20React%20Query%20e53ee0d94e2b4e079b376aef4fe8d10e/Untitled%208.png" alt="Apollo App Loading State" /></p>
+
+<p>Apollo App Loading State</p>
+
+<p><img src="Why%20React%20Query%20e53ee0d94e2b4e079b376aef4fe8d10e/Untitled%209.png" alt="Apollo App Fetching State" /></p>
+
+<p>Apollo App Fetching State</p>
+
+<p><img src="Why%20React%20Query%20e53ee0d94e2b4e079b376aef4fe8d10e/Untitled%2010.png" alt="Fotmob Loading State" /></p>
+
+<p>Fotmob Loading State</p>
+
+<p><img src="Why%20React%20Query%20e53ee0d94e2b4e079b376aef4fe8d10e/Untitled%2011.png" alt="Fotmob Fetching State" /></p>
+
+<p>Fotmob Fetching State</p>
+
+<h3 id="stale-useeffects">Stale UseEffects</h3>
+
+<hr />
+
+<p><img src="Why%20React%20Query%20e53ee0d94e2b4e079b376aef4fe8d10e/Untitled%2012.png" alt="Untitled" /></p>
+
+<p>Stale useEffects are considered bad. Ideally, when we have a useEffect, it should have all its variables inside the dependency array. So in the above example, for the useEffect to be not considered stale, it should have a dependency array of <code class="language-plaintext highlighter-rouge">[getData, setGroupsLoading, getGroupsData, setGroupsList fetchGroupsData]</code></p>
+
+<p>Even when we know none of this is going to change, it’s a React Functional Component anti-pattern to have stale <code class="language-plaintext highlighter-rouge">useEffects</code>.</p>
+
+<p>One reason is that React Functional Components are nothing but closures. And the mental model is that every <code class="language-plaintext highlighter-rouge">render</code> has its own <code class="language-plaintext highlighter-rouge">state</code> and <code class="language-plaintext highlighter-rouge">props</code>.</p>
+
+<p>i.e,</p>
+
+<div class="language-jsx highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="p">[</span><span class="nx">count</span><span class="p">,</span> <span class="nx">setState</span><span class="p">]</span> <span class="o">=</span> <span class="nx">useState</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
+</code></pre></div></div>
+
+<p><strong>In this example, <code class="language-plaintext highlighter-rouge">count</code> is just a number.</strong> It’s not a magic “data binding”, a “watcher”, a “proxy”, or anything else. It’s a good old number like this one:</p>
+
+<div class="language-jsx highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">count</span> <span class="o">=</span> <span class="mi">12</span><span class="p">;</span>
+</code></pre></div></div>
+
+<p>This mental model breaks when we have stale useEffects.</p>
+
+<p>Example taken from: <a href="https://overreacted.io/a-complete-guide-to-useeffect/">https://overreacted.io/a-complete-guide-to-useeffect/</a></p>
+:ET

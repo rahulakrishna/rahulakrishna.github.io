@@ -1,4 +1,60 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2023-11-27T12:11:21+05:30</updated><id>http://localhost:4000/feed.xml</id><title type="html">Field Notes</title><subtitle>Hello I'm a Principal Software Engineer at Bridgestone Americas. I occasionally convert my Notion Docs to markdown and publish them here.</subtitle><entry><title type="html">Illusion of Touch</title><link href="http://localhost:4000/notes/2023/11/27/illusion-of-touch.html" rel="alternate" type="text/html" title="Illusion of Touch" /><published>2023-11-27T11:15:00+05:30</published><updated>2023-11-27T11:15:00+05:30</updated><id>http://localhost:4000/notes/2023/11/27/illusion-of-touch</id><content type="html" xml:base="http://localhost:4000/notes/2023/11/27/illusion-of-touch.html">&lt;h3 id=&quot;til&quot;&gt;TIL&lt;/h3&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2024-01-01T21:51:05+05:30</updated><id>http://localhost:4000/feed.xml</id><title type="html">Field Notes</title><subtitle>Hello I'm a Principal Software Engineer at Bridgestone Americas. I occasionally convert my Notion Docs to markdown and publish them here.</subtitle><entry><title type="html">Loading vs Fetching</title><link href="http://localhost:4000/notes/2024/01/01/loading-vs-fetching.html" rel="alternate" type="text/html" title="Loading vs Fetching" /><published>2024-01-01T11:15:00+05:30</published><updated>2024-01-01T11:15:00+05:30</updated><id>http://localhost:4000/notes/2024/01/01/loading-vs-fetching</id><content type="html" xml:base="http://localhost:4000/notes/2024/01/01/loading-vs-fetching.html">&lt;h3 id=&quot;the-basics&quot;&gt;The Basics&lt;/h3&gt;
+
+&lt;hr /&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;No Data + Fetching Data = LOADING&lt;/li&gt;
+  &lt;li&gt;Yes Data + Fetching Data = FETCHING&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;why&quot;&gt;Why?&lt;/h3&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;As long as the data we have is not invalid. We have no reason to hide it away from the user.&lt;/p&gt;
+
+&lt;h3 id=&quot;examples-from-around-the-world&quot;&gt;Examples from around the world&lt;/h3&gt;
+
+&lt;hr /&gt;
+
+&lt;table&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Loading&lt;/td&gt;
+      &lt;td&gt;Fetching&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;img src=&quot;/images/loading-vs-fetching/Untitled%206.png&quot; alt=&quot;YouTube Loading State&quot; /&gt; YouTube Loading State&lt;/td&gt;
+      &lt;td&gt;&lt;img src=&quot;/images/loading-vs-fetching/Untitled%207.png&quot; alt=&quot;YouTube Fetching State&quot; /&gt; YouTube Fetching State&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;img src=&quot;/images/loading-vs-fetching/Untitled%208.png&quot; alt=&quot;Apollo App Loading State&quot; /&gt; Apollo App Loading State&lt;/td&gt;
+      &lt;td&gt;&lt;img src=&quot;/images/loading-vs-fetching/Untitled%209.png&quot; alt=&quot;Apollo App Fetching State&quot; /&gt; Apollo App Fetching State&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;img src=&quot;/images/loading-vs-fetching/Untitled%2010.png&quot; alt=&quot;Fotmob Loading State&quot; /&gt; Fotmob Loading State&lt;/td&gt;
+      &lt;td&gt;&lt;img src=&quot;/images/loading-vs-fetching/Untitled%2011.png&quot; alt=&quot;Fotmob Fetching State&quot; /&gt; Fotmob Fetching State&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h3 id=&quot;important-exception&quot;&gt;Important Exception&lt;/h3&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;We must be careful not to trigger the fetching state when the &lt;em&gt;data is invalid&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/loading-vs-fetching/facebook-messenger.jpeg&quot; alt=&quot;Facebook Messenger Concept&quot; /&gt; Facebook Messenger Concept (Credit: Christoffer O. Jensen)&lt;/p&gt;
+
+&lt;p&gt;In this example. Moving between chats should always render the data on the screen invalid.&lt;/p&gt;
+
+&lt;h3 id=&quot;references&quot;&gt;References&lt;/h3&gt;
+
+&lt;hr /&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Christoffer O. Jensen on Dribble - &lt;b&gt;Facebook Messenger App&lt;/b&gt; - https://dribbble.com/shots/800893-Facebook-Messenger-App/attachments/81487&lt;/li&gt;
+&lt;/ul&gt;</content><author><name>Rahul Krishna</name></author><category term="notes" /><category term="programming" /><category term="ux" /><summary type="html">The Basics</summary></entry><entry><title type="html">Illusion of Touch</title><link href="http://localhost:4000/notes/2023/11/27/illusion-of-touch.html" rel="alternate" type="text/html" title="Illusion of Touch" /><published>2023-11-27T11:15:00+05:30</published><updated>2023-11-27T11:15:00+05:30</updated><id>http://localhost:4000/notes/2023/11/27/illusion-of-touch</id><content type="html" xml:base="http://localhost:4000/notes/2023/11/27/illusion-of-touch.html">&lt;h3 id=&quot;til&quot;&gt;TIL&lt;/h3&gt;
 
 &lt;p&gt;It’s physically impossible to touch anything because we’re made up of atoms. When we get too close to an object, our electrons and the electrons of that object will repel each other. However, our brain interprets the sensation of those repulsion forces as the illusion of “touch” even though they never actually touch.&lt;/p&gt;</content><author><name>Rahul Krishna</name></author><category term="notes" /><category term="til" /><summary type="html">TIL</summary></entry><entry><title type="html">Budgeting Tool with Numbers + Shortcuts</title><link href="http://localhost:4000/notes/2023/11/18/simple-budgeting-tool-with-numbers-shortcuts.html" rel="alternate" type="text/html" title="Budgeting Tool with Numbers + Shortcuts" /><published>2023-11-18T11:15:00+05:30</published><updated>2023-11-18T11:15:00+05:30</updated><id>http://localhost:4000/notes/2023/11/18/simple-budgeting-tool-with-numbers-shortcuts</id><content type="html" xml:base="http://localhost:4000/notes/2023/11/18/simple-budgeting-tool-with-numbers-shortcuts.html">&lt;h3 id=&quot;the-case-for-default-applications&quot;&gt;The Case for Default Applications&lt;/h3&gt;
 
