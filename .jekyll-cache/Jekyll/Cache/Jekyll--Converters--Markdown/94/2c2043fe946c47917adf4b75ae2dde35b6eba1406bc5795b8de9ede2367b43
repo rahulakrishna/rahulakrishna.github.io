@@ -1,0 +1,59 @@
+I"^<h3 id="loading-vs-fetching">Loading vs Fetching</h3>
+
+<hr />
+
+<p>It’s a good UX practice to differentiate Loading and Fetching.</p>
+
+<p>Loading state is when we don’t yet have data.</p>
+
+<p>Once we have data, for subsequent fetches, we should ideally show fetching state</p>
+
+<p>Examples from some well designed apps</p>
+
+<table>
+  <tbody>
+    <tr>
+      <td>Loading</td>
+      <td>Fetching</td>
+    </tr>
+    <tr>
+      <td><img src="/images/why-react-query/Untitled%206.png" alt="YouTube Loading State" /> YouTube Loading State</td>
+      <td><img src="/images/why-react-query/Untitled%207.png" alt="YouTube Fetching State" /> YouTube Fetching State</td>
+    </tr>
+    <tr>
+      <td><img src="/images/why-react-query/Untitled%208.png" alt="Apollo App Loading State" /> Apollo App Loading State</td>
+      <td><img src="/images/why-react-query/Untitled%209.png" alt="Apollo App Fetching State" /> Apollo App Fetching State</td>
+    </tr>
+    <tr>
+      <td><img src="/images/why-react-query/Untitled%2010.png" alt="Fotmob Loading State" /> Fotmob Loading State</td>
+      <td><img src="/images/why-react-query/Untitled%2011.png" alt="Fotmob Fetching State" /> Fotmob Fetching State</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="stale-useeffects">Stale UseEffects</h3>
+
+<hr />
+
+<p><img src="/images/why-react-query/Untitled%2012.png" alt="Untitled" /></p>
+
+<p>Stale useEffects are considered bad. Ideally, when we have a useEffect, it should have all its variables inside the dependency array. So in the above example, for the useEffect to be not considered stale, it should have a dependency array of <code class="language-plaintext highlighter-rouge">[getData, setGroupsLoading, getGroupsData, setGroupsList fetchGroupsData]</code></p>
+
+<p>Even when we know none of this is going to change, it’s a React Functional Component anti-pattern to have stale <code class="language-plaintext highlighter-rouge">useEffects</code>.</p>
+
+<p>One reason is that React Functional Components are nothing but closures. And the mental model is that every <code class="language-plaintext highlighter-rouge">render</code> has its own <code class="language-plaintext highlighter-rouge">state</code> and <code class="language-plaintext highlighter-rouge">props</code>.</p>
+
+<p>i.e,</p>
+
+<div class="language-jsx highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="p">[</span><span class="nx">count</span><span class="p">,</span> <span class="nx">setState</span><span class="p">]</span> <span class="o">=</span> <span class="nx">useState</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
+</code></pre></div></div>
+
+<p><strong>In this example, <code class="language-plaintext highlighter-rouge">count</code> is just a number.</strong> It’s not a magic “data binding”, a “watcher”, a “proxy”, or anything else. It’s a good old number like this one:</p>
+
+<div class="language-jsx highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">count</span> <span class="o">=</span> <span class="mi">12</span><span class="p">;</span>
+</code></pre></div></div>
+
+<p>This mental model breaks when we have stale useEffects.</p>
+
+<p>Example taken from: <a href="https://overreacted.io/a-complete-guide-to-useeffect/">https://overreacted.io/a-complete-guide-to-useeffect/</a></p>
+:ET
