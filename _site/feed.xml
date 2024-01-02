@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2024-01-02T16:58:16+05:30</updated><id>http://localhost:4000/feed.xml</id><title type="html">Field Notes</title><subtitle>Hello I'm a Principal Software Engineer at Bridgestone Americas. I occasionally convert my Notion Docs to markdown and publish them here.</subtitle><entry><title type="html">Visual History of World Cup Logos</title><link href="http://localhost:4000/notes/2024/01/02/visual-history-of-world-cups.html" rel="alternate" type="text/html" title="Visual History of World Cup Logos" /><published>2024-01-02T11:15:00+05:30</published><updated>2024-01-02T11:15:00+05:30</updated><id>http://localhost:4000/notes/2024/01/02/visual-history-of-world-cups</id><content type="html" xml:base="http://localhost:4000/notes/2024/01/02/visual-history-of-world-cups.html">&lt;h3 id=&quot;introduction&quot;&gt;Introduction&lt;/h3&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2024-01-02T17:00:51+05:30</updated><id>http://localhost:4000/feed.xml</id><title type="html">Field Notes</title><subtitle>Hello I'm a Principal Software Engineer at Bridgestone Americas. I occasionally convert my Notion Docs to markdown and publish them here.</subtitle><entry><title type="html">Visual History of World Cup Logos</title><link href="http://localhost:4000/notes/2024/01/02/visual-history-of-world-cups.html" rel="alternate" type="text/html" title="Visual History of World Cup Logos" /><published>2024-01-02T11:15:00+05:30</published><updated>2024-01-02T11:15:00+05:30</updated><id>http://localhost:4000/notes/2024/01/02/visual-history-of-world-cups</id><content type="html" xml:base="http://localhost:4000/notes/2024/01/02/visual-history-of-world-cups.html">&lt;h3 id=&quot;introduction&quot;&gt;Introduction&lt;/h3&gt;
 
 &lt;hr /&gt;
 
@@ -10,8 +10,9 @@
   &lt;li&gt;Rugby World Cup&lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Nearly all world cup logos look reasonably bad or illegible in dark mode. So this page is better read in light mode
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;Nearly all world cup logos look reasonably bad or illegible in dark mode. So this page is better read in light mode&lt;/p&gt;
+&lt;/blockquote&gt;
 
 &lt;h3 id=&quot;the-actual-cups&quot;&gt;The Actual Cups&lt;/h3&gt;
 

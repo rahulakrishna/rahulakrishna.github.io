@@ -17,9 +17,7 @@ World Cup logos are a visual representation of the time, culture and the general
 2. ICC Cricket World Cup
 3. Rugby World Cup
 
-```
-Nearly all world cup logos look reasonably bad or illegible in dark mode. So this page is better read in light mode
-```
+> Nearly all world cup logos look reasonably bad or illegible in dark mode. So this page is better read in light mode
 
 ### The Actual Cups
 
