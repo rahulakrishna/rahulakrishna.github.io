@@ -1,4 +1,309 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2024-01-01T21:51:05+05:30</updated><id>http://localhost:4000/feed.xml</id><title type="html">Field Notes</title><subtitle>Hello I'm a Principal Software Engineer at Bridgestone Americas. I occasionally convert my Notion Docs to markdown and publish them here.</subtitle><entry><title type="html">Loading vs Fetching</title><link href="http://localhost:4000/notes/2024/01/01/loading-vs-fetching.html" rel="alternate" type="text/html" title="Loading vs Fetching" /><published>2024-01-01T11:15:00+05:30</published><updated>2024-01-01T11:15:00+05:30</updated><id>http://localhost:4000/notes/2024/01/01/loading-vs-fetching</id><content type="html" xml:base="http://localhost:4000/notes/2024/01/01/loading-vs-fetching.html">&lt;h3 id=&quot;the-basics&quot;&gt;The Basics&lt;/h3&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2024-01-02T17:00:51+05:30</updated><id>http://localhost:4000/feed.xml</id><title type="html">Field Notes</title><subtitle>Hello I'm a Principal Software Engineer at Bridgestone Americas. I occasionally convert my Notion Docs to markdown and publish them here.</subtitle><entry><title type="html">Visual History of World Cup Logos</title><link href="http://localhost:4000/notes/2024/01/02/visual-history-of-world-cups.html" rel="alternate" type="text/html" title="Visual History of World Cup Logos" /><published>2024-01-02T11:15:00+05:30</published><updated>2024-01-02T11:15:00+05:30</updated><id>http://localhost:4000/notes/2024/01/02/visual-history-of-world-cups</id><content type="html" xml:base="http://localhost:4000/notes/2024/01/02/visual-history-of-world-cups.html">&lt;h3 id=&quot;introduction&quot;&gt;Introduction&lt;/h3&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;World Cup logos are a visual representation of the time, culture and the general vibe of the host nation and the time period in which it is held. There are three major world cups that happen. In order of popularity, they are:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;FIFA World Cup&lt;/li&gt;
+  &lt;li&gt;ICC Cricket World Cup&lt;/li&gt;
+  &lt;li&gt;Rugby World Cup&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Nearly all world cup logos look reasonably bad or illegible in dark mode. So this page is better read in light mode&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h3 id=&quot;the-actual-cups&quot;&gt;The Actual Cups&lt;/h3&gt;
+
+&lt;hr /&gt;
+
+&lt;table&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;img src=&quot;/images/visual-history-of-world-cup-logos/MSport-World-Cup-1.jpg&quot; alt=&quot;MSport-World-Cup-1.jpg&quot; /&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;img src=&quot;/images/visual-history-of-world-cup-logos/post_image_1d174d2.jpg&quot; alt=&quot;post_image_1d174d2.jpg&quot; /&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;img src=&quot;/images/visual-history-of-world-cup-logos/skysports-webb-ellis-cup-rugby-world-cup_6333804.jpg&quot; alt=&quot;skysports-webb-ellis-cup-rugby-world-cup_6333804.jpg&quot; /&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h3 id=&quot;logos-before-2014&quot;&gt;Logos before 2014&lt;/h3&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;strong&gt;FIFA World Cup started in 1930. It did not have a logo for a long time, rather a poster existed.
+Cricket World Cup debuted in 1975 and the Rugby World Cup in 1987.&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Poster Era (1930-1966)&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/visual-history-of-world-cup-logos/Untitled.png&quot; alt=&quot;Untitled&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/visual-history-of-world-cup-logos/Untitled%201.png&quot; alt=&quot;Untitled&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/visual-history-of-world-cup-logos/Untitled%202.png&quot; alt=&quot;Untitled&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/visual-history-of-world-cup-logos/Untitled%203.png&quot; alt=&quot;Untitled&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/visual-history-of-world-cup-logos/Untitled%204.png&quot; alt=&quot;Untitled&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/visual-history-of-world-cup-logos/Untitled%205.png&quot; alt=&quot;Untitled&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/visual-history-of-world-cup-logos/Untitled%206.png&quot; alt=&quot;Untitled&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/visual-history-of-world-cup-logos/Untitled%207.png&quot; alt=&quot;Untitled&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Logo Era&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/visual-history-of-world-cup-logos/Untitled%208.png&quot; alt=&quot;This is probably what can be considered the first logo&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;This is probably what can be considered the first logo&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;img src=&quot;/images/visual-history-of-world-cup-logos/Untitled%209.png&quot; alt=&quot;Untitled&quot; /&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;img src=&quot;/images/visual-history-of-world-cup-logos/Untitled%2010.png&quot; alt=&quot;Untitled&quot; /&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;table&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;img src=&quot;/images/visual-history-of-world-cup-logos/Untitled%2011.png&quot; alt=&quot;Untitled&quot; /&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;img src=&quot;/images/visual-history-of-world-cup-logos/Untitled%2012.png&quot; alt=&quot;Untitled&quot; /&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;table&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;img src=&quot;/images/visual-history-of-world-cup-logos/Untitled%2013.png&quot; alt=&quot;Untitled&quot; /&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;img src=&quot;/images/visual-history-of-world-cup-logos/Untitled%2014.png&quot; alt=&quot;Untitled&quot; /&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;table&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;img src=&quot;/images/visual-history-of-world-cup-logos/Untitled%2015.png&quot; alt=&quot;Untitled&quot; /&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;img src=&quot;/images/visual-history-of-world-cup-logos/Untitled%2016.png&quot; alt=&quot;The first CWC logo to have had some effort. But reasonably bad.&quot; /&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;img src=&quot;/images/visual-history-of-world-cup-logos/Untitled%2017.png&quot; alt=&quot;Untitled&quot; /&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;table&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;img src=&quot;/images/visual-history-of-world-cup-logos/Untitled%2018.png&quot; alt=&quot;Untitled&quot; /&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;img src=&quot;/images/visual-history-of-world-cup-logos/Untitled%2019.png&quot; alt=&quot;Untitled&quot; /&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;img src=&quot;/images/visual-history-of-world-cup-logos/Untitled%2020.png&quot; alt=&quot;Untitled&quot; /&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;table&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;img src=&quot;/images/visual-history-of-world-cup-logos/Untitled%2021.png&quot; alt=&quot;Untitled&quot; /&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;img src=&quot;/images/visual-history-of-world-cup-logos/Untitled%2022.png&quot; alt=&quot;Untitled&quot; /&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;img src=&quot;/images/visual-history-of-world-cup-logos/Untitled%2023.png&quot; alt=&quot;Untitled&quot; /&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;table&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;img src=&quot;/images/visual-history-of-world-cup-logos/Untitled%2024.png&quot; alt=&quot;Untitled&quot; /&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;img src=&quot;/images/visual-history-of-world-cup-logos/Untitled%2025.png&quot; alt=&quot;Untitled&quot; /&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;img src=&quot;/images/visual-history-of-world-cup-logos/Untitled%2026.png&quot; alt=&quot;Untitled&quot; /&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;table&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;img src=&quot;/images/visual-history-of-world-cup-logos/Untitled%2027.png&quot; alt=&quot;Untitled&quot; /&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;img src=&quot;/images/visual-history-of-world-cup-logos/Untitled%2028.png&quot; alt=&quot;Untitled&quot; /&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;img src=&quot;/images/visual-history-of-world-cup-logos/Untitled%2029.png&quot; alt=&quot;Untitled&quot; /&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;table&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;img src=&quot;/images/visual-history-of-world-cup-logos/Untitled%2030.png&quot; alt=&quot;Untitled&quot; /&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;img src=&quot;/images/visual-history-of-world-cup-logos/Untitled%2031.png&quot; alt=&quot;Untitled&quot; /&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;img src=&quot;/images/visual-history-of-world-cup-logos/Untitled%2032.png&quot; alt=&quot;Untitled&quot; /&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;table&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;img src=&quot;/images/visual-history-of-world-cup-logos/Untitled%2033.png&quot; alt=&quot;Untitled&quot; /&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;img src=&quot;/images/visual-history-of-world-cup-logos/Untitled%2034.png&quot; alt=&quot;Untitled&quot; /&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;img src=&quot;/images/visual-history-of-world-cup-logos/Untitled%2035.png&quot; alt=&quot;Untitled&quot; /&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h3 id=&quot;the-last-of-freeform-logos&quot;&gt;The last of Freeform logos&lt;/h3&gt;
+
+&lt;hr /&gt;
+
+&lt;table&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;img src=&quot;/images/visual-history-of-world-cup-logos/Untitled%2036.png&quot; alt=&quot;Untitled&quot; /&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;img src=&quot;/images/visual-history-of-world-cup-logos/Untitled%2037.png&quot; alt=&quot;Untitled&quot; /&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;img src=&quot;/images/visual-history-of-world-cup-logos/Untitled%2038.png&quot; alt=&quot;Untitled&quot; /&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;FIFA seems to have set on the logo format back in 2014. But it definitely took a better shape in 2018 and 2022. ICC had nothing resembling the cup, while the Rugby World Cup had no specific World Cup Logo before 2019.&lt;/p&gt;
+
+&lt;h3 id=&quot;the-first-logos-to-strictly-follow-the-format&quot;&gt;The first logos to strictly follow the format&lt;/h3&gt;
+
+&lt;hr /&gt;
+
+&lt;table&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;img src=&quot;/images/visual-history-of-world-cup-logos/Untitled%2039.png&quot; alt=&quot;Untitled&quot; /&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;img src=&quot;/images/visual-history-of-world-cup-logos/Untitled%2040.png&quot; alt=&quot;Untitled&quot; /&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;img src=&quot;/images/visual-history-of-world-cup-logos/Untitled%2041.png&quot; alt=&quot;Untitled&quot; /&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h3 id=&quot;latest-logos&quot;&gt;Latest Logos&lt;/h3&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;The latest FIFA World Cup happened in 2022, ICC Cricket World Cup and the Rugby World Cup in 2023. The hosts were Qatar, India and France respectively.&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;img src=&quot;/images/visual-history-of-world-cup-logos/Untitled%2042.png&quot; alt=&quot;Untitled&quot; /&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;img src=&quot;/images/visual-history-of-world-cup-logos/Untitled%2043.png&quot; alt=&quot;Untitled&quot; /&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;img src=&quot;/images/visual-history-of-world-cup-logos/Untitled%2044.png&quot; alt=&quot;Untitled&quot; /&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;Seems to be the case that all major World Cups are going for a format onto which host nations can apply their visual pattern. This behaviour is relatively new and started with these World Cups during the 2018-19 time period. Looking at the previous logos&lt;/p&gt;
+
+&lt;h3 id=&quot;putting-these-together&quot;&gt;Putting these together&lt;/h3&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;Rugby has a similar visual identity that still allows for freedom across their various world cups. With 6 logos following the visual pattern, they’re clearly ahead&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Rugby&lt;/em&gt;&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;img src=&quot;/images/visual-history-of-world-cup-logos/Untitled%2045.png&quot; alt=&quot;Untitled&quot; /&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;img src=&quot;/images/visual-history-of-world-cup-logos/Untitled%2046.png&quot; alt=&quot;Untitled&quot; /&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;img src=&quot;/images/visual-history-of-world-cup-logos/Untitled%2041.png&quot; alt=&quot;Untitled&quot; /&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;table&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;img src=&quot;/images/visual-history-of-world-cup-logos/Untitled%2047.png&quot; alt=&quot;Untitled&quot; /&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;img src=&quot;/images/visual-history-of-world-cup-logos/Untitled%2048.png&quot; alt=&quot;Untitled&quot; /&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;img src=&quot;/images/visual-history-of-world-cup-logos/Untitled%2044.png&quot; alt=&quot;Untitled&quot; /&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;&lt;em&gt;Cricket&lt;/em&gt;&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;img src=&quot;/images/visual-history-of-world-cup-logos/Untitled%2040.png&quot; alt=&quot;Untitled&quot; /&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;img src=&quot;/images/visual-history-of-world-cup-logos/Untitled%2043.png&quot; alt=&quot;Untitled&quot; /&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;img src=&quot;/images/visual-history-of-world-cup-logos/Untitled%2049.png&quot; alt=&quot;Untitled&quot; /&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;&lt;em&gt;Football&lt;/em&gt;&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;img src=&quot;/images/visual-history-of-world-cup-logos/Untitled%2036.png&quot; alt=&quot;Untitled&quot; /&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;img src=&quot;/images/visual-history-of-world-cup-logos/Untitled%2039.png&quot; alt=&quot;Untitled&quot; /&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;img src=&quot;/images/visual-history-of-world-cup-logos/Untitled%2042.png&quot; alt=&quot;Untitled&quot; /&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h3 id=&quot;bonus-t20-cricket-world-cup&quot;&gt;Bonus: T20 Cricket World Cup&lt;/h3&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;The T20 World Cup logos from 2007 to 2012 saw host nations having to write the word &lt;strong&gt;T20&lt;/strong&gt; in their choice of design&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;img src=&quot;/images/visual-history-of-world-cup-logos/Untitled%2050.png&quot; alt=&quot;Untitled&quot; /&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;img src=&quot;/images/visual-history-of-world-cup-logos/Untitled%2051.png&quot; alt=&quot;Untitled&quot; /&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;table&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;img src=&quot;/images/visual-history-of-world-cup-logos/Untitled%2052.png&quot; alt=&quot;Untitled&quot; /&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;img src=&quot;/images/visual-history-of-world-cup-logos/Untitled%2053.png&quot; alt=&quot;Untitled&quot; /&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;img src=&quot;/images/visual-history-of-world-cup-logos/Untitled%2054.png&quot; alt=&quot;Untitled&quot; /&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;This changed in 2014 and ICC decided on a more restrictive format where you could only change the colours&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;img src=&quot;/images/visual-history-of-world-cup-logos/Untitled%2055.png&quot; alt=&quot;Untitled&quot; /&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;img src=&quot;/images/visual-history-of-world-cup-logos/Untitled%2056.png&quot; alt=&quot;Untitled&quot; /&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;img src=&quot;/images/visual-history-of-world-cup-logos/Untitled%2057.png&quot; alt=&quot;Untitled&quot; /&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;table&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;img src=&quot;/images/visual-history-of-world-cup-logos/Untitled%2058.png&quot; alt=&quot;Untitled&quot; /&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;img src=&quot;/images/visual-history-of-world-cup-logos/Untitled%2059.png&quot; alt=&quot;Untitled&quot; /&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;img src=&quot;/images/visual-history-of-world-cup-logos/Untitled%2060.png&quot; alt=&quot;Untitled&quot; /&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;</content><author><name>Rahul Krishna</name></author><category term="notes" /><category term="logo" /><category term="design" /><summary type="html">Introduction</summary></entry><entry><title type="html">Loading vs Fetching</title><link href="http://localhost:4000/notes/2024/01/01/loading-vs-fetching.html" rel="alternate" type="text/html" title="Loading vs Fetching" /><published>2024-01-01T11:15:00+05:30</published><updated>2024-01-01T11:15:00+05:30</updated><id>http://localhost:4000/notes/2024/01/01/loading-vs-fetching</id><content type="html" xml:base="http://localhost:4000/notes/2024/01/01/loading-vs-fetching.html">&lt;h3 id=&quot;the-basics&quot;&gt;The Basics&lt;/h3&gt;
 
 &lt;hr /&gt;
 
