@@ -1,4 +1,132 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2024-01-02T17:00:51+05:30</updated><id>http://localhost:4000/feed.xml</id><title type="html">Field Notes</title><subtitle>Hello I'm a Principal Software Engineer at Bridgestone Americas. I occasionally convert my Notion Docs to markdown and publish them here.</subtitle><entry><title type="html">Visual History of World Cup Logos</title><link href="http://localhost:4000/notes/2024/01/02/visual-history-of-world-cups.html" rel="alternate" type="text/html" title="Visual History of World Cup Logos" /><published>2024-01-02T11:15:00+05:30</published><updated>2024-01-02T11:15:00+05:30</updated><id>http://localhost:4000/notes/2024/01/02/visual-history-of-world-cups</id><content type="html" xml:base="http://localhost:4000/notes/2024/01/02/visual-history-of-world-cups.html">&lt;h3 id=&quot;introduction&quot;&gt;Introduction&lt;/h3&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2024-02-06T13:08:39+05:30</updated><id>http://localhost:4000/feed.xml</id><title type="html">Field Notes</title><subtitle>Hello I'm a Principal Software Engineer at Bridgestone Americas. I occasionally convert my Notion Docs to markdown and publish them here.</subtitle><entry><title type="html">Arc Browser</title><link href="http://localhost:4000/notes/2024/02/06/arc-browser.html" rel="alternate" type="text/html" title="Arc Browser" /><published>2024-02-06T11:15:00+05:30</published><updated>2024-02-06T11:15:00+05:30</updated><id>http://localhost:4000/notes/2024/02/06/arc-browser</id><content type="html" xml:base="http://localhost:4000/notes/2024/02/06/arc-browser.html">&lt;h3 id=&quot;what-is-a-web-browser&quot;&gt;What is a Web Browser?&lt;/h3&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;Not too long back, my phone was a Pixel 3 XL and my laptop a Macbook Pro. I figured that most of what I do on my laptop involved Google Chrome. And having a phone made by the browser manufacturer instead of the laptop manufacturer would still make sense. To be clear, I wasn’t under the impression that a Google phone will work as a better companion to the Apple Computer than an Apple Phone. The iPhone has improved and works better as a companion device to your Mac.&lt;/p&gt;
+
+&lt;p&gt;As web started having more “webapps” than “websites”, a browser became more akin to an Operating System than just another app. Chrome has a task manager of its own. Every other browser has improved on tab management mechanisms. But it still fell short of OS level of UX. This is where Arc comes in&lt;/p&gt;
+
+&lt;h3 id=&quot;launcher&quot;&gt;Launcher&lt;/h3&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;Every Operating Systems have some kind of “Launcher”.&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;img src=&quot;/images/arc-browser/Untitled.png&quot; alt=&quot;Spotlight on Mac&quot; /&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;img src=&quot;/images/arc-browser/Untitled%202.png&quot; alt=&quot;Spotlight on Mac&quot; /&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;Spotlight on Mac&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/arc-browser/Untitled%201.png&quot; alt=&quot;GNOME’s Launcher&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;GNOME’s Launcher&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/arc-browser/Untitled%203.png&quot; alt=&quot;Spotlight on iPhone&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Spotlight on iPhone&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/arc-browser/Untitled%204.png&quot; alt=&quot;Start Menu on Windows&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Start Menu on Windows&lt;/p&gt;
+
+&lt;p&gt;Probably the biggest upgrade in Browser terms is when Google made the URL bar of Chrome work more like a “Launcher”. You weren’t any more expected to precisely type in the URL of the page you had to go to. Google would actually prefer it if you first went to &lt;a href=&quot;http://google.com&quot;&gt;google.com&lt;/a&gt; and clicked on a link from there.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/arc-browser/Untitled%205.png&quot; alt=&quot;Untitled&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/arc-browser/Untitled%206.png&quot; alt=&quot;Untitled&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/arc-browser/Untitled%207.png&quot; alt=&quot;Untitled&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Arc changes this by opening a Spotlight-like Command Palette every time you hit Cmd+T.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/arc-browser/Untitled%208.png&quot; alt=&quot;Untitled&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;This lets you do much more than just start a search or open a URL. For instance:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/arc-browser/Untitled%209.png&quot; alt=&quot;Untitled&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;This may seem like a radical change, but the fact is many applications have already mapped &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Cmd+T&lt;/code&gt; to such an action.&lt;/p&gt;
+
+&lt;p&gt;VS Code shows this:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/arc-browser/Untitled%2010.png&quot; alt=&quot;Untitled&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Slack shows this:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/arc-browser/Untitled%2011.png&quot; alt=&quot;Untitled&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;tab-management&quot;&gt;Tab Management&lt;/h3&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;Window Management in Operating Systems and Tab Management in Browsers have a lot in common. But all major browsers still rely on the same &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Ctrl-Tab&lt;/code&gt; shortcut to switch to the next tab. Arc changes this.&lt;/p&gt;
+
+&lt;div style=&quot;position: relative; padding-bottom: 56.25%; height: 0;&quot;&gt;&lt;iframe src=&quot;https://www.loom.com/embed/6c19c4099d334a278ed71e1c9928dc7e?sid=3c63b83b-870d-4f14-84ad-ac785fb92f13&quot; frameborder=&quot;0&quot; webkitallowfullscreen=&quot;&quot; mozallowfullscreen=&quot;&quot; allowfullscreen=&quot;&quot; style=&quot;position: absolute; top: 0; left: 0; width: 100%; height: 100%;&quot;&gt;&lt;/iframe&gt;&lt;/div&gt;
+&lt;h3 id=&quot;space-management&quot;&gt;Space Management&lt;/h3&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;Spaces is another cool general OS feature that Browsers have tried to implement, but it hasn’t fared well.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/arc-browser/Untitled%2012.png&quot; alt=&quot;Spaces on macOS&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Spaces on macOS&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/arc-browser/Untitled%2013.png&quot; alt=&quot;Untitled&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Safari’s Space Management is called Tab Groupings. And while this gets synced across devices and is pretty useful if you’re into organising things, it’s almost always hidden away from view. No keyboard shortcuts exist. It’s almost like a way to stash away a group of tabs rather than an intuitive way to organise tabs.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/arc-browser/Untitled%2014.png&quot; alt=&quot;Untitled&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Chrome has an even simpler Tab Grouping that essentially lets you put a label next to tabs.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/arc-browser/Untitled%2015.png&quot; alt=&quot;Untitled&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Arc simply lets you have this small icons at the bottom of your tabs list. Where you can do a Horizontal scroll to switch between tabs. Also you can find tabs open in other tab groups from the “Spotlight-like” search thingie.&lt;/p&gt;
+
+&lt;div style=&quot;position: relative; padding-bottom: 56.25%; height: 0;&quot;&gt;&lt;iframe src=&quot;https://www.loom.com/embed/da81b54218db46bbb14766baf4fbef0a?sid=b4541dfd-4fdc-4358-9435-29cca03b8432&quot; frameborder=&quot;0&quot; webkitallowfullscreen=&quot;&quot; mozallowfullscreen=&quot;&quot; allowfullscreen=&quot;&quot; style=&quot;position: absolute; top: 0; left: 0; width: 100%; height: 100%;&quot;&gt;&lt;/iframe&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;vertical-tabs&quot;&gt;Vertical Tabs&lt;/h3&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;Horizontal Tabs are hard to work with if you have a lot of tabs open.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/arc-browser/Untitled%2016.png&quot; alt=&quot;Untitled&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Vertical Tabs offer a better view of the page title. It’s also essential for the scroll to switch space feature&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/arc-browser/Untitled%2017.png&quot; alt=&quot;Untitled&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;renaming-tabs&quot;&gt;Renaming Tabs&lt;/h3&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;Arc lets you rename tabs. Ridiculously simple. But really useful!&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/arc-browser/Untitled%2018.png&quot; alt=&quot;Untitled&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;theming&quot;&gt;Theming&lt;/h3&gt;
+
+&lt;hr /&gt;
+
+&lt;div style=&quot;position: relative; padding-bottom: 56.25%; height: 0;&quot;&gt;&lt;iframe src=&quot;https://www.loom.com/embed/8b744c9075ce44d8a0f415a329011201?sid=6a954096-5835-4f17-a16a-26625f39171c&quot; frameborder=&quot;0&quot; webkitallowfullscreen=&quot;&quot; mozallowfullscreen=&quot;&quot; allowfullscreen=&quot;&quot; style=&quot;position: absolute; top: 0; left: 0; width: 100%; height: 100%;&quot;&gt;&lt;/iframe&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;ai-features-and-split-view&quot;&gt;AI Features and Split View&lt;/h3&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;Arc clearly has an idea of how you browse the web and actively tries to enhance it. One day into trying out Arc, it completely changed how I use HN&lt;/p&gt;
+
+&lt;div style=&quot;position: relative; padding-bottom: 56.25%; height: 0;&quot;&gt;&lt;iframe src=&quot;https://www.loom.com/embed/6c19c4099d334a278ed71e1c9928dc7e?sid=9dee27e8-32fa-41ab-bb01-d0357f7fe95d&quot; frameborder=&quot;0&quot; webkitallowfullscreen=&quot;&quot; mozallowfullscreen=&quot;&quot; allowfullscreen=&quot;&quot; style=&quot;position: absolute; top: 0; left: 0; width: 100%; height: 100%;&quot;&gt;&lt;/iframe&gt;&lt;/div&gt;
+
+&lt;p&gt;Hover over links to get a summary. Open in split view so I never lose context of the HN link that took me there.&lt;/p&gt;</content><author><name>Rahul Krishna</name></author><category term="notes" /><category term="browsers" /><category term="ux" /><summary type="html">What is a Web Browser?</summary></entry><entry><title type="html">Visual History of World Cup Logos</title><link href="http://localhost:4000/notes/2024/01/02/visual-history-of-world-cups.html" rel="alternate" type="text/html" title="Visual History of World Cup Logos" /><published>2024-01-02T11:15:00+05:30</published><updated>2024-01-02T11:15:00+05:30</updated><id>http://localhost:4000/notes/2024/01/02/visual-history-of-world-cups</id><content type="html" xml:base="http://localhost:4000/notes/2024/01/02/visual-history-of-world-cups.html">&lt;h3 id=&quot;introduction&quot;&gt;Introduction&lt;/h3&gt;
 
 &lt;hr /&gt;
 
