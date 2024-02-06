@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2024-02-06T13:08:39+05:30</updated><id>http://localhost:4000/feed.xml</id><title type="html">Field Notes</title><subtitle>Hello I'm a Principal Software Engineer at Bridgestone Americas. I occasionally convert my Notion Docs to markdown and publish them here.</subtitle><entry><title type="html">Arc Browser</title><link href="http://localhost:4000/notes/2024/02/06/arc-browser.html" rel="alternate" type="text/html" title="Arc Browser" /><published>2024-02-06T11:15:00+05:30</published><updated>2024-02-06T11:15:00+05:30</updated><id>http://localhost:4000/notes/2024/02/06/arc-browser</id><content type="html" xml:base="http://localhost:4000/notes/2024/02/06/arc-browser.html">&lt;h3 id=&quot;what-is-a-web-browser&quot;&gt;What is a Web Browser?&lt;/h3&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2024-02-06T13:22:34+05:30</updated><id>http://localhost:4000/feed.xml</id><title type="html">Field Notes</title><subtitle>Hello I'm a Principal Software Engineer at Bridgestone Americas. I occasionally convert my Notion Docs to markdown and publish them here.</subtitle><entry><title type="html">Arc Browser</title><link href="http://localhost:4000/notes/2024/02/06/arc-browser.html" rel="alternate" type="text/html" title="Arc Browser" /><published>2024-02-06T11:15:00+05:30</published><updated>2024-02-06T11:15:00+05:30</updated><id>http://localhost:4000/notes/2024/02/06/arc-browser</id><content type="html" xml:base="http://localhost:4000/notes/2024/02/06/arc-browser.html">&lt;h3 id=&quot;what-is-a-web-browser&quot;&gt;What is a Web Browser?&lt;/h3&gt;
 
 &lt;hr /&gt;
 
@@ -12,14 +12,7 @@
 
 &lt;p&gt;Every Operating Systems have some kind of “Launcher”.&lt;/p&gt;
 
-&lt;table&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td&gt;&lt;img src=&quot;/images/arc-browser/Untitled.png&quot; alt=&quot;Spotlight on Mac&quot; /&gt;&lt;/td&gt;
-      &lt;td&gt;&lt;img src=&quot;/images/arc-browser/Untitled%202.png&quot; alt=&quot;Spotlight on Mac&quot; /&gt;&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
+&lt;p&gt;&lt;img src=&quot;/images/arc-browser/Untitled%202.png&quot; alt=&quot;Spotlight on Mac&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Spotlight on Mac&lt;/p&gt;
 
@@ -67,7 +60,8 @@
 
 &lt;p&gt;Window Management in Operating Systems and Tab Management in Browsers have a lot in common. But all major browsers still rely on the same &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Ctrl-Tab&lt;/code&gt; shortcut to switch to the next tab. Arc changes this.&lt;/p&gt;
 
-&lt;div style=&quot;position: relative; padding-bottom: 56.25%; height: 0;&quot;&gt;&lt;iframe src=&quot;https://www.loom.com/embed/6c19c4099d334a278ed71e1c9928dc7e?sid=3c63b83b-870d-4f14-84ad-ac785fb92f13&quot; frameborder=&quot;0&quot; webkitallowfullscreen=&quot;&quot; mozallowfullscreen=&quot;&quot; allowfullscreen=&quot;&quot; style=&quot;position: absolute; top: 0; left: 0; width: 100%; height: 100%;&quot;&gt;&lt;/iframe&gt;&lt;/div&gt;
+&lt;div style=&quot;position: relative; padding-bottom: 56.25%; height: 0;&quot;&gt;&lt;iframe src=&quot;https://www.loom.com/embed/cf92ac0bd7034f46b74da932a76696ee?sid=e25f5206-5ff8-483e-95f8-8dc682bce4a4&quot; frameborder=&quot;0&quot; webkitallowfullscreen=&quot;&quot; mozallowfullscreen=&quot;&quot; allowfullscreen=&quot;&quot; style=&quot;position: absolute; top: 0; left: 0; width: 100%; height: 100%;&quot;&gt;&lt;/iframe&gt;&lt;/div&gt;
+
 &lt;h3 id=&quot;space-management&quot;&gt;Space Management&lt;/h3&gt;
 
 &lt;hr /&gt;

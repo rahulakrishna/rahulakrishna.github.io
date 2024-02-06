@@ -21,7 +21,7 @@ As web started having more “webapps” than “websites”, a browser became m
 
 Every Operating Systems have some kind of “Launcher”.
 
-![Spotlight on Mac](/images/arc-browser/Untitled.png) | ![Spotlight on Mac](/images/arc-browser/Untitled%202.png)
+![Spotlight on Mac](/images/arc-browser/Untitled%202.png)
 
 Spotlight on Mac
 
@@ -69,7 +69,8 @@ Slack shows this:
 
 Window Management in Operating Systems and Tab Management in Browsers have a lot in common. But all major browsers still rely on the same `Ctrl-Tab` shortcut to switch to the next tab. Arc changes this.
 
-<div style="position: relative; padding-bottom: 56.25%; height: 0;"><iframe src="https://www.loom.com/embed/6c19c4099d334a278ed71e1c9928dc7e?sid=3c63b83b-870d-4f14-84ad-ac785fb92f13" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe></div>
+<div style="position: relative; padding-bottom: 56.25%; height: 0;"><iframe src="https://www.loom.com/embed/cf92ac0bd7034f46b74da932a76696ee?sid=e25f5206-5ff8-483e-95f8-8dc682bce4a4" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe></div>
+
 ### Space Management
 
 ---
