@@ -1,10 +1,18 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2024-02-06T13:22:34+05:30</updated><id>http://localhost:4000/feed.xml</id><title type="html">Field Notes</title><subtitle>Hello I'm a Principal Software Engineer at Bridgestone Americas. I occasionally convert my Notion Docs to markdown and publish them here.</subtitle><entry><title type="html">Arc Browser</title><link href="http://localhost:4000/notes/2024/02/06/arc-browser.html" rel="alternate" type="text/html" title="Arc Browser" /><published>2024-02-06T11:15:00+05:30</published><updated>2024-02-06T11:15:00+05:30</updated><id>http://localhost:4000/notes/2024/02/06/arc-browser</id><content type="html" xml:base="http://localhost:4000/notes/2024/02/06/arc-browser.html">&lt;h3 id=&quot;what-is-a-web-browser&quot;&gt;What is a Web Browser?&lt;/h3&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2024-02-07T11:49:25+05:30</updated><id>http://localhost:4000/feed.xml</id><title type="html">Field Notes</title><subtitle>Hello I'm a Principal Software Engineer at Bridgestone Americas. I occasionally convert my Notion Docs to markdown and publish them here.</subtitle><entry><title type="html">Arc Browser</title><link href="http://localhost:4000/notes/2024/02/06/arc-browser.html" rel="alternate" type="text/html" title="Arc Browser" /><published>2024-02-06T11:15:00+05:30</published><updated>2024-02-06T11:15:00+05:30</updated><id>http://localhost:4000/notes/2024/02/06/arc-browser</id><content type="html" xml:base="http://localhost:4000/notes/2024/02/06/arc-browser.html">&lt;h3 id=&quot;web-browser&quot;&gt;Web Browser&lt;/h3&gt;
 
 &lt;hr /&gt;
 
-&lt;p&gt;Not too long back, my phone was a Pixel 3 XL and my laptop a Macbook Pro. I figured that most of what I do on my laptop involved Google Chrome. And having a phone made by the browser manufacturer instead of the laptop manufacturer would still make sense. To be clear, I wasn’t under the impression that a Google phone will work as a better companion to the Apple Computer than an Apple Phone. The iPhone has improved and works better as a companion device to your Mac.&lt;/p&gt;
+&lt;p&gt;A Web Browser, ultimately, is an application that lets you send a request to a URL and displays the HTML response on your screen. Apart from displaying simple markup, it also has the ability to run JavaScript and style using CSS.&lt;/p&gt;
 
-&lt;p&gt;As web started having more “webapps” than “websites”, a browser became more akin to an Operating System than just another app. Chrome has a task manager of its own. Every other browser has improved on tab management mechanisms. But it still fell short of OS level of UX. This is where Arc comes in&lt;/p&gt;
+&lt;h3 id=&quot;web-page&quot;&gt;Web Page&lt;/h3&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;Web Pages have been relying on the “running JavaScript” part more and more. When Angular 1 came out, you were supposed to run the JS bundle inside your HTML. But most frameworks now expect you to render the markup inside JS. Even static websites now have a largely JS based codebase.&lt;/p&gt;
+
+&lt;p&gt;We’re seeing more and more “web-apps” instead of “web-sites”. This change makes a browser more akin to an Operating System running apps. Instead of the original concept of an application that renders markup.&lt;/p&gt;
+
+&lt;p&gt;In other words, we’re “doing more things” with our browsers than “reading things” with them. Arc Browser tries to bring some of those OS type UX into the browser world.&lt;/p&gt;
 
 &lt;h3 id=&quot;launcher&quot;&gt;Launcher&lt;/h3&gt;
 
@@ -12,21 +20,9 @@
 
 &lt;p&gt;Every Operating Systems have some kind of “Launcher”.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/images/arc-browser/Untitled%202.png&quot; alt=&quot;Spotlight on Mac&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/images/arc-browser/Untitled%202.png&quot; alt=&quot;Spotlight on Mac&quot; style=&quot;width: 50%;&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;Spotlight on Mac&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/images/arc-browser/Untitled%201.png&quot; alt=&quot;GNOME’s Launcher&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;GNOME’s Launcher&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/images/arc-browser/Untitled%203.png&quot; alt=&quot;Spotlight on iPhone&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Spotlight on iPhone&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/images/arc-browser/Untitled%204.png&quot; alt=&quot;Start Menu on Windows&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Start Menu on Windows&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/images/arc-browser/Untitled%204.png&quot; alt=&quot;Start Menu on Windows&quot; style=&quot;width: 50%;&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Probably the biggest upgrade in Browser terms is when Google made the URL bar of Chrome work more like a “Launcher”. You weren’t any more expected to precisely type in the URL of the page you had to go to. Google would actually prefer it if you first went to &lt;a href=&quot;http://google.com&quot;&gt;google.com&lt;/a&gt; and clicked on a link from there.&lt;/p&gt;
 
@@ -120,7 +116,7 @@
 
 &lt;div style=&quot;position: relative; padding-bottom: 56.25%; height: 0;&quot;&gt;&lt;iframe src=&quot;https://www.loom.com/embed/6c19c4099d334a278ed71e1c9928dc7e?sid=9dee27e8-32fa-41ab-bb01-d0357f7fe95d&quot; frameborder=&quot;0&quot; webkitallowfullscreen=&quot;&quot; mozallowfullscreen=&quot;&quot; allowfullscreen=&quot;&quot; style=&quot;position: absolute; top: 0; left: 0; width: 100%; height: 100%;&quot;&gt;&lt;/iframe&gt;&lt;/div&gt;
 
-&lt;p&gt;Hover over links to get a summary. Open in split view so I never lose context of the HN link that took me there.&lt;/p&gt;</content><author><name>Rahul Krishna</name></author><category term="notes" /><category term="browsers" /><category term="ux" /><summary type="html">What is a Web Browser?</summary></entry><entry><title type="html">Visual History of World Cup Logos</title><link href="http://localhost:4000/notes/2024/01/02/visual-history-of-world-cups.html" rel="alternate" type="text/html" title="Visual History of World Cup Logos" /><published>2024-01-02T11:15:00+05:30</published><updated>2024-01-02T11:15:00+05:30</updated><id>http://localhost:4000/notes/2024/01/02/visual-history-of-world-cups</id><content type="html" xml:base="http://localhost:4000/notes/2024/01/02/visual-history-of-world-cups.html">&lt;h3 id=&quot;introduction&quot;&gt;Introduction&lt;/h3&gt;
+&lt;p&gt;Hover over links to get a summary. Open in split view so I never lose context of the HN link that took me there.&lt;/p&gt;</content><author><name>Rahul Krishna</name></author><category term="notes" /><category term="browsers" /><category term="ux" /><summary type="html">Web Browser</summary></entry><entry><title type="html">Visual History of World Cup Logos</title><link href="http://localhost:4000/notes/2024/01/02/visual-history-of-world-cups.html" rel="alternate" type="text/html" title="Visual History of World Cup Logos" /><published>2024-01-02T11:15:00+05:30</published><updated>2024-01-02T11:15:00+05:30</updated><id>http://localhost:4000/notes/2024/01/02/visual-history-of-world-cups</id><content type="html" xml:base="http://localhost:4000/notes/2024/01/02/visual-history-of-world-cups.html">&lt;h3 id=&quot;introduction&quot;&gt;Introduction&lt;/h3&gt;
 
 &lt;hr /&gt;
 

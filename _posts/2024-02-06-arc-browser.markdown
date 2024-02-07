@@ -7,13 +7,21 @@ categories: [notes]
 tags: [browsers, ux]
 ---
 
-### What is a Web Browser?
+### Web Browser
 
 ---
 
-Not too long back, my phone was a Pixel 3 XL and my laptop a Macbook Pro. I figured that most of what I do on my laptop involved Google Chrome. And having a phone made by the browser manufacturer instead of the laptop manufacturer would still make sense. To be clear, I wasn’t under the impression that a Google phone will work as a better companion to the Apple Computer than an Apple Phone. The iPhone has improved and works better as a companion device to your Mac.
+A Web Browser, ultimately, is an application that lets you send a request to a URL and displays the HTML response on your screen. Apart from displaying simple markup, it also has the ability to run JavaScript and style using CSS.
 
-As web started having more “webapps” than “websites”, a browser became more akin to an Operating System than just another app. Chrome has a task manager of its own. Every other browser has improved on tab management mechanisms. But it still fell short of OS level of UX. This is where Arc comes in
+### Web Page
+
+---
+
+Web Pages have been relying on the “running JavaScript” part more and more. When Angular 1 came out, you were supposed to run the JS bundle inside your HTML. But most frameworks now expect you to render the markup inside JS. Even static websites now have a largely JS based codebase.
+
+We’re seeing more and more “web-apps” instead of “web-sites”. This change makes a browser more akin to an Operating System running apps. Instead of the original concept of an application that renders markup.
+
+In other words, we’re “doing more things” with our browsers than “reading things” with them. Arc Browser tries to bring some of those OS type UX into the browser world.
 
 ### Launcher
 
@@ -21,21 +29,9 @@ As web started having more “webapps” than “websites”, a browser became m
 
 Every Operating Systems have some kind of “Launcher”.
 
-![Spotlight on Mac](/images/arc-browser/Untitled%202.png)
+<img src='/images/arc-browser/Untitled%202.png' alt="Spotlight on Mac" style="width: 50%;" />
 
-Spotlight on Mac
-
-![GNOME’s Launcher](/images/arc-browser/Untitled%201.png)
-
-GNOME’s Launcher
-
-![Spotlight on iPhone](/images/arc-browser/Untitled%203.png)
-
-Spotlight on iPhone
-
-![Start Menu on Windows](/images/arc-browser/Untitled%204.png)
-
-Start Menu on Windows
+<img src="/images/arc-browser/Untitled%204.png" alt="Start Menu on Windows" style="width: 50%;"/>
 
 Probably the biggest upgrade in Browser terms is when Google made the URL bar of Chrome work more like a “Launcher”. You weren’t any more expected to precisely type in the URL of the page you had to go to. Google would actually prefer it if you first went to [google.com](http://google.com) and clicked on a link from there.
 
