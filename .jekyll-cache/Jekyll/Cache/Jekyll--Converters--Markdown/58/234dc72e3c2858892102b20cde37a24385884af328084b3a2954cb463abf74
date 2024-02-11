@@ -1,0 +1,69 @@
+I"�<h3 id="what-is-it">What is it?</h3>
+
+<hr />
+
+<p>Here is what Arc Search has to say about Arc Search!</p>
+
+<div style="text-align: center;"><img src="/images/arc-search/Untitled.png" style="max-width: 250px;" /></div>
+
+<h3 id="basic-stuff-it-does">Basic Stuff it does</h3>
+
+<hr />
+
+<p>It does the basic stuff you expect a web browser to do. You can use it to open and browse websites and search the web.</p>
+
+<h3 id="cool-stuff-it-does">Cool Stuff it does!</h3>
+
+<hr />
+
+<p>The cool stuff is the <strong>Browse for me</strong> feature.</p>
+
+<div style="text-align: center;"><img src="/images/arc-search/Untitled%201.png" /></div>
+
+<p>This is very much like Google’s “featured snippets” but collates information from various sources</p>
+
+<div style="text-align: center;"><img src="/images/arc-search/IMG_3803.jpeg" /></div>
+
+<p>Here Google shows the answer and source</p>
+
+<p>Whereas Arc:</p>
+
+<div style="text-align: center;"><img src="/images/arc-search/IMG_3804.png" /></div>
+
+<div style="text-align: center;"><img src="/images/arc-search/IMG_3805.png" /></div>
+
+<p>This is data from multiple sources. Now one useful thing you can do with Google is where you add the keyword “reddit” to the search query to find a thread that may contain deeper discussion or specific answer. So you can ask Arc Search:</p>
+
+<div style="text-align: center;"><img src="/images/arc-search/IMG_3806.png" /></div>
+
+<div style="text-align: center;"><img src="/images/arc-search/IMG_3807.png" /></div>
+
+<div style="text-align: center;"><img src="/images/arc-search/IMG_3808.png" /></div>
+
+<p>I’ve found asking what Reddit, Twitter or Hacker News thinks about specific topics and gotten interesting results. Just the contrast in what the user bases talk about is interesting.</p>
+
+<p>Consider yourself in a bookstore. Using Arc to search “what does reddit think about Radical Candor” is much simpler and faster than searching Google “Radical Candor reddit”.</p>
+
+<h3 id="drawbacks">Drawbacks</h3>
+
+<hr />
+
+<ul>
+  <li>It does display the sources for your data. But it’s AI and AI gets it wrong at times.</li>
+</ul>
+
+<div style="text-align: center;"><img src="/images/arc-search/Untitled.jpeg" /></div>
+
+<p>All other data on the page is impressive.</p>
+
+<p>All the text in this page is right about me. But the person shown in the picture is not me. That’s another person who has the same name as me</p>
+
+<div style="text-align: center;"><img src="/images/arc-search/Untitled%201.jpeg" /></div>
+
+<ul>
+  <li>Less prominence to sources.
+Look at the sunscreen related screenshots in this page. It shows you where it sources the data from. In a tiny text below the blocks. There’s also a list of links if you’re interested in learning more. But the UI is trying to hiny that there’s enough data here that you don’t need to click through those links. I’m not sure how you can solve this problem or even if this is a problem.
+They probably don’t want to replace Google Search. Where you are presented with titles and content hidden behind links.
+Ben Werdmuller wrote about this problem at: <a href="https://werd.io/2024/stripping-the-web-of-its-humanity">https://werd.io/2024/stripping-the-web-of-its-humanity</a></li>
+</ul>
+:ET
