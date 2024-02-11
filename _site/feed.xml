@@ -1,4 +1,99 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2024-02-07T11:49:25+05:30</updated><id>http://localhost:4000/feed.xml</id><title type="html">Field Notes</title><subtitle>Hello I'm a Principal Software Engineer at Bridgestone Americas. I occasionally convert my Notion Docs to markdown and publish them here.</subtitle><entry><title type="html">Arc Browser</title><link href="http://localhost:4000/notes/2024/02/06/arc-browser.html" rel="alternate" type="text/html" title="Arc Browser" /><published>2024-02-06T11:15:00+05:30</published><updated>2024-02-06T11:15:00+05:30</updated><id>http://localhost:4000/notes/2024/02/06/arc-browser</id><content type="html" xml:base="http://localhost:4000/notes/2024/02/06/arc-browser.html">&lt;h3 id=&quot;web-browser&quot;&gt;Web Browser&lt;/h3&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2024-02-11T12:13:28+05:30</updated><id>http://localhost:4000/feed.xml</id><title type="html">Field Notes</title><subtitle>Hello I'm a Principal Software Engineer at Bridgestone Americas. I occasionally convert my Notion Docs to markdown and publish them here.</subtitle><entry><title type="html">Arc Search</title><link href="http://localhost:4000/notes/2024/02/10/arc-search.html" rel="alternate" type="text/html" title="Arc Search" /><published>2024-02-10T11:15:00+05:30</published><updated>2024-02-10T11:15:00+05:30</updated><id>http://localhost:4000/notes/2024/02/10/arc-search</id><content type="html" xml:base="http://localhost:4000/notes/2024/02/10/arc-search.html">&lt;h3 id=&quot;what-is-it&quot;&gt;What is it?&lt;/h3&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;Here is what Arc Search has to say about Arc Search!&lt;/p&gt;
+
+&lt;div style=&quot;text-align: center;&quot;&gt;&lt;img src=&quot;/images/arc-search/Untitled.png&quot; style=&quot;max-width: 250px;&quot; /&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;basic-stuff-it-does&quot;&gt;Basic Stuff it does&lt;/h3&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;It does the basic stuff you expect a web browser to do. You can use it to open and browse websites and search the web.&lt;/p&gt;
+
+&lt;h3 id=&quot;cool-stuff-it-does&quot;&gt;Cool Stuff it does!&lt;/h3&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;The cool stuff is the &lt;strong&gt;Browse for me&lt;/strong&gt; feature.&lt;/p&gt;
+
+&lt;div style=&quot;text-align: center;&quot;&gt;&lt;img src=&quot;/images/arc-search/Untitled%201.png&quot; style=&quot;max-width: 200px&quot; /&gt;&lt;/div&gt;
+
+&lt;p&gt;This is very much like Google’s “featured snippets” but collates information from various sources&lt;/p&gt;
+
+&lt;div style=&quot;text-align: center;&quot;&gt;&lt;img src=&quot;/images/arc-search/IMG_3803.jpeg&quot; style=&quot;max-width: 250px&quot; /&gt;&lt;/div&gt;
+
+&lt;p&gt;Here Google shows the answer and source&lt;/p&gt;
+
+&lt;p&gt;Whereas Arc:&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;img src=&quot;/images/arc-search/IMG_3804.png&quot; /&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;img src=&quot;/images/arc-search/IMG_3805.png&quot; /&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;This is data from multiple sources. Now one useful thing you can do with Google is where you add the keyword “reddit” to the search query to find a thread that may contain deeper discussion or specific answer. So you can ask Arc Search:&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;img src=&quot;/images/arc-search/IMG_3806.png&quot; /&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;img src=&quot;/images/arc-search/IMG_3807.png&quot; /&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;img src=&quot;/images/arc-search/IMG_3808.png&quot; /&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;I’ve found asking what Reddit, Twitter or Hacker News thinks about specific topics and gotten interesting results. Just the contrast in what the user bases talk about is interesting.&lt;/p&gt;
+
+&lt;p&gt;Consider yourself in a bookstore. Using Arc to search “what does reddit think about Radical Candor” is much simpler and faster than searching Google “Radical Candor reddit”.&lt;/p&gt;
+
+&lt;h3 id=&quot;drawbacks&quot;&gt;Drawbacks&lt;/h3&gt;
+
+&lt;hr /&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;It does display the sources for your data. But it’s AI and AI gets it wrong at times.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;table&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;img src=&quot;/images/arc-search/Untitled.jpeg&quot; style=&quot;max-width: 250px;&quot; /&gt;&lt;/td&gt;
+      &lt;td&gt;All the text in this page is right about me. But the person shown in the picture is not me. That’s another person who has the same name as me&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;table&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;All other data on the page is impressive.&lt;/td&gt;
+      &lt;td&gt;&lt;img src=&quot;/images/arc-search/Untitled%201.jpeg&quot; style=&quot;max-width: 250px&quot; /&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Less prominence to sources.
+Look at the sunscreen related screenshots in this page. It shows you where it sources the data from. In a tiny text below the blocks. There’s also a list of links if you’re interested in learning more. But the UI is trying to hiny that there’s enough data here that you don’t need to click through those links. I’m not sure how you can solve this problem or even if this is a problem.
+They probably don’t want to replace Google Search. Where you are presented with titles and content hidden behind links.
+Ben Werdmuller wrote about this problem at: &lt;a href=&quot;https://werd.io/2024/stripping-the-web-of-its-humanity&quot;&gt;https://werd.io/2024/stripping-the-web-of-its-humanity&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;references&quot;&gt;References&lt;/h3&gt;
+
+&lt;hr /&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Ben Werdmuller at: &lt;a href=&quot;https://werd.io/2024/stripping-the-web-of-its-humanity&quot;&gt;https://werd.io/2024/stripping-the-web-of-its-humanity&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Arc Blog on Arc Search: &lt;a href=&quot;https://arc.net/blog/arc-search&quot;&gt;https://arc.net/blog/arc-search&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content><author><name>Rahul Krishna</name></author><category term="notes" /><category term="browsers" /><category term="ux" /><summary type="html">What is it?</summary></entry><entry><title type="html">Arc Browser</title><link href="http://localhost:4000/notes/2024/02/06/arc-browser.html" rel="alternate" type="text/html" title="Arc Browser" /><published>2024-02-06T11:15:00+05:30</published><updated>2024-02-06T11:15:00+05:30</updated><id>http://localhost:4000/notes/2024/02/06/arc-browser</id><content type="html" xml:base="http://localhost:4000/notes/2024/02/06/arc-browser.html">&lt;h3 id=&quot;web-browser&quot;&gt;Web Browser&lt;/h3&gt;
 
 &lt;hr /&gt;
 
@@ -1013,44 +1108,4 @@ content/post/2023-10-20-some-miscellaneous-git-facts.markdown | 40 +++++++++++++
 
 &lt;p&gt;&lt;img src=&quot;https://thisdot.notion.site/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2Feb53edbf-045d-426c-aa09-d626c2816f18%2F31bb1d16-a928-4993-940d-dba7f906cfe8%2FUntitled.png?table=block&amp;amp;id=2614941e-393c-448d-b6cc-87fa477d10e6&amp;amp;spaceId=eb53edbf-045d-426c-aa09-d626c2816f18&amp;amp;width=2000&amp;amp;userId=&amp;amp;cache=v2&quot; alt=&quot;Untitled&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;The memory consumption which went from &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;500MB&lt;/code&gt; to &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;367MB&lt;/code&gt; after memory cleanup, went down to &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;140MB&lt;/code&gt; after removing the marker drawings!&lt;/p&gt;</content><author><name>Rahul Krishna</name></author><category term="notes" /><summary type="html">Premise</summary></entry><entry><title type="html">React Tips for Future</title><link href="http://localhost:4000/notes/2023/06/07/react-tips-for-future.html" rel="alternate" type="text/html" title="React Tips for Future" /><published>2023-06-07T09:16:44+05:30</published><updated>2023-06-07T09:16:44+05:30</updated><id>http://localhost:4000/notes/2023/06/07/react-tips-for-future</id><content type="html" xml:base="http://localhost:4000/notes/2023/06/07/react-tips-for-future.html">&lt;h3 id=&quot;1-do-not-over-use-useeffect&quot;&gt;1. Do not over-use useEffect&lt;/h3&gt;
-
-&lt;hr /&gt;
-
-&lt;p&gt;For developers, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;useEffect&lt;/code&gt; is often seen as a replacement for &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;componentDidMount&lt;/code&gt;. However, strictly speaking, it is not. The name suggests that it is a place to manage side-effects, but that is not entirely accurate.&lt;/p&gt;
-
-&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;useEffect&lt;/code&gt; is actually a way to synchronize local state with an external store. This means that &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;useEffect&lt;/code&gt; is a purely asynchronous method, with unpredictable performance implications. Think of &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;useEffect&lt;/code&gt; as a reliable henchman, who will eventually step in and complete your task, but not always on schedule.&lt;/p&gt;
-
-&lt;p&gt;Interestingly, updating state during rendering, which was once discouraged in the era of components, is now preferred over &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;useEffect&lt;/code&gt;.&lt;/p&gt;
-
-&lt;h3 id=&quot;2-data-fetching-has-too-many-hidden-traps-do-not-re-invent-the-wheel-here&quot;&gt;2. Data fetching has too many hidden traps. Do not re-invent the wheel here&lt;/h3&gt;
-
-&lt;hr /&gt;
-
-&lt;p&gt;Data fetching may appear straightforward at first. You are asynchronously fetching data from the remote and setting it in state. However, there are numerous hidden traps that must be taken into account, including caching, deduping, and performance, to name a few.&lt;/p&gt;
-
-&lt;p&gt;Do not think of data fetching as simply “making an API call.” Rather, think of it as syncing your local store with an external store. While &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;useEffect&lt;/code&gt; may seem like a perfect solution for this, it is best to use libraries specifically designed for this purpose, such as &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;react-query&lt;/code&gt;.&lt;/p&gt;
-
-&lt;h3 id=&quot;3-use-a-framework&quot;&gt;3. Use a framework&lt;/h3&gt;
-
-&lt;hr /&gt;
-
-&lt;p&gt;With confidence, I must say that React is currently outdated. While using a library instead of committing to a framework used to be seen as an advantage, it is now a serious cause for confusion later on. It is recommended to use frameworks built on top of React such as NextJS and Remix.&lt;/p&gt;
-
-&lt;h3 id=&quot;4-think-about-styling&quot;&gt;4. Think about styling&lt;/h3&gt;
-
-&lt;hr /&gt;
-
-&lt;p&gt;Use Tailwind. The biggest advantage is not only the extensive list of built-in classes but also the exceptional quality of the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;tailwind.config.js&lt;/code&gt; file. By strictly adhering to the use of classes, you can significantly enhance the organization of the application.&lt;/p&gt;
-
-&lt;h3 id=&quot;5-do-not-make-accommodations-for-product-teams-inconsistencies-in-code&quot;&gt;5. Do not make accommodations for product team’s inconsistencies in code&lt;/h3&gt;
-
-&lt;hr /&gt;
-
-&lt;p&gt;This task can be challenging; however, when a product decides to go with a new table design for a solution that is already in place, there are two options to consider. One is to conditionally render the new style in the existing table, while the other is to create two different solutions for the same scenario inside the code. It is imperative to avoid both scenarios and ensure the protection of your code by enforcing a single, unified solution for each problem.&lt;/p&gt;
-
-&lt;h3 id=&quot;6-colours-need-names&quot;&gt;6. Colours need names&lt;/h3&gt;
-
-&lt;hr /&gt;
-
-&lt;p&gt;When writing code, it is important to avoid using &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;#ffffff&lt;/code&gt;. Instead, utilize the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;text-white&lt;/code&gt; class from tailwind. This ensures that when new colors are introduced by the design/product, the responsibility lies with them to come up with a name. Rather than relying on &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;#ff2345&lt;/code&gt;, it is recommended to use &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;text-primary-red&lt;/code&gt; in the code.&lt;/p&gt;</content><author><name>Rahul Krishna</name></author><category term="notes" /><summary type="html">1. Do not over-use useEffect</summary></entry></feed>
+&lt;p&gt;The memory consumption which went from &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;500MB&lt;/code&gt; to &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;367MB&lt;/code&gt; after memory cleanup, went down to &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;140MB&lt;/code&gt; after removing the marker drawings!&lt;/p&gt;</content><author><name>Rahul Krishna</name></author><category term="notes" /><summary type="html">Premise</summary></entry></feed>
