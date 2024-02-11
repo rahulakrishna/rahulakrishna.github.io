@@ -58,7 +58,7 @@ Consider yourself in a bookstore. Using Arc to search “what does reddit think 
 All other data on the page is impressive. | <img src='/images/arc-search/Untitled%201.jpeg' style="max-width: 250px"/>
 
 - Less prominence to sources.
-  Look at the sunscreen related screenshots in this page. It shows you where it sources the data from. In a tiny text below the blocks. There’s also a list of links if you’re interested in learning more. But the UI is trying to hiny that there’s enough data here that you don’t need to click through those links. I’m not sure how you can solve this problem or even if this is a problem.
+  Look at the sunscreen related screenshots in this page. It shows you where it sources the data from. In a tiny text below the blocks. There’s also a list of links if you’re interested in learning more. But the UI is trying to hint that there’s enough data here that you don’t need to click through those links. I’m not sure how you can solve this problem or even if this is a problem.
   They probably don’t want to replace Google Search. Where you are presented with titles and content hidden behind links.
   Ben Werdmuller wrote about this problem at: [https://werd.io/2024/stripping-the-web-of-its-humanity](https://werd.io/2024/stripping-the-web-of-its-humanity)
 
