@@ -13,7 +13,7 @@ tags: [browsers, ux]
 
 Here is what Arc Search has to say about Arc Search!
 
-<div style="text-align: center;"><img src='/images/arc-search/Untitled.png' style="max-width: 250px;"/></div>
+<div style="text-align: center;"><img src='/images/arc-search/javascript-result.png' style="max-width: 250px;"/></div>
 
 ### Basic Stuff it does
 
