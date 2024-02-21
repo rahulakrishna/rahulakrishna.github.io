@@ -6,7 +6,7 @@ input, select, textarea, button { font-family: inherit; font-size: inherit; line
 body, h1, h2, h3, h4, h5, h6, p, blockquote, pre, hr, dl, dd, ol, ul, figure { margin: 0; padding: 0; }
 
 /** Basic styling */
-body { font-family: Athelas, Palatino, Georgia, serif; font-size: 16px; line-height: 1.5; color: var(--color-body-text); background-color: var(--color-background); }
+body { font-family: "Atkinson Hyperlegible", Athelas, Palatino, Georgia, serif; font-size: 14px; line-height: 1.5; color: var(--color-body-text); background-color: var(--color-background); }
 
 p { margin-top: 0; margin-bottom: 0.5em; }
 
@@ -30,7 +30,7 @@ a:hover { color: var(--color-primary-link); text-decoration: none; border-bottom
 
 pre { border-left: 8px solid var(--color-border); margin: 32px 0; padding-left: 16px; width: 100%; overflow-x: auto; }
 
-code { color: var(--color-code); font-size: 16px; padding: 1px 4px; }
+code { color: var(--color-code); font-size: 14px; padding: 1px 4px; }
 
 .prose p, .prose ol, .prose ul { font-size: 16px; margin-bottom: 1em; width: 100%; }
 

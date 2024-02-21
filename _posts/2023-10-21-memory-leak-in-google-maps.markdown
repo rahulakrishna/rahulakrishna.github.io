@@ -12,7 +12,7 @@ categories: notes
 
 ![Untitled](https://thisdot.notion.site/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2Feb53edbf-045d-426c-aa09-d626c2816f18%2F0a0376ef-1fed-43b9-b795-a0838c2dc18a%2FUntitled.png?table=block&id=5dbb1e64-43ed-4918-8607-981ca6a374a1&spaceId=eb53edbf-045d-426c-aa09-d626c2816f18&width=2000&userId=&cache=v2)
 
-n order to visualize geospatial data, we are employing the google-map-react library. However, we have encountered a performance issue when rendering a substantial volume of data points. This issue manifests as a temporary unresponsiveness of the page, followed by a noticeable slowdown in subsequent operations. These symptoms suggest the presence of a memory leak.
+In order to visualize geospatial data, we are employing the google-map-react library. However, we have encountered a performance issue when rendering a substantial volume of data points. This issue manifests as a temporary unresponsiveness of the page, followed by a noticeable slowdown in subsequent operations. These symptoms suggest the presence of a memory leak.
 
 ![Untitled](https://thisdot.notion.site/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2Feb53edbf-045d-426c-aa09-d626c2816f18%2F0e323202-b790-4d19-9f30-e80445bcea0f%2FUntitled.png?table=block&id=30bf63d9-45c4-4bbe-b5d0-b6d31ee4bff2&spaceId=eb53edbf-045d-426c-aa09-d626c2816f18&width=770&userId=&cache=v2)
 
