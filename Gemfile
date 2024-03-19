@@ -17,7 +17,7 @@ gem 'jekyll-athena', '~> 0.0.2'
 # If you have any plugins, put them here!
 group :jekyll_plugins do
   gem "jekyll-feed", "~> 0.12"
-  gem "nokogiri", "~> 1.15.4"
+  gem "nokogiri", "~> 1.15.6"
   gem 'jekyll-link-attributes'
 end
 
