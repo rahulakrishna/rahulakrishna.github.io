@@ -2,23 +2,24 @@
 
 // Code formatting
 pre {
-    border-left: $spacer-1 solid var(--color-border);
-    margin: $spacer-3 0;
-    padding-left: 16px;
-    width: 100%; // matches col-9
-    overflow-x: auto;
+  margin: $spacer-3 0;
+  width: 100%; // matches col-9
+  overflow-x: auto;
 }
 
 code {
-    color: var(--color-code);
-    font-size: $body-font-size;
-    padding: 1px 4px;
+  color: var(--color-code);
+  font-size: $body-font-size;
+  padding: 1px 4px;
 }
 
-
 .prose {
-
-  p, ol, ul {
+  h3 {
+    color: var(--green);
+  }
+  p,
+  ol,
+  ul {
     font-size: $prose-font-size;
     margin-bottom: 1em;
     width: 100%;
@@ -26,29 +27,28 @@ code {
     // @media (min-width: $breakpoint-lg) {
     //   width: (10 / 12 * 100%); // matches col-10
     // }
-
   }
 
-  ul, ol {
+  ul,
+  ol {
     padding-left: 40px;
   }
 
   li {
     margin-bottom: 0.5em;
 
-    ul li, ol li {
+    ul li,
+    ol li {
       margin-bottom: 0;
     }
   }
 
   img {
-
     max-width: 100%;
 
     // @media (min-width: $breakpoint-lg) {
     //   max-width: (12 / 10 * 100%); // make image fill width of container on desktop
     // }
-
   }
 
   blockquote {
@@ -70,13 +70,11 @@ code {
       p {
         font-size: 32px;
       }
-
     }
-
   }
 
   hr {
-    color: var(--color-body-text);
+    color: var(--green);
     border-style: solid;
     border-width: thin;
     margin-top: 0.5em;
@@ -126,5 +124,4 @@ code {
       border-bottom: 2px solid var(--color-body-text);
     }
   }
-
 }

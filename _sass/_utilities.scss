@@ -33,9 +33,9 @@
   text-decoration: none;
   border-bottom: 2px solid currentColor;
   padding-bottom: 1px;
+  color: var(--color-primary-link);
 
   &:hover {
-    color: var(--color-primary-link);
     text-decoration: none;
     border-bottom: 2px dotted;
   }
@@ -449,4 +449,23 @@
       width: 100%;
     }
   }
+}
+
+.green-text {
+  color: var(--green);
+}
+
+.home-posts-feed {
+  list-style: none;
+  li {
+    margin-bottom: 16px;
+  }
+}
+
+.display-picture {
+  width: 40px;
+  border-radius: 100%;
+  position: relative;
+  top: 8px;
+  margin-right: 4px;
 }
