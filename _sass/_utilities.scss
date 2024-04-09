@@ -443,6 +443,8 @@
   }
   .new-line-on-mobile {
     line-break: strict;
+    position: relative;
+    left: 50px;
   }
   .home-posts-feed {
     .link-primary {
