@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2024-04-14T22:03:28+05:30</updated><id>http://localhost:4000/feed.xml</id><title type="html">Field Notes</title><subtitle>Hello I'm a Principal Software Engineer at Bridgestone Americas. I occasionally convert my Notion Docs to markdown and publish them here.</subtitle><entry><title type="html">Recursion in React</title><link href="http://localhost:4000/notes/2024/02/21/recursion-in-react.html" rel="alternate" type="text/html" title="Recursion in React" /><published>2024-02-21T11:15:00+05:30</published><updated>2024-02-21T11:15:00+05:30</updated><id>http://localhost:4000/notes/2024/02/21/recursion-in-react</id><content type="html" xml:base="http://localhost:4000/notes/2024/02/21/recursion-in-react.html">&lt;h3 id=&quot;tldr&quot;&gt;TLDR;&lt;/h3&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2024-04-15T20:08:01+05:30</updated><id>http://localhost:4000/feed.xml</id><title type="html">Field Notes</title><subtitle>Hello I'm a Principal Software Engineer at Bridgestone Americas. I occasionally convert my Notion Docs to markdown and publish them here.</subtitle><entry><title type="html">Recursion in React</title><link href="http://localhost:4000/notes/2024/02/21/recursion-in-react.html" rel="alternate" type="text/html" title="Recursion in React" /><published>2024-02-21T11:15:00+05:30</published><updated>2024-02-21T11:15:00+05:30</updated><id>http://localhost:4000/notes/2024/02/21/recursion-in-react</id><content type="html" xml:base="http://localhost:4000/notes/2024/02/21/recursion-in-react.html">&lt;h3 id=&quot;tldr&quot;&gt;TLDR;&lt;/h3&gt;
 
 &lt;hr /&gt;
 
@@ -111,7 +111,41 @@ So while thinking in React, it may not immediately occur that you can call a &lt
 &lt;ul&gt;
   &lt;li&gt;Thinking in React: &lt;a href=&quot;https://react.dev/learn/thinking-in-react&quot;&gt;https://react.dev/learn/thinking-in-react&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;hackrmn repo: &lt;a href=&quot;https://github.com/rahulakrishna/hackrmn/tree/master&quot;&gt;https://github.com/rahulakrishna/hackrmn/tree/master&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>Rahul Krishna</name></author><category term="notes" /><category term="javascript" /><category term="react" /><summary type="html">TLDR;</summary></entry><entry><title type="html">Arc Search</title><link href="http://localhost:4000/notes/2024/02/10/arc-search.html" rel="alternate" type="text/html" title="Arc Search" /><published>2024-02-10T11:15:00+05:30</published><updated>2024-02-10T11:15:00+05:30</updated><id>http://localhost:4000/notes/2024/02/10/arc-search</id><content type="html" xml:base="http://localhost:4000/notes/2024/02/10/arc-search.html">&lt;h3 id=&quot;what-is-it&quot;&gt;What is it?&lt;/h3&gt;
+&lt;/ul&gt;</content><author><name>Rahul Krishna</name></author><category term="notes" /><category term="javascript" /><category term="react" /><summary type="html">TLDR;</summary></entry><entry><title type="html">Off by 100% Bias</title><link href="http://localhost:4000/notes/2024/02/21/off-by-100-percent-bias.html" rel="alternate" type="text/html" title="Off by 100% Bias" /><published>2024-02-21T11:15:00+05:30</published><updated>2024-02-21T11:15:00+05:30</updated><id>http://localhost:4000/notes/2024/02/21/off-by-100-percent-bias</id><content type="html" xml:base="http://localhost:4000/notes/2024/02/21/off-by-100-percent-bias.html">&lt;p&gt;Today I learnt about &lt;strong&gt;Off by 100% bias.&lt;/strong&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;When a consumer sees “130% more”, they likely do not put much thought or effort into actually computing what it means,” she adds. Instead, the consumer’s mind “jumps” to the first thing that makes sense, the straight “30% more” calculation.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;div class=&quot;language-jsx highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;number&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;50&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;delta&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;25&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+
+&lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;final&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;number&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;delta&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// 75;&lt;/span&gt;
+
+&lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;percentage_increase&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;delta&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;/&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;number&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// 25 / 50 = 0.5; i.e 50%;&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;x_times&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;final&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;/&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;number&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// 75/50 = 1.5; i.e, 1.5x&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;This is even more evident in increases of more than 100%;&lt;/p&gt;
+
+&lt;div class=&quot;language-jsx highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;number&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;50&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;increase&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;75&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+
+&lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;final_number&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;number&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;delta&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// 125;&lt;/span&gt;
+
+&lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;percentage_increase&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;delta&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;/&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;number&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// 75 / 50 = 1.5; i.e 150%&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;x_times&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;final&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;/&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;number&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// 125 / 50 = 2.5; i.e 2.5x&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;The true reason is that the factors in &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;percentage&lt;/code&gt; are the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;previous number&lt;/code&gt; and the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;delta&lt;/code&gt;. Whereas, when you calculate &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;x times&lt;/code&gt; value, you factor the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;final number&lt;/code&gt; and the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;previous number&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;The &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;final number&lt;/code&gt; and the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;previous number&lt;/code&gt; will have a higher difference. Therefore, showing &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;x times&lt;/code&gt; value will &lt;strong&gt;&lt;em&gt;appear&lt;/em&gt;&lt;/strong&gt; to have a higher magnitude.&lt;/p&gt;
+
+&lt;h3 id=&quot;sources&quot;&gt;Sources&lt;/h3&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;https://coxtoday.smu.edu/2022/02/28/consumer-marketing-math-even-the-numerate-are-off-by-100/&lt;/p&gt;</content><author><name>Rahul Krishna</name></author><category term="notes" /><category term="TIL" /><summary type="html">Today I learnt about Off by 100% bias.</summary></entry><entry><title type="html">Arc Search</title><link href="http://localhost:4000/notes/2024/02/10/arc-search.html" rel="alternate" type="text/html" title="Arc Search" /><published>2024-02-10T11:15:00+05:30</published><updated>2024-02-10T11:15:00+05:30</updated><id>http://localhost:4000/notes/2024/02/10/arc-search</id><content type="html" xml:base="http://localhost:4000/notes/2024/02/10/arc-search.html">&lt;h3 id=&quot;what-is-it&quot;&gt;What is it?&lt;/h3&gt;
 
 &lt;hr /&gt;
 
@@ -882,115 +916,4 @@ Cricket World Cup debuted in 1975 and the Rugby World Cup in 1987.&lt;/strong&gt
 
 &lt;p&gt;🎤 Podcasts: Apple Podcasts&lt;/p&gt;
 
-&lt;p&gt;🔐 Password Management: Apple Password Manager&lt;/p&gt;</content><author><name>Rahul Krishna</name></author><category term="notes" /><summary type="html">📨 Mail Client: Apple Mail</summary></entry><entry><title type="html">Stash as a Commit</title><link href="http://localhost:4000/notes/2023/10/31/stash-as-a-commit.html" rel="alternate" type="text/html" title="Stash as a Commit" /><published>2023-10-31T17:35:44+05:30</published><updated>2023-10-31T17:35:44+05:30</updated><id>http://localhost:4000/notes/2023/10/31/stash-as-a-commit</id><content type="html" xml:base="http://localhost:4000/notes/2023/10/31/stash-as-a-commit.html">&lt;h3 id=&quot;what-is-a-stash&quot;&gt;What is a Stash?&lt;/h3&gt;
-
-&lt;hr /&gt;
-
-&lt;p&gt;From Julia Evans’ blog article titled &lt;strong&gt;Some miscellaneous git facts&lt;/strong&gt;&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;👉🏽 *&lt;strong&gt;*the stash is a bunch of commits**&lt;/strong&gt;&lt;/p&gt;
-
-  &lt;p&gt;When I run &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;git stash&lt;/code&gt; to stash my changes, I’ve always been a bit confused about where those changes actually went. It turns out that when you run &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;git stash&lt;/code&gt;, git makes some commits with your changes and labels them with a reference called &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;stash&lt;/code&gt; (in &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;.git/refs/stash&lt;/code&gt;).&lt;/p&gt;
-
-  &lt;p&gt;Let’s stash this blog post and look at the log of the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;stash&lt;/code&gt; reference:&lt;/p&gt;
-
-  &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ git log stash --oneline
-6cb983fe (refs/stash) WIP on main: c6ee55ed wip
-2ff2c273 index on main: c6ee55ed wip
-... some more stuff
-
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;  &lt;/div&gt;
-
-  &lt;p&gt;Now we can look at the commit &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;2ff2c273&lt;/code&gt; to see what it contains:&lt;/p&gt;
-
-  &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ git show 2ff2c273  --stat
-commit 2ff2c273357c94a0087104f776a8dd28ee467769
-Author: Julia Evans &amp;lt;julia@jvns.ca&amp;gt;
-Date:   Fri Oct 20 14:49:20 2023 -0400
-
-   index on main: c6ee55ed wip
-
-content/post/2023-10-20-some-miscellaneous-git-facts.markdown | 40 ++++++++++++++++++++++++++++++++++++++++
-
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;  &lt;/div&gt;
-
-  &lt;p&gt;Unsurprisingly, it contains this blog post. Makes sense!&lt;/p&gt;
-
-  &lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;git stash&lt;/code&gt; actually creates 2 separate commits: one for the index, and one for your changes that you haven’t staged yet. I found this kind of heartening because I’ve been working on a tool to snapshot and restore the state of a git repository (that I may or may not ever release) and I came up with a very similar design, so that made me feel better about my choices.&lt;/p&gt;
-
-  &lt;p&gt;Apparently older commits in the stash are stored in the reflog.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;h3 id=&quot;the-rationale-behind-preferring-commit-over-stash&quot;&gt;The Rationale Behind Preferring Commit Over Stash&lt;/h3&gt;
-
-&lt;hr /&gt;
-
-&lt;p&gt;For individuals accustomed to the command-line interface of Git, the concept of committing instead of stashing may seem unconventional. However, when one’s Git workflow is seamlessly integrated into their Integrated Development Environment (IDE), particularly Visual Studio Code, this approach becomes highly beneficial.&lt;/p&gt;
-
-&lt;h4 id=&quot;the-user-interface-of-atom&quot;&gt;The User Interface of Atom&lt;/h4&gt;
-
-&lt;p&gt;The user interface of Atom is commendable, particularly due to its tri-pane design that consistently displays the File Explorer, Code, and Git.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://thisdot.notion.site/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2Feb53edbf-045d-426c-aa09-d626c2816f18%2F30eb89c7-3a26-44ee-b2f2-68ee6c0aa485%2FUntitled.png?table=block&amp;amp;id=d8d6eda7-64ee-407a-80bc-5008f3df3411&amp;amp;spaceId=eb53edbf-045d-426c-aa09-d626c2816f18&amp;amp;width=2000&amp;amp;userId=&amp;amp;cache=v2&quot; alt=&quot;The Atom UI with File Explorer, Code Area and Git/Github Panel&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;The Atom UI with File Explorer, Code Area and Git/Github Panel&lt;/p&gt;
-
-&lt;p&gt;This design is advantageous as it continually updates a list of changes made to files on the right side of the screen, providing a general overview of the magnitude of your modifications. This visibility encourages experimental changes, which can be easily cherry-picked or discarded.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://thisdot.notion.site/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2Feb53edbf-045d-426c-aa09-d626c2816f18%2Fa0cac6ea-b1a1-4188-88f2-bcd93e7ae264%2FUntitled.png?table=block&amp;amp;id=a43d04df-ecd0-4ece-bb34-c6249ef0ace4&amp;amp;spaceId=eb53edbf-045d-426c-aa09-d626c2816f18&amp;amp;width=2000&amp;amp;userId=&amp;amp;cache=v2&quot; alt=&quot;Atom Git Pane&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Atom Git Pane&lt;/p&gt;
-
-&lt;h3 id=&quot;the-workflow-in-atom&quot;&gt;The Workflow in Atom&lt;/h3&gt;
-
-&lt;hr /&gt;
-
-&lt;p&gt;Consider a scenario where you are working on &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;feature-branch-1&lt;/code&gt; and need to switch to the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;master&lt;/code&gt; branch. Typically, you would stash your changes in &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;feature-branch-1&lt;/code&gt;. However, Atom provides an alternative commit method.&lt;/p&gt;
-
-&lt;div style=&quot;position: relative; padding-bottom: 60.30150753768844%; height: 0;&quot;&gt;&lt;iframe src=&quot;https://www.loom.com/embed/3b5ae799bb104aa5891ed51a92d5f6ca?sid=55db5932-acf4-4c6f-89c3-b1eca8610ee7&quot; frameborder=&quot;0&quot; webkitallowfullscreen=&quot;&quot; mozallowfullscreen=&quot;&quot; allowfullscreen=&quot;&quot; style=&quot;position: absolute; top: 0; left: 0; width: 100%; height: 100%;&quot;&gt;&lt;/iframe&gt;&lt;/div&gt;
-
-&lt;h3 id=&quot;visual-studio-code-a-comparison&quot;&gt;Visual Studio Code: A Comparison&lt;/h3&gt;
-
-&lt;hr /&gt;
-
-&lt;p&gt;By default, Visual Studio Code does not offer the same layout as Atom. However, this is arguably advantageous, and a similar workflow to Atom can be achieved in Visual Studio Code. This can be done by enabling a Secondary Side Bar and moving your “Source Control” and “Commits” to the second pane.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://thisdot.notion.site/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2Feb53edbf-045d-426c-aa09-d626c2816f18%2F883485c0-262f-459b-ae7c-fb679142d8ff%2FUntitled.png?table=block&amp;amp;id=8c888b7c-77bb-4b97-89f1-3ebeb297a110&amp;amp;spaceId=eb53edbf-045d-426c-aa09-d626c2816f18&amp;amp;width=2000&amp;amp;userId=&amp;amp;cache=v2&quot; alt=&quot;Untitled&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://thisdot.notion.site/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2Feb53edbf-045d-426c-aa09-d626c2816f18%2F842b7ef4-deb7-4304-8063-0af1ad02e19f%2FUntitled.png?table=block&amp;amp;id=99e468ec-9c5b-4861-9f49-0643fd5bb392&amp;amp;spaceId=eb53edbf-045d-426c-aa09-d626c2816f18&amp;amp;width=2000&amp;amp;userId=&amp;amp;cache=v2&quot; alt=&quot;A lot more cluttered than my Atom. But it also does a lot more than Atom!&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;A lot more cluttered than my Atom. But it also does a lot more than Atom!&lt;/p&gt;
-
-&lt;h3 id=&quot;the-workflow-in-visual-studio-code&quot;&gt;The Workflow in Visual Studio Code&lt;/h3&gt;
-
-&lt;hr /&gt;
-
-&lt;div style=&quot;position: relative; padding-bottom: 58.91980360065466%; height: 0;&quot;&gt;&lt;iframe src=&quot;https://www.loom.com/embed/a1fa5c8bebd74fb889ae26dbbfcf63ee?sid=e00e01da-5fc6-4b6a-95eb-a9c3912e3e95&quot; frameborder=&quot;0&quot; webkitallowfullscreen=&quot;&quot; mozallowfullscreen=&quot;&quot; allowfullscreen=&quot;&quot; style=&quot;position: absolute; top: 0; left: 0; width: 100%; height: 100%;&quot;&gt;&lt;/iframe&gt;&lt;/div&gt;
-
-&lt;h3 id=&quot;additional-command-line-approach&quot;&gt;Additional: Command Line Approach&lt;/h3&gt;
-
-&lt;hr /&gt;
-
-&lt;div style=&quot;position: relative; padding-bottom: 74.34052757793765%; height: 0;&quot;&gt;&lt;iframe src=&quot;https://www.loom.com/embed/70c3d90ac8a64c2aaae010394174a8bb?sid=5674d81a-c4e8-4438-aaea-ec7200ae4212&quot; frameborder=&quot;0&quot; webkitallowfullscreen=&quot;&quot; mozallowfullscreen=&quot;&quot; allowfullscreen=&quot;&quot; style=&quot;position: absolute; top: 0; left: 0; width: 100%; height: 100%;&quot;&gt;&lt;/iframe&gt;&lt;/div&gt;
-
-&lt;h3 id=&quot;the-merits-of-stash-commit&quot;&gt;The Merits of Stash Commit&lt;/h3&gt;
-
-&lt;hr /&gt;
-
-&lt;p&gt;The primary advantage of a stash commit is that it is local to a branch. This is particularly useful when working on multiple features and needing to stash changes to switch branches (often to master to create a new branch). Upon returning, the stash commit is visible, allowing you to resume where you left off. This is especially helpful when revisiting a branch after a significant period, as remembering that you stashed some code may not be evident.&lt;/p&gt;
-
-&lt;h3 id=&quot;the-argument-for-stash&quot;&gt;The Argument for Stash&lt;/h3&gt;
-
-&lt;hr /&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;git stash&lt;/code&gt; effectively clears your branch of changes for later use, which is necessary if you do not have a branch to perform a &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;stash commit&lt;/code&gt;.&lt;/li&gt;
-  &lt;li&gt;If you have a piece of code that is frequently needed but cannot be committed, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;git stash&lt;/code&gt; is the preferred method.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;references&quot;&gt;References&lt;/h3&gt;
-
-&lt;hr /&gt;
-
-&lt;p&gt;Julia Evans’ Blog Article: &lt;a href=&quot;https://jvns.ca/blog/2023/10/20/some-miscellaneous-git-facts/&quot;&gt;https://jvns.ca/blog/2023/10/20/some-miscellaneous-git-facts/&lt;/a&gt;&lt;/p&gt;</content><author><name>Rahul Krishna</name></author><category term="notes" /><summary type="html">What is a Stash?</summary></entry></feed>
+&lt;p&gt;🔐 Password Management: Apple Password Manager&lt;/p&gt;</content><author><name>Rahul Krishna</name></author><category term="notes" /><summary type="html">📨 Mail Client: Apple Mail</summary></entry></feed>
