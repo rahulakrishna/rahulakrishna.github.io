@@ -1,919 +1,919 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2024-04-15T20:08:01+05:30</updated><id>http://localhost:4000/feed.xml</id><title type="html">Field Notes</title><subtitle>Hello I'm a Principal Software Engineer at Bridgestone Americas. I occasionally convert my Notion Docs to markdown and publish them here.</subtitle><entry><title type="html">Recursion in React</title><link href="http://localhost:4000/notes/2024/02/21/recursion-in-react.html" rel="alternate" type="text/html" title="Recursion in React" /><published>2024-02-21T11:15:00+05:30</published><updated>2024-02-21T11:15:00+05:30</updated><id>http://localhost:4000/notes/2024/02/21/recursion-in-react</id><content type="html" xml:base="http://localhost:4000/notes/2024/02/21/recursion-in-react.html">&lt;h3 id=&quot;tldr&quot;&gt;TLDR;&lt;/h3&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2024-06-13T17:48:15+05:30</updated><id>http://localhost:4000/feed.xml</id><title type="html">Field Notes</title><subtitle>Hello I&apos;m a Principal Software Engineer at Bridgestone Americas. I occasionally convert my Notion Docs to markdown and publish them here.</subtitle><entry><title type="html">Recursion in React</title><link href="http://localhost:4000/notes/2024/02/21/recursion-in-react.html" rel="alternate" type="text/html" title="Recursion in React" /><published>2024-02-21T11:15:00+05:30</published><updated>2024-02-21T11:15:00+05:30</updated><id>http://localhost:4000/notes/2024/02/21/recursion-in-react</id><content type="html" xml:base="http://localhost:4000/notes/2024/02/21/recursion-in-react.html"><![CDATA[<h3 id="tldr">TLDR;</h3>
 
-&lt;hr /&gt;
+<hr />
 
-&lt;p&gt;TIL that you can have recursive components in React!&lt;/p&gt;
+<p>TIL that you can have recursive components in React!</p>
 
-&lt;aside&gt;
+<aside>
 💡 React uses one-way data flow, passing data down the component hierarchy from parent to child component
-&lt;/aside&gt;
-&lt;p&gt;&lt;br /&gt;
-So while thinking in React, it may not immediately occur that you can call a &lt;strong&gt;parent&lt;/strong&gt; inside the &lt;strong&gt;child!&lt;/strong&gt; But it is possible&lt;/p&gt;
+</aside>
+<p><br />
+So while thinking in React, it may not immediately occur that you can call a <strong>parent</strong> inside the <strong>child!</strong> But it is possible</p>
 
-&lt;h3 id=&quot;consider-a-data-structure-like-this&quot;&gt;Consider a Data Structure like this:&lt;/h3&gt;
+<h3 id="consider-a-data-structure-like-this">Consider a Data Structure like this:</h3>
 
-&lt;hr /&gt;
+<hr />
 
-&lt;div class=&quot;language-jsx highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;comments&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;
-  &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;na&quot;&gt;content&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;Comment 1&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-    &lt;span class=&quot;na&quot;&gt;level&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-    &lt;span class=&quot;na&quot;&gt;comments&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;
-      &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-        &lt;span class=&quot;na&quot;&gt;content&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;Comment 1 &amp;gt; 1&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-        &lt;span class=&quot;na&quot;&gt;level&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-        &lt;span class=&quot;na&quot;&gt;comments&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;
-          &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-            &lt;span class=&quot;na&quot;&gt;content&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;Comment 1 &amp;gt; 1 &amp;gt; 1&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-            &lt;span class=&quot;na&quot;&gt;level&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-            &lt;span class=&quot;na&quot;&gt;comments&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[],&lt;/span&gt;
-          &lt;span class=&quot;p&quot;&gt;},&lt;/span&gt;
-        &lt;span class=&quot;p&quot;&gt;],&lt;/span&gt;
-      &lt;span class=&quot;p&quot;&gt;},&lt;/span&gt;
-      &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-        &lt;span class=&quot;na&quot;&gt;content&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;Comment 1 &amp;gt; 2&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-        &lt;span class=&quot;na&quot;&gt;level&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-        &lt;span class=&quot;na&quot;&gt;comments&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[],&lt;/span&gt;
-      &lt;span class=&quot;p&quot;&gt;},&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;],&lt;/span&gt;
-  &lt;span class=&quot;p&quot;&gt;},&lt;/span&gt;
-  &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;na&quot;&gt;content&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;Comment 2&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-    &lt;span class=&quot;na&quot;&gt;level&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-    &lt;span class=&quot;na&quot;&gt;comments&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[],&lt;/span&gt;
-  &lt;span class=&quot;p&quot;&gt;},&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+<div class="language-jsx highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">comments</span> <span class="o">=</span> <span class="p">[</span>
+  <span class="p">{</span>
+    <span class="na">content</span><span class="p">:</span> <span class="dl">"</span><span class="s2">Comment 1</span><span class="dl">"</span><span class="p">,</span>
+    <span class="na">level</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+    <span class="na">comments</span><span class="p">:</span> <span class="p">[</span>
+      <span class="p">{</span>
+        <span class="na">content</span><span class="p">:</span> <span class="dl">"</span><span class="s2">Comment 1 &gt; 1</span><span class="dl">"</span><span class="p">,</span>
+        <span class="na">level</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+        <span class="na">comments</span><span class="p">:</span> <span class="p">[</span>
+          <span class="p">{</span>
+            <span class="na">content</span><span class="p">:</span> <span class="dl">"</span><span class="s2">Comment 1 &gt; 1 &gt; 1</span><span class="dl">"</span><span class="p">,</span>
+            <span class="na">level</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span>
+            <span class="na">comments</span><span class="p">:</span> <span class="p">[],</span>
+          <span class="p">},</span>
+        <span class="p">],</span>
+      <span class="p">},</span>
+      <span class="p">{</span>
+        <span class="na">content</span><span class="p">:</span> <span class="dl">"</span><span class="s2">Comment 1 &gt; 2</span><span class="dl">"</span><span class="p">,</span>
+        <span class="na">level</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+        <span class="na">comments</span><span class="p">:</span> <span class="p">[],</span>
+      <span class="p">},</span>
+    <span class="p">],</span>
+  <span class="p">},</span>
+  <span class="p">{</span>
+    <span class="na">content</span><span class="p">:</span> <span class="dl">"</span><span class="s2">Comment 2</span><span class="dl">"</span><span class="p">,</span>
+    <span class="na">level</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+    <span class="na">comments</span><span class="p">:</span> <span class="p">[],</span>
+  <span class="p">},</span>
+<span class="p">];</span>
+</code></pre></div></div>
 
-&lt;h3 id=&quot;doing-this-in-javascript&quot;&gt;Doing this in Javascript&lt;/h3&gt;
+<h3 id="doing-this-in-javascript">Doing this in Javascript</h3>
 
-&lt;hr /&gt;
+<hr />
 
-&lt;div class=&quot;language-jsx highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;displayComments&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;comments&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;comments&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;reduce&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;((&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;acc&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;comment&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;prefix&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;Array&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;comment&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;level&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-      &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;fill&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;|&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-      &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;reduce&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;((&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;acc&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;item&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;`&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;acc&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;item&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;`&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;&quot;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+<div class="language-jsx highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">function</span> <span class="nx">displayComments</span><span class="p">(</span><span class="nx">comments</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">return</span> <span class="nx">comments</span><span class="p">.</span><span class="nx">reduce</span><span class="p">((</span><span class="nx">acc</span><span class="p">,</span> <span class="nx">comment</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+    <span class="kd">const</span> <span class="nx">prefix</span> <span class="o">=</span> <span class="nb">Array</span><span class="p">(</span><span class="nx">comment</span><span class="p">.</span><span class="nx">level</span><span class="p">)</span>
+      <span class="p">.</span><span class="nx">fill</span><span class="p">(</span><span class="dl">"</span><span class="s2">|</span><span class="dl">"</span><span class="p">)</span>
+      <span class="p">.</span><span class="nx">reduce</span><span class="p">((</span><span class="nx">acc</span><span class="p">,</span> <span class="nx">item</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="s2">`</span><span class="p">${</span><span class="nx">acc</span><span class="p">}</span><span class="s2"> </span><span class="p">${</span><span class="nx">item</span><span class="p">}</span><span class="s2">`</span><span class="p">,</span> <span class="dl">""</span><span class="p">);</span>
 
-    &lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;moreComments&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;displayComments&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;comment&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;comments&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+    <span class="kd">const</span> <span class="nx">moreComments</span> <span class="o">=</span> <span class="nx">displayComments</span><span class="p">(</span><span class="nx">comment</span><span class="p">.</span><span class="nx">comments</span><span class="p">);</span>
 
-    &lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;stringToReturn&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;`&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;prefix&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;comment&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;content&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt; \n &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;moreComments&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;`&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;`&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;acc&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;stringToReturn&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;`&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-  &lt;span class=&quot;p&quot;&gt;},&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;&quot;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+    <span class="kd">const</span> <span class="nx">stringToReturn</span> <span class="o">=</span> <span class="s2">`</span><span class="p">${</span><span class="nx">prefix</span><span class="p">}</span><span class="s2"> </span><span class="p">${</span><span class="nx">comment</span><span class="p">.</span><span class="nx">content</span><span class="p">}</span><span class="s2"> \n </span><span class="p">${</span><span class="nx">moreComments</span><span class="p">}</span><span class="s2">`</span><span class="p">;</span>
+    <span class="k">return</span> <span class="s2">`</span><span class="p">${</span><span class="nx">acc</span><span class="p">}</span><span class="s2"> </span><span class="p">${</span><span class="nx">stringToReturn</span><span class="p">}</span><span class="s2">`</span><span class="p">;</span>
+  <span class="p">},</span> <span class="dl">""</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div></div>
 
-&lt;p&gt;Result:&lt;/p&gt;
+<p>Result:</p>
 
-&lt;p&gt;&lt;img src=&quot;/images/recursion-in-react/javascript-result.png&quot; alt=&quot;Javascript Result&quot; /&gt;&lt;/p&gt;
+<p><img src="/images/recursion-in-react/javascript-result.png" alt="Javascript Result" /></p>
 
-&lt;h3 id=&quot;doing-this-in-react&quot;&gt;Doing this in React&lt;/h3&gt;
+<h3 id="doing-this-in-react">Doing this in React</h3>
 
-&lt;hr /&gt;
+<hr />
 
-&lt;div class=&quot;language-jsx highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;Comment&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;({&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;comment&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;})&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;prefix&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;Array&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;comment&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;level&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;fill&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;|&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;reduce&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;((&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;acc&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;item&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;`&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;acc&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;item&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;`&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;&quot;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-  &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;div&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;gt;&lt;/span&gt;
-      &lt;span class=&quot;si&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;prefix&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;si&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;comment&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;content&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;
-      &lt;span class=&quot;p&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;Comments&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;comments&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;comment&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;comments&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;/&amp;gt;&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;div&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;gt;&lt;/span&gt;
-  &lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+<div class="language-jsx highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">function</span> <span class="nx">Comment</span><span class="p">({</span> <span class="nx">comment</span> <span class="p">})</span> <span class="p">{</span>
+  <span class="kd">const</span> <span class="nx">prefix</span> <span class="o">=</span> <span class="nb">Array</span><span class="p">(</span><span class="nx">comment</span><span class="p">.</span><span class="nx">level</span><span class="p">)</span>
+    <span class="p">.</span><span class="nx">fill</span><span class="p">(</span><span class="dl">"</span><span class="s2">|</span><span class="dl">"</span><span class="p">)</span>
+    <span class="p">.</span><span class="nx">reduce</span><span class="p">((</span><span class="nx">acc</span><span class="p">,</span> <span class="nx">item</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="s2">`</span><span class="p">${</span><span class="nx">acc</span><span class="p">}</span><span class="s2"> </span><span class="p">${</span><span class="nx">item</span><span class="p">}</span><span class="s2">`</span><span class="p">,</span> <span class="dl">""</span><span class="p">);</span>
+  <span class="k">return</span> <span class="p">(</span>
+    <span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;</span>
+      <span class="si">{</span><span class="nx">prefix</span><span class="si">}</span> <span class="si">{</span><span class="nx">comment</span><span class="p">.</span><span class="nx">content</span><span class="si">}</span>
+      <span class="p">&lt;</span><span class="nc">Comments</span> <span class="na">comments</span><span class="p">=</span><span class="si">{</span><span class="nx">comment</span><span class="p">.</span><span class="nx">comments</span><span class="si">}</span> <span class="p">/&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+  <span class="p">);</span>
+<span class="p">}</span>
 
-&lt;span class=&quot;k&quot;&gt;export&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;default&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;Comments&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;({&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;comments&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;})&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;comments&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;map&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;((&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;comment&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;Comment&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;comment&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;comment&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;/&amp;gt;;&lt;/span&gt;
-  &lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+<span class="k">export</span> <span class="k">default</span> <span class="kd">function</span> <span class="nx">Comments</span><span class="p">({</span> <span class="nx">comments</span> <span class="p">})</span> <span class="p">{</span>
+  <span class="k">return</span> <span class="nx">comments</span><span class="p">.</span><span class="nx">map</span><span class="p">((</span><span class="nx">comment</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="p">&lt;</span><span class="nc">Comment</span> <span class="na">comment</span><span class="p">=</span><span class="si">{</span><span class="nx">comment</span><span class="si">}</span> <span class="p">/&gt;;</span>
+  <span class="p">});</span>
+<span class="p">}</span>
+</code></pre></div></div>
 
-&lt;p&gt;Result:&lt;/p&gt;
+<p>Result:</p>
 
-&lt;p&gt;&lt;img src=&quot;/images/recursion-in-react/react-result.png&quot; alt=&quot;React Result&quot; /&gt;&lt;/p&gt;
+<p><img src="/images/recursion-in-react/react-result.png" alt="React Result" /></p>
 
-&lt;h3 id=&quot;actual-example-of-rendering-a-comment-tree&quot;&gt;Actual example of rendering a comment tree&lt;/h3&gt;
+<h3 id="actual-example-of-rendering-a-comment-tree">Actual example of rendering a comment tree</h3>
 
-&lt;hr /&gt;
+<hr />
 
-&lt;p&gt;It’s unlikely we’ll be using &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;|&lt;/code&gt; prefixes when actually building a comment tree. We’ll more likely be playing around with &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;padding&lt;/code&gt; and &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;margin&lt;/code&gt;.&lt;/p&gt;
+<p>It’s unlikely we’ll be using <code class="language-plaintext highlighter-rouge">|</code> prefixes when actually building a comment tree. We’ll more likely be playing around with <code class="language-plaintext highlighter-rouge">padding</code> and <code class="language-plaintext highlighter-rouge">margin</code>.</p>
 
-&lt;p&gt;Here’s a code example of actual comment tree rendering in React with TailwindCSS: &lt;a href=&quot;https://github.com/rahulakrishna/hackrmn/blob/master/src/app/%5Bstorylist%5D/comments/%5Bcommentid%5D/comment-block.js&quot;&gt;https://github.com/rahulakrishna/hackrmn/blob/master/src/app/[storylist]/comments/[commentid]/comment-block.js&lt;/a&gt;&lt;/p&gt;
+<p>Here’s a code example of actual comment tree rendering in React with TailwindCSS: <a href="https://github.com/rahulakrishna/hackrmn/blob/master/src/app/%5Bstorylist%5D/comments/%5Bcommentid%5D/comment-block.js">https://github.com/rahulakrishna/hackrmn/blob/master/src/app/[storylist]/comments/[commentid]/comment-block.js</a></p>
 
-&lt;p&gt;&lt;img src=&quot;/images/recursion-in-react/real-life-example.png&quot; alt=&quot;Untitled&quot; /&gt;&lt;/p&gt;
+<p><img src="/images/recursion-in-react/real-life-example.png" alt="Untitled" /></p>
 
-&lt;h3 id=&quot;references&quot;&gt;References&lt;/h3&gt;
+<h3 id="references">References</h3>
 
-&lt;hr /&gt;
+<hr />
 
-&lt;ul&gt;
-  &lt;li&gt;Thinking in React: &lt;a href=&quot;https://react.dev/learn/thinking-in-react&quot;&gt;https://react.dev/learn/thinking-in-react&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;hackrmn repo: &lt;a href=&quot;https://github.com/rahulakrishna/hackrmn/tree/master&quot;&gt;https://github.com/rahulakrishna/hackrmn/tree/master&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>Rahul Krishna</name></author><category term="notes" /><category term="javascript" /><category term="react" /><summary type="html">TLDR;</summary></entry><entry><title type="html">Off by 100% Bias</title><link href="http://localhost:4000/notes/2024/02/21/off-by-100-percent-bias.html" rel="alternate" type="text/html" title="Off by 100% Bias" /><published>2024-02-21T11:15:00+05:30</published><updated>2024-02-21T11:15:00+05:30</updated><id>http://localhost:4000/notes/2024/02/21/off-by-100-percent-bias</id><content type="html" xml:base="http://localhost:4000/notes/2024/02/21/off-by-100-percent-bias.html">&lt;p&gt;Today I learnt about &lt;strong&gt;Off by 100% bias.&lt;/strong&gt;&lt;/p&gt;
+<ul>
+  <li>Thinking in React: <a href="https://react.dev/learn/thinking-in-react">https://react.dev/learn/thinking-in-react</a></li>
+  <li>hackrmn repo: <a href="https://github.com/rahulakrishna/hackrmn/tree/master">https://github.com/rahulakrishna/hackrmn/tree/master</a></li>
+</ul>]]></content><author><name>Rahul Krishna</name></author><category term="notes" /><category term="javascript" /><category term="react" /><summary type="html"><![CDATA[TLDR;]]></summary></entry><entry><title type="html">Off by 100% Bias</title><link href="http://localhost:4000/notes/2024/02/21/off-by-100-percent-bias.html" rel="alternate" type="text/html" title="Off by 100% Bias" /><published>2024-02-21T11:15:00+05:30</published><updated>2024-02-21T11:15:00+05:30</updated><id>http://localhost:4000/notes/2024/02/21/off-by-100-percent-bias</id><content type="html" xml:base="http://localhost:4000/notes/2024/02/21/off-by-100-percent-bias.html"><![CDATA[<p>Today I learnt about <strong>Off by 100% bias.</strong></p>
 
-&lt;blockquote&gt;
-  &lt;p&gt;When a consumer sees “130% more”, they likely do not put much thought or effort into actually computing what it means,” she adds. Instead, the consumer’s mind “jumps” to the first thing that makes sense, the straight “30% more” calculation.&lt;/p&gt;
-&lt;/blockquote&gt;
+<blockquote>
+  <p>When a consumer sees “130% more”, they likely do not put much thought or effort into actually computing what it means,” she adds. Instead, the consumer’s mind “jumps” to the first thing that makes sense, the straight “30% more” calculation.</p>
+</blockquote>
 
-&lt;div class=&quot;language-jsx highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;number&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;50&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;delta&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;25&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+<div class="language-jsx highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">number</span> <span class="o">=</span> <span class="mi">50</span><span class="p">;</span>
+<span class="kd">const</span> <span class="nx">delta</span> <span class="o">=</span> <span class="mi">25</span><span class="p">;</span>
 
-&lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;final&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;number&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;delta&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// 75;&lt;/span&gt;
+<span class="kd">const</span> <span class="nx">final</span> <span class="o">=</span> <span class="nx">number</span> <span class="o">+</span> <span class="nx">delta</span><span class="p">;</span> <span class="c1">// 75;</span>
 
-&lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;percentage_increase&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;delta&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;/&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;number&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// 25 / 50 = 0.5; i.e 50%;&lt;/span&gt;
-&lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;x_times&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;final&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;/&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;number&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// 75/50 = 1.5; i.e, 1.5x&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+<span class="kd">const</span> <span class="nx">percentage_increase</span> <span class="o">=</span> <span class="nx">delta</span> <span class="o">/</span> <span class="nx">number</span><span class="p">;</span> <span class="c1">// 25 / 50 = 0.5; i.e 50%;</span>
+<span class="kd">const</span> <span class="nx">x_times</span> <span class="o">=</span> <span class="nx">final</span> <span class="o">/</span> <span class="nx">number</span><span class="p">;</span> <span class="c1">// 75/50 = 1.5; i.e, 1.5x</span>
+</code></pre></div></div>
 
-&lt;p&gt;This is even more evident in increases of more than 100%;&lt;/p&gt;
+<p>This is even more evident in increases of more than 100%;</p>
 
-&lt;div class=&quot;language-jsx highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;number&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;50&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;increase&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;75&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+<div class="language-jsx highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">number</span> <span class="o">=</span> <span class="mi">50</span><span class="p">;</span>
+<span class="kd">const</span> <span class="nx">increase</span> <span class="o">=</span> <span class="mi">75</span><span class="p">;</span>
 
-&lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;final_number&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;number&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;delta&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// 125;&lt;/span&gt;
+<span class="kd">const</span> <span class="nx">final_number</span> <span class="o">=</span> <span class="nx">number</span> <span class="o">+</span> <span class="nx">delta</span><span class="p">;</span> <span class="c1">// 125;</span>
 
-&lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;percentage_increase&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;delta&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;/&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;number&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// 75 / 50 = 1.5; i.e 150%&lt;/span&gt;
-&lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;x_times&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;final&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;/&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;number&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// 125 / 50 = 2.5; i.e 2.5x&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+<span class="kd">const</span> <span class="nx">percentage_increase</span> <span class="o">=</span> <span class="nx">delta</span> <span class="o">/</span> <span class="nx">number</span><span class="p">;</span> <span class="c1">// 75 / 50 = 1.5; i.e 150%</span>
+<span class="kd">const</span> <span class="nx">x_times</span> <span class="o">=</span> <span class="nx">final</span> <span class="o">/</span> <span class="nx">number</span><span class="p">;</span> <span class="c1">// 125 / 50 = 2.5; i.e 2.5x</span>
+</code></pre></div></div>
 
-&lt;p&gt;The true reason is that the factors in &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;percentage&lt;/code&gt; are the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;previous number&lt;/code&gt; and the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;delta&lt;/code&gt;. Whereas, when you calculate &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;x times&lt;/code&gt; value, you factor the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;final number&lt;/code&gt; and the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;previous number&lt;/code&gt;.&lt;/p&gt;
+<p>The true reason is that the factors in <code class="language-plaintext highlighter-rouge">percentage</code> are the <code class="language-plaintext highlighter-rouge">previous number</code> and the <code class="language-plaintext highlighter-rouge">delta</code>. Whereas, when you calculate <code class="language-plaintext highlighter-rouge">x times</code> value, you factor the <code class="language-plaintext highlighter-rouge">final number</code> and the <code class="language-plaintext highlighter-rouge">previous number</code>.</p>
 
-&lt;p&gt;The &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;final number&lt;/code&gt; and the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;previous number&lt;/code&gt; will have a higher difference. Therefore, showing &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;x times&lt;/code&gt; value will &lt;strong&gt;&lt;em&gt;appear&lt;/em&gt;&lt;/strong&gt; to have a higher magnitude.&lt;/p&gt;
+<p>The <code class="language-plaintext highlighter-rouge">final number</code> and the <code class="language-plaintext highlighter-rouge">previous number</code> will have a higher difference. Therefore, showing <code class="language-plaintext highlighter-rouge">x times</code> value will <strong><em>appear</em></strong> to have a higher magnitude.</p>
 
-&lt;h3 id=&quot;sources&quot;&gt;Sources&lt;/h3&gt;
+<h3 id="sources">Sources</h3>
 
-&lt;hr /&gt;
+<hr />
 
-&lt;p&gt;https://coxtoday.smu.edu/2022/02/28/consumer-marketing-math-even-the-numerate-are-off-by-100/&lt;/p&gt;</content><author><name>Rahul Krishna</name></author><category term="notes" /><category term="TIL" /><summary type="html">Today I learnt about Off by 100% bias.</summary></entry><entry><title type="html">Arc Search</title><link href="http://localhost:4000/notes/2024/02/10/arc-search.html" rel="alternate" type="text/html" title="Arc Search" /><published>2024-02-10T11:15:00+05:30</published><updated>2024-02-10T11:15:00+05:30</updated><id>http://localhost:4000/notes/2024/02/10/arc-search</id><content type="html" xml:base="http://localhost:4000/notes/2024/02/10/arc-search.html">&lt;h3 id=&quot;what-is-it&quot;&gt;What is it?&lt;/h3&gt;
+<p>https://coxtoday.smu.edu/2022/02/28/consumer-marketing-math-even-the-numerate-are-off-by-100/</p>]]></content><author><name>Rahul Krishna</name></author><category term="notes" /><category term="TIL" /><summary type="html"><![CDATA[Today I learnt about Off by 100% bias.]]></summary></entry><entry><title type="html">Arc Search</title><link href="http://localhost:4000/notes/2024/02/10/arc-search.html" rel="alternate" type="text/html" title="Arc Search" /><published>2024-02-10T11:15:00+05:30</published><updated>2024-02-10T11:15:00+05:30</updated><id>http://localhost:4000/notes/2024/02/10/arc-search</id><content type="html" xml:base="http://localhost:4000/notes/2024/02/10/arc-search.html"><![CDATA[<h3 id="what-is-it">What is it?</h3>
 
-&lt;hr /&gt;
+<hr />
 
-&lt;p&gt;Here is what Arc Search has to say about Arc Search!&lt;/p&gt;
+<p>Here is what Arc Search has to say about Arc Search!</p>
 
-&lt;div style=&quot;text-align: center;&quot;&gt;&lt;img src=&quot;/images/arc-search/Untitled.png&quot; style=&quot;max-width: 250px;&quot; /&gt;&lt;/div&gt;
+<div style="text-align: center;"><img src="/images/arc-search/Untitled.png" style="max-width: 250px;" /></div>
 
-&lt;h3 id=&quot;basic-stuff-it-does&quot;&gt;Basic Stuff it does&lt;/h3&gt;
+<h3 id="basic-stuff-it-does">Basic Stuff it does</h3>
 
-&lt;hr /&gt;
+<hr />
 
-&lt;p&gt;It does the basic stuff you expect a web browser to do. You can use it to open and browse websites and search the web.&lt;/p&gt;
+<p>It does the basic stuff you expect a web browser to do. You can use it to open and browse websites and search the web.</p>
 
-&lt;h3 id=&quot;cool-stuff-it-does&quot;&gt;Cool Stuff it does!&lt;/h3&gt;
+<h3 id="cool-stuff-it-does">Cool Stuff it does!</h3>
 
-&lt;hr /&gt;
+<hr />
 
-&lt;p&gt;The cool stuff is the &lt;strong&gt;Browse for me&lt;/strong&gt; feature.&lt;/p&gt;
+<p>The cool stuff is the <strong>Browse for me</strong> feature.</p>
 
-&lt;div style=&quot;text-align: center;&quot;&gt;&lt;img src=&quot;/images/arc-search/Untitled%201.png&quot; style=&quot;max-width: 200px&quot; /&gt;&lt;/div&gt;
+<div style="text-align: center;"><img src="/images/arc-search/Untitled%201.png" style="max-width: 200px" /></div>
 
-&lt;p&gt;This is very much like Google’s “featured snippets” but collates information from various sources&lt;/p&gt;
+<p>This is very much like Google’s “featured snippets” but collates information from various sources</p>
 
-&lt;div style=&quot;text-align: center;&quot;&gt;&lt;img src=&quot;/images/arc-search/IMG_3803.jpeg&quot; style=&quot;max-width: 250px&quot; /&gt;&lt;/div&gt;
+<div style="text-align: center;"><img src="/images/arc-search/IMG_3803.jpeg" style="max-width: 250px" /></div>
 
-&lt;p&gt;Here Google shows the answer and source&lt;/p&gt;
+<p>Here Google shows the answer and source</p>
 
-&lt;p&gt;Whereas Arc:&lt;/p&gt;
+<p>Whereas Arc:</p>
 
-&lt;table&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td&gt;&lt;img src=&quot;/images/arc-search/IMG_3804.png&quot; /&gt;&lt;/td&gt;
-      &lt;td&gt;&lt;img src=&quot;/images/arc-search/IMG_3805.png&quot; /&gt;&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
+<table>
+  <tbody>
+    <tr>
+      <td><img src="/images/arc-search/IMG_3804.png" /></td>
+      <td><img src="/images/arc-search/IMG_3805.png" /></td>
+    </tr>
+  </tbody>
+</table>
 
-&lt;p&gt;This is data from multiple sources. Now one useful thing you can do with Google is where you add the keyword “reddit” to the search query to find a thread that may contain deeper discussion or specific answer. So you can ask Arc Search:&lt;/p&gt;
+<p>This is data from multiple sources. Now one useful thing you can do with Google is where you add the keyword “reddit” to the search query to find a thread that may contain deeper discussion or specific answer. So you can ask Arc Search:</p>
 
-&lt;table&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td&gt;&lt;img src=&quot;/images/arc-search/IMG_3806.png&quot; /&gt;&lt;/td&gt;
-      &lt;td&gt;&lt;img src=&quot;/images/arc-search/IMG_3807.png&quot; /&gt;&lt;/td&gt;
-      &lt;td&gt;&lt;img src=&quot;/images/arc-search/IMG_3808.png&quot; /&gt;&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
+<table>
+  <tbody>
+    <tr>
+      <td><img src="/images/arc-search/IMG_3806.png" /></td>
+      <td><img src="/images/arc-search/IMG_3807.png" /></td>
+      <td><img src="/images/arc-search/IMG_3808.png" /></td>
+    </tr>
+  </tbody>
+</table>
 
-&lt;p&gt;I’ve found asking what Reddit, Twitter or Hacker News thinks about specific topics and gotten interesting results. Just the contrast in what the user bases talk about is interesting.&lt;/p&gt;
+<p>I’ve found asking what Reddit, Twitter or Hacker News thinks about specific topics and gotten interesting results. Just the contrast in what the user bases talk about is interesting.</p>
 
-&lt;p&gt;Consider yourself in a bookstore. Using Arc to search “what does reddit think about Radical Candor” is much simpler and faster than searching Google “Radical Candor reddit”.&lt;/p&gt;
+<p>Consider yourself in a bookstore. Using Arc to search “what does reddit think about Radical Candor” is much simpler and faster than searching Google “Radical Candor reddit”.</p>
 
-&lt;h3 id=&quot;drawbacks&quot;&gt;Drawbacks&lt;/h3&gt;
+<h3 id="drawbacks">Drawbacks</h3>
 
-&lt;hr /&gt;
+<hr />
 
-&lt;ul&gt;
-  &lt;li&gt;It does display the sources for your data. But it’s AI and AI gets it wrong at times.&lt;/li&gt;
-&lt;/ul&gt;
+<ul>
+  <li>It does display the sources for your data. But it’s AI and AI gets it wrong at times.</li>
+</ul>
 
-&lt;table&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td&gt;&lt;img src=&quot;/images/arc-search/Untitled.jpeg&quot; style=&quot;max-width: 250px;&quot; /&gt;&lt;/td&gt;
-      &lt;td&gt;All the text in this page is right about me. But the person shown in the picture is not me. That’s another person who has the same name as me&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
+<table>
+  <tbody>
+    <tr>
+      <td><img src="/images/arc-search/Untitled.jpeg" style="max-width: 250px;" /></td>
+      <td>All the text in this page is right about me. But the person shown in the picture is not me. That’s another person who has the same name as me</td>
+    </tr>
+  </tbody>
+</table>
 
-&lt;table&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td&gt;All other data on the page is impressive.&lt;/td&gt;
-      &lt;td&gt;&lt;img src=&quot;/images/arc-search/Untitled%201.jpeg&quot; style=&quot;max-width: 250px&quot; /&gt;&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
+<table>
+  <tbody>
+    <tr>
+      <td>All other data on the page is impressive.</td>
+      <td><img src="/images/arc-search/Untitled%201.jpeg" style="max-width: 250px" /></td>
+    </tr>
+  </tbody>
+</table>
 
-&lt;ul&gt;
-  &lt;li&gt;Less prominence to sources.
+<ul>
+  <li>Less prominence to sources.
 Look at the sunscreen related screenshots in this page. It shows you where it sources the data from. In a tiny text below the blocks. There’s also a list of links if you’re interested in learning more. But the UI is trying to hint that there’s enough data here that you don’t need to click through those links. I’m not sure how you can solve this problem or even if this is a problem.
 They probably don’t want to replace Google Search. Where you are presented with titles and content hidden behind links.
-Ben Werdmuller wrote about this problem at: &lt;a href=&quot;https://werd.io/2024/stripping-the-web-of-its-humanity&quot;&gt;https://werd.io/2024/stripping-the-web-of-its-humanity&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
+Ben Werdmuller wrote about this problem at: <a href="https://werd.io/2024/stripping-the-web-of-its-humanity">https://werd.io/2024/stripping-the-web-of-its-humanity</a></li>
+</ul>
 
-&lt;h3 id=&quot;references&quot;&gt;References&lt;/h3&gt;
+<h3 id="references">References</h3>
 
-&lt;hr /&gt;
+<hr />
 
-&lt;ul&gt;
-  &lt;li&gt;Ben Werdmuller at: &lt;a href=&quot;https://werd.io/2024/stripping-the-web-of-its-humanity&quot;&gt;https://werd.io/2024/stripping-the-web-of-its-humanity&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;Arc Blog on Arc Search: &lt;a href=&quot;https://arc.net/blog/arc-search&quot;&gt;https://arc.net/blog/arc-search&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>Rahul Krishna</name></author><category term="notes" /><category term="browsers" /><category term="ux" /><summary type="html">What is it?</summary></entry><entry><title type="html">Arc Browser</title><link href="http://localhost:4000/notes/2024/02/06/arc-browser.html" rel="alternate" type="text/html" title="Arc Browser" /><published>2024-02-06T11:15:00+05:30</published><updated>2024-02-06T11:15:00+05:30</updated><id>http://localhost:4000/notes/2024/02/06/arc-browser</id><content type="html" xml:base="http://localhost:4000/notes/2024/02/06/arc-browser.html">&lt;h3 id=&quot;web-browser&quot;&gt;Web Browser&lt;/h3&gt;
+<ul>
+  <li>Ben Werdmuller at: <a href="https://werd.io/2024/stripping-the-web-of-its-humanity">https://werd.io/2024/stripping-the-web-of-its-humanity</a></li>
+  <li>Arc Blog on Arc Search: <a href="https://arc.net/blog/arc-search">https://arc.net/blog/arc-search</a></li>
+</ul>]]></content><author><name>Rahul Krishna</name></author><category term="notes" /><category term="browsers" /><category term="ux" /><summary type="html"><![CDATA[What is it?]]></summary></entry><entry><title type="html">Arc Browser</title><link href="http://localhost:4000/notes/2024/02/06/arc-browser.html" rel="alternate" type="text/html" title="Arc Browser" /><published>2024-02-06T11:15:00+05:30</published><updated>2024-02-06T11:15:00+05:30</updated><id>http://localhost:4000/notes/2024/02/06/arc-browser</id><content type="html" xml:base="http://localhost:4000/notes/2024/02/06/arc-browser.html"><![CDATA[<h3 id="web-browser">Web Browser</h3>
 
-&lt;hr /&gt;
+<hr />
 
-&lt;p&gt;A Web Browser, ultimately, is an application that lets you send a request to a URL and displays the HTML response on your screen. Apart from displaying simple markup, it also has the ability to run JavaScript and style using CSS.&lt;/p&gt;
+<p>A Web Browser, ultimately, is an application that lets you send a request to a URL and displays the HTML response on your screen. Apart from displaying simple markup, it also has the ability to run JavaScript and style using CSS.</p>
 
-&lt;h3 id=&quot;web-page&quot;&gt;Web Page&lt;/h3&gt;
+<h3 id="web-page">Web Page</h3>
 
-&lt;hr /&gt;
+<hr />
 
-&lt;p&gt;Web Pages have been relying on the “running JavaScript” part more and more. When Angular 1 came out, you were supposed to run the JS bundle inside your HTML. But most frameworks now expect you to render the markup inside JS. Even static websites now have a largely JS based codebase.&lt;/p&gt;
+<p>Web Pages have been relying on the “running JavaScript” part more and more. When Angular 1 came out, you were supposed to run the JS bundle inside your HTML. But most frameworks now expect you to render the markup inside JS. Even static websites now have a largely JS based codebase.</p>
 
-&lt;p&gt;We’re seeing more and more “web-apps” instead of “web-sites”. This change makes a browser more akin to an Operating System running apps. Instead of the original concept of an application that renders markup.&lt;/p&gt;
+<p>We’re seeing more and more “web-apps” instead of “web-sites”. This change makes a browser more akin to an Operating System running apps. Instead of the original concept of an application that renders markup.</p>
 
-&lt;p&gt;In other words, we’re “doing more things” with our browsers than “reading things” with them. Arc Browser tries to bring some of those OS type UX into the browser world.&lt;/p&gt;
+<p>In other words, we’re “doing more things” with our browsers than “reading things” with them. Arc Browser tries to bring some of those OS type UX into the browser world.</p>
 
-&lt;h3 id=&quot;launcher&quot;&gt;Launcher&lt;/h3&gt;
+<h3 id="launcher">Launcher</h3>
 
-&lt;hr /&gt;
+<hr />
 
-&lt;p&gt;Every Operating Systems have some kind of “Launcher”.&lt;/p&gt;
+<p>Every Operating Systems have some kind of “Launcher”.</p>
 
-&lt;p&gt;&lt;img src=&quot;/images/arc-browser/Untitled%202.png&quot; alt=&quot;Spotlight on Mac&quot; style=&quot;width: 50%;&quot; /&gt;&lt;/p&gt;
+<p><img src="/images/arc-browser/Untitled%202.png" alt="Spotlight on Mac" style="width: 50%;" /></p>
 
-&lt;p&gt;&lt;img src=&quot;/images/arc-browser/Untitled%204.png&quot; alt=&quot;Start Menu on Windows&quot; style=&quot;width: 50%;&quot; /&gt;&lt;/p&gt;
+<p><img src="/images/arc-browser/Untitled%204.png" alt="Start Menu on Windows" style="width: 50%;" /></p>
 
-&lt;p&gt;Probably the biggest upgrade in Browser terms is when Google made the URL bar of Chrome work more like a “Launcher”. You weren’t any more expected to precisely type in the URL of the page you had to go to. Google would actually prefer it if you first went to &lt;a href=&quot;http://google.com&quot;&gt;google.com&lt;/a&gt; and clicked on a link from there.&lt;/p&gt;
+<p>Probably the biggest upgrade in Browser terms is when Google made the URL bar of Chrome work more like a “Launcher”. You weren’t any more expected to precisely type in the URL of the page you had to go to. Google would actually prefer it if you first went to <a href="http://google.com">google.com</a> and clicked on a link from there.</p>
 
-&lt;p&gt;&lt;img src=&quot;/images/arc-browser/Untitled%205.png&quot; alt=&quot;Untitled&quot; /&gt;&lt;/p&gt;
+<p><img src="/images/arc-browser/Untitled%205.png" alt="Untitled" /></p>
 
-&lt;p&gt;&lt;img src=&quot;/images/arc-browser/Untitled%206.png&quot; alt=&quot;Untitled&quot; /&gt;&lt;/p&gt;
+<p><img src="/images/arc-browser/Untitled%206.png" alt="Untitled" /></p>
 
-&lt;p&gt;&lt;img src=&quot;/images/arc-browser/Untitled%207.png&quot; alt=&quot;Untitled&quot; /&gt;&lt;/p&gt;
+<p><img src="/images/arc-browser/Untitled%207.png" alt="Untitled" /></p>
 
-&lt;p&gt;Arc changes this by opening a Spotlight-like Command Palette every time you hit Cmd+T.&lt;/p&gt;
+<p>Arc changes this by opening a Spotlight-like Command Palette every time you hit Cmd+T.</p>
 
-&lt;p&gt;&lt;img src=&quot;/images/arc-browser/Untitled%208.png&quot; alt=&quot;Untitled&quot; /&gt;&lt;/p&gt;
+<p><img src="/images/arc-browser/Untitled%208.png" alt="Untitled" /></p>
 
-&lt;p&gt;This lets you do much more than just start a search or open a URL. For instance:&lt;/p&gt;
+<p>This lets you do much more than just start a search or open a URL. For instance:</p>
 
-&lt;p&gt;&lt;img src=&quot;/images/arc-browser/Untitled%209.png&quot; alt=&quot;Untitled&quot; /&gt;&lt;/p&gt;
+<p><img src="/images/arc-browser/Untitled%209.png" alt="Untitled" /></p>
 
-&lt;p&gt;This may seem like a radical change, but the fact is many applications have already mapped &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Cmd+T&lt;/code&gt; to such an action.&lt;/p&gt;
+<p>This may seem like a radical change, but the fact is many applications have already mapped <code class="language-plaintext highlighter-rouge">Cmd+T</code> to such an action.</p>
 
-&lt;p&gt;VS Code shows this:&lt;/p&gt;
+<p>VS Code shows this:</p>
 
-&lt;p&gt;&lt;img src=&quot;/images/arc-browser/Untitled%2010.png&quot; alt=&quot;Untitled&quot; /&gt;&lt;/p&gt;
+<p><img src="/images/arc-browser/Untitled%2010.png" alt="Untitled" /></p>
 
-&lt;p&gt;Slack shows this:&lt;/p&gt;
+<p>Slack shows this:</p>
 
-&lt;p&gt;&lt;img src=&quot;/images/arc-browser/Untitled%2011.png&quot; alt=&quot;Untitled&quot; /&gt;&lt;/p&gt;
+<p><img src="/images/arc-browser/Untitled%2011.png" alt="Untitled" /></p>
 
-&lt;h3 id=&quot;tab-management&quot;&gt;Tab Management&lt;/h3&gt;
+<h3 id="tab-management">Tab Management</h3>
 
-&lt;hr /&gt;
+<hr />
 
-&lt;p&gt;Window Management in Operating Systems and Tab Management in Browsers have a lot in common. But all major browsers still rely on the same &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Ctrl-Tab&lt;/code&gt; shortcut to switch to the next tab. Arc changes this.&lt;/p&gt;
+<p>Window Management in Operating Systems and Tab Management in Browsers have a lot in common. But all major browsers still rely on the same <code class="language-plaintext highlighter-rouge">Ctrl-Tab</code> shortcut to switch to the next tab. Arc changes this.</p>
 
-&lt;div style=&quot;position: relative; padding-bottom: 56.25%; height: 0;&quot;&gt;&lt;iframe src=&quot;https://www.loom.com/embed/cf92ac0bd7034f46b74da932a76696ee?sid=e25f5206-5ff8-483e-95f8-8dc682bce4a4&quot; frameborder=&quot;0&quot; webkitallowfullscreen=&quot;&quot; mozallowfullscreen=&quot;&quot; allowfullscreen=&quot;&quot; style=&quot;position: absolute; top: 0; left: 0; width: 100%; height: 100%;&quot;&gt;&lt;/iframe&gt;&lt;/div&gt;
+<div style="position: relative; padding-bottom: 56.25%; height: 0;"><iframe src="https://www.loom.com/embed/cf92ac0bd7034f46b74da932a76696ee?sid=e25f5206-5ff8-483e-95f8-8dc682bce4a4" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen="" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe></div>
 
-&lt;h3 id=&quot;space-management&quot;&gt;Space Management&lt;/h3&gt;
+<h3 id="space-management">Space Management</h3>
 
-&lt;hr /&gt;
+<hr />
 
-&lt;p&gt;Spaces is another cool general OS feature that Browsers have tried to implement, but it hasn’t fared well.&lt;/p&gt;
+<p>Spaces is another cool general OS feature that Browsers have tried to implement, but it hasn’t fared well.</p>
 
-&lt;p&gt;&lt;img src=&quot;/images/arc-browser/Untitled%2012.png&quot; alt=&quot;Spaces on macOS&quot; /&gt;&lt;/p&gt;
+<p><img src="/images/arc-browser/Untitled%2012.png" alt="Spaces on macOS" /></p>
 
-&lt;p&gt;Spaces on macOS&lt;/p&gt;
+<p>Spaces on macOS</p>
 
-&lt;p&gt;&lt;img src=&quot;/images/arc-browser/Untitled%2013.png&quot; alt=&quot;Untitled&quot; /&gt;&lt;/p&gt;
+<p><img src="/images/arc-browser/Untitled%2013.png" alt="Untitled" /></p>
 
-&lt;p&gt;Safari’s Space Management is called Tab Groupings. And while this gets synced across devices and is pretty useful if you’re into organising things, it’s almost always hidden away from view. No keyboard shortcuts exist. It’s almost like a way to stash away a group of tabs rather than an intuitive way to organise tabs.&lt;/p&gt;
+<p>Safari’s Space Management is called Tab Groupings. And while this gets synced across devices and is pretty useful if you’re into organising things, it’s almost always hidden away from view. No keyboard shortcuts exist. It’s almost like a way to stash away a group of tabs rather than an intuitive way to organise tabs.</p>
 
-&lt;p&gt;&lt;img src=&quot;/images/arc-browser/Untitled%2014.png&quot; alt=&quot;Untitled&quot; /&gt;&lt;/p&gt;
+<p><img src="/images/arc-browser/Untitled%2014.png" alt="Untitled" /></p>
 
-&lt;p&gt;Chrome has an even simpler Tab Grouping that essentially lets you put a label next to tabs.&lt;/p&gt;
+<p>Chrome has an even simpler Tab Grouping that essentially lets you put a label next to tabs.</p>
 
-&lt;p&gt;&lt;img src=&quot;/images/arc-browser/Untitled%2015.png&quot; alt=&quot;Untitled&quot; /&gt;&lt;/p&gt;
+<p><img src="/images/arc-browser/Untitled%2015.png" alt="Untitled" /></p>
 
-&lt;p&gt;Arc simply lets you have this small icons at the bottom of your tabs list. Where you can do a Horizontal scroll to switch between tabs. Also you can find tabs open in other tab groups from the “Spotlight-like” search thingie.&lt;/p&gt;
+<p>Arc simply lets you have this small icons at the bottom of your tabs list. Where you can do a Horizontal scroll to switch between tabs. Also you can find tabs open in other tab groups from the “Spotlight-like” search thingie.</p>
 
-&lt;div style=&quot;position: relative; padding-bottom: 56.25%; height: 0;&quot;&gt;&lt;iframe src=&quot;https://www.loom.com/embed/da81b54218db46bbb14766baf4fbef0a?sid=b4541dfd-4fdc-4358-9435-29cca03b8432&quot; frameborder=&quot;0&quot; webkitallowfullscreen=&quot;&quot; mozallowfullscreen=&quot;&quot; allowfullscreen=&quot;&quot; style=&quot;position: absolute; top: 0; left: 0; width: 100%; height: 100%;&quot;&gt;&lt;/iframe&gt;&lt;/div&gt;
+<div style="position: relative; padding-bottom: 56.25%; height: 0;"><iframe src="https://www.loom.com/embed/da81b54218db46bbb14766baf4fbef0a?sid=b4541dfd-4fdc-4358-9435-29cca03b8432" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen="" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe></div>
 
-&lt;h3 id=&quot;vertical-tabs&quot;&gt;Vertical Tabs&lt;/h3&gt;
+<h3 id="vertical-tabs">Vertical Tabs</h3>
 
-&lt;hr /&gt;
+<hr />
 
-&lt;p&gt;Horizontal Tabs are hard to work with if you have a lot of tabs open.&lt;/p&gt;
+<p>Horizontal Tabs are hard to work with if you have a lot of tabs open.</p>
 
-&lt;p&gt;&lt;img src=&quot;/images/arc-browser/Untitled%2016.png&quot; alt=&quot;Untitled&quot; /&gt;&lt;/p&gt;
+<p><img src="/images/arc-browser/Untitled%2016.png" alt="Untitled" /></p>
 
-&lt;p&gt;Vertical Tabs offer a better view of the page title. It’s also essential for the scroll to switch space feature&lt;/p&gt;
+<p>Vertical Tabs offer a better view of the page title. It’s also essential for the scroll to switch space feature</p>
 
-&lt;p&gt;&lt;img src=&quot;/images/arc-browser/Untitled%2017.png&quot; alt=&quot;Untitled&quot; /&gt;&lt;/p&gt;
+<p><img src="/images/arc-browser/Untitled%2017.png" alt="Untitled" /></p>
 
-&lt;h3 id=&quot;renaming-tabs&quot;&gt;Renaming Tabs&lt;/h3&gt;
+<h3 id="renaming-tabs">Renaming Tabs</h3>
 
-&lt;hr /&gt;
+<hr />
 
-&lt;p&gt;Arc lets you rename tabs. Ridiculously simple. But really useful!&lt;/p&gt;
+<p>Arc lets you rename tabs. Ridiculously simple. But really useful!</p>
 
-&lt;p&gt;&lt;img src=&quot;/images/arc-browser/Untitled%2018.png&quot; alt=&quot;Untitled&quot; /&gt;&lt;/p&gt;
+<p><img src="/images/arc-browser/Untitled%2018.png" alt="Untitled" /></p>
 
-&lt;h3 id=&quot;theming&quot;&gt;Theming&lt;/h3&gt;
+<h3 id="theming">Theming</h3>
 
-&lt;hr /&gt;
+<hr />
 
-&lt;div style=&quot;position: relative; padding-bottom: 56.25%; height: 0;&quot;&gt;&lt;iframe src=&quot;https://www.loom.com/embed/8b744c9075ce44d8a0f415a329011201?sid=6a954096-5835-4f17-a16a-26625f39171c&quot; frameborder=&quot;0&quot; webkitallowfullscreen=&quot;&quot; mozallowfullscreen=&quot;&quot; allowfullscreen=&quot;&quot; style=&quot;position: absolute; top: 0; left: 0; width: 100%; height: 100%;&quot;&gt;&lt;/iframe&gt;&lt;/div&gt;
+<div style="position: relative; padding-bottom: 56.25%; height: 0;"><iframe src="https://www.loom.com/embed/8b744c9075ce44d8a0f415a329011201?sid=6a954096-5835-4f17-a16a-26625f39171c" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen="" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe></div>
 
-&lt;h3 id=&quot;ai-features-and-split-view&quot;&gt;AI Features and Split View&lt;/h3&gt;
+<h3 id="ai-features-and-split-view">AI Features and Split View</h3>
 
-&lt;hr /&gt;
+<hr />
 
-&lt;p&gt;Arc clearly has an idea of how you browse the web and actively tries to enhance it. One day into trying out Arc, it completely changed how I use HN&lt;/p&gt;
+<p>Arc clearly has an idea of how you browse the web and actively tries to enhance it. One day into trying out Arc, it completely changed how I use HN</p>
 
-&lt;div style=&quot;position: relative; padding-bottom: 56.25%; height: 0;&quot;&gt;&lt;iframe src=&quot;https://www.loom.com/embed/6c19c4099d334a278ed71e1c9928dc7e?sid=9dee27e8-32fa-41ab-bb01-d0357f7fe95d&quot; frameborder=&quot;0&quot; webkitallowfullscreen=&quot;&quot; mozallowfullscreen=&quot;&quot; allowfullscreen=&quot;&quot; style=&quot;position: absolute; top: 0; left: 0; width: 100%; height: 100%;&quot;&gt;&lt;/iframe&gt;&lt;/div&gt;
+<div style="position: relative; padding-bottom: 56.25%; height: 0;"><iframe src="https://www.loom.com/embed/6c19c4099d334a278ed71e1c9928dc7e?sid=9dee27e8-32fa-41ab-bb01-d0357f7fe95d" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen="" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe></div>
 
-&lt;p&gt;Hover over links to get a summary. Open in split view so I never lose context of the HN link that took me there.&lt;/p&gt;</content><author><name>Rahul Krishna</name></author><category term="notes" /><category term="browsers" /><category term="ux" /><summary type="html">Web Browser</summary></entry><entry><title type="html">Visual History of World Cup Logos</title><link href="http://localhost:4000/notes/2024/01/02/visual-history-of-world-cups.html" rel="alternate" type="text/html" title="Visual History of World Cup Logos" /><published>2024-01-02T11:15:00+05:30</published><updated>2024-01-02T11:15:00+05:30</updated><id>http://localhost:4000/notes/2024/01/02/visual-history-of-world-cups</id><content type="html" xml:base="http://localhost:4000/notes/2024/01/02/visual-history-of-world-cups.html">&lt;h3 id=&quot;introduction&quot;&gt;Introduction&lt;/h3&gt;
+<p>Hover over links to get a summary. Open in split view so I never lose context of the HN link that took me there.</p>]]></content><author><name>Rahul Krishna</name></author><category term="notes" /><category term="browsers" /><category term="ux" /><summary type="html"><![CDATA[Web Browser]]></summary></entry><entry><title type="html">Visual History of World Cup Logos</title><link href="http://localhost:4000/notes/2024/01/02/visual-history-of-world-cups.html" rel="alternate" type="text/html" title="Visual History of World Cup Logos" /><published>2024-01-02T11:15:00+05:30</published><updated>2024-01-02T11:15:00+05:30</updated><id>http://localhost:4000/notes/2024/01/02/visual-history-of-world-cups</id><content type="html" xml:base="http://localhost:4000/notes/2024/01/02/visual-history-of-world-cups.html"><![CDATA[<h3 id="introduction">Introduction</h3>
 
-&lt;hr /&gt;
+<hr />
 
-&lt;p&gt;World Cup logos are a visual representation of the time, culture and the general vibe of the host nation and the time period in which it is held. There are three major world cups that happen. In order of popularity, they are:&lt;/p&gt;
+<p>World Cup logos are a visual representation of the time, culture and the general vibe of the host nation and the time period in which it is held. There are three major world cups that happen. In order of popularity, they are:</p>
 
-&lt;ol&gt;
-  &lt;li&gt;FIFA World Cup&lt;/li&gt;
-  &lt;li&gt;ICC Cricket World Cup&lt;/li&gt;
-  &lt;li&gt;Rugby World Cup&lt;/li&gt;
-&lt;/ol&gt;
+<ol>
+  <li>FIFA World Cup</li>
+  <li>ICC Cricket World Cup</li>
+  <li>Rugby World Cup</li>
+</ol>
 
-&lt;blockquote&gt;
-  &lt;p&gt;Nearly all world cup logos look reasonably bad or illegible in dark mode. So this page is better read in light mode&lt;/p&gt;
-&lt;/blockquote&gt;
+<blockquote>
+  <p>Nearly all world cup logos look reasonably bad or illegible in dark mode. So this page is better read in light mode</p>
+</blockquote>
 
-&lt;h3 id=&quot;the-actual-cups&quot;&gt;The Actual Cups&lt;/h3&gt;
+<h3 id="the-actual-cups">The Actual Cups</h3>
 
-&lt;hr /&gt;
+<hr />
 
-&lt;table&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td&gt;&lt;img src=&quot;/images/visual-history-of-world-cup-logos/MSport-World-Cup-1.jpg&quot; alt=&quot;MSport-World-Cup-1.jpg&quot; /&gt;&lt;/td&gt;
-      &lt;td&gt;&lt;img src=&quot;/images/visual-history-of-world-cup-logos/post_image_1d174d2.jpg&quot; alt=&quot;post_image_1d174d2.jpg&quot; /&gt;&lt;/td&gt;
-      &lt;td&gt;&lt;img src=&quot;/images/visual-history-of-world-cup-logos/skysports-webb-ellis-cup-rugby-world-cup_6333804.jpg&quot; alt=&quot;skysports-webb-ellis-cup-rugby-world-cup_6333804.jpg&quot; /&gt;&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
+<table>
+  <tbody>
+    <tr>
+      <td><img src="/images/visual-history-of-world-cup-logos/MSport-World-Cup-1.jpg" alt="MSport-World-Cup-1.jpg" /></td>
+      <td><img src="/images/visual-history-of-world-cup-logos/post_image_1d174d2.jpg" alt="post_image_1d174d2.jpg" /></td>
+      <td><img src="/images/visual-history-of-world-cup-logos/skysports-webb-ellis-cup-rugby-world-cup_6333804.jpg" alt="skysports-webb-ellis-cup-rugby-world-cup_6333804.jpg" /></td>
+    </tr>
+  </tbody>
+</table>
 
-&lt;h3 id=&quot;logos-before-2014&quot;&gt;Logos before 2014&lt;/h3&gt;
+<h3 id="logos-before-2014">Logos before 2014</h3>
 
-&lt;hr /&gt;
+<hr />
 
-&lt;p&gt;&lt;strong&gt;FIFA World Cup started in 1930. It did not have a logo for a long time, rather a poster existed.
-Cricket World Cup debuted in 1975 and the Rugby World Cup in 1987.&lt;/strong&gt;&lt;/p&gt;
+<p><strong>FIFA World Cup started in 1930. It did not have a logo for a long time, rather a poster existed.
+Cricket World Cup debuted in 1975 and the Rugby World Cup in 1987.</strong></p>
 
-&lt;p&gt;&lt;em&gt;Poster Era (1930-1966)&lt;/em&gt;&lt;/p&gt;
+<p><em>Poster Era (1930-1966)</em></p>
 
-&lt;p&gt;&lt;img src=&quot;/images/visual-history-of-world-cup-logos/Untitled.png&quot; alt=&quot;Untitled&quot; /&gt;&lt;/p&gt;
+<p><img src="/images/visual-history-of-world-cup-logos/Untitled.png" alt="Untitled" /></p>
 
-&lt;p&gt;&lt;img src=&quot;/images/visual-history-of-world-cup-logos/Untitled%201.png&quot; alt=&quot;Untitled&quot; /&gt;&lt;/p&gt;
+<p><img src="/images/visual-history-of-world-cup-logos/Untitled%201.png" alt="Untitled" /></p>
 
-&lt;p&gt;&lt;img src=&quot;/images/visual-history-of-world-cup-logos/Untitled%202.png&quot; alt=&quot;Untitled&quot; /&gt;&lt;/p&gt;
+<p><img src="/images/visual-history-of-world-cup-logos/Untitled%202.png" alt="Untitled" /></p>
 
-&lt;p&gt;&lt;img src=&quot;/images/visual-history-of-world-cup-logos/Untitled%203.png&quot; alt=&quot;Untitled&quot; /&gt;&lt;/p&gt;
+<p><img src="/images/visual-history-of-world-cup-logos/Untitled%203.png" alt="Untitled" /></p>
 
-&lt;p&gt;&lt;img src=&quot;/images/visual-history-of-world-cup-logos/Untitled%204.png&quot; alt=&quot;Untitled&quot; /&gt;&lt;/p&gt;
+<p><img src="/images/visual-history-of-world-cup-logos/Untitled%204.png" alt="Untitled" /></p>
 
-&lt;p&gt;&lt;img src=&quot;/images/visual-history-of-world-cup-logos/Untitled%205.png&quot; alt=&quot;Untitled&quot; /&gt;&lt;/p&gt;
+<p><img src="/images/visual-history-of-world-cup-logos/Untitled%205.png" alt="Untitled" /></p>
 
-&lt;p&gt;&lt;img src=&quot;/images/visual-history-of-world-cup-logos/Untitled%206.png&quot; alt=&quot;Untitled&quot; /&gt;&lt;/p&gt;
+<p><img src="/images/visual-history-of-world-cup-logos/Untitled%206.png" alt="Untitled" /></p>
 
-&lt;p&gt;&lt;img src=&quot;/images/visual-history-of-world-cup-logos/Untitled%207.png&quot; alt=&quot;Untitled&quot; /&gt;&lt;/p&gt;
+<p><img src="/images/visual-history-of-world-cup-logos/Untitled%207.png" alt="Untitled" /></p>
 
-&lt;p&gt;&lt;strong&gt;Logo Era&lt;/strong&gt;&lt;/p&gt;
+<p><strong>Logo Era</strong></p>
 
-&lt;p&gt;&lt;img src=&quot;/images/visual-history-of-world-cup-logos/Untitled%208.png&quot; alt=&quot;This is probably what can be considered the first logo&quot; /&gt;&lt;/p&gt;
+<p><img src="/images/visual-history-of-world-cup-logos/Untitled%208.png" alt="This is probably what can be considered the first logo" /></p>
 
-&lt;p&gt;This is probably what can be considered the first logo&lt;/p&gt;
+<p>This is probably what can be considered the first logo</p>
 
-&lt;table&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td&gt;&lt;img src=&quot;/images/visual-history-of-world-cup-logos/Untitled%209.png&quot; alt=&quot;Untitled&quot; /&gt;&lt;/td&gt;
-      &lt;td&gt;&lt;img src=&quot;/images/visual-history-of-world-cup-logos/Untitled%2010.png&quot; alt=&quot;Untitled&quot; /&gt;&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;table&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td&gt;&lt;img src=&quot;/images/visual-history-of-world-cup-logos/Untitled%2011.png&quot; alt=&quot;Untitled&quot; /&gt;&lt;/td&gt;
-      &lt;td&gt;&lt;img src=&quot;/images/visual-history-of-world-cup-logos/Untitled%2012.png&quot; alt=&quot;Untitled&quot; /&gt;&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
+<table>
+  <tbody>
+    <tr>
+      <td><img src="/images/visual-history-of-world-cup-logos/Untitled%209.png" alt="Untitled" /></td>
+      <td><img src="/images/visual-history-of-world-cup-logos/Untitled%2010.png" alt="Untitled" /></td>
+    </tr>
+  </tbody>
+</table>
+
+<table>
+  <tbody>
+    <tr>
+      <td><img src="/images/visual-history-of-world-cup-logos/Untitled%2011.png" alt="Untitled" /></td>
+      <td><img src="/images/visual-history-of-world-cup-logos/Untitled%2012.png" alt="Untitled" /></td>
+    </tr>
+  </tbody>
+</table>
 
-&lt;table&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td&gt;&lt;img src=&quot;/images/visual-history-of-world-cup-logos/Untitled%2013.png&quot; alt=&quot;Untitled&quot; /&gt;&lt;/td&gt;
-      &lt;td&gt;&lt;img src=&quot;/images/visual-history-of-world-cup-logos/Untitled%2014.png&quot; alt=&quot;Untitled&quot; /&gt;&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;table&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td&gt;&lt;img src=&quot;/images/visual-history-of-world-cup-logos/Untitled%2015.png&quot; alt=&quot;Untitled&quot; /&gt;&lt;/td&gt;
-      &lt;td&gt;&lt;img src=&quot;/images/visual-history-of-world-cup-logos/Untitled%2016.png&quot; alt=&quot;The first CWC logo to have had some effort. But reasonably bad.&quot; /&gt;&lt;/td&gt;
-      &lt;td&gt;&lt;img src=&quot;/images/visual-history-of-world-cup-logos/Untitled%2017.png&quot; alt=&quot;Untitled&quot; /&gt;&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
+<table>
+  <tbody>
+    <tr>
+      <td><img src="/images/visual-history-of-world-cup-logos/Untitled%2013.png" alt="Untitled" /></td>
+      <td><img src="/images/visual-history-of-world-cup-logos/Untitled%2014.png" alt="Untitled" /></td>
+    </tr>
+  </tbody>
+</table>
+
+<table>
+  <tbody>
+    <tr>
+      <td><img src="/images/visual-history-of-world-cup-logos/Untitled%2015.png" alt="Untitled" /></td>
+      <td><img src="/images/visual-history-of-world-cup-logos/Untitled%2016.png" alt="The first CWC logo to have had some effort. But reasonably bad." /></td>
+      <td><img src="/images/visual-history-of-world-cup-logos/Untitled%2017.png" alt="Untitled" /></td>
+    </tr>
+  </tbody>
+</table>
 
-&lt;table&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td&gt;&lt;img src=&quot;/images/visual-history-of-world-cup-logos/Untitled%2018.png&quot; alt=&quot;Untitled&quot; /&gt;&lt;/td&gt;
-      &lt;td&gt;&lt;img src=&quot;/images/visual-history-of-world-cup-logos/Untitled%2019.png&quot; alt=&quot;Untitled&quot; /&gt;&lt;/td&gt;
-      &lt;td&gt;&lt;img src=&quot;/images/visual-history-of-world-cup-logos/Untitled%2020.png&quot; alt=&quot;Untitled&quot; /&gt;&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
+<table>
+  <tbody>
+    <tr>
+      <td><img src="/images/visual-history-of-world-cup-logos/Untitled%2018.png" alt="Untitled" /></td>
+      <td><img src="/images/visual-history-of-world-cup-logos/Untitled%2019.png" alt="Untitled" /></td>
+      <td><img src="/images/visual-history-of-world-cup-logos/Untitled%2020.png" alt="Untitled" /></td>
+    </tr>
+  </tbody>
+</table>
 
-&lt;table&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td&gt;&lt;img src=&quot;/images/visual-history-of-world-cup-logos/Untitled%2021.png&quot; alt=&quot;Untitled&quot; /&gt;&lt;/td&gt;
-      &lt;td&gt;&lt;img src=&quot;/images/visual-history-of-world-cup-logos/Untitled%2022.png&quot; alt=&quot;Untitled&quot; /&gt;&lt;/td&gt;
-      &lt;td&gt;&lt;img src=&quot;/images/visual-history-of-world-cup-logos/Untitled%2023.png&quot; alt=&quot;Untitled&quot; /&gt;&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
+<table>
+  <tbody>
+    <tr>
+      <td><img src="/images/visual-history-of-world-cup-logos/Untitled%2021.png" alt="Untitled" /></td>
+      <td><img src="/images/visual-history-of-world-cup-logos/Untitled%2022.png" alt="Untitled" /></td>
+      <td><img src="/images/visual-history-of-world-cup-logos/Untitled%2023.png" alt="Untitled" /></td>
+    </tr>
+  </tbody>
+</table>
 
-&lt;table&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td&gt;&lt;img src=&quot;/images/visual-history-of-world-cup-logos/Untitled%2024.png&quot; alt=&quot;Untitled&quot; /&gt;&lt;/td&gt;
-      &lt;td&gt;&lt;img src=&quot;/images/visual-history-of-world-cup-logos/Untitled%2025.png&quot; alt=&quot;Untitled&quot; /&gt;&lt;/td&gt;
-      &lt;td&gt;&lt;img src=&quot;/images/visual-history-of-world-cup-logos/Untitled%2026.png&quot; alt=&quot;Untitled&quot; /&gt;&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
+<table>
+  <tbody>
+    <tr>
+      <td><img src="/images/visual-history-of-world-cup-logos/Untitled%2024.png" alt="Untitled" /></td>
+      <td><img src="/images/visual-history-of-world-cup-logos/Untitled%2025.png" alt="Untitled" /></td>
+      <td><img src="/images/visual-history-of-world-cup-logos/Untitled%2026.png" alt="Untitled" /></td>
+    </tr>
+  </tbody>
+</table>
 
-&lt;table&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td&gt;&lt;img src=&quot;/images/visual-history-of-world-cup-logos/Untitled%2027.png&quot; alt=&quot;Untitled&quot; /&gt;&lt;/td&gt;
-      &lt;td&gt;&lt;img src=&quot;/images/visual-history-of-world-cup-logos/Untitled%2028.png&quot; alt=&quot;Untitled&quot; /&gt;&lt;/td&gt;
-      &lt;td&gt;&lt;img src=&quot;/images/visual-history-of-world-cup-logos/Untitled%2029.png&quot; alt=&quot;Untitled&quot; /&gt;&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;table&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td&gt;&lt;img src=&quot;/images/visual-history-of-world-cup-logos/Untitled%2030.png&quot; alt=&quot;Untitled&quot; /&gt;&lt;/td&gt;
-      &lt;td&gt;&lt;img src=&quot;/images/visual-history-of-world-cup-logos/Untitled%2031.png&quot; alt=&quot;Untitled&quot; /&gt;&lt;/td&gt;
-      &lt;td&gt;&lt;img src=&quot;/images/visual-history-of-world-cup-logos/Untitled%2032.png&quot; alt=&quot;Untitled&quot; /&gt;&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;table&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td&gt;&lt;img src=&quot;/images/visual-history-of-world-cup-logos/Untitled%2033.png&quot; alt=&quot;Untitled&quot; /&gt;&lt;/td&gt;
-      &lt;td&gt;&lt;img src=&quot;/images/visual-history-of-world-cup-logos/Untitled%2034.png&quot; alt=&quot;Untitled&quot; /&gt;&lt;/td&gt;
-      &lt;td&gt;&lt;img src=&quot;/images/visual-history-of-world-cup-logos/Untitled%2035.png&quot; alt=&quot;Untitled&quot; /&gt;&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;h3 id=&quot;the-last-of-freeform-logos&quot;&gt;The last of Freeform logos&lt;/h3&gt;
-
-&lt;hr /&gt;
-
-&lt;table&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td&gt;&lt;img src=&quot;/images/visual-history-of-world-cup-logos/Untitled%2036.png&quot; alt=&quot;Untitled&quot; /&gt;&lt;/td&gt;
-      &lt;td&gt;&lt;img src=&quot;/images/visual-history-of-world-cup-logos/Untitled%2037.png&quot; alt=&quot;Untitled&quot; /&gt;&lt;/td&gt;
-      &lt;td&gt;&lt;img src=&quot;/images/visual-history-of-world-cup-logos/Untitled%2038.png&quot; alt=&quot;Untitled&quot; /&gt;&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;p&gt;FIFA seems to have set on the logo format back in 2014. But it definitely took a better shape in 2018 and 2022. ICC had nothing resembling the cup, while the Rugby World Cup had no specific World Cup Logo before 2019.&lt;/p&gt;
-
-&lt;h3 id=&quot;the-first-logos-to-strictly-follow-the-format&quot;&gt;The first logos to strictly follow the format&lt;/h3&gt;
-
-&lt;hr /&gt;
-
-&lt;table&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td&gt;&lt;img src=&quot;/images/visual-history-of-world-cup-logos/Untitled%2039.png&quot; alt=&quot;Untitled&quot; /&gt;&lt;/td&gt;
-      &lt;td&gt;&lt;img src=&quot;/images/visual-history-of-world-cup-logos/Untitled%2040.png&quot; alt=&quot;Untitled&quot; /&gt;&lt;/td&gt;
-      &lt;td&gt;&lt;img src=&quot;/images/visual-history-of-world-cup-logos/Untitled%2041.png&quot; alt=&quot;Untitled&quot; /&gt;&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;h3 id=&quot;latest-logos&quot;&gt;Latest Logos&lt;/h3&gt;
-
-&lt;hr /&gt;
-
-&lt;p&gt;The latest FIFA World Cup happened in 2022, ICC Cricket World Cup and the Rugby World Cup in 2023. The hosts were Qatar, India and France respectively.&lt;/p&gt;
-
-&lt;table&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td&gt;&lt;img src=&quot;/images/visual-history-of-world-cup-logos/Untitled%2042.png&quot; alt=&quot;Untitled&quot; /&gt;&lt;/td&gt;
-      &lt;td&gt;&lt;img src=&quot;/images/visual-history-of-world-cup-logos/Untitled%2043.png&quot; alt=&quot;Untitled&quot; /&gt;&lt;/td&gt;
-      &lt;td&gt;&lt;img src=&quot;/images/visual-history-of-world-cup-logos/Untitled%2044.png&quot; alt=&quot;Untitled&quot; /&gt;&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;hr /&gt;
-
-&lt;p&gt;Seems to be the case that all major World Cups are going for a format onto which host nations can apply their visual pattern. This behaviour is relatively new and started with these World Cups during the 2018-19 time period. Looking at the previous logos&lt;/p&gt;
-
-&lt;h3 id=&quot;putting-these-together&quot;&gt;Putting these together&lt;/h3&gt;
-
-&lt;hr /&gt;
-
-&lt;p&gt;Rugby has a similar visual identity that still allows for freedom across their various world cups. With 6 logos following the visual pattern, they’re clearly ahead&lt;/p&gt;
-
-&lt;p&gt;&lt;em&gt;Rugby&lt;/em&gt;&lt;/p&gt;
-
-&lt;table&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td&gt;&lt;img src=&quot;/images/visual-history-of-world-cup-logos/Untitled%2045.png&quot; alt=&quot;Untitled&quot; /&gt;&lt;/td&gt;
-      &lt;td&gt;&lt;img src=&quot;/images/visual-history-of-world-cup-logos/Untitled%2046.png&quot; alt=&quot;Untitled&quot; /&gt;&lt;/td&gt;
-      &lt;td&gt;&lt;img src=&quot;/images/visual-history-of-world-cup-logos/Untitled%2041.png&quot; alt=&quot;Untitled&quot; /&gt;&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;table&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td&gt;&lt;img src=&quot;/images/visual-history-of-world-cup-logos/Untitled%2047.png&quot; alt=&quot;Untitled&quot; /&gt;&lt;/td&gt;
-      &lt;td&gt;&lt;img src=&quot;/images/visual-history-of-world-cup-logos/Untitled%2048.png&quot; alt=&quot;Untitled&quot; /&gt;&lt;/td&gt;
-      &lt;td&gt;&lt;img src=&quot;/images/visual-history-of-world-cup-logos/Untitled%2044.png&quot; alt=&quot;Untitled&quot; /&gt;&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;p&gt;&lt;em&gt;Cricket&lt;/em&gt;&lt;/p&gt;
-
-&lt;table&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td&gt;&lt;img src=&quot;/images/visual-history-of-world-cup-logos/Untitled%2040.png&quot; alt=&quot;Untitled&quot; /&gt;&lt;/td&gt;
-      &lt;td&gt;&lt;img src=&quot;/images/visual-history-of-world-cup-logos/Untitled%2043.png&quot; alt=&quot;Untitled&quot; /&gt;&lt;/td&gt;
-      &lt;td&gt;&lt;img src=&quot;/images/visual-history-of-world-cup-logos/Untitled%2049.png&quot; alt=&quot;Untitled&quot; /&gt;&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;p&gt;&lt;em&gt;Football&lt;/em&gt;&lt;/p&gt;
-
-&lt;table&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td&gt;&lt;img src=&quot;/images/visual-history-of-world-cup-logos/Untitled%2036.png&quot; alt=&quot;Untitled&quot; /&gt;&lt;/td&gt;
-      &lt;td&gt;&lt;img src=&quot;/images/visual-history-of-world-cup-logos/Untitled%2039.png&quot; alt=&quot;Untitled&quot; /&gt;&lt;/td&gt;
-      &lt;td&gt;&lt;img src=&quot;/images/visual-history-of-world-cup-logos/Untitled%2042.png&quot; alt=&quot;Untitled&quot; /&gt;&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;h3 id=&quot;bonus-t20-cricket-world-cup&quot;&gt;Bonus: T20 Cricket World Cup&lt;/h3&gt;
-
-&lt;hr /&gt;
-
-&lt;p&gt;The T20 World Cup logos from 2007 to 2012 saw host nations having to write the word &lt;strong&gt;T20&lt;/strong&gt; in their choice of design&lt;/p&gt;
-
-&lt;table&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td&gt;&lt;img src=&quot;/images/visual-history-of-world-cup-logos/Untitled%2050.png&quot; alt=&quot;Untitled&quot; /&gt;&lt;/td&gt;
-      &lt;td&gt;&lt;img src=&quot;/images/visual-history-of-world-cup-logos/Untitled%2051.png&quot; alt=&quot;Untitled&quot; /&gt;&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;table&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td&gt;&lt;img src=&quot;/images/visual-history-of-world-cup-logos/Untitled%2052.png&quot; alt=&quot;Untitled&quot; /&gt;&lt;/td&gt;
-      &lt;td&gt;&lt;img src=&quot;/images/visual-history-of-world-cup-logos/Untitled%2053.png&quot; alt=&quot;Untitled&quot; /&gt;&lt;/td&gt;
-      &lt;td&gt;&lt;img src=&quot;/images/visual-history-of-world-cup-logos/Untitled%2054.png&quot; alt=&quot;Untitled&quot; /&gt;&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;p&gt;This changed in 2014 and ICC decided on a more restrictive format where you could only change the colours&lt;/p&gt;
-
-&lt;table&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td&gt;&lt;img src=&quot;/images/visual-history-of-world-cup-logos/Untitled%2055.png&quot; alt=&quot;Untitled&quot; /&gt;&lt;/td&gt;
-      &lt;td&gt;&lt;img src=&quot;/images/visual-history-of-world-cup-logos/Untitled%2056.png&quot; alt=&quot;Untitled&quot; /&gt;&lt;/td&gt;
-      &lt;td&gt;&lt;img src=&quot;/images/visual-history-of-world-cup-logos/Untitled%2057.png&quot; alt=&quot;Untitled&quot; /&gt;&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;table&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td&gt;&lt;img src=&quot;/images/visual-history-of-world-cup-logos/Untitled%2058.png&quot; alt=&quot;Untitled&quot; /&gt;&lt;/td&gt;
-      &lt;td&gt;&lt;img src=&quot;/images/visual-history-of-world-cup-logos/Untitled%2059.png&quot; alt=&quot;Untitled&quot; /&gt;&lt;/td&gt;
-      &lt;td&gt;&lt;img src=&quot;/images/visual-history-of-world-cup-logos/Untitled%2060.png&quot; alt=&quot;Untitled&quot; /&gt;&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;</content><author><name>Rahul Krishna</name></author><category term="notes" /><category term="logo" /><category term="design" /><summary type="html">Introduction</summary></entry><entry><title type="html">Loading vs Fetching</title><link href="http://localhost:4000/notes/2024/01/01/loading-vs-fetching.html" rel="alternate" type="text/html" title="Loading vs Fetching" /><published>2024-01-01T11:15:00+05:30</published><updated>2024-01-01T11:15:00+05:30</updated><id>http://localhost:4000/notes/2024/01/01/loading-vs-fetching</id><content type="html" xml:base="http://localhost:4000/notes/2024/01/01/loading-vs-fetching.html">&lt;h3 id=&quot;the-basics&quot;&gt;The Basics&lt;/h3&gt;
-
-&lt;hr /&gt;
+<table>
+  <tbody>
+    <tr>
+      <td><img src="/images/visual-history-of-world-cup-logos/Untitled%2027.png" alt="Untitled" /></td>
+      <td><img src="/images/visual-history-of-world-cup-logos/Untitled%2028.png" alt="Untitled" /></td>
+      <td><img src="/images/visual-history-of-world-cup-logos/Untitled%2029.png" alt="Untitled" /></td>
+    </tr>
+  </tbody>
+</table>
+
+<table>
+  <tbody>
+    <tr>
+      <td><img src="/images/visual-history-of-world-cup-logos/Untitled%2030.png" alt="Untitled" /></td>
+      <td><img src="/images/visual-history-of-world-cup-logos/Untitled%2031.png" alt="Untitled" /></td>
+      <td><img src="/images/visual-history-of-world-cup-logos/Untitled%2032.png" alt="Untitled" /></td>
+    </tr>
+  </tbody>
+</table>
+
+<table>
+  <tbody>
+    <tr>
+      <td><img src="/images/visual-history-of-world-cup-logos/Untitled%2033.png" alt="Untitled" /></td>
+      <td><img src="/images/visual-history-of-world-cup-logos/Untitled%2034.png" alt="Untitled" /></td>
+      <td><img src="/images/visual-history-of-world-cup-logos/Untitled%2035.png" alt="Untitled" /></td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="the-last-of-freeform-logos">The last of Freeform logos</h3>
+
+<hr />
+
+<table>
+  <tbody>
+    <tr>
+      <td><img src="/images/visual-history-of-world-cup-logos/Untitled%2036.png" alt="Untitled" /></td>
+      <td><img src="/images/visual-history-of-world-cup-logos/Untitled%2037.png" alt="Untitled" /></td>
+      <td><img src="/images/visual-history-of-world-cup-logos/Untitled%2038.png" alt="Untitled" /></td>
+    </tr>
+  </tbody>
+</table>
+
+<p>FIFA seems to have set on the logo format back in 2014. But it definitely took a better shape in 2018 and 2022. ICC had nothing resembling the cup, while the Rugby World Cup had no specific World Cup Logo before 2019.</p>
+
+<h3 id="the-first-logos-to-strictly-follow-the-format">The first logos to strictly follow the format</h3>
+
+<hr />
+
+<table>
+  <tbody>
+    <tr>
+      <td><img src="/images/visual-history-of-world-cup-logos/Untitled%2039.png" alt="Untitled" /></td>
+      <td><img src="/images/visual-history-of-world-cup-logos/Untitled%2040.png" alt="Untitled" /></td>
+      <td><img src="/images/visual-history-of-world-cup-logos/Untitled%2041.png" alt="Untitled" /></td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="latest-logos">Latest Logos</h3>
+
+<hr />
+
+<p>The latest FIFA World Cup happened in 2022, ICC Cricket World Cup and the Rugby World Cup in 2023. The hosts were Qatar, India and France respectively.</p>
+
+<table>
+  <tbody>
+    <tr>
+      <td><img src="/images/visual-history-of-world-cup-logos/Untitled%2042.png" alt="Untitled" /></td>
+      <td><img src="/images/visual-history-of-world-cup-logos/Untitled%2043.png" alt="Untitled" /></td>
+      <td><img src="/images/visual-history-of-world-cup-logos/Untitled%2044.png" alt="Untitled" /></td>
+    </tr>
+  </tbody>
+</table>
+
+<hr />
+
+<p>Seems to be the case that all major World Cups are going for a format onto which host nations can apply their visual pattern. This behaviour is relatively new and started with these World Cups during the 2018-19 time period. Looking at the previous logos</p>
+
+<h3 id="putting-these-together">Putting these together</h3>
+
+<hr />
+
+<p>Rugby has a similar visual identity that still allows for freedom across their various world cups. With 6 logos following the visual pattern, they’re clearly ahead</p>
+
+<p><em>Rugby</em></p>
+
+<table>
+  <tbody>
+    <tr>
+      <td><img src="/images/visual-history-of-world-cup-logos/Untitled%2045.png" alt="Untitled" /></td>
+      <td><img src="/images/visual-history-of-world-cup-logos/Untitled%2046.png" alt="Untitled" /></td>
+      <td><img src="/images/visual-history-of-world-cup-logos/Untitled%2041.png" alt="Untitled" /></td>
+    </tr>
+  </tbody>
+</table>
+
+<table>
+  <tbody>
+    <tr>
+      <td><img src="/images/visual-history-of-world-cup-logos/Untitled%2047.png" alt="Untitled" /></td>
+      <td><img src="/images/visual-history-of-world-cup-logos/Untitled%2048.png" alt="Untitled" /></td>
+      <td><img src="/images/visual-history-of-world-cup-logos/Untitled%2044.png" alt="Untitled" /></td>
+    </tr>
+  </tbody>
+</table>
+
+<p><em>Cricket</em></p>
+
+<table>
+  <tbody>
+    <tr>
+      <td><img src="/images/visual-history-of-world-cup-logos/Untitled%2040.png" alt="Untitled" /></td>
+      <td><img src="/images/visual-history-of-world-cup-logos/Untitled%2043.png" alt="Untitled" /></td>
+      <td><img src="/images/visual-history-of-world-cup-logos/Untitled%2049.png" alt="Untitled" /></td>
+    </tr>
+  </tbody>
+</table>
+
+<p><em>Football</em></p>
+
+<table>
+  <tbody>
+    <tr>
+      <td><img src="/images/visual-history-of-world-cup-logos/Untitled%2036.png" alt="Untitled" /></td>
+      <td><img src="/images/visual-history-of-world-cup-logos/Untitled%2039.png" alt="Untitled" /></td>
+      <td><img src="/images/visual-history-of-world-cup-logos/Untitled%2042.png" alt="Untitled" /></td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="bonus-t20-cricket-world-cup">Bonus: T20 Cricket World Cup</h3>
+
+<hr />
+
+<p>The T20 World Cup logos from 2007 to 2012 saw host nations having to write the word <strong>T20</strong> in their choice of design</p>
+
+<table>
+  <tbody>
+    <tr>
+      <td><img src="/images/visual-history-of-world-cup-logos/Untitled%2050.png" alt="Untitled" /></td>
+      <td><img src="/images/visual-history-of-world-cup-logos/Untitled%2051.png" alt="Untitled" /></td>
+    </tr>
+  </tbody>
+</table>
+
+<table>
+  <tbody>
+    <tr>
+      <td><img src="/images/visual-history-of-world-cup-logos/Untitled%2052.png" alt="Untitled" /></td>
+      <td><img src="/images/visual-history-of-world-cup-logos/Untitled%2053.png" alt="Untitled" /></td>
+      <td><img src="/images/visual-history-of-world-cup-logos/Untitled%2054.png" alt="Untitled" /></td>
+    </tr>
+  </tbody>
+</table>
+
+<p>This changed in 2014 and ICC decided on a more restrictive format where you could only change the colours</p>
+
+<table>
+  <tbody>
+    <tr>
+      <td><img src="/images/visual-history-of-world-cup-logos/Untitled%2055.png" alt="Untitled" /></td>
+      <td><img src="/images/visual-history-of-world-cup-logos/Untitled%2056.png" alt="Untitled" /></td>
+      <td><img src="/images/visual-history-of-world-cup-logos/Untitled%2057.png" alt="Untitled" /></td>
+    </tr>
+  </tbody>
+</table>
+
+<table>
+  <tbody>
+    <tr>
+      <td><img src="/images/visual-history-of-world-cup-logos/Untitled%2058.png" alt="Untitled" /></td>
+      <td><img src="/images/visual-history-of-world-cup-logos/Untitled%2059.png" alt="Untitled" /></td>
+      <td><img src="/images/visual-history-of-world-cup-logos/Untitled%2060.png" alt="Untitled" /></td>
+    </tr>
+  </tbody>
+</table>]]></content><author><name>Rahul Krishna</name></author><category term="notes" /><category term="logo" /><category term="design" /><summary type="html"><![CDATA[Introduction]]></summary></entry><entry><title type="html">Loading vs Fetching</title><link href="http://localhost:4000/notes/2024/01/01/loading-vs-fetching.html" rel="alternate" type="text/html" title="Loading vs Fetching" /><published>2024-01-01T11:15:00+05:30</published><updated>2024-01-01T11:15:00+05:30</updated><id>http://localhost:4000/notes/2024/01/01/loading-vs-fetching</id><content type="html" xml:base="http://localhost:4000/notes/2024/01/01/loading-vs-fetching.html"><![CDATA[<h3 id="the-basics">The Basics</h3>
+
+<hr />
 
-&lt;ul&gt;
-  &lt;li&gt;No Data + Fetching Data = LOADING&lt;/li&gt;
-  &lt;li&gt;Yes Data + Fetching Data = FETCHING&lt;/li&gt;
-&lt;/ul&gt;
+<ul>
+  <li>No Data + Fetching Data = LOADING</li>
+  <li>Yes Data + Fetching Data = FETCHING</li>
+</ul>
 
-&lt;h3 id=&quot;why&quot;&gt;Why?&lt;/h3&gt;
+<h3 id="why">Why?</h3>
 
-&lt;hr /&gt;
+<hr />
 
-&lt;p&gt;As long as the data we have is not invalid. We have no reason to hide it away from the user.&lt;/p&gt;
+<p>As long as the data we have is not invalid. We have no reason to hide it away from the user.</p>
 
-&lt;h3 id=&quot;examples-from-around-the-world&quot;&gt;Examples from around the world&lt;/h3&gt;
+<h3 id="examples-from-around-the-world">Examples from around the world</h3>
 
-&lt;hr /&gt;
+<hr />
 
-&lt;table&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td&gt;Loading&lt;/td&gt;
-      &lt;td&gt;Fetching&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;&lt;img src=&quot;/images/loading-vs-fetching/Untitled%206.png&quot; alt=&quot;YouTube Loading State&quot; /&gt; YouTube Loading State&lt;/td&gt;
-      &lt;td&gt;&lt;img src=&quot;/images/loading-vs-fetching/Untitled%207.png&quot; alt=&quot;YouTube Fetching State&quot; /&gt; YouTube Fetching State&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;&lt;img src=&quot;/images/loading-vs-fetching/Untitled%208.png&quot; alt=&quot;Apollo App Loading State&quot; /&gt; Apollo App Loading State&lt;/td&gt;
-      &lt;td&gt;&lt;img src=&quot;/images/loading-vs-fetching/Untitled%209.png&quot; alt=&quot;Apollo App Fetching State&quot; /&gt; Apollo App Fetching State&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;&lt;img src=&quot;/images/loading-vs-fetching/Untitled%2010.png&quot; alt=&quot;Fotmob Loading State&quot; /&gt; Fotmob Loading State&lt;/td&gt;
-      &lt;td&gt;&lt;img src=&quot;/images/loading-vs-fetching/Untitled%2011.png&quot; alt=&quot;Fotmob Fetching State&quot; /&gt; Fotmob Fetching State&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
+<table>
+  <tbody>
+    <tr>
+      <td>Loading</td>
+      <td>Fetching</td>
+    </tr>
+    <tr>
+      <td><img src="/images/loading-vs-fetching/Untitled%206.png" alt="YouTube Loading State" /> YouTube Loading State</td>
+      <td><img src="/images/loading-vs-fetching/Untitled%207.png" alt="YouTube Fetching State" /> YouTube Fetching State</td>
+    </tr>
+    <tr>
+      <td><img src="/images/loading-vs-fetching/Untitled%208.png" alt="Apollo App Loading State" /> Apollo App Loading State</td>
+      <td><img src="/images/loading-vs-fetching/Untitled%209.png" alt="Apollo App Fetching State" /> Apollo App Fetching State</td>
+    </tr>
+    <tr>
+      <td><img src="/images/loading-vs-fetching/Untitled%2010.png" alt="Fotmob Loading State" /> Fotmob Loading State</td>
+      <td><img src="/images/loading-vs-fetching/Untitled%2011.png" alt="Fotmob Fetching State" /> Fotmob Fetching State</td>
+    </tr>
+  </tbody>
+</table>
 
-&lt;h3 id=&quot;important-exception&quot;&gt;Important Exception&lt;/h3&gt;
+<h3 id="important-exception">Important Exception</h3>
 
-&lt;hr /&gt;
+<hr />
 
-&lt;p&gt;We must be careful not to trigger the fetching state when the &lt;em&gt;data is invalid&lt;/em&gt;&lt;/p&gt;
+<p>We must be careful not to trigger the fetching state when the <em>data is invalid</em></p>
 
-&lt;p&gt;&lt;img src=&quot;/images/loading-vs-fetching/facebook-messenger.jpeg&quot; alt=&quot;Facebook Messenger Concept&quot; /&gt; Facebook Messenger Concept (Credit: Christoffer O. Jensen)&lt;/p&gt;
+<p><img src="/images/loading-vs-fetching/facebook-messenger.jpeg" alt="Facebook Messenger Concept" /> Facebook Messenger Concept (Credit: Christoffer O. Jensen)</p>
 
-&lt;p&gt;In this example. Moving between chats should always render the data on the screen invalid.&lt;/p&gt;
+<p>In this example. Moving between chats should always render the data on the screen invalid.</p>
 
-&lt;h3 id=&quot;references&quot;&gt;References&lt;/h3&gt;
+<h3 id="references">References</h3>
 
-&lt;hr /&gt;
+<hr />
 
-&lt;ul&gt;
-  &lt;li&gt;Christoffer O. Jensen on Dribble - &lt;b&gt;Facebook Messenger App&lt;/b&gt; - https://dribbble.com/shots/800893-Facebook-Messenger-App/attachments/81487&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>Rahul Krishna</name></author><category term="notes" /><category term="programming" /><category term="ux" /><summary type="html">The Basics</summary></entry><entry><title type="html">Illusion of Touch</title><link href="http://localhost:4000/notes/2023/11/27/illusion-of-touch.html" rel="alternate" type="text/html" title="Illusion of Touch" /><published>2023-11-27T11:15:00+05:30</published><updated>2023-11-27T11:15:00+05:30</updated><id>http://localhost:4000/notes/2023/11/27/illusion-of-touch</id><content type="html" xml:base="http://localhost:4000/notes/2023/11/27/illusion-of-touch.html">&lt;h3 id=&quot;til&quot;&gt;TIL&lt;/h3&gt;
+<ul>
+  <li>Christoffer O. Jensen on Dribble - <b>Facebook Messenger App</b> - https://dribbble.com/shots/800893-Facebook-Messenger-App/attachments/81487</li>
+</ul>]]></content><author><name>Rahul Krishna</name></author><category term="notes" /><category term="programming" /><category term="ux" /><summary type="html"><![CDATA[The Basics]]></summary></entry><entry><title type="html">Illusion of Touch</title><link href="http://localhost:4000/notes/2023/11/27/illusion-of-touch.html" rel="alternate" type="text/html" title="Illusion of Touch" /><published>2023-11-27T11:15:00+05:30</published><updated>2023-11-27T11:15:00+05:30</updated><id>http://localhost:4000/notes/2023/11/27/illusion-of-touch</id><content type="html" xml:base="http://localhost:4000/notes/2023/11/27/illusion-of-touch.html"><![CDATA[<h3 id="til">TIL</h3>
 
-&lt;p&gt;It’s physically impossible to touch anything because we’re made up of atoms. When we get too close to an object, our electrons and the electrons of that object will repel each other. However, our brain interprets the sensation of those repulsion forces as the illusion of “touch” even though they never actually touch.&lt;/p&gt;</content><author><name>Rahul Krishna</name></author><category term="notes" /><category term="til" /><summary type="html">TIL</summary></entry><entry><title type="html">Budgeting Tool with Numbers + Shortcuts</title><link href="http://localhost:4000/notes/2023/11/18/simple-budgeting-tool-with-numbers-shortcuts.html" rel="alternate" type="text/html" title="Budgeting Tool with Numbers + Shortcuts" /><published>2023-11-18T11:15:00+05:30</published><updated>2023-11-18T11:15:00+05:30</updated><id>http://localhost:4000/notes/2023/11/18/simple-budgeting-tool-with-numbers-shortcuts</id><content type="html" xml:base="http://localhost:4000/notes/2023/11/18/simple-budgeting-tool-with-numbers-shortcuts.html">&lt;h3 id=&quot;the-case-for-default-applications&quot;&gt;The Case for Default Applications&lt;/h3&gt;
+<p>It’s physically impossible to touch anything because we’re made up of atoms. When we get too close to an object, our electrons and the electrons of that object will repel each other. However, our brain interprets the sensation of those repulsion forces as the illusion of “touch” even though they never actually touch.</p>]]></content><author><name>Rahul Krishna</name></author><category term="notes" /><category term="til" /><summary type="html"><![CDATA[TIL]]></summary></entry><entry><title type="html">Budgeting Tool with Numbers + Shortcuts</title><link href="http://localhost:4000/notes/2023/11/18/simple-budgeting-tool-with-numbers-shortcuts.html" rel="alternate" type="text/html" title="Budgeting Tool with Numbers + Shortcuts" /><published>2023-11-18T11:15:00+05:30</published><updated>2023-11-18T11:15:00+05:30</updated><id>http://localhost:4000/notes/2023/11/18/simple-budgeting-tool-with-numbers-shortcuts</id><content type="html" xml:base="http://localhost:4000/notes/2023/11/18/simple-budgeting-tool-with-numbers-shortcuts.html"><![CDATA[<h3 id="the-case-for-default-applications">The Case for Default Applications</h3>
 
-&lt;hr /&gt;
+<hr />
 
-&lt;p&gt;Simple default applications often surpass complex specialized solutions due to their ease of use, efficiency, and reliability. They offer a user-friendly experience, are optimized for common use cases, and prioritize simplicity and functionality, making them more efficient and effective for everyday tasks.&lt;/p&gt;
+<p>Simple default applications often surpass complex specialized solutions due to their ease of use, efficiency, and reliability. They offer a user-friendly experience, are optimized for common use cases, and prioritize simplicity and functionality, making them more efficient and effective for everyday tasks.</p>
 
-&lt;h3 id=&quot;prerequisite&quot;&gt;Prerequisite&lt;/h3&gt;
+<h3 id="prerequisite">Prerequisite</h3>
 
-&lt;hr /&gt;
+<hr />
 
-&lt;div style=&quot;float: right;&quot;&gt;
-&lt;img src=&quot;/images/budgeting-tool/numbers-icon.png&quot; alt=&quot;Numbers Icon&quot; /&gt;
-&lt;br /&gt;
-&lt;img src=&quot;/images/budgeting-tool/shortcuts-icon.png&quot; alt=&quot;Shortcuts icon&quot; /&gt;
-&lt;/div&gt;
+<div style="float: right;">
+<img src="/images/budgeting-tool/numbers-icon.png" alt="Numbers Icon" />
+<br />
+<img src="/images/budgeting-tool/shortcuts-icon.png" alt="Shortcuts icon" />
+</div>
 
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;An Apple Device - (iPhone, Mac or iPad)&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Numbers - Default App - (&lt;a href=&quot;https://apps.apple.com/us/app/numbers/id361304891&quot;&gt;iOS, iPadOS&lt;/a&gt;. &lt;a href=&quot;https://apps.apple.com/us/app/numbers/id409203825&quot;&gt;macOS&lt;/a&gt;)&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Shortcuts - Default App - (&lt;a href=&quot;https://apps.apple.com/us/app/shortcuts/id915249334&quot;&gt;iOS, iPadOS&lt;/a&gt;)&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
+<ul>
+  <li>
+    <p>An Apple Device - (iPhone, Mac or iPad)</p>
+  </li>
+  <li>
+    <p>Numbers - Default App - (<a href="https://apps.apple.com/us/app/numbers/id361304891">iOS, iPadOS</a>. <a href="https://apps.apple.com/us/app/numbers/id409203825">macOS</a>)</p>
+  </li>
+  <li>
+    <p>Shortcuts - Default App - (<a href="https://apps.apple.com/us/app/shortcuts/id915249334">iOS, iPadOS</a>)</p>
+  </li>
+</ul>
 
-&lt;h3 id=&quot;what-do-we-expect-from-budget&quot;&gt;What do we expect from Budget?&lt;/h3&gt;
+<h3 id="what-do-we-expect-from-budget">What do we expect from Budget?</h3>
 
-&lt;hr /&gt;
+<hr />
 
-&lt;p&gt;&lt;img src=&quot;/images/budgeting-tool/budget-sheets.png&quot; alt=&quot;Budget Sheets&quot; /&gt;&lt;/p&gt;
+<p><img src="/images/budgeting-tool/budget-sheets.png" alt="Budget Sheets" /></p>
 
-&lt;p&gt;The proposed budgeting tool will incorporate two distinct sheets: a ‘Budget’ sheet for resource allocation and a ‘Transactions’ sheet for recording financial transactions. The ‘Budget’ sheet is intended to be established at the commencement of each month, with subsequent modifications primarily occurring within the ‘Transactions’ sheet. It is anticipated that updates to the ‘Transactions’ sheet will automatically reflect in the ‘Budget’ sheet, ensuring real-time accuracy of the budgeting data.&lt;/p&gt;
+<p>The proposed budgeting tool will incorporate two distinct sheets: a ‘Budget’ sheet for resource allocation and a ‘Transactions’ sheet for recording financial transactions. The ‘Budget’ sheet is intended to be established at the commencement of each month, with subsequent modifications primarily occurring within the ‘Transactions’ sheet. It is anticipated that updates to the ‘Transactions’ sheet will automatically reflect in the ‘Budget’ sheet, ensuring real-time accuracy of the budgeting data.</p>
 
-&lt;h3 id=&quot;doing-this-in-numbers&quot;&gt;&lt;strong&gt;Doing this in Numbers&lt;/strong&gt;&lt;/h3&gt;
+<h3 id="doing-this-in-numbers"><strong>Doing this in Numbers</strong></h3>
 
-&lt;hr /&gt;
+<hr />
 
-&lt;p&gt;Fortunately, all these functionalities are incorporated within a pre-constructed default template in Numbers, providing a seamless user experience.&lt;/p&gt;
+<p>Fortunately, all these functionalities are incorporated within a pre-constructed default template in Numbers, providing a seamless user experience.</p>
 
-&lt;p&gt;&lt;img src=&quot;/images/budgeting-tool/new-sheet.png&quot; alt=&quot;New Sheet&quot; /&gt;&lt;/p&gt;
+<p><img src="/images/budgeting-tool/new-sheet.png" alt="New Sheet" /></p>
 
-&lt;p&gt;Let’s proceed to validate the functionality of this process:&lt;/p&gt;
+<p>Let’s proceed to validate the functionality of this process:</p>
 
-&lt;div style=&quot;position: relative; padding-bottom: 69.09788867562379%; height: 0;&quot;&gt;&lt;iframe src=&quot;https://www.loom.com/embed/4f1d948d002444f4af89b7c38867875e?sid=c6293f23-7f98-42df-bac1-eb559a37670b&quot; frameborder=&quot;0&quot; webkitallowfullscreen=&quot;&quot; mozallowfullscreen=&quot;&quot; allowfullscreen=&quot;&quot; style=&quot;position: absolute; top: 0; left: 0; width: 100%; height: 100%;&quot;&gt;&lt;/iframe&gt;&lt;/div&gt;
+<div style="position: relative; padding-bottom: 69.09788867562379%; height: 0;"><iframe src="https://www.loom.com/embed/4f1d948d002444f4af89b7c38867875e?sid=c6293f23-7f98-42df-bac1-eb559a37670b" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen="" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe></div>
 
-&lt;h3 id=&quot;on-to-the-shortcut&quot;&gt;On to the Shortcut&lt;/h3&gt;
+<h3 id="on-to-the-shortcut">On to the Shortcut</h3>
 
-&lt;hr /&gt;
+<hr />
 
-&lt;p&gt;Upon mastering the utilization of Shortcuts, one can truly comprehend the immense capabilities inherent within the iOS operating system. It essentially integrates the functionality of IFTTT directly into the operating system itself.&lt;/p&gt;
+<p>Upon mastering the utilization of Shortcuts, one can truly comprehend the immense capabilities inherent within the iOS operating system. It essentially integrates the functionality of IFTTT directly into the operating system itself.</p>
 
-&lt;p&gt;Below is the shortcut designed to append a transaction to the sheet:&lt;/p&gt;
+<p>Below is the shortcut designed to append a transaction to the sheet:</p>
 
-&lt;p&gt;&lt;img src=&quot;/images/budgeting-tool/shortcut.png&quot; alt=&quot;Shortcut&quot; /&gt;&lt;/p&gt;
+<p><img src="/images/budgeting-tool/shortcut.png" alt="Shortcut" /></p>
 
-&lt;p&gt;Link to &lt;a href=&quot;https://www.icloud.com/shortcuts/ada47167d0974ad78f0664ba7dc3dbac&quot;&gt;Shortcut&lt;/a&gt;&lt;/p&gt;
+<p>Link to <a href="https://www.icloud.com/shortcuts/ada47167d0974ad78f0664ba7dc3dbac">Shortcut</a></p>
 
-&lt;h3 id=&quot;before-test&quot;&gt;Before Test&lt;/h3&gt;
+<h3 id="before-test">Before Test</h3>
 
-&lt;hr /&gt;
+<hr />
 
-&lt;p&gt;Here are the screenshots of cleaned up Numbers sheet before we start adding Transactions&lt;/p&gt;
+<p>Here are the screenshots of cleaned up Numbers sheet before we start adding Transactions</p>
 
-&lt;p&gt;&lt;img src=&quot;/images/budgeting-tool/cleaned-numbers.png&quot; alt=&quot;Cleaned Numbers&quot; /&gt;&lt;/p&gt;
+<p><img src="/images/budgeting-tool/cleaned-numbers.png" alt="Cleaned Numbers" /></p>
 
-&lt;p&gt;&lt;img src=&quot;/images/budgeting-tool/cleaned-transactions-sheet.png&quot; alt=&quot;Cleaned Transactions Sheet&quot; /&gt;&lt;/p&gt;
+<p><img src="/images/budgeting-tool/cleaned-transactions-sheet.png" alt="Cleaned Transactions Sheet" /></p>
 
-&lt;h3 id=&quot;shortcut-in-action-on-macos&quot;&gt;Shortcut in Action on macOS&lt;/h3&gt;
+<h3 id="shortcut-in-action-on-macos">Shortcut in Action on macOS</h3>
 
-&lt;hr /&gt;
+<hr />
 
-&lt;div style=&quot;position: relative; padding-bottom: 62.5%; height: 0;&quot;&gt;&lt;iframe src=&quot;https://www.loom.com/embed/8a8b8b854b114e3a9f294c015f777208?sid=00d3e64f-8006-4387-afa5-fe270cf4c55c&quot; frameborder=&quot;0&quot; webkitallowfullscreen=&quot;&quot; mozallowfullscreen=&quot;&quot; allowfullscreen=&quot;&quot; style=&quot;position: absolute; top: 0; left: 0; width: 100%; height: 100%;&quot;&gt;&lt;/iframe&gt;&lt;/div&gt;
+<div style="position: relative; padding-bottom: 62.5%; height: 0;"><iframe src="https://www.loom.com/embed/8a8b8b854b114e3a9f294c015f777208?sid=00d3e64f-8006-4387-afa5-fe270cf4c55c" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen="" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe></div>
 
-&lt;h3 id=&quot;shortcut-in-action---ios&quot;&gt;Shortcut in Action - iOS&lt;/h3&gt;
+<h3 id="shortcut-in-action---ios">Shortcut in Action - iOS</h3>
 
-&lt;hr /&gt;
+<hr />
 
-&lt;div style=&quot;position: relative; padding-bottom: 216.4785553047404%; height: 0;&quot;&gt;&lt;iframe src=&quot;https://www.loom.com/embed/f1ec1f9998d2414ab0aafc9fa54d1c46?sid=727d0f61-2661-479a-a27a-1d91d8aef529&quot; frameborder=&quot;0&quot; webkitallowfullscreen=&quot;&quot; mozallowfullscreen=&quot;&quot; allowfullscreen=&quot;&quot; style=&quot;position: absolute; top: 0; left: 0; width: 100%; height: 100%;&quot;&gt;&lt;/iframe&gt;&lt;/div&gt;
+<div style="position: relative; padding-bottom: 216.4785553047404%; height: 0;"><iframe src="https://www.loom.com/embed/f1ec1f9998d2414ab0aafc9fa54d1c46?sid=727d0f61-2661-479a-a27a-1d91d8aef529" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen="" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe></div>
 
-&lt;h3 id=&quot;references&quot;&gt;References&lt;/h3&gt;
+<h3 id="references">References</h3>
 
-&lt;hr /&gt;
+<hr />
 
-&lt;ul&gt;
-  &lt;li&gt;macmostvideo on Youtube - &lt;b&gt;Using Shortcuts To Add Data To a Numbers Spreadsheet&lt;/b&gt; - &lt;a href=&quot;https://www.youtube.com/watch?v=EJedH7pZLg0&quot;&gt;https://www.youtube.com/watch?v=EJedH7pZLg0&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>Rahul Krishna</name></author><category term="notes" /><category term="personal" /><summary type="html">The Case for Default Applications</summary></entry><entry><title type="html">Book Notes: The Brain: The Story of You (by David Eagleman)</title><link href="http://localhost:4000/notes/books/2023/11/15/the-brain-david-eagleman.html" rel="alternate" type="text/html" title="Book Notes: The Brain: The Story of You (by David Eagleman)" /><published>2023-11-15T20:00:44+05:30</published><updated>2023-11-15T20:00:44+05:30</updated><id>http://localhost:4000/notes/books/2023/11/15/the-brain-david-eagleman</id><content type="html" xml:base="http://localhost:4000/notes/books/2023/11/15/the-brain-david-eagleman.html">&lt;h1 id=&quot;-action-items&quot;&gt;🎬 Action Items&lt;/h1&gt;
+<ul>
+  <li>macmostvideo on Youtube - <b>Using Shortcuts To Add Data To a Numbers Spreadsheet</b> - <a href="https://www.youtube.com/watch?v=EJedH7pZLg0">https://www.youtube.com/watch?v=EJedH7pZLg0</a></li>
+</ul>]]></content><author><name>Rahul Krishna</name></author><category term="notes" /><category term="personal" /><summary type="html"><![CDATA[The Case for Default Applications]]></summary></entry><entry><title type="html">Book Notes: The Brain: The Story of You (by David Eagleman)</title><link href="http://localhost:4000/notes/books/2023/11/15/the-brain-david-eagleman.html" rel="alternate" type="text/html" title="Book Notes: The Brain: The Story of You (by David Eagleman)" /><published>2023-11-15T20:00:44+05:30</published><updated>2023-11-15T20:00:44+05:30</updated><id>http://localhost:4000/notes/books/2023/11/15/the-brain-david-eagleman</id><content type="html" xml:base="http://localhost:4000/notes/books/2023/11/15/the-brain-david-eagleman.html"><![CDATA[<h1 id="-action-items">🎬 Action Items</h1>
 
-&lt;hr /&gt;
+<hr />
 
-&lt;ol&gt;
-  &lt;li&gt;The concept of consciousness: The majority of our daily activities are conducted unconsciously, which is beneficial. However, we can strategically plan for our future selves and make our intentions exceedingly clear. This concept aligns with productivity literature such as Atomic Habits and Allen Carr’s Easy Way to Stop Smoking.&lt;/li&gt;
-&lt;/ol&gt;
+<ol>
+  <li>The concept of consciousness: The majority of our daily activities are conducted unconsciously, which is beneficial. However, we can strategically plan for our future selves and make our intentions exceedingly clear. This concept aligns with productivity literature such as Atomic Habits and Allen Carr’s Easy Way to Stop Smoking.</li>
+</ol>
 
-&lt;h1 id=&quot;-the-book-in-3-sentences&quot;&gt;🚀 The Book in 3 Sentences&lt;/h1&gt;
+<h1 id="-the-book-in-3-sentences">🚀 The Book in 3 Sentences</h1>
 
-&lt;hr /&gt;
+<hr />
 
-&lt;ol&gt;
-  &lt;li&gt;The book delves into the philosophical and biological aspects of the brain, focusing on the concept of consciousness.&lt;/li&gt;
-  &lt;li&gt;It examines the notion of “reality” and the possibility of multiple realities.&lt;/li&gt;
-  &lt;li&gt;It explores how consciousness has minimal influence on the majority of daily activities conducted by the brain.&lt;/li&gt;
-&lt;/ol&gt;
+<ol>
+  <li>The book delves into the philosophical and biological aspects of the brain, focusing on the concept of consciousness.</li>
+  <li>It examines the notion of “reality” and the possibility of multiple realities.</li>
+  <li>It explores how consciousness has minimal influence on the majority of daily activities conducted by the brain.</li>
+</ol>
 
-&lt;h1 id=&quot;-impressions&quot;&gt;🎨 Impressions&lt;/h1&gt;
+<h1 id="-impressions">🎨 Impressions</h1>
 
-&lt;hr /&gt;
+<hr />
 
-&lt;p&gt;The book is highly intriguing. Eagleman, a neuroscientist, brings his extensive experience with unique brain-related phenomena to the table.&lt;/p&gt;
+<p>The book is highly intriguing. Eagleman, a neuroscientist, brings his extensive experience with unique brain-related phenomena to the table.</p>
 
-&lt;h2 id=&quot;how-i-discovered-it&quot;&gt;How I Discovered It&lt;/h2&gt;
+<h2 id="how-i-discovered-it">How I Discovered It</h2>
 
-&lt;p&gt;This book was recommended to me by a PhD student who has since completed her doctorate in the medical field. The recommendation came during a discussion about the book Why We Sleep.&lt;/p&gt;
+<p>This book was recommended to me by a PhD student who has since completed her doctorate in the medical field. The recommendation came during a discussion about the book Why We Sleep.</p>
 
-&lt;h2 id=&quot;who-should-read-it&quot;&gt;Who Should Read It?&lt;/h2&gt;
+<h2 id="who-should-read-it">Who Should Read It?</h2>
 
-&lt;p&gt;While neuroscientists may already be familiar with the concepts presented, the book has received high praise from the scientific community for Eagleman’s ability to simplify complex neuroscientific concepts for the general reader. If you have an interest in neuroscience, this book is recommended.&lt;/p&gt;
+<p>While neuroscientists may already be familiar with the concepts presented, the book has received high praise from the scientific community for Eagleman’s ability to simplify complex neuroscientific concepts for the general reader. If you have an interest in neuroscience, this book is recommended.</p>
 
-&lt;h1 id=&quot;️-how-the-book-changed-me&quot;&gt;☘️ How the Book Changed Me&lt;/h1&gt;
+<h1 id="️-how-the-book-changed-me">☘️ How the Book Changed Me</h1>
 
-&lt;hr /&gt;
+<hr />
 
-&lt;aside&gt;
+<aside>
 💡 How my life / behaviour / thoughts / ideas have changed as a result of reading the book.
 
-&lt;/aside&gt;
+</aside>
 
-&lt;ul&gt;
-  &lt;li&gt;The book’s portrayal of consciousness as the CEO of our brain has had a profound impact on me. We often believe that our actions are the result of our thought processes, but this is not always the case. Consciousness initiates a thought, but its subsequent journey is largely out of our control. This concept is fascinating. Eagleman provides strategies for using our consciousness to influence unconscious actions, which I found to be a powerful tool. Moving forward, I will strive to be more aware of the unconscious actions I perform daily, such as picking up a coffee mug or reclining on a couch, and attempt to leverage these autopilot mechanisms to my advantage.&lt;/li&gt;
-  &lt;li&gt;The idea that reality is unique to each individual is significant (this aligns closely with the Indian spiritual concept of Maya, where everything is considered an illusion). This understanding encourages greater empathy and consideration for others’ perspectives, as their perception of reality, viewed through their unique lens, differs from our own.&lt;/li&gt;
-&lt;/ul&gt;
+<ul>
+  <li>The book’s portrayal of consciousness as the CEO of our brain has had a profound impact on me. We often believe that our actions are the result of our thought processes, but this is not always the case. Consciousness initiates a thought, but its subsequent journey is largely out of our control. This concept is fascinating. Eagleman provides strategies for using our consciousness to influence unconscious actions, which I found to be a powerful tool. Moving forward, I will strive to be more aware of the unconscious actions I perform daily, such as picking up a coffee mug or reclining on a couch, and attempt to leverage these autopilot mechanisms to my advantage.</li>
+  <li>The idea that reality is unique to each individual is significant (this aligns closely with the Indian spiritual concept of Maya, where everything is considered an illusion). This understanding encourages greater empathy and consideration for others’ perspectives, as their perception of reality, viewed through their unique lens, differs from our own.</li>
+</ul>
 
-&lt;h1 id=&quot;️-my-top-4-quotes&quot;&gt;✍️ My Top 4 Quotes&lt;/h1&gt;
+<h1 id="️-my-top-4-quotes">✍️ My Top 4 Quotes</h1>
 
-&lt;hr /&gt;
+<hr />
 
-&lt;ol&gt;
-  &lt;li&gt;What if I told you that the world around you, with its rich colors, textures, sounds, and scents is an illusion, a show put on for you by your brain? If you could perceive reality as it is, you would be shocked by its colorless, odorless, tasteless silence. Outside your brain, there is just energy and matter.&lt;/li&gt;
-  &lt;li&gt;So not only was it possible to implant false new memories in the brain, but people embraced and embellished them, unknowingly weaving fantasy into the fabric of their identity.&lt;/li&gt;
-  &lt;li&gt;So who you are at any given moment depends on the detailed rhythms of your neuronal firing. During the day, the conscious you emerges from that integrated neural complexity. At night, when the interaction of your neurons changes just a bit, you disappear. Your loved ones have to wait until the next morning, when your neurons let the wave die and work themselves back into their complex rhythm. Only then do you return.&lt;/li&gt;
-  &lt;li&gt;You might assume that you end at the border of your skin, but there’s a sense in which there’s no way to mark the end of you and the beginning of all those around you.&lt;/li&gt;
-&lt;/ol&gt;
+<ol>
+  <li>What if I told you that the world around you, with its rich colors, textures, sounds, and scents is an illusion, a show put on for you by your brain? If you could perceive reality as it is, you would be shocked by its colorless, odorless, tasteless silence. Outside your brain, there is just energy and matter.</li>
+  <li>So not only was it possible to implant false new memories in the brain, but people embraced and embellished them, unknowingly weaving fantasy into the fabric of their identity.</li>
+  <li>So who you are at any given moment depends on the detailed rhythms of your neuronal firing. During the day, the conscious you emerges from that integrated neural complexity. At night, when the interaction of your neurons changes just a bit, you disappear. Your loved ones have to wait until the next morning, when your neurons let the wave die and work themselves back into their complex rhythm. Only then do you return.</li>
+  <li>You might assume that you end at the border of your skin, but there’s a sense in which there’s no way to mark the end of you and the beginning of all those around you.</li>
+</ol>
 
-&lt;h1 id=&quot;-summary--notes&quot;&gt;📒 Summary + Notes&lt;/h1&gt;
+<h1 id="-summary--notes">📒 Summary + Notes</h1>
 
-&lt;hr /&gt;
+<hr />
 
-&lt;p&gt;&lt;a href=&quot;https://lifeclub.org/books/the-brain-david-eagleman-review-summary&quot;&gt;The Brain Summary, Review PDF&lt;/a&gt;&lt;/p&gt;</content><author><name>Rahul Krishna</name></author><category term="notes" /><category term="books" /><category term="book" /><category term="review" /><category term="science" /><summary type="html">🎬 Action Items</summary></entry><entry><title type="html">My App Defaults (Late 2023)</title><link href="http://localhost:4000/notes/2023/11/14/my-default-apps-late-2023.html" rel="alternate" type="text/html" title="My App Defaults (Late 2023)" /><published>2023-11-14T11:55:44+05:30</published><updated>2023-11-14T11:55:44+05:30</updated><id>http://localhost:4000/notes/2023/11/14/my-default-apps-late-2023</id><content type="html" xml:base="http://localhost:4000/notes/2023/11/14/my-default-apps-late-2023.html">&lt;p&gt;📨 Mail Client: Apple Mail&lt;/p&gt;
+<p><a href="https://lifeclub.org/books/the-brain-david-eagleman-review-summary">The Brain Summary, Review PDF</a></p>]]></content><author><name>Rahul Krishna</name></author><category term="notes" /><category term="books" /><category term="book" /><category term="review" /><category term="science" /><summary type="html"><![CDATA[🎬 Action Items]]></summary></entry><entry><title type="html">My App Defaults (Late 2023)</title><link href="http://localhost:4000/notes/2023/11/14/my-default-apps-late-2023.html" rel="alternate" type="text/html" title="My App Defaults (Late 2023)" /><published>2023-11-14T11:55:44+05:30</published><updated>2023-11-14T11:55:44+05:30</updated><id>http://localhost:4000/notes/2023/11/14/my-default-apps-late-2023</id><content type="html" xml:base="http://localhost:4000/notes/2023/11/14/my-default-apps-late-2023.html"><![CDATA[<p>📨 Mail Client: Apple Mail</p>
 
-&lt;p&gt;📮 Mail Server: GMail&lt;/p&gt;
+<p>📮 Mail Server: GMail</p>
 
-&lt;p&gt;📝 Notes: Notion&lt;/p&gt;
+<p>📝 Notes: Notion</p>
 
-&lt;p&gt;✅ To-Do: Todoist&lt;/p&gt;
+<p>✅ To-Do: Todoist</p>
 
-&lt;p&gt;📷 iPhone Photo Shooting: iOS Camera&lt;/p&gt;
+<p>📷 iPhone Photo Shooting: iOS Camera</p>
 
-&lt;p&gt;🟦 Photo Management: Apple Photos&lt;/p&gt;
+<p>🟦 Photo Management: Apple Photos</p>
 
-&lt;p&gt;📆 Calendar: Google Calendar&lt;/p&gt;
+<p>📆 Calendar: Google Calendar</p>
 
-&lt;p&gt;📁 Cloud File Storage: iCloud&lt;/p&gt;
+<p>📁 Cloud File Storage: iCloud</p>
 
-&lt;p&gt;📖 RSS: NetNewsWire&lt;/p&gt;
+<p>📖 RSS: NetNewsWire</p>
 
-&lt;p&gt;🙍🏻‍♂️ Contacts: Google Contacts&lt;/p&gt;
+<p>🙍🏻‍♂️ Contacts: Google Contacts</p>
 
-&lt;p&gt;🌐 Browser: Safari&lt;/p&gt;
+<p>🌐 Browser: Safari</p>
 
-&lt;p&gt;💬 Chat: iMessage&lt;/p&gt;
+<p>💬 Chat: iMessage</p>
 
-&lt;p&gt;🔖 Bookmarks: Notion&lt;/p&gt;
+<p>🔖 Bookmarks: Notion</p>
 
-&lt;p&gt;📑 Read It Later: Todoist&lt;/p&gt;
+<p>📑 Read It Later: Todoist</p>
 
-&lt;p&gt;📜 Word Processing: Google Docs&lt;/p&gt;
+<p>📜 Word Processing: Google Docs</p>
 
-&lt;p&gt;📈 Spreadsheets: Google Sheets&lt;/p&gt;
+<p>📈 Spreadsheets: Google Sheets</p>
 
-&lt;p&gt;📊 Presentations: Google Slide&lt;/p&gt;
+<p>📊 Presentations: Google Slide</p>
 
-&lt;p&gt;🛒 Shopping Lists: Apple Notes&lt;/p&gt;
+<p>🛒 Shopping Lists: Apple Notes</p>
 
-&lt;p&gt;🍴 Meal Planning: Notion&lt;/p&gt;
+<p>🍴 Meal Planning: Notion</p>
 
-&lt;p&gt;💰 Budgeting and Personal Finance: Numbers&lt;/p&gt;
+<p>💰 Budgeting and Personal Finance: Numbers</p>
 
-&lt;p&gt;📰 News: NetNewsWire / HACK for Hacker News&lt;/p&gt;
+<p>📰 News: NetNewsWire / HACK for Hacker News</p>
 
-&lt;p&gt;🎵 Music: Spotify&lt;/p&gt;
+<p>🎵 Music: Spotify</p>
 
-&lt;p&gt;🎤 Podcasts: Apple Podcasts&lt;/p&gt;
+<p>🎤 Podcasts: Apple Podcasts</p>
 
-&lt;p&gt;🔐 Password Management: Apple Password Manager&lt;/p&gt;</content><author><name>Rahul Krishna</name></author><category term="notes" /><summary type="html">📨 Mail Client: Apple Mail</summary></entry></feed>
+<p>🔐 Password Management: Apple Password Manager</p>]]></content><author><name>Rahul Krishna</name></author><category term="notes" /><summary type="html"><![CDATA[📨 Mail Client: Apple Mail]]></summary></entry></feed>
