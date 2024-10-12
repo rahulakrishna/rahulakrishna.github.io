@@ -16,7 +16,7 @@ A coming-of-age story set in 1960s Japan, narrated by Toru Watanabe, a college s
 
 ---
 
-Multiple sources recommended the book to me. My friend Mazin had recommended it back in 2020. A girlfriend had recommended it again in 2021. A very good Reddit friend in 2024 finally made me give up my reservations and try it. 
+Multiple sources recommended the book to me. My friend Mazin had recommended it back in 2020. A girlfriend had recommended it again in 2021. Finally decided to give up my reservations and try this in 2024
 
 # 🧠 Thoughts
 
