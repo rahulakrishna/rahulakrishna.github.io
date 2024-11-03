@@ -1,4 +1,113 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2024-06-13T17:53:18+05:30</updated><id>http://localhost:4000/feed.xml</id><title type="html">Field Notes</title><subtitle>Hello I&apos;m a Principal Software Engineer at Bridgestone Americas. I occasionally convert my Notion Docs to markdown and publish them here.</subtitle><entry><title type="html">Recursion in React</title><link href="http://localhost:4000/notes/2024/02/21/recursion-in-react.html" rel="alternate" type="text/html" title="Recursion in React" /><published>2024-02-21T11:15:00+05:30</published><updated>2024-02-21T11:15:00+05:30</updated><id>http://localhost:4000/notes/2024/02/21/recursion-in-react</id><content type="html" xml:base="http://localhost:4000/notes/2024/02/21/recursion-in-react.html"><![CDATA[<h3 id="tldr">TLDR;</h3>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2024-11-03T20:44:09+05:30</updated><id>http://localhost:4000/feed.xml</id><title type="html">Field Notes</title><subtitle>Hello I&apos;m a Principal Software Engineer at Bridgestone Americas. I occasionally convert my Notion Docs to markdown and publish them here.</subtitle><entry><title type="html">Apple’s Bold Design Choice of Making Things Look Bad</title><link href="http://localhost:4000/blog/2024/11/03/apples-bold-design-choice.html" rel="alternate" type="text/html" title="Apple’s Bold Design Choice of Making Things Look Bad" /><published>2024-11-03T09:50:44+05:30</published><updated>2024-11-03T09:50:44+05:30</updated><id>http://localhost:4000/blog/2024/11/03/apples-bold-design-choice</id><content type="html" xml:base="http://localhost:4000/blog/2024/11/03/apples-bold-design-choice.html"><![CDATA[<h3 id="introduction">Introduction</h3>
+
+<hr />
+
+<p>Apple enjoys a unique position in the mobile business. It manages a platform that runs in an exclusive range of devices. For developers, this means that they can expect their app to run reasonably similar to how it runs on their own devices.</p>
+
+<p>This affords Apple to make design choices that make “things look bad”. And reasonably expect developers to make the necessary changes to make their app look good on Apple devices</p>
+
+<h3 id="case-1-the-notch">Case 1: The Notch</h3>
+
+<hr />
+
+<p>The notch is effectively a visual modification to the already existing status bar. And the status bar is part of the system interface, not the app interface.</p>
+
+<p><img src="/images/apples-bold-design/notch.png" alt="Notch on an iPhone X" /></p>
+
+<p>Android’s solution to optimising the app interfaces to the notched displays was exactly this. They treated the notch area as the status bar. The app didn’t have to be bothered by it. It continued to work as before</p>
+
+<p>iOS, on the other hand, added huge black areas on the top and bottom for apps that didn’t claim to be optimized. Effectively reducing the app interfaces real estate to 4.7” on a 5.8” screen.</p>
+
+<p><img src="/images/apples-bold-design/unoptimised-app-with-notch.png" alt="apps not optimised for notch" /></p>
+
+<p>In hindsight, this paid off. Nearly all iOS apps started working well on screens with display cutouts very soon</p>
+
+<h3 id="case-2-tinted-icons">Case 2: Tinted Icons</h3>
+
+<hr />
+
+<p>This is again something both iOS and Android did. But Android is far more lenient with its approach, using the default icon as a fallback icon if tinted icon doesn’t exist in the manifest</p>
+
+<p><img src="/images/apples-bold-design/android-tinted-icons.png" alt="Tinted Icons on Android" />
+<img src="/images/apples-bold-design/android-tinted-icons-unoptimised.png" alt="Unoptimised apps on Tinted Icons mode in Android" /></p>
+
+<p>iOS again doesn’t use a fallback, instead choosing to make the icon look potentially bad by applying a tint over it.</p>
+
+<p><img src="/images/apples-bold-design/apple-tinted-icons.png" alt="Tinted Icons on Apple" /></p>
+
+<p>This attracted a lot of initial criticism but is very much in line with how Apple does things. The onus falls on the app developers to make their app fit into this system</p>]]></content><author><name>Rahul Krishna</name></author><category term="blog" /><category term="apple" /><category term="design" /><summary type="html"><![CDATA[Introduction]]></summary></entry><entry><title type="html">Book Notes: Norwegian Wood (by Haruki Murakami)</title><link href="http://localhost:4000/notes/books/2024/10/12/norwegian-wood.html" rel="alternate" type="text/html" title="Book Notes: Norwegian Wood (by Haruki Murakami)" /><published>2024-10-12T09:50:44+05:30</published><updated>2024-10-12T09:50:44+05:30</updated><id>http://localhost:4000/notes/books/2024/10/12/norwegian-wood</id><content type="html" xml:base="http://localhost:4000/notes/books/2024/10/12/norwegian-wood.html"><![CDATA[<h1 id="-what-its-about">⛰ What It’s About</h1>
+
+<hr />
+
+<p>A coming-of-age story set in 1960s Japan, narrated by Toru Watanabe, a college student who reflects on his past, particularly his relationships with two women: Naoko and Midori. The novel explores themes of love, loss, memory, and mental health, set against the backdrop of political unrest and youth culture in postwar Japan.</p>
+
+<h1 id="-how-i-discovered-it">🔍 How I Discovered It</h1>
+
+<hr />
+
+<p>Multiple sources recommended the book to me. My friend Mazin had recommended it back in 2020. A girlfriend had recommended it again in 2021. Finally decided to give up my reservations and try this in 2024</p>
+
+<h1 id="-thoughts">🧠 Thoughts</h1>
+
+<hr />
+
+<p>Loved it. The book has a matter-of-fact voice like that of a scientific journal. Murakami intends to re-kindle the pain or experience of the primary themes of the book of love, loss, memory and mental health instead of bringing a brand new experience to readers. That makes this book personal for its readers</p>
+
+<h2 id="what-i-liked-about-it">What I Liked About It</h2>
+
+<p>I liked the writing style of Murakami. It’s vert matter-of-factly. Doesn’t use <em>intensifiers</em> in his writing. Bringing such technical writing to matters of love, death and sex is interesting. Authors are usually careful approaching the subject of sex in their books. Murakami’s treatment of sex as if in a scientific journal is unique. A kiss is two lips caressing each other. An orgasm is the process of getting rid of cum. The bold explorations of loss and love is what makes this book universally loved.</p>
+
+<h2 id="what-i-didnt-like-about-it">What I Didn’t Like About It</h2>
+
+<p>There’s some general hate in the wild west of Internet about Murakami’s treatment of women.</p>
+
+<h1 id="-who-would-like-it">🥰 Who Would Like It?</h1>
+
+<hr />
+
+<p>Anyone who has experienced intense feelings of love, loss, memory and mental health!</p>
+
+<h1 id="-related-books">📚 Related Books</h1>
+
+<hr />
+
+<ul>
+  <li>My first of this kind</li>
+</ul>]]></content><author><name>Rahul Krishna</name></author><category term="notes" /><category term="books" /><category term="book" /><category term="review" /><category term="fiction" /><summary type="html"><![CDATA[⛰ What It’s About]]></summary></entry><entry><title type="html">Off by 100% Bias</title><link href="http://localhost:4000/notes/2024/02/21/off-by-100-percent-bias.html" rel="alternate" type="text/html" title="Off by 100% Bias" /><published>2024-02-21T11:15:00+05:30</published><updated>2024-02-21T11:15:00+05:30</updated><id>http://localhost:4000/notes/2024/02/21/off-by-100-percent-bias</id><content type="html" xml:base="http://localhost:4000/notes/2024/02/21/off-by-100-percent-bias.html"><![CDATA[<p>Today I learnt about <strong>Off by 100% bias.</strong></p>
+
+<blockquote>
+  <p>When a consumer sees “130% more”, they likely do not put much thought or effort into actually computing what it means,” she adds. Instead, the consumer’s mind “jumps” to the first thing that makes sense, the straight “30% more” calculation.</p>
+</blockquote>
+
+<div class="language-jsx highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">number</span> <span class="o">=</span> <span class="mi">50</span><span class="p">;</span>
+<span class="kd">const</span> <span class="nx">delta</span> <span class="o">=</span> <span class="mi">25</span><span class="p">;</span>
+
+<span class="kd">const</span> <span class="nx">final</span> <span class="o">=</span> <span class="nx">number</span> <span class="o">+</span> <span class="nx">delta</span><span class="p">;</span> <span class="c1">// 75;</span>
+
+<span class="kd">const</span> <span class="nx">percentage_increase</span> <span class="o">=</span> <span class="nx">delta</span> <span class="o">/</span> <span class="nx">number</span><span class="p">;</span> <span class="c1">// 25 / 50 = 0.5; i.e 50%;</span>
+<span class="kd">const</span> <span class="nx">x_times</span> <span class="o">=</span> <span class="nx">final</span> <span class="o">/</span> <span class="nx">number</span><span class="p">;</span> <span class="c1">// 75/50 = 1.5; i.e, 1.5x</span>
+</code></pre></div></div>
+
+<p>This is even more evident in increases of more than 100%;</p>
+
+<div class="language-jsx highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">number</span> <span class="o">=</span> <span class="mi">50</span><span class="p">;</span>
+<span class="kd">const</span> <span class="nx">increase</span> <span class="o">=</span> <span class="mi">75</span><span class="p">;</span>
+
+<span class="kd">const</span> <span class="nx">final_number</span> <span class="o">=</span> <span class="nx">number</span> <span class="o">+</span> <span class="nx">delta</span><span class="p">;</span> <span class="c1">// 125;</span>
+
+<span class="kd">const</span> <span class="nx">percentage_increase</span> <span class="o">=</span> <span class="nx">delta</span> <span class="o">/</span> <span class="nx">number</span><span class="p">;</span> <span class="c1">// 75 / 50 = 1.5; i.e 150%</span>
+<span class="kd">const</span> <span class="nx">x_times</span> <span class="o">=</span> <span class="nx">final</span> <span class="o">/</span> <span class="nx">number</span><span class="p">;</span> <span class="c1">// 125 / 50 = 2.5; i.e 2.5x</span>
+</code></pre></div></div>
+
+<p>The true reason is that the factors in <code class="language-plaintext highlighter-rouge">percentage</code> are the <code class="language-plaintext highlighter-rouge">previous number</code> and the <code class="language-plaintext highlighter-rouge">delta</code>. Whereas, when you calculate <code class="language-plaintext highlighter-rouge">x times</code> value, you factor the <code class="language-plaintext highlighter-rouge">final number</code> and the <code class="language-plaintext highlighter-rouge">previous number</code>.</p>
+
+<p>The <code class="language-plaintext highlighter-rouge">final number</code> and the <code class="language-plaintext highlighter-rouge">previous number</code> will have a higher difference. Therefore, showing <code class="language-plaintext highlighter-rouge">x times</code> value will <strong><em>appear</em></strong> to have a higher magnitude.</p>
+
+<h3 id="sources">Sources</h3>
+
+<hr />
+
+<p>https://coxtoday.smu.edu/2022/02/28/consumer-marketing-math-even-the-numerate-are-off-by-100/</p>]]></content><author><name>Rahul Krishna</name></author><category term="notes" /><category term="TIL" /><summary type="html"><![CDATA[Today I learnt about Off by 100% bias.]]></summary></entry><entry><title type="html">Recursion in React</title><link href="http://localhost:4000/notes/2024/02/21/recursion-in-react.html" rel="alternate" type="text/html" title="Recursion in React" /><published>2024-02-21T11:15:00+05:30</published><updated>2024-02-21T11:15:00+05:30</updated><id>http://localhost:4000/notes/2024/02/21/recursion-in-react</id><content type="html" xml:base="http://localhost:4000/notes/2024/02/21/recursion-in-react.html"><![CDATA[<h3 id="tldr">TLDR;</h3>
 
 <hr />
 
@@ -111,41 +220,7 @@ So while thinking in React, it may not immediately occur that you can call a <st
 <ul>
   <li>Thinking in React: <a href="https://react.dev/learn/thinking-in-react">https://react.dev/learn/thinking-in-react</a></li>
   <li>hackrmn repo: <a href="https://github.com/rahulakrishna/hackrmn/tree/master">https://github.com/rahulakrishna/hackrmn/tree/master</a></li>
-</ul>]]></content><author><name>Rahul Krishna</name></author><category term="notes" /><category term="javascript" /><category term="react" /><summary type="html"><![CDATA[TLDR;]]></summary></entry><entry><title type="html">Off by 100% Bias</title><link href="http://localhost:4000/notes/2024/02/21/off-by-100-percent-bias.html" rel="alternate" type="text/html" title="Off by 100% Bias" /><published>2024-02-21T11:15:00+05:30</published><updated>2024-02-21T11:15:00+05:30</updated><id>http://localhost:4000/notes/2024/02/21/off-by-100-percent-bias</id><content type="html" xml:base="http://localhost:4000/notes/2024/02/21/off-by-100-percent-bias.html"><![CDATA[<p>Today I learnt about <strong>Off by 100% bias.</strong></p>
-
-<blockquote>
-  <p>When a consumer sees “130% more”, they likely do not put much thought or effort into actually computing what it means,” she adds. Instead, the consumer’s mind “jumps” to the first thing that makes sense, the straight “30% more” calculation.</p>
-</blockquote>
-
-<div class="language-jsx highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">number</span> <span class="o">=</span> <span class="mi">50</span><span class="p">;</span>
-<span class="kd">const</span> <span class="nx">delta</span> <span class="o">=</span> <span class="mi">25</span><span class="p">;</span>
-
-<span class="kd">const</span> <span class="nx">final</span> <span class="o">=</span> <span class="nx">number</span> <span class="o">+</span> <span class="nx">delta</span><span class="p">;</span> <span class="c1">// 75;</span>
-
-<span class="kd">const</span> <span class="nx">percentage_increase</span> <span class="o">=</span> <span class="nx">delta</span> <span class="o">/</span> <span class="nx">number</span><span class="p">;</span> <span class="c1">// 25 / 50 = 0.5; i.e 50%;</span>
-<span class="kd">const</span> <span class="nx">x_times</span> <span class="o">=</span> <span class="nx">final</span> <span class="o">/</span> <span class="nx">number</span><span class="p">;</span> <span class="c1">// 75/50 = 1.5; i.e, 1.5x</span>
-</code></pre></div></div>
-
-<p>This is even more evident in increases of more than 100%;</p>
-
-<div class="language-jsx highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">number</span> <span class="o">=</span> <span class="mi">50</span><span class="p">;</span>
-<span class="kd">const</span> <span class="nx">increase</span> <span class="o">=</span> <span class="mi">75</span><span class="p">;</span>
-
-<span class="kd">const</span> <span class="nx">final_number</span> <span class="o">=</span> <span class="nx">number</span> <span class="o">+</span> <span class="nx">delta</span><span class="p">;</span> <span class="c1">// 125;</span>
-
-<span class="kd">const</span> <span class="nx">percentage_increase</span> <span class="o">=</span> <span class="nx">delta</span> <span class="o">/</span> <span class="nx">number</span><span class="p">;</span> <span class="c1">// 75 / 50 = 1.5; i.e 150%</span>
-<span class="kd">const</span> <span class="nx">x_times</span> <span class="o">=</span> <span class="nx">final</span> <span class="o">/</span> <span class="nx">number</span><span class="p">;</span> <span class="c1">// 125 / 50 = 2.5; i.e 2.5x</span>
-</code></pre></div></div>
-
-<p>The true reason is that the factors in <code class="language-plaintext highlighter-rouge">percentage</code> are the <code class="language-plaintext highlighter-rouge">previous number</code> and the <code class="language-plaintext highlighter-rouge">delta</code>. Whereas, when you calculate <code class="language-plaintext highlighter-rouge">x times</code> value, you factor the <code class="language-plaintext highlighter-rouge">final number</code> and the <code class="language-plaintext highlighter-rouge">previous number</code>.</p>
-
-<p>The <code class="language-plaintext highlighter-rouge">final number</code> and the <code class="language-plaintext highlighter-rouge">previous number</code> will have a higher difference. Therefore, showing <code class="language-plaintext highlighter-rouge">x times</code> value will <strong><em>appear</em></strong> to have a higher magnitude.</p>
-
-<h3 id="sources">Sources</h3>
-
-<hr />
-
-<p>https://coxtoday.smu.edu/2022/02/28/consumer-marketing-math-even-the-numerate-are-off-by-100/</p>]]></content><author><name>Rahul Krishna</name></author><category term="notes" /><category term="TIL" /><summary type="html"><![CDATA[Today I learnt about Off by 100% bias.]]></summary></entry><entry><title type="html">Arc Search</title><link href="http://localhost:4000/notes/2024/02/10/arc-search.html" rel="alternate" type="text/html" title="Arc Search" /><published>2024-02-10T11:15:00+05:30</published><updated>2024-02-10T11:15:00+05:30</updated><id>http://localhost:4000/notes/2024/02/10/arc-search</id><content type="html" xml:base="http://localhost:4000/notes/2024/02/10/arc-search.html"><![CDATA[<h3 id="what-is-it">What is it?</h3>
+</ul>]]></content><author><name>Rahul Krishna</name></author><category term="notes" /><category term="javascript" /><category term="react" /><summary type="html"><![CDATA[TLDR;]]></summary></entry><entry><title type="html">Arc Search</title><link href="http://localhost:4000/notes/2024/02/10/arc-search.html" rel="alternate" type="text/html" title="Arc Search" /><published>2024-02-10T11:15:00+05:30</published><updated>2024-02-10T11:15:00+05:30</updated><id>http://localhost:4000/notes/2024/02/10/arc-search</id><content type="html" xml:base="http://localhost:4000/notes/2024/02/10/arc-search.html"><![CDATA[<h3 id="what-is-it">What is it?</h3>
 
 <hr />
 
@@ -809,111 +884,4 @@ Cricket World Cup debuted in 1975 and the Rugby World Cup in 1987.</strong></p>
 
 <ul>
   <li>macmostvideo on Youtube - <b>Using Shortcuts To Add Data To a Numbers Spreadsheet</b> - <a href="https://www.youtube.com/watch?v=EJedH7pZLg0">https://www.youtube.com/watch?v=EJedH7pZLg0</a></li>
-</ul>]]></content><author><name>Rahul Krishna</name></author><category term="notes" /><category term="personal" /><summary type="html"><![CDATA[The Case for Default Applications]]></summary></entry><entry><title type="html">Book Notes: The Brain: The Story of You (by David Eagleman)</title><link href="http://localhost:4000/notes/books/2023/11/15/the-brain-david-eagleman.html" rel="alternate" type="text/html" title="Book Notes: The Brain: The Story of You (by David Eagleman)" /><published>2023-11-15T20:00:44+05:30</published><updated>2023-11-15T20:00:44+05:30</updated><id>http://localhost:4000/notes/books/2023/11/15/the-brain-david-eagleman</id><content type="html" xml:base="http://localhost:4000/notes/books/2023/11/15/the-brain-david-eagleman.html"><![CDATA[<h1 id="-action-items">🎬 Action Items</h1>
-
-<hr />
-
-<ol>
-  <li>The concept of consciousness: The majority of our daily activities are conducted unconsciously, which is beneficial. However, we can strategically plan for our future selves and make our intentions exceedingly clear. This concept aligns with productivity literature such as Atomic Habits and Allen Carr’s Easy Way to Stop Smoking.</li>
-</ol>
-
-<h1 id="-the-book-in-3-sentences">🚀 The Book in 3 Sentences</h1>
-
-<hr />
-
-<ol>
-  <li>The book delves into the philosophical and biological aspects of the brain, focusing on the concept of consciousness.</li>
-  <li>It examines the notion of “reality” and the possibility of multiple realities.</li>
-  <li>It explores how consciousness has minimal influence on the majority of daily activities conducted by the brain.</li>
-</ol>
-
-<h1 id="-impressions">🎨 Impressions</h1>
-
-<hr />
-
-<p>The book is highly intriguing. Eagleman, a neuroscientist, brings his extensive experience with unique brain-related phenomena to the table.</p>
-
-<h2 id="how-i-discovered-it">How I Discovered It</h2>
-
-<p>This book was recommended to me by a PhD student who has since completed her doctorate in the medical field. The recommendation came during a discussion about the book Why We Sleep.</p>
-
-<h2 id="who-should-read-it">Who Should Read It?</h2>
-
-<p>While neuroscientists may already be familiar with the concepts presented, the book has received high praise from the scientific community for Eagleman’s ability to simplify complex neuroscientific concepts for the general reader. If you have an interest in neuroscience, this book is recommended.</p>
-
-<h1 id="️-how-the-book-changed-me">☘️ How the Book Changed Me</h1>
-
-<hr />
-
-<aside>
-💡 How my life / behaviour / thoughts / ideas have changed as a result of reading the book.
-
-</aside>
-
-<ul>
-  <li>The book’s portrayal of consciousness as the CEO of our brain has had a profound impact on me. We often believe that our actions are the result of our thought processes, but this is not always the case. Consciousness initiates a thought, but its subsequent journey is largely out of our control. This concept is fascinating. Eagleman provides strategies for using our consciousness to influence unconscious actions, which I found to be a powerful tool. Moving forward, I will strive to be more aware of the unconscious actions I perform daily, such as picking up a coffee mug or reclining on a couch, and attempt to leverage these autopilot mechanisms to my advantage.</li>
-  <li>The idea that reality is unique to each individual is significant (this aligns closely with the Indian spiritual concept of Maya, where everything is considered an illusion). This understanding encourages greater empathy and consideration for others’ perspectives, as their perception of reality, viewed through their unique lens, differs from our own.</li>
-</ul>
-
-<h1 id="️-my-top-4-quotes">✍️ My Top 4 Quotes</h1>
-
-<hr />
-
-<ol>
-  <li>What if I told you that the world around you, with its rich colors, textures, sounds, and scents is an illusion, a show put on for you by your brain? If you could perceive reality as it is, you would be shocked by its colorless, odorless, tasteless silence. Outside your brain, there is just energy and matter.</li>
-  <li>So not only was it possible to implant false new memories in the brain, but people embraced and embellished them, unknowingly weaving fantasy into the fabric of their identity.</li>
-  <li>So who you are at any given moment depends on the detailed rhythms of your neuronal firing. During the day, the conscious you emerges from that integrated neural complexity. At night, when the interaction of your neurons changes just a bit, you disappear. Your loved ones have to wait until the next morning, when your neurons let the wave die and work themselves back into their complex rhythm. Only then do you return.</li>
-  <li>You might assume that you end at the border of your skin, but there’s a sense in which there’s no way to mark the end of you and the beginning of all those around you.</li>
-</ol>
-
-<h1 id="-summary--notes">📒 Summary + Notes</h1>
-
-<hr />
-
-<p><a href="https://lifeclub.org/books/the-brain-david-eagleman-review-summary">The Brain Summary, Review PDF</a></p>]]></content><author><name>Rahul Krishna</name></author><category term="notes" /><category term="books" /><category term="book" /><category term="review" /><category term="science" /><summary type="html"><![CDATA[🎬 Action Items]]></summary></entry><entry><title type="html">My App Defaults (Late 2023)</title><link href="http://localhost:4000/notes/2023/11/14/my-default-apps-late-2023.html" rel="alternate" type="text/html" title="My App Defaults (Late 2023)" /><published>2023-11-14T11:55:44+05:30</published><updated>2023-11-14T11:55:44+05:30</updated><id>http://localhost:4000/notes/2023/11/14/my-default-apps-late-2023</id><content type="html" xml:base="http://localhost:4000/notes/2023/11/14/my-default-apps-late-2023.html"><![CDATA[<p>📨 Mail Client: Apple Mail</p>
-
-<p>📮 Mail Server: GMail</p>
-
-<p>📝 Notes: Notion</p>
-
-<p>✅ To-Do: Todoist</p>
-
-<p>📷 iPhone Photo Shooting: iOS Camera</p>
-
-<p>🟦 Photo Management: Apple Photos</p>
-
-<p>📆 Calendar: Google Calendar</p>
-
-<p>📁 Cloud File Storage: iCloud</p>
-
-<p>📖 RSS: NetNewsWire</p>
-
-<p>🙍🏻‍♂️ Contacts: Google Contacts</p>
-
-<p>🌐 Browser: Safari</p>
-
-<p>💬 Chat: iMessage</p>
-
-<p>🔖 Bookmarks: Notion</p>
-
-<p>📑 Read It Later: Todoist</p>
-
-<p>📜 Word Processing: Google Docs</p>
-
-<p>📈 Spreadsheets: Google Sheets</p>
-
-<p>📊 Presentations: Google Slide</p>
-
-<p>🛒 Shopping Lists: Apple Notes</p>
-
-<p>🍴 Meal Planning: Notion</p>
-
-<p>💰 Budgeting and Personal Finance: Numbers</p>
-
-<p>📰 News: NetNewsWire / HACK for Hacker News</p>
-
-<p>🎵 Music: Spotify</p>
-
-<p>🎤 Podcasts: Apple Podcasts</p>
-
-<p>🔐 Password Management: Apple Password Manager</p>]]></content><author><name>Rahul Krishna</name></author><category term="notes" /><summary type="html"><![CDATA[📨 Mail Client: Apple Mail]]></summary></entry></feed>
+</ul>]]></content><author><name>Rahul Krishna</name></author><category term="notes" /><category term="personal" /><summary type="html"><![CDATA[The Case for Default Applications]]></summary></entry></feed>

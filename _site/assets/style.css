@@ -23,7 +23,7 @@ dl, dd, ol, ul, figure {
  * Basic styling
  */
 body {
-  font-family: "Atkinson Hyperlegible", Athelas, Palatino, Georgia, serif;
+  font-family: Inter, sans-serif;
   font-size: 14px;
   line-height: 1.5;
   color: var(--color-body-text);
