@@ -22,3 +22,9 @@ I haven’t done much this week. But I’m hoping that having this ritual in the
 <a href="https://www.mamamia.com.au/wednesday-waffle-friendship-hack/">mamamia article</a>
 
 <a href="https://www.newsweek.com/millennial-man-heartwarming-weekly-tradition-friends-1890309">Newsweek Article</a>
+
+### From the Newsweek Article
+
+---
+
+> There have been hundreds of comments from people saying it has helped them reconnect and build deeper connections with friends and family that live in different parts of the world," he said. "But by far the most incredible feedback has been from commenters suggesting that the idea will save lives, and that their loved ones might still be here had they had something like this with their mates.
