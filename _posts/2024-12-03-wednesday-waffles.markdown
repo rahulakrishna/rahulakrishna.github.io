@@ -39,4 +39,4 @@ My plan is to divide it into three sections as of now
 
 ---
 
-> There have been hundreds of comments from people saying it has helped them reconnect and build deeper connections with friends and family that live in different parts of the world," he said. "But by far the most incredible feedback has been from commenters suggesting that the idea will save lives, and that their loved ones might still be here had they had something like this with their mates.
+> "There have been hundreds of comments from people saying it has helped them reconnect and build deeper connections with friends and family that live in different parts of the world," he said. "But by far the most incredible feedback has been from commenters suggesting that the idea will save lives, and that their loved ones might still be here had they had something like this with their mates."
