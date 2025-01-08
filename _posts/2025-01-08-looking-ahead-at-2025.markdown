@@ -2,7 +2,7 @@
 layout: post
 title: "Looking ahead at 2025"
 author: "Rahul Krishna"
-date: 2024-01-08 19:32:44 +0530
+date: 2025-01-08 19:32:44 +0530
 categories: [blog]
 tags: [professional, career]
 ---
