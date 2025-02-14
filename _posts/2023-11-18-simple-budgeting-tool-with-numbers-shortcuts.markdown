@@ -11,7 +11,7 @@ tags: [personal]
 
 ---
 
-Simple default applications often surpass complex specialized solutions due to their ease of use, efficiency, and reliability. They offer a user-friendly experience, are optimized for common use cases, and prioritize simplicity and functionality, making them more efficient and effective for everyday tasks.
+Simple, built-in apps often outperform complex specialized tools because they’re easier to use, more efficient, and more reliable. They’re designed for common tasks, optimized for usability, and focused on getting the job done without unnecessary complexity.
 
 ### Prerequisite
 
@@ -35,13 +35,13 @@ Simple default applications often surpass complex specialized solutions due to t
 
 ![Budget Sheets](/images/budgeting-tool/budget-sheets.png)
 
-The proposed budgeting tool will incorporate two distinct sheets: a 'Budget' sheet for resource allocation and a 'Transactions' sheet for recording financial transactions. The 'Budget' sheet is intended to be established at the commencement of each month, with subsequent modifications primarily occurring within the 'Transactions' sheet. It is anticipated that updates to the 'Transactions' sheet will automatically reflect in the 'Budget' sheet, ensuring real-time accuracy of the budgeting data.
+The budgeting tool will feature two key sheets: a 'Budget' sheet for setting allocations and a 'Transactions' sheet for logging expenses. At the start of each month, users define their budget, while day-to-day updates happen in the 'Transactions' sheet. Changes there will automatically update the 'Budget' sheet, keeping everything in sync in real time.
 
 ### **Doing this in Numbers**
 
 ---
 
-Fortunately, all these functionalities are incorporated within a pre-constructed default template in Numbers, providing a seamless user experience.
+Thankfully, all these features come built into a default Numbers template, making for a smooth, hassle-free experience.
 
 ![New Sheet](/images/budgeting-tool/new-sheet.png)
 
@@ -53,9 +53,9 @@ Let's proceed to validate the functionality of this process:
 
 ---
 
-Upon mastering the utilization of Shortcuts, one can truly comprehend the immense capabilities inherent within the iOS operating system. It essentially integrates the functionality of IFTTT directly into the operating system itself.
+Once you get the hang of Shortcuts, you start to see just how powerful iOS really is. It’s like having IFTTT baked directly into the system.
 
-Below is the shortcut designed to append a transaction to the sheet:
+Here’s the shortcut that adds a transaction to the sheet:
 
 ![Shortcut](/images/budgeting-tool/shortcut.png)
 
