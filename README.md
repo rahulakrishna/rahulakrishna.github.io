@@ -1,3 +1,3 @@
-# rahulakrishna.github.io
+# Rahul Krrishna's personal website
 
-Field Notes
+Hosted at [rahulkrrrishna.xyz](https://rahulkrrrishna.xyz)
