@@ -3,6 +3,7 @@ languageCode = 'en-us'
 title = 'Rahul Krrishna'
 theme = 'hugo-coder'
 defaultcontentlanguage = "en"
+publishDir = "docs"
 
 [markup]
   [markup.goldmark]
@@ -95,3 +96,4 @@ style = "github-dark"
   name = "Resume"
   weight = 2
   url = "resume/"
+
