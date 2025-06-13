@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <title>
+  React Tips for Future · Rahul Krrishna
+</title>
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="color-scheme" content="light dark">
+
+
+
+
+<meta name="author" content="Rahul Krrishna">
+<meta name="description" content="
+  1. Do not over-use useEffect
+  
+    
+    Link to heading
+  
+
+
+For developers, useEffect is often seen as a replacement for componentDidMount. However, strictly speaking, it is not. The name suggests that it is a place to manage side-effects, but that is not entirely accurate.
+useEffect is actually a way to synchronize local state with an external store. This means that useEffect is a purely asynchronous method, with unpredictable performance implications. Think of useEffect as a reliable henchman, who will eventually step in and complete your task, but not always on schedule.">
+<meta name="keywords" content="blog,developer,personal">
+
+
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="React Tips for Future">
+  <meta name="twitter:description" content="1. Do not over-use useEffect Link to heading For developers, useEffect is often seen as a replacement for componentDidMount. However, strictly speaking, it is not. The name suggests that it is a place to manage side-effects, but that is not entirely accurate.
+useEffect is actually a way to synchronize local state with an external store. This means that useEffect is a purely asynchronous method, with unpredictable performance implications. Think of useEffect as a reliable henchman, who will eventually step in and complete your task, but not always on schedule.">
+
+<meta property="og:url" content="http://localhost:1313/blog/2023-06-07-react-tips-for-future/">
+  <meta property="og:site_name" content="Rahul Krrishna">
+  <meta property="og:title" content="React Tips for Future">
+  <meta property="og:description" content="1. Do not over-use useEffect Link to heading For developers, useEffect is often seen as a replacement for componentDidMount. However, strictly speaking, it is not. The name suggests that it is a place to manage side-effects, but that is not entirely accurate.
+useEffect is actually a way to synchronize local state with an external store. This means that useEffect is a purely asynchronous method, with unpredictable performance implications. Think of useEffect as a reliable henchman, who will eventually step in and complete your task, but not always on schedule.">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="blog">
+    <meta property="article:published_time" content="2023-06-07T09:16:44+05:30">
+    <meta property="article:modified_time" content="2023-06-07T09:16:44+05:30">
+
+
+
+
+<link rel="canonical" href="http://localhost:1313/blog/2023-06-07-react-tips-for-future/">
+
+
+<link rel="preload" href="/fonts/fa-brands-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/fa-regular-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/fa-solid-900.woff2" as="font" type="font/woff2" crossorigin>
+
+
+  
+  
+  <link rel="stylesheet" href="/css/coder.css" media="screen">
+
+
+
+
+
+
+  
+    
+    
+    <link rel="stylesheet" href="/css/coder-dark.css" media="screen">
+  
+
+
+
+ 
+
+
+
+
+<link rel="icon" type="image/svg+xml" href="/img/favicon.svg" sizes="any">
+<link rel="icon" type="image/png" href="/img/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="/img/favicon-16x16.png" sizes="16x16">
+
+<link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+
+<link rel="manifest" href="/site.webmanifest">
+<link rel="mask-icon" href="/images/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+
+
+
+
+
+
+</head>
+
+
+
+
+
+
+<body class="preload-transitions colorscheme-auto">
+  
+<div class="float-container">
+    <a id="dark-mode-toggle" class="colorscheme-toggle">
+        <i class="fa-solid fa-adjust fa-fw" aria-hidden="true"></i>
+    </a>
+</div>
+
+
+  <main class="wrapper">
+    <nav class="navigation">
+  <section class="container">
+    
+    <a class="navigation-title" href="http://localhost:1313/">
+      Rahul Krrishna
+    </a>
+    
+    
+      <input type="checkbox" id="menu-toggle" />
+      <label class="menu-button float-right" for="menu-toggle">
+        <i class="fa-solid fa-bars fa-fw" aria-hidden="true"></i>
+      </label>
+      <ul class="navigation-list">
+        
+          
+            <li class="navigation-item">
+              <a class="navigation-link " href="/blog/">Blog</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link " href="/about/">About</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link " href="/resume/">Resume</a>
+            </li>
+          
+        
+        
+      </ul>
+    
+  </section>
+</nav>
+
+
+    <div class="content">
+      
+  <section class="container page">
+  <article>
+    <header>
+      <h1 class="title">
+        <a class="title-link" href="http://localhost:1313/blog/2023-06-07-react-tips-for-future/">
+          React Tips for Future
+        </a>
+      </h1>
+    </header>
+
+    <h3 id="1-do-not-over-use-useeffect">
+  1. Do not over-use useEffect
+  <a class="heading-link" href="#1-do-not-over-use-useeffect">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<hr>
+<p>For developers, <code>useEffect</code> is often seen as a replacement for <code>componentDidMount</code>. However, strictly speaking, it is not. The name suggests that it is a place to manage side-effects, but that is not entirely accurate.</p>
+<p><code>useEffect</code> is actually a way to synchronize local state with an external store. This means that <code>useEffect</code> is a purely asynchronous method, with unpredictable performance implications. Think of <code>useEffect</code> as a reliable henchman, who will eventually step in and complete your task, but not always on schedule.</p>
+<p>Interestingly, updating state during rendering, which was once discouraged in the era of components, is now preferred over <code>useEffect</code>.</p>
+<h3 id="2-data-fetching-has-too-many-hidden-traps-do-not-re-invent-the-wheel-here">
+  2. Data fetching has too many hidden traps. Do not re-invent the wheel here
+  <a class="heading-link" href="#2-data-fetching-has-too-many-hidden-traps-do-not-re-invent-the-wheel-here">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<hr>
+<p>Data fetching may appear straightforward at first. You are asynchronously fetching data from the remote and setting it in state. However, there are numerous hidden traps that must be taken into account, including caching, deduping, and performance, to name a few.</p>
+<p>Do not think of data fetching as simply &ldquo;making an API call.&rdquo; Rather, think of it as syncing your local store with an external store. While <code>useEffect</code> may seem like a perfect solution for this, it is best to use libraries specifically designed for this purpose, such as <code>react-query</code>.</p>
+<h3 id="3-use-a-framework">
+  3. Use a framework
+  <a class="heading-link" href="#3-use-a-framework">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<hr>
+<p>With confidence, I must say that React is currently outdated. While using a library instead of committing to a framework used to be seen as an advantage, it is now a serious cause for confusion later on. It is recommended to use frameworks built on top of React such as NextJS and Remix.</p>
+<h3 id="4-think-about-styling">
+  4. Think about styling
+  <a class="heading-link" href="#4-think-about-styling">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<hr>
+<p>Use Tailwind. The biggest advantage is not only the extensive list of built-in classes but also the exceptional quality of the <code>tailwind.config.js</code> file. By strictly adhering to the use of classes, you can significantly enhance the organization of the application.</p>
+<h3 id="5-do-not-make-accommodations-for-product-teams-inconsistencies-in-code">
+  5. Do not make accommodations for product team’s inconsistencies in code
+  <a class="heading-link" href="#5-do-not-make-accommodations-for-product-teams-inconsistencies-in-code">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<hr>
+<p>This task can be challenging; however, when a product decides to go with a new table design for a solution that is already in place, there are two options to consider. One is to conditionally render the new style in the existing table, while the other is to create two different solutions for the same scenario inside the code. It is imperative to avoid both scenarios and ensure the protection of your code by enforcing a single, unified solution for each problem.</p>
+<h3 id="6-colours-need-names">
+  6. Colours need names
+  <a class="heading-link" href="#6-colours-need-names">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<hr>
+<p>When writing code, it is important to avoid using <code>#ffffff</code>. Instead, utilize the <code>text-white</code> class from tailwind. This ensures that when new colors are introduced by the design/product, the responsibility lies with them to come up with a name. Rather than relying on <code>#ff2345</code>, it is recommended to use <code>text-primary-red</code> in the code.</p>
+
+  </article>
+</section>
+
+  
+
+    </div>
+
+    <footer class="footer">
+  <section class="container">
+    ©
+    
+      2019 -
+    
+    2025
+     Rahul Krrishna 
+    ·
+    
+    Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> & <a href="https://github.com/luizdepra/hugo-coder/" target="_blank" rel="noopener">Coder</a>.
+    
+  </section>
+</footer>
+
+  </main>
+
+  
+
+  
+  
+  <script src="/js/coder.js"></script>
+  
+
+  
+
+  
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</body>
+</html>

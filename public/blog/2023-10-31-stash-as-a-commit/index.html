@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <title>
+  Stash as a Commit · Rahul Krrishna
+</title>
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="color-scheme" content="light dark">
+
+
+
+
+<meta name="author" content="Rahul Krrishna">
+<meta name="description" content="
+  What is a Stash?
+  
+    
+    Link to heading
+  
+
+
+From Julia Evans’ blog article titled Some miscellaneous git facts
+
+👉🏽 **the stash is a bunch of commits**
+When I run git stash to stash my changes, I’ve always been a bit confused about where those changes actually went. It turns out that when you run git stash, git makes some commits with your changes and labels them with a reference called stash (in .git/refs/stash).">
+<meta name="keywords" content="blog,developer,personal">
+
+
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Stash as a Commit">
+  <meta name="twitter:description" content="What is a Stash? Link to heading From Julia Evans’ blog article titled Some miscellaneous git facts
+👉🏽 **the stash is a bunch of commits**
+When I run git stash to stash my changes, I’ve always been a bit confused about where those changes actually went. It turns out that when you run git stash, git makes some commits with your changes and labels them with a reference called stash (in .git/refs/stash).">
+
+<meta property="og:url" content="http://localhost:1313/blog/2023-10-31-stash-as-a-commit/">
+  <meta property="og:site_name" content="Rahul Krrishna">
+  <meta property="og:title" content="Stash as a Commit">
+  <meta property="og:description" content="What is a Stash? Link to heading From Julia Evans’ blog article titled Some miscellaneous git facts
+👉🏽 **the stash is a bunch of commits**
+When I run git stash to stash my changes, I’ve always been a bit confused about where those changes actually went. It turns out that when you run git stash, git makes some commits with your changes and labels them with a reference called stash (in .git/refs/stash).">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="blog">
+    <meta property="article:published_time" content="2023-10-31T17:35:44+05:30">
+    <meta property="article:modified_time" content="2023-10-31T17:35:44+05:30">
+
+
+
+
+<link rel="canonical" href="http://localhost:1313/blog/2023-10-31-stash-as-a-commit/">
+
+
+<link rel="preload" href="/fonts/fa-brands-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/fa-regular-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/fa-solid-900.woff2" as="font" type="font/woff2" crossorigin>
+
+
+  
+  
+  <link rel="stylesheet" href="/css/coder.css" media="screen">
+
+
+
+
+
+
+  
+    
+    
+    <link rel="stylesheet" href="/css/coder-dark.css" media="screen">
+  
+
+
+
+ 
+
+
+
+
+<link rel="icon" type="image/svg+xml" href="/img/favicon.svg" sizes="any">
+<link rel="icon" type="image/png" href="/img/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="/img/favicon-16x16.png" sizes="16x16">
+
+<link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+
+<link rel="manifest" href="/site.webmanifest">
+<link rel="mask-icon" href="/images/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+
+
+
+
+
+
+</head>
+
+
+
+
+
+
+<body class="preload-transitions colorscheme-auto">
+  
+<div class="float-container">
+    <a id="dark-mode-toggle" class="colorscheme-toggle">
+        <i class="fa-solid fa-adjust fa-fw" aria-hidden="true"></i>
+    </a>
+</div>
+
+
+  <main class="wrapper">
+    <nav class="navigation">
+  <section class="container">
+    
+    <a class="navigation-title" href="http://localhost:1313/">
+      Rahul Krrishna
+    </a>
+    
+    
+      <input type="checkbox" id="menu-toggle" />
+      <label class="menu-button float-right" for="menu-toggle">
+        <i class="fa-solid fa-bars fa-fw" aria-hidden="true"></i>
+      </label>
+      <ul class="navigation-list">
+        
+          
+            <li class="navigation-item">
+              <a class="navigation-link " href="/blog/">Blog</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link " href="/about/">About</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link " href="/resume/">Resume</a>
+            </li>
+          
+        
+        
+      </ul>
+    
+  </section>
+</nav>
+
+
+    <div class="content">
+      
+  <section class="container page">
+  <article>
+    <header>
+      <h1 class="title">
+        <a class="title-link" href="http://localhost:1313/blog/2023-10-31-stash-as-a-commit/">
+          Stash as a Commit
+        </a>
+      </h1>
+    </header>
+
+    <h3 id="what-is-a-stash">
+  What is a Stash?
+  <a class="heading-link" href="#what-is-a-stash">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<hr>
+<p>From Julia Evans’ blog article titled <strong>Some miscellaneous git facts</strong></p>
+<blockquote>
+<p>👉🏽 *<strong>*the stash is a bunch of commits**</strong></p>
+<p>When I run <code>git stash</code> to stash my changes, I’ve always been a bit confused about where those changes actually went. It turns out that when you run <code>git stash</code>, git makes some commits with your changes and labels them with a reference called <code>stash</code> (in <code>.git/refs/stash</code>).</p>
+<p>Let’s stash this blog post and look at the log of the <code>stash</code> reference:</p>
+<pre tabindex="0"><code>$ git log stash --oneline
+6cb983fe (refs/stash) WIP on main: c6ee55ed wip
+2ff2c273 index on main: c6ee55ed wip
+... some more stuff
+</code></pre><p>Now we can look at the commit <code>2ff2c273</code> to see what it contains:</p>
+<pre tabindex="0"><code>$ git show 2ff2c273  --stat
+commit 2ff2c273357c94a0087104f776a8dd28ee467769
+Author: Julia Evans &lt;julia@jvns.ca&gt;
+Date:   Fri Oct 20 14:49:20 2023 -0400
+
+   index on main: c6ee55ed wip
+
+content/post/2023-10-20-some-miscellaneous-git-facts.markdown | 40 ++++++++++++++++++++++++++++++++++++++++
+</code></pre><p>Unsurprisingly, it contains this blog post. Makes sense!</p>
+<p><code>git stash</code> actually creates 2 separate commits: one for the index, and one for your changes that you haven’t staged yet. I found this kind of heartening because I’ve been working on a tool to snapshot and restore the state of a git repository (that I may or may not ever release) and I came up with a very similar design, so that made me feel better about my choices.</p>
+<p>Apparently older commits in the stash are stored in the reflog.</p></blockquote>
+<h3 id="the-rationale-behind-preferring-commit-over-stash">
+  The Rationale Behind Preferring Commit Over Stash
+  <a class="heading-link" href="#the-rationale-behind-preferring-commit-over-stash">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<hr>
+<p>For individuals accustomed to the command-line interface of Git, the concept of committing instead of stashing may seem unconventional. However, when one&rsquo;s Git workflow is seamlessly integrated into their Integrated Development Environment (IDE), particularly Visual Studio Code, this approach becomes highly beneficial.</p>
+<h4 id="the-user-interface-of-atom">
+  The User Interface of Atom
+  <a class="heading-link" href="#the-user-interface-of-atom">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h4>
+<p>The user interface of Atom is commendable, particularly due to its tri-pane design that consistently displays the File Explorer, Code, and Git.</p>
+<p><img src="https://thisdot.notion.site/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2Feb53edbf-045d-426c-aa09-d626c2816f18%2F30eb89c7-3a26-44ee-b2f2-68ee6c0aa485%2FUntitled.png?table=block&amp;id=d8d6eda7-64ee-407a-80bc-5008f3df3411&amp;spaceId=eb53edbf-045d-426c-aa09-d626c2816f18&amp;width=2000&amp;userId=&amp;cache=v2" alt="The Atom UI with File Explorer, Code Area and Git/Github Panel"></p>
+<p>The Atom UI with File Explorer, Code Area and Git/Github Panel</p>
+<p>This design is advantageous as it continually updates a list of changes made to files on the right side of the screen, providing a general overview of the magnitude of your modifications. This visibility encourages experimental changes, which can be easily cherry-picked or discarded.</p>
+<p><img src="https://thisdot.notion.site/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2Feb53edbf-045d-426c-aa09-d626c2816f18%2Fa0cac6ea-b1a1-4188-88f2-bcd93e7ae264%2FUntitled.png?table=block&amp;id=a43d04df-ecd0-4ece-bb34-c6249ef0ace4&amp;spaceId=eb53edbf-045d-426c-aa09-d626c2816f18&amp;width=2000&amp;userId=&amp;cache=v2" alt="Atom Git Pane"></p>
+<p>Atom Git Pane</p>
+<h3 id="the-workflow-in-atom">
+  The Workflow in Atom
+  <a class="heading-link" href="#the-workflow-in-atom">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<hr>
+<p>Consider a scenario where you are working on <code>feature-branch-1</code> and need to switch to the <code>master</code> branch. Typically, you would stash your changes in <code>feature-branch-1</code>. However, Atom provides an alternative commit method.</p>
+<div style="position: relative; padding-bottom: 60.30150753768844%; height: 0;"><iframe src="https://www.loom.com/embed/3b5ae799bb104aa5891ed51a92d5f6ca?sid=55db5932-acf4-4c6f-89c3-b1eca8610ee7" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe></div>
+<h3 id="visual-studio-code-a-comparison">
+  Visual Studio Code: A Comparison
+  <a class="heading-link" href="#visual-studio-code-a-comparison">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<hr>
+<p>By default, Visual Studio Code does not offer the same layout as Atom. However, this is arguably advantageous, and a similar workflow to Atom can be achieved in Visual Studio Code. This can be done by enabling a Secondary Side Bar and moving your &ldquo;Source Control&rdquo; and &ldquo;Commits&rdquo; to the second pane.</p>
+<p><img src="https://thisdot.notion.site/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2Feb53edbf-045d-426c-aa09-d626c2816f18%2F883485c0-262f-459b-ae7c-fb679142d8ff%2FUntitled.png?table=block&amp;id=8c888b7c-77bb-4b97-89f1-3ebeb297a110&amp;spaceId=eb53edbf-045d-426c-aa09-d626c2816f18&amp;width=2000&amp;userId=&amp;cache=v2" alt="Untitled"></p>
+<p><img src="https://thisdot.notion.site/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2Feb53edbf-045d-426c-aa09-d626c2816f18%2F842b7ef4-deb7-4304-8063-0af1ad02e19f%2FUntitled.png?table=block&amp;id=99e468ec-9c5b-4861-9f49-0643fd5bb392&amp;spaceId=eb53edbf-045d-426c-aa09-d626c2816f18&amp;width=2000&amp;userId=&amp;cache=v2" alt="A lot more cluttered than my Atom. But it also does a lot more than Atom!"></p>
+<p>A lot more cluttered than my Atom. But it also does a lot more than Atom!</p>
+<h3 id="the-workflow-in-visual-studio-code">
+  The Workflow in Visual Studio Code
+  <a class="heading-link" href="#the-workflow-in-visual-studio-code">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<hr>
+<div style="position: relative; padding-bottom: 58.91980360065466%; height: 0;"><iframe src="https://www.loom.com/embed/a1fa5c8bebd74fb889ae26dbbfcf63ee?sid=e00e01da-5fc6-4b6a-95eb-a9c3912e3e95" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe></div>
+<h3 id="additional-command-line-approach">
+  Additional: Command Line Approach
+  <a class="heading-link" href="#additional-command-line-approach">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<hr>
+<div style="position: relative; padding-bottom: 74.34052757793765%; height: 0;"><iframe src="https://www.loom.com/embed/70c3d90ac8a64c2aaae010394174a8bb?sid=5674d81a-c4e8-4438-aaea-ec7200ae4212" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe></div>
+<h3 id="the-merits-of-stash-commit">
+  The Merits of Stash Commit
+  <a class="heading-link" href="#the-merits-of-stash-commit">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<hr>
+<p>The primary advantage of a stash commit is that it is local to a branch. This is particularly useful when working on multiple features and needing to stash changes to switch branches (often to master to create a new branch). Upon returning, the stash commit is visible, allowing you to resume where you left off. This is especially helpful when revisiting a branch after a significant period, as remembering that you stashed some code may not be evident.</p>
+<h3 id="the-argument-for-stash">
+  The Argument for Stash
+  <a class="heading-link" href="#the-argument-for-stash">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<hr>
+<ul>
+<li><code>git stash</code> effectively clears your branch of changes for later use, which is necessary if you do not have a branch to perform a <code>stash commit</code>.</li>
+<li>If you have a piece of code that is frequently needed but cannot be committed, <code>git stash</code> is the preferred method.</li>
+</ul>
+<h3 id="references">
+  References
+  <a class="heading-link" href="#references">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<hr>
+<p>Julia Evans’ Blog Article: <a href="https://jvns.ca/blog/2023/10/20/some-miscellaneous-git-facts/"  class="external-link" target="_blank" rel="noopener">https://jvns.ca/blog/2023/10/20/some-miscellaneous-git-facts/</a></p>
+
+  </article>
+</section>
+
+  
+
+    </div>
+
+    <footer class="footer">
+  <section class="container">
+    ©
+    
+      2019 -
+    
+    2025
+     Rahul Krrishna 
+    ·
+    
+    Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> & <a href="https://github.com/luizdepra/hugo-coder/" target="_blank" rel="noopener">Coder</a>.
+    
+  </section>
+</footer>
+
+  </main>
+
+  
+
+  
+  
+  <script src="/js/coder.js"></script>
+  
+
+  
+
+  
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</body>
+</html>

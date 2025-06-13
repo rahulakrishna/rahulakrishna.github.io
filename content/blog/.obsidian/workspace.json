@@ -1,0 +1,208 @@
+{
+  "main": {
+    "id": "7e41cecd5487f70a",
+    "type": "split",
+    "children": [
+      {
+        "id": "1118029e1516b5ea",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "e4d110bd1b60ee01",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "2025-06-12-my-new-post.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "2025-06-12-my-new-post"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "b69685ee4a16b8cb",
+    "type": "split",
+    "children": [
+      {
+        "id": "2a5993404bffc32d",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "0470a8775fb40ebf",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
+            }
+          },
+          {
+            "id": "e7b9b4ea351debce",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Search"
+            }
+          },
+          {
+            "id": "8ceba1ee732e7071",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "a7fee4a3fecdacd5",
+    "type": "split",
+    "children": [
+      {
+        "id": "30141a8e45113741",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "613b59aa52fefb21",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "first-blog-post.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks for first-blog-post"
+            }
+          },
+          {
+            "id": "94233829396db5b4",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "first-blog-post.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links from first-blog-post"
+            }
+          },
+          {
+            "id": "34e632ff3f9adae0",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
+          },
+          {
+            "id": "03a22e517fcee57d",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "first-blog-post.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Outline of first-blog-post"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false
+    }
+  },
+  "active": "e4d110bd1b60ee01",
+  "lastOpenFiles": [
+    "2025-06-13.md",
+    "2025-06-12-my-new-post.md",
+    "_index.md",
+    "my-new-post.md",
+    "2025-01-08-looking-ahead-at-2025.md",
+    "first-blog-post.md",
+    "2023-06-07-react-tips-for-future.md",
+    "2024-12-03-wednesday-waffles.md",
+    "2024-12-03-mark-manson-on-threads.md",
+    "2024-11-03-apples-bold-design-choice.md",
+    "2024-10-12-norwegian-wood.md",
+    "2024-04-15-off-by-100-percent-bias.md",
+    "2024-02-21-recursion-in-react.md",
+    "2024-02-10-arc-search.md",
+    "2024-02-06-arc-browser.md",
+    "2024-01-02-visual-history-of-world-cups.md",
+    "2024-01-01-loading-vs-fetching.md",
+    "2023-11-27-illusion-of-touch.md",
+    "2023-11-18-simple-budgeting-tool-with-numbers-shortcuts.md",
+    "2023-11-15-the-brain-david-eagleman.md",
+    "2023-11-14-my-default-apps-late-2023.md",
+    "2023-10-31-stash-as-a-commit.md",
+    "2023-10-21-memory-leak-in-google-maps.md",
+    "2025-01-08-looking-ahead-at-2025.markdown",
+    "2024-12-03-wednesday-waffles.markdown",
+    "2024-12-03-mark-manson-on-threads.markdown",
+    "2024-11-03-apples-bold-design-choice.markdown",
+    "2024-10-12-norwegian-wood.markdown",
+    "2024-04-15-off-by-100-percent-bias.markdown",
+    "2024-02-21-recursion-in-react.markdown",
+    "2024-02-10-arc-search.markdown",
+    "2024-02-06-arc-browser.markdown",
+    "2024-01-02-visual-history-of-world-cups.markdown",
+    "First Blog Post.md"
+  ]
+}

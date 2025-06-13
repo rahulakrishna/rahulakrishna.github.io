@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Programming on Rahul Krrishna</title>
+    <link>http://localhost:1313/tags/programming/</link>
+    <description>Recent content in Programming on Rahul Krrishna</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 01 Jan 2024 11:15:00 +0530</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/programming/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Loading vs Fetching</title>
+      <link>http://localhost:1313/blog/2024-01-01-loading-vs-fetching/</link>
+      <pubDate>Mon, 01 Jan 2024 11:15:00 +0530</pubDate>
+      <guid>http://localhost:1313/blog/2024-01-01-loading-vs-fetching/</guid>
+      <description>&lt;h3 id=&#34;the-basics&#34;&gt;&#xA;  The Basics&#xA;  &lt;a class=&#34;heading-link&#34; href=&#34;#the-basics&#34;&gt;&#xA;    &lt;i class=&#34;fa-solid fa-link&#34; aria-hidden=&#34;true&#34; title=&#34;Link to heading&#34;&gt;&lt;/i&gt;&#xA;    &lt;span class=&#34;sr-only&#34;&gt;Link to heading&lt;/span&gt;&#xA;  &lt;/a&gt;&#xA;&lt;/h3&gt;&#xA;&lt;hr&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;No Data + Fetching Data = LOADING&lt;/li&gt;&#xA;&lt;li&gt;Yes Data + Fetching Data = FETCHING&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h3 id=&#34;why&#34;&gt;&#xA;  Why?&#xA;  &lt;a class=&#34;heading-link&#34; href=&#34;#why&#34;&gt;&#xA;    &lt;i class=&#34;fa-solid fa-link&#34; aria-hidden=&#34;true&#34; title=&#34;Link to heading&#34;&gt;&lt;/i&gt;&#xA;    &lt;span class=&#34;sr-only&#34;&gt;Link to heading&lt;/span&gt;&#xA;  &lt;/a&gt;&#xA;&lt;/h3&gt;&#xA;&lt;hr&gt;&#xA;&lt;p&gt;As long as the data we have is not invalid. We have no reason to hide it away from the user.&lt;/p&gt;&#xA;&lt;h3 id=&#34;examples-from-around-the-world&#34;&gt;&#xA;  Examples from around the world&#xA;  &lt;a class=&#34;heading-link&#34; href=&#34;#examples-from-around-the-world&#34;&gt;&#xA;    &lt;i class=&#34;fa-solid fa-link&#34; aria-hidden=&#34;true&#34; title=&#34;Link to heading&#34;&gt;&lt;/i&gt;&#xA;    &lt;span class=&#34;sr-only&#34;&gt;Link to heading&lt;/span&gt;&#xA;  &lt;/a&gt;&#xA;&lt;/h3&gt;&#xA;&lt;hr&gt;&#xA;&lt;p&gt;Loading | Fetching&#xA;&lt;img src=&#34;http://localhost:1313/images/loading-vs-fetching/Untitled%206.png&#34; alt=&#34;YouTube Loading State&#34;&gt; YouTube Loading State |&lt;img src=&#34;http://localhost:1313/images/loading-vs-fetching/Untitled%207.png&#34; alt=&#34;YouTube Fetching State&#34;&gt; YouTube Fetching State&#xA;&lt;img src=&#34;http://localhost:1313/images/loading-vs-fetching/Untitled%208.png&#34; alt=&#34;Apollo App Loading State&#34;&gt; Apollo App Loading State | &lt;img src=&#34;http://localhost:1313/images/loading-vs-fetching/Untitled%209.png&#34; alt=&#34;Apollo App Fetching State&#34;&gt; Apollo App Fetching State&#xA;&lt;img src=&#34;http://localhost:1313/images/loading-vs-fetching/Untitled%2010.png&#34; alt=&#34;Fotmob Loading State&#34;&gt; Fotmob Loading State | &lt;img src=&#34;http://localhost:1313/images/loading-vs-fetching/Untitled%2011.png&#34; alt=&#34;Fotmob Fetching State&#34;&gt; Fotmob Fetching State&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
