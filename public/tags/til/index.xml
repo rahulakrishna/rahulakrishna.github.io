@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>TIL on Rahul Krrishna</title>
+    <link>https://rahulkrrrishna.xyz/tags/til/</link>
+    <description>Recent content in TIL on Rahul Krrishna</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 21 Feb 2024 11:15:00 +0530</lastBuildDate>
+    <atom:link href="https://rahulkrrrishna.xyz/tags/til/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Off by 100% Bias</title>
+      <link>https://rahulkrrrishna.xyz/blog/2024-04-15-off-by-100-percent-bias/</link>
+      <pubDate>Wed, 21 Feb 2024 11:15:00 +0530</pubDate>
+      <guid>https://rahulkrrrishna.xyz/blog/2024-04-15-off-by-100-percent-bias/</guid>
+      <description>&lt;p&gt;Today I learnt about &lt;strong&gt;Off by 100% bias.&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;When a consumer sees “130% more”, they likely do not put much thought or effort into actually computing what it means,” she adds. Instead, the consumer’s mind “jumps” to the first thing that makes sense, the straight “30% more” calculation.&lt;/p&gt;&lt;/blockquote&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-jsx&#34; data-lang=&#34;jsx&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#ff7b72&#34;&gt;const&lt;/span&gt; number &lt;span style=&#34;color:#ff7b72;font-weight:bold&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#a5d6ff&#34;&gt;50&lt;/span&gt;;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#ff7b72&#34;&gt;const&lt;/span&gt; delta &lt;span style=&#34;color:#ff7b72;font-weight:bold&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#a5d6ff&#34;&gt;25&lt;/span&gt;;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#ff7b72&#34;&gt;const&lt;/span&gt; &lt;span style=&#34;color:#ff7b72&#34;&gt;final&lt;/span&gt; &lt;span style=&#34;color:#ff7b72;font-weight:bold&#34;&gt;=&lt;/span&gt; number &lt;span style=&#34;color:#ff7b72;font-weight:bold&#34;&gt;+&lt;/span&gt; delta; &lt;span style=&#34;color:#8b949e;font-style:italic&#34;&gt;// 75;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#8b949e;font-style:italic&#34;&gt;&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#ff7b72&#34;&gt;const&lt;/span&gt; percentage_increase &lt;span style=&#34;color:#ff7b72;font-weight:bold&#34;&gt;=&lt;/span&gt; delta &lt;span style=&#34;color:#ff7b72;font-weight:bold&#34;&gt;/&lt;/span&gt; number; &lt;span style=&#34;color:#8b949e;font-style:italic&#34;&gt;// 25 / 50 = 0.5; i.e 50%;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#8b949e;font-style:italic&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#ff7b72&#34;&gt;const&lt;/span&gt; x_times &lt;span style=&#34;color:#ff7b72;font-weight:bold&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#ff7b72&#34;&gt;final&lt;/span&gt; &lt;span style=&#34;color:#ff7b72;font-weight:bold&#34;&gt;/&lt;/span&gt; number; &lt;span style=&#34;color:#8b949e;font-style:italic&#34;&gt;// 75/50 = 1.5; i.e, 1.5x&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;This is even more evident in increases of more than 100%;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Illusion of Touch</title>
+      <link>https://rahulkrrrishna.xyz/blog/2023-11-27-illusion-of-touch/</link>
+      <pubDate>Mon, 27 Nov 2023 11:15:00 +0530</pubDate>
+      <guid>https://rahulkrrrishna.xyz/blog/2023-11-27-illusion-of-touch/</guid>
+      <description>&lt;h3 id=&#34;til&#34;&gt;&#xA;  TIL&#xA;  &lt;a class=&#34;heading-link&#34; href=&#34;#til&#34;&gt;&#xA;    &lt;i class=&#34;fa-solid fa-link&#34; aria-hidden=&#34;true&#34; title=&#34;Link to heading&#34;&gt;&lt;/i&gt;&#xA;    &lt;span class=&#34;sr-only&#34;&gt;Link to heading&lt;/span&gt;&#xA;  &lt;/a&gt;&#xA;&lt;/h3&gt;&#xA;&lt;p&gt;It&amp;rsquo;s physically impossible to touch anything because we&amp;rsquo;re made up of atoms. When we get too close to an object, our electrons and the electrons of that object will repel each other. However, our brain interprets the sensation of those repulsion forces as the illusion of &amp;ldquo;touch&amp;rdquo; even though they never actually touch.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
