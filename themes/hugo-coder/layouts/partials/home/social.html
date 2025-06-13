@@ -1,17 +1,25 @@
 {{ with .Site.Params.social }}
+{{ $socials := sort . "weight" }}
+{{ $count := len $socials }}
+{{ range $i, $item := $socials }}
+{{ if eq (mod $i 3) 0 }}
+{{ if ne $i 0 }}</ul>{{ end }}
 <ul>
-  {{ range sort . "weight" }}
-    {{ if .icon }}
-      <li>
-        <a href="{{ .url | safeURL }}" aria-label="{{ .name }}" {{ if .rel }}rel="{{ .rel }}"{{ end }} {{ if .target }}target="{{ .target }}"{{ end }} {{ if .type }}type="{{ .type }}"{{ end }}>
-          <i class="{{ .icon }}" aria-hidden="true"></i>
-        </a>
-      </li>
-    {{ else }}
-      <li>
-        <a href="{{ .url | safeURL }}" aria-label="{{ .name }}" {{ if .rel }}rel="{{ .rel }}"{{ end }} {{ if .target }}target="{{ .target }}"{{ end }}>{{ .name }}</a>
-      </li>
-    {{ end }}
   {{ end }}
-</ul>
+  {{ if $item.icon }}
+  <li>
+    <a href="{{ $item.url | safeURL }}" aria-label="{{ $item.name }}" {{ if $item.rel }}rel="{{ $item.rel }}" {{ end }}
+      {{ if $item.target }}target="{{ $item.target }}" {{ end }} {{ if $item.type }}type="{{ $item.type }}" {{ end }}>
+      <i class="{{ $item.icon }}" aria-hidden="true"></i>
+    </a>
+  </li>
+  {{ else }}
+  <li>
+    <a href="{{ $item.url | safeURL }}" aria-label="{{ $item.name }}" {{ if $item.rel }}rel="{{ $item.rel }}" {{ end }}
+      {{ if $item.target }}target="{{ $item.target }}" {{ end }}>{{ $item.name }}</a>
+  </li>
+  {{ end }}
+  {{ if eq (add $i 1) $count }}
+</ul>{{ end }}
+{{ end }}
 {{ end }}
