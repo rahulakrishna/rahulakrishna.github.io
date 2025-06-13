@@ -22,7 +22,7 @@ style = "github-dark"
   info = "Frontend Engineer"
   description = "Rahul Krrishna's personal website"
   keywords = "blog,developer,personal"
-  avatarurl = "https://rahulkrrrishna.xyz/images/dp.jpg"
+  avatarurl = "/images/dp.jpg"
   #gravatar = "rkbalu524@gmail.com"
 
   faviconSVG = "/img/favicon.svg"
