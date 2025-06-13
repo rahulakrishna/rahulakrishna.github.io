@@ -2,31 +2,31 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Categories on Rahul Krrishna</title>
-    <link>http://localhost:1313/categories/</link>
+    <link>https://rahulkrrrishna.xyz/categories/</link>
     <description>Recent content in Categories on Rahul Krrishna</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 08 Jan 2025 19:32:44 +0530</lastBuildDate>
-    <atom:link href="http://localhost:1313/categories/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://rahulkrrrishna.xyz/categories/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Blog</title>
-      <link>http://localhost:1313/categories/blog/</link>
+      <link>https://rahulkrrrishna.xyz/categories/blog/</link>
       <pubDate>Wed, 08 Jan 2025 19:32:44 +0530</pubDate>
-      <guid>http://localhost:1313/categories/blog/</guid>
+      <guid>https://rahulkrrrishna.xyz/categories/blog/</guid>
       <description></description>
     </item>
     <item>
       <title>Books</title>
-      <link>http://localhost:1313/categories/books/</link>
+      <link>https://rahulkrrrishna.xyz/categories/books/</link>
       <pubDate>Sat, 12 Oct 2024 09:50:44 +0530</pubDate>
-      <guid>http://localhost:1313/categories/books/</guid>
+      <guid>https://rahulkrrrishna.xyz/categories/books/</guid>
       <description></description>
     </item>
     <item>
       <title>Notes</title>
-      <link>http://localhost:1313/categories/notes/</link>
+      <link>https://rahulkrrrishna.xyz/categories/notes/</link>
       <pubDate>Sat, 12 Oct 2024 09:50:44 +0530</pubDate>
-      <guid>http://localhost:1313/categories/notes/</guid>
+      <guid>https://rahulkrrrishna.xyz/categories/notes/</guid>
       <description></description>
     </item>
   </channel>
