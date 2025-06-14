@@ -1,11 +1,13 @@
 ---
 layout: post
 title: Moving to Hugo
-author: Rahul Krishna
+author:
+  - Rahul Krishna
 date: 2023-06-14
 categories: blog
 tags:
   - programming
+draft: false
 ---
 	I moved my Blog from Jekyll to Hugo!
 
@@ -21,12 +23,9 @@ All of my content in the Jekyll site was stored in plaintext markdown. Moving th
 
 ### Obsidian
 ---
-I’m interested in the idea of writing blogs from the comfort of Obsidian. Unlike my clumsy previous workflow of writing in Notion and then copying stuff over to code.  Markdown is native to both Obsidian and Hugo. Might look into ways to publish from my phone
+The idea of building a knowledge base on plaintext with powerful features like linking and graph view excites me. Naturally extending the idea on to blogs (the public facing department of my knowledge base) sounds interesting.
 
-I’m thinking
-1. Move the entire directory to my iCloud
-2. Pay for Obsidian sync
-3. Set up a git push action I can trigger from my phone
+Currently, I have [Obsidian Git](https://github.com/Vinzent03/obsidian-git) as a git service inside Obsidian. Which might not work that well on mobile. The dream is to have everything working so effortlessly that I can have full ownership of my blogging approach yet have it working perfectly on all my devices with something like Obsidian as the frontend.
 
 ### Deployment
 ---
