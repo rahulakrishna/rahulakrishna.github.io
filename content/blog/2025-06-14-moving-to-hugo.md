@@ -2,10 +2,10 @@
 layout: post
 title: "Moving to Hugo"
 author: "Rahul Krishna"
-date: 2023-06-14 12:17:44 +0530
+date: 2025-06-14 12:17:44 +0530
 categories: blog
 tags: [programming]
-draft: false
+draft: true
 ---
 
 >	I moved my Blog from Jekyll to Hugo!
