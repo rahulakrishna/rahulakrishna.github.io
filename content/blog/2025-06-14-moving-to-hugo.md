@@ -17,7 +17,7 @@ Jekyll’s tooling often broke. I found myself upgrading and spending weekends t
 
 ### Markdowns
 ---
-Authors in the book [[The Pragmatic Programmer]] tells us to store as much data as possible in Markdown. And Markdown seems to have won the markup war. (See relevant discussion here: (link to apple notes getting markdown export hn thread))
+Authors in the book [[The Pragmatic Programmer]] tells us to store as much data as possible in Markdown. And Markdown seems to have won the markup war. (See relevant [Hacker News Discussion](https://news.ycombinator.com/item?id=44183923))
 
 All of my content in the Jekyll site was stored in plaintext markdown. Moving them over was a simple matter of copying the files over
 
