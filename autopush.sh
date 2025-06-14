@@ -7,7 +7,7 @@ cd . || exit 1
 if [[ -n $(git status --porcelain) ]]; then
   git add .
   git commit -m "Auto-update: $(date '+%Y-%m-%d %H:%M:%S')"
-  git push origin main
+  git push origin master
 else
   echo "[$(date)] No changes to commit."
 fi
