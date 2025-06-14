@@ -7,9 +7,10 @@ date: 2023-06-14
 categories: blog
 tags:
   - programming
-draft: true
+draft: false
 ---
-	I moved my Blog from Jekyll to Hugo!
+
+>	I moved my Blog from Jekyll to Hugo!
 
 ### Why?
 ---
