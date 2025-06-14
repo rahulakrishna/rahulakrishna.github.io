@@ -1,10 +1,19 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Apple on Rahul Krrishna</title><link>https://rahulkrrrishna.xyz/tags/apple/</link><description>Recent content in Apple on Rahul Krrishna</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Sun, 03 Nov 2024 09:50:44 +0530</lastBuildDate><atom:link href="https://rahulkrrrishna.xyz/tags/apple/index.xml" rel="self" type="application/rss+xml"/><item><title>Apple’s Bold Design Choice of Making Things Look Bad</title><link>https://rahulkrrrishna.xyz/blog/2024-11-03-apples-bold-design-choice/</link><pubDate>Sun, 03 Nov 2024 09:50:44 +0530</pubDate><guid>https://rahulkrrrishna.xyz/blog/2024-11-03-apples-bold-design-choice/</guid><description>&lt;h3 id="introduction">
- Introduction
- &lt;a class="heading-link" href="#introduction">
- &lt;i class="fa-solid fa-link" aria-hidden="true" title="Link to heading">&lt;/i>
- &lt;span class="sr-only">Link to heading&lt;/span>
- &lt;/a>
-&lt;/h3>
-&lt;hr>
-&lt;p>Apple enjoys a unique position in the mobile business. It manages a platform that runs in an exclusive range of devices. For developers, this means that they can expect their app to run reasonably similar to how it runs on their own devices.&lt;/p>
-&lt;p>This affords Apple to make design choices that make “things look bad”. And reasonably expect developers to make the necessary changes to make their app look good on Apple devices&lt;/p></description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Apple on Rahul Krrishna</title>
+    <link>https://rahulkrrrishna.xyz/tags/apple/</link>
+    <description>Recent content in Apple on Rahul Krrishna</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 03 Nov 2024 09:50:44 +0530</lastBuildDate>
+    <atom:link href="https://rahulkrrrishna.xyz/tags/apple/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Apple’s Bold Design Choice of Making Things Look Bad</title>
+      <link>https://rahulkrrrishna.xyz/blog/2024-11-03-apples-bold-design-choice/</link>
+      <pubDate>Sun, 03 Nov 2024 09:50:44 +0530</pubDate>
+      <guid>https://rahulkrrrishna.xyz/blog/2024-11-03-apples-bold-design-choice/</guid>
+      <description>&lt;h3 id=&#34;introduction&#34;&gt;&#xA;  Introduction&#xA;  &lt;a class=&#34;heading-link&#34; href=&#34;#introduction&#34;&gt;&#xA;    &lt;i class=&#34;fa-solid fa-link&#34; aria-hidden=&#34;true&#34; title=&#34;Link to heading&#34;&gt;&lt;/i&gt;&#xA;    &lt;span class=&#34;sr-only&#34;&gt;Link to heading&lt;/span&gt;&#xA;  &lt;/a&gt;&#xA;&lt;/h3&gt;&#xA;&lt;hr&gt;&#xA;&lt;p&gt;Apple enjoys a unique position in the mobile business. It manages a platform that runs in an exclusive range of devices. For developers, this means that they can expect their app to run reasonably similar to how it runs on their own devices.&lt;/p&gt;&#xA;&lt;p&gt;This affords Apple to make design choices that make “things look bad”. And reasonably expect developers to make the necessary changes to make their app look good on Apple devices&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

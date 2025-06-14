@@ -1,24 +1,19 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Professional on Rahul Krrishna</title><link>https://rahulkrrrishna.xyz/tags/professional/</link><description>Recent content in Professional on Rahul Krrishna</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Wed, 08 Jan 2025 19:32:44 +0530</lastBuildDate><atom:link href="https://rahulkrrrishna.xyz/tags/professional/index.xml" rel="self" type="application/rss+xml"/><item><title>Looking ahead at 2025</title><link>https://rahulkrrrishna.xyz/blog/2025-01-08-looking-ahead-at-2025/</link><pubDate>Wed, 08 Jan 2025 19:32:44 +0530</pubDate><guid>https://rahulkrrrishna.xyz/blog/2025-01-08-looking-ahead-at-2025/</guid><description>&lt;h2 id="goals-for-2025">
- Goals for 2025
- &lt;a class="heading-link" href="#goals-for-2025">
- &lt;i class="fa-solid fa-link" aria-hidden="true" title="Link to heading">&lt;/i>
- &lt;span class="sr-only">Link to heading&lt;/span>
- &lt;/a>
-&lt;/h2>
-&lt;hr>
-&lt;ul>
-&lt;li>Build a side project that at least 10 people find useful&lt;/li>
-&lt;li>Do a 10km run&lt;/li>
-&lt;li>Buy a car&lt;/li>
-&lt;li>Publish 20 Blog Posts&lt;/li>
-&lt;/ul>
-&lt;h3 id="the-side-project-hustle">
- The Side Project Hustle
- &lt;a class="heading-link" href="#the-side-project-hustle">
- &lt;i class="fa-solid fa-link" aria-hidden="true" title="Link to heading">&lt;/i>
- &lt;span class="sr-only">Link to heading&lt;/span>
- &lt;/a>
-&lt;/h3>
-&lt;hr>
-&lt;p>This post is heavily inspired by &lt;a href="https://garrit.xyz/posts/2024-12-29-2024-in-review?utm_source=rss" class="external-link" target="_blank" rel="noopener">Garrit&amp;rsquo;s blog post&lt;/a>&lt;/p>
-&lt;p>Garrit wants to build a side project that generates x amount in revenue. I want to build a side project that at least 10 people find useful. Apart from work, the projects that I&amp;rsquo;ve contributed to that people have found useful are majestic and kindle2notion. My own variant of kindle2notion that was built on nextjs with a decent ui leaves far more to be desired. In 2025, I want to either contribute seriously to some existing open source project, or build one on my own&lt;/p></description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Professional on Rahul Krrishna</title>
+    <link>https://rahulkrrrishna.xyz/tags/professional/</link>
+    <description>Recent content in Professional on Rahul Krrishna</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 08 Jan 2025 19:32:44 +0530</lastBuildDate>
+    <atom:link href="https://rahulkrrrishna.xyz/tags/professional/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Looking ahead at 2025</title>
+      <link>https://rahulkrrrishna.xyz/blog/2025-01-08-looking-ahead-at-2025/</link>
+      <pubDate>Wed, 08 Jan 2025 19:32:44 +0530</pubDate>
+      <guid>https://rahulkrrrishna.xyz/blog/2025-01-08-looking-ahead-at-2025/</guid>
+      <description>&lt;h2 id=&#34;goals-for-2025&#34;&gt;&#xA;  Goals for 2025&#xA;  &lt;a class=&#34;heading-link&#34; href=&#34;#goals-for-2025&#34;&gt;&#xA;    &lt;i class=&#34;fa-solid fa-link&#34; aria-hidden=&#34;true&#34; title=&#34;Link to heading&#34;&gt;&lt;/i&gt;&#xA;    &lt;span class=&#34;sr-only&#34;&gt;Link to heading&lt;/span&gt;&#xA;  &lt;/a&gt;&#xA;&lt;/h2&gt;&#xA;&lt;hr&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Build a side project that at least 10 people find useful&lt;/li&gt;&#xA;&lt;li&gt;Do a 10km run&lt;/li&gt;&#xA;&lt;li&gt;Buy a car&lt;/li&gt;&#xA;&lt;li&gt;Publish 20 Blog Posts&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h3 id=&#34;the-side-project-hustle&#34;&gt;&#xA;  The Side Project Hustle&#xA;  &lt;a class=&#34;heading-link&#34; href=&#34;#the-side-project-hustle&#34;&gt;&#xA;    &lt;i class=&#34;fa-solid fa-link&#34; aria-hidden=&#34;true&#34; title=&#34;Link to heading&#34;&gt;&lt;/i&gt;&#xA;    &lt;span class=&#34;sr-only&#34;&gt;Link to heading&lt;/span&gt;&#xA;  &lt;/a&gt;&#xA;&lt;/h3&gt;&#xA;&lt;hr&gt;&#xA;&lt;p&gt;This post is heavily inspired by &lt;a href=&#34;https://garrit.xyz/posts/2024-12-29-2024-in-review?utm_source=rss&#34;  class=&#34;external-link&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Garrit&amp;rsquo;s blog post&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;Garrit wants to build a side project that generates x amount in revenue. I want to build a side project that at least 10 people find useful. Apart from work, the projects that I&amp;rsquo;ve contributed to that people have found useful are majestic and kindle2notion. My own variant of kindle2notion that was built on nextjs with a decent ui leaves far more to be desired. In 2025, I want to either contribute seriously to some existing open source project, or build one on my own&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

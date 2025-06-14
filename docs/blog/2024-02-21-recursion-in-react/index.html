@@ -1,4 +1,19 @@
-<!doctype html><html lang=en><head><title>Recursion in React · Rahul Krrishna</title><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta name=color-scheme content="light dark"><meta name=author content="Rahul Krrishna"><meta name=description content='
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>
+  Recursion in React · Rahul Krrishna
+</title>
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="color-scheme" content="light dark">
+
+
+
+
+<meta name="author" content="Rahul Krrishna">
+<meta name="description" content="
   TLDR;
   
     
@@ -22,29 +37,29 @@ So while thinking in React, it may not immediately occur that you can call a **p
 
 const comments = [
   {
-    content: "Comment 1",
+    content: &#34;Comment 1&#34;,
     level: 0,
     comments: [
       {
-        content: "Comment 1 > 1",
+        content: &#34;Comment 1 &gt; 1&#34;,
         level: 1,
         comments: [
           {
-            content: "Comment 1 > 1 > 1",
+            content: &#34;Comment 1 &gt; 1 &gt; 1&#34;,
             level: 2,
             comments: [],
           },
         ],
       },
       {
-        content: "Comment 1 > 2",
+        content: &#34;Comment 1 &gt; 2&#34;,
         level: 1,
         comments: [],
       },
     ],
   },
   {
-    content: "Comment 2",
+    content: &#34;Comment 2&#34;,
     level: 0,
     comments: [],
   },
@@ -58,94 +73,347 @@ const comments = [
 
 
 function displayComments(comments) {
-  return comments.reduce((acc, comment) => {
+  return comments.reduce((acc, comment) =&gt; {
     const prefix = Array(comment.level)
-      .fill("|")
-      .reduce((acc, item) => `${acc} ${item}`, "");
+      .fill(&#34;|&#34;)
+      .reduce((acc, item) =&gt; `${acc} ${item}`, &#34;&#34;);
 
     const moreComments = displayComments(comment.comments);
 
     const stringToReturn = `${prefix} ${comment.content} \n ${moreComments}`;
     return `${acc} ${stringToReturn}`;
-  }, "");
+  }, &#34;&#34;);
 }
-Result:'><meta name=keywords content="blog,developer,personal"><meta name=twitter:card content="summary"><meta name=twitter:title content="Recursion in React"><meta name=twitter:description content='TLDR; Link to heading TIL that you can have recursive components in React!
-💡 React uses one-way data flow, passing data down the component hierarchy from parent to child component So while thinking in React, it may not immediately occur that you can call a **parent** inside the **child!** But it is possible Consider a Data Structure like this: Link to heading const comments = [ { content: "Comment 1", level: 0, comments: [ { content: "Comment 1 > 1", level: 1, comments: [ { content: "Comment 1 > 1 > 1", level: 2, comments: [], }, ], }, { content: "Comment 1 > 2", level: 1, comments: [], }, ], }, { content: "Comment 2", level: 0, comments: [], }, ]; Doing this in Javascript Link to heading function displayComments(comments) { return comments.reduce((acc, comment) => { const prefix = Array(comment.level) .fill("|") .reduce((acc, item) => `${acc} ${item}`, ""); const moreComments = displayComments(comment.comments); const stringToReturn = `${prefix} ${comment.content} \n ${moreComments}`; return `${acc} ${stringToReturn}`; }, ""); } Result:'><meta property="og:url" content="https://rahulkrrrishna.xyz/blog/2024-02-21-recursion-in-react/"><meta property="og:site_name" content="Rahul Krrishna"><meta property="og:title" content="Recursion in React"><meta property="og:description" content='TLDR; Link to heading TIL that you can have recursive components in React!
-💡 React uses one-way data flow, passing data down the component hierarchy from parent to child component So while thinking in React, it may not immediately occur that you can call a **parent** inside the **child!** But it is possible Consider a Data Structure like this: Link to heading const comments = [ { content: "Comment 1", level: 0, comments: [ { content: "Comment 1 > 1", level: 1, comments: [ { content: "Comment 1 > 1 > 1", level: 2, comments: [], }, ], }, { content: "Comment 1 > 2", level: 1, comments: [], }, ], }, { content: "Comment 2", level: 0, comments: [], }, ]; Doing this in Javascript Link to heading function displayComments(comments) { return comments.reduce((acc, comment) => { const prefix = Array(comment.level) .fill("|") .reduce((acc, item) => `${acc} ${item}`, ""); const moreComments = displayComments(comment.comments); const stringToReturn = `${prefix} ${comment.content} \n ${moreComments}`; return `${acc} ${stringToReturn}`; }, ""); } Result:'><meta property="og:locale" content="en_us"><meta property="og:type" content="article"><meta property="article:section" content="blog"><meta property="article:published_time" content="2024-02-21T11:15:00+05:30"><meta property="article:modified_time" content="2024-02-21T11:15:00+05:30"><meta property="article:tag" content="Javascript"><meta property="article:tag" content="React"><link rel=canonical href=https://rahulkrrrishna.xyz/blog/2024-02-21-recursion-in-react/><link rel=preload href=/fonts/fa-brands-400.woff2 as=font type=font/woff2 crossorigin><link rel=preload href=/fonts/fa-regular-400.woff2 as=font type=font/woff2 crossorigin><link rel=preload href=/fonts/fa-solid-900.woff2 as=font type=font/woff2 crossorigin><link rel=stylesheet href=/css/coder.min.6445a802b9389c9660e1b07b724dcf5718b1065ed2d71b4eeaf981cc7cc5fc46.css integrity="sha256-ZEWoArk4nJZg4bB7ck3PVxixBl7S1xtO6vmBzHzF/EY=" crossorigin=anonymous media=screen><link rel=stylesheet href=/css/coder-dark.min.a00e6364bacbc8266ad1cc81230774a1397198f8cfb7bcba29b7d6fcb54ce57f.css integrity="sha256-oA5jZLrLyCZq0cyBIwd0oTlxmPjPt7y6KbfW/LVM5X8=" crossorigin=anonymous media=screen><link rel=icon type=image/svg+xml href=/img/favicon.svg sizes=any><link rel=icon type=image/png href=/img/favicon-32x32.png sizes=32x32><link rel=icon type=image/png href=/img/favicon-16x16.png sizes=16x16><link rel=apple-touch-icon href=/images/apple-touch-icon.png><link rel=apple-touch-icon sizes=180x180 href=/images/apple-touch-icon.png><link rel=manifest href=/site.webmanifest><link rel=mask-icon href=/images/safari-pinned-tab.svg color=#5bbad5></head><body class="preload-transitions colorscheme-auto"><div class=float-container><a id=dark-mode-toggle class=colorscheme-toggle><i class="fa-solid fa-adjust fa-fw" aria-hidden=true></i></a></div><main class=wrapper><nav class=navigation><section class=container><a class=navigation-title href=https://rahulkrrrishna.xyz/>Rahul Krrishna
-</a><input type=checkbox id=menu-toggle>
-<label class="menu-button float-right" for=menu-toggle><i class="fa-solid fa-bars fa-fw" aria-hidden=true></i></label><ul class=navigation-list><li class=navigation-item><a class=navigation-link href=/blog/>Blog</a></li><li class=navigation-item><a class=navigation-link href=/about/>About</a></li><li class=navigation-item><a class=navigation-link href=/resume/>Resume</a></li></ul></section></nav><div class=content><section class="container page"><article><header><h1 class=title><a class=title-link href=https://rahulkrrrishna.xyz/blog/2024-02-21-recursion-in-react/>Recursion in React</a></h1></header><h3 id=tldr>TLDR;
-<a class=heading-link href=#tldr><i class="fa-solid fa-link" aria-hidden=true title="Link to heading"></i>
-<span class=sr-only>Link to heading</span></a></h3><hr><p>TIL that you can have recursive components in React!</p><aside>💡 React uses one-way data flow, passing data down the component hierarchy from parent to child component</aside><br>So while thinking in React, it may not immediately occur that you can call a **parent** inside the **child!** But it is possible<h3 id=consider-a-data-structure-like-this>Consider a Data Structure like this:
-<a class=heading-link href=#consider-a-data-structure-like-this><i class="fa-solid fa-link" aria-hidden=true title="Link to heading"></i>
-<span class=sr-only>Link to heading</span></a></h3><hr><div class=highlight><pre tabindex=0 style=color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-jsx data-lang=jsx><span style=display:flex><span><span style=color:#ff7b72>const</span> comments <span style=color:#ff7b72;font-weight:700>=</span> [
-</span></span><span style=display:flex><span>  {
-</span></span><span style=display:flex><span>    content<span style=color:#ff7b72;font-weight:700>:</span> <span style=color:#a5d6ff>&#34;Comment 1&#34;</span>,
-</span></span><span style=display:flex><span>    level<span style=color:#ff7b72;font-weight:700>:</span> <span style=color:#a5d6ff>0</span>,
-</span></span><span style=display:flex><span>    comments<span style=color:#ff7b72;font-weight:700>:</span> [
-</span></span><span style=display:flex><span>      {
-</span></span><span style=display:flex><span>        content<span style=color:#ff7b72;font-weight:700>:</span> <span style=color:#a5d6ff>&#34;Comment 1 &gt; 1&#34;</span>,
-</span></span><span style=display:flex><span>        level<span style=color:#ff7b72;font-weight:700>:</span> <span style=color:#a5d6ff>1</span>,
-</span></span><span style=display:flex><span>        comments<span style=color:#ff7b72;font-weight:700>:</span> [
-</span></span><span style=display:flex><span>          {
-</span></span><span style=display:flex><span>            content<span style=color:#ff7b72;font-weight:700>:</span> <span style=color:#a5d6ff>&#34;Comment 1 &gt; 1 &gt; 1&#34;</span>,
-</span></span><span style=display:flex><span>            level<span style=color:#ff7b72;font-weight:700>:</span> <span style=color:#a5d6ff>2</span>,
-</span></span><span style=display:flex><span>            comments<span style=color:#ff7b72;font-weight:700>:</span> [],
-</span></span><span style=display:flex><span>          },
-</span></span><span style=display:flex><span>        ],
-</span></span><span style=display:flex><span>      },
-</span></span><span style=display:flex><span>      {
-</span></span><span style=display:flex><span>        content<span style=color:#ff7b72;font-weight:700>:</span> <span style=color:#a5d6ff>&#34;Comment 1 &gt; 2&#34;</span>,
-</span></span><span style=display:flex><span>        level<span style=color:#ff7b72;font-weight:700>:</span> <span style=color:#a5d6ff>1</span>,
-</span></span><span style=display:flex><span>        comments<span style=color:#ff7b72;font-weight:700>:</span> [],
-</span></span><span style=display:flex><span>      },
-</span></span><span style=display:flex><span>    ],
-</span></span><span style=display:flex><span>  },
-</span></span><span style=display:flex><span>  {
-</span></span><span style=display:flex><span>    content<span style=color:#ff7b72;font-weight:700>:</span> <span style=color:#a5d6ff>&#34;Comment 2&#34;</span>,
-</span></span><span style=display:flex><span>    level<span style=color:#ff7b72;font-weight:700>:</span> <span style=color:#a5d6ff>0</span>,
-</span></span><span style=display:flex><span>    comments<span style=color:#ff7b72;font-weight:700>:</span> [],
-</span></span><span style=display:flex><span>  },
-</span></span><span style=display:flex><span>];
-</span></span></code></pre></div><h3 id=doing-this-in-javascript>Doing this in Javascript
-<a class=heading-link href=#doing-this-in-javascript><i class="fa-solid fa-link" aria-hidden=true title="Link to heading"></i>
-<span class=sr-only>Link to heading</span></a></h3><hr><div class=highlight><pre tabindex=0 style=color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-jsx data-lang=jsx><span style=display:flex><span><span style=color:#ff7b72>function</span> displayComments(comments) {
-</span></span><span style=display:flex><span>  <span style=color:#ff7b72>return</span> comments.reduce((acc, comment) =&gt; {
-</span></span><span style=display:flex><span>    <span style=color:#ff7b72>const</span> prefix <span style=color:#ff7b72;font-weight:700>=</span> Array(comment.level)
-</span></span><span style=display:flex><span>      .fill(<span style=color:#a5d6ff>&#34;|&#34;</span>)
-</span></span><span style=display:flex><span>      .reduce((acc, item) =&gt; <span style=color:#a5d6ff>`</span><span style=color:#a5d6ff>${</span>acc<span style=color:#a5d6ff>}</span><span style=color:#a5d6ff> </span><span style=color:#a5d6ff>${</span>item<span style=color:#a5d6ff>}</span><span style=color:#a5d6ff>`</span>, <span style=color:#a5d6ff>&#34;&#34;</span>);
-</span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span>    <span style=color:#ff7b72>const</span> moreComments <span style=color:#ff7b72;font-weight:700>=</span> displayComments(comment.comments);
-</span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span>    <span style=color:#ff7b72>const</span> stringToReturn <span style=color:#ff7b72;font-weight:700>=</span> <span style=color:#a5d6ff>`</span><span style=color:#a5d6ff>${</span>prefix<span style=color:#a5d6ff>}</span><span style=color:#a5d6ff> </span><span style=color:#a5d6ff>${</span>comment.content<span style=color:#a5d6ff>}</span><span style=color:#a5d6ff> </span><span style=color:#f85149>\</span><span style=color:#a5d6ff>n </span><span style=color:#a5d6ff>${</span>moreComments<span style=color:#a5d6ff>}</span><span style=color:#a5d6ff>`</span>;
-</span></span><span style=display:flex><span>    <span style=color:#ff7b72>return</span> <span style=color:#a5d6ff>`</span><span style=color:#a5d6ff>${</span>acc<span style=color:#a5d6ff>}</span><span style=color:#a5d6ff> </span><span style=color:#a5d6ff>${</span>stringToReturn<span style=color:#a5d6ff>}</span><span style=color:#a5d6ff>`</span>;
-</span></span><span style=display:flex><span>  }, <span style=color:#a5d6ff>&#34;&#34;</span>);
-</span></span><span style=display:flex><span>}
-</span></span></code></pre></div><p>Result:</p><p><img src=/images/recursion-in-react/javascript-result.png alt="Javascript Result"></p><h3 id=doing-this-in-react>Doing this in React
-<a class=heading-link href=#doing-this-in-react><i class="fa-solid fa-link" aria-hidden=true title="Link to heading"></i>
-<span class=sr-only>Link to heading</span></a></h3><hr><div class=highlight><pre tabindex=0 style=color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-jsx data-lang=jsx><span style=display:flex><span><span style=color:#ff7b72>function</span> Comment({ comment }) {
-</span></span><span style=display:flex><span>  <span style=color:#ff7b72>const</span> prefix <span style=color:#ff7b72;font-weight:700>=</span> Array(comment.level)
-</span></span><span style=display:flex><span>    .fill(<span style=color:#a5d6ff>&#34;|&#34;</span>)
-</span></span><span style=display:flex><span>    .reduce((acc, item) =&gt; <span style=color:#a5d6ff>`</span><span style=color:#a5d6ff>${</span>acc<span style=color:#a5d6ff>}</span><span style=color:#a5d6ff> </span><span style=color:#a5d6ff>${</span>item<span style=color:#a5d6ff>}</span><span style=color:#a5d6ff>`</span>, <span style=color:#a5d6ff>&#34;&#34;</span>);
-</span></span><span style=display:flex><span>  <span style=color:#ff7b72>return</span> (
-</span></span><span style=display:flex><span>    &lt;<span style=color:#7ee787>div</span>&gt;
-</span></span><span style=display:flex><span>      {prefix} {comment.content}
-</span></span><span style=display:flex><span>      &lt;<span style=color:#7ee787>Comments</span> comments<span style=color:#ff7b72;font-weight:700>=</span>{comment.comments} /&gt;
-</span></span><span style=display:flex><span>    &lt;/<span style=color:#7ee787>div</span>&gt;
-</span></span><span style=display:flex><span>  );
-</span></span><span style=display:flex><span>}
-</span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span><span style=color:#ff7b72>export</span> <span style=color:#ff7b72>default</span> <span style=color:#ff7b72>function</span> Comments({ comments }) {
-</span></span><span style=display:flex><span>  <span style=color:#ff7b72>return</span> comments.map((comment) =&gt; {
-</span></span><span style=display:flex><span>    <span style=color:#ff7b72>return</span> &lt;<span style=color:#7ee787>Comment</span> comment<span style=color:#ff7b72;font-weight:700>=</span>{comment} /&gt;;
-</span></span><span style=display:flex><span>  });
-</span></span><span style=display:flex><span>}
-</span></span></code></pre></div><p>Result:</p><p><img src=/images/recursion-in-react/react-result.png alt="React Result"></p><h3 id=actual-example-of-rendering-a-comment-tree>Actual example of rendering a comment tree
-<a class=heading-link href=#actual-example-of-rendering-a-comment-tree><i class="fa-solid fa-link" aria-hidden=true title="Link to heading"></i>
-<span class=sr-only>Link to heading</span></a></h3><hr><p>It’s unlikely we’ll be using <code>|</code> prefixes when actually building a comment tree. We’ll more likely be playing around with <code>padding</code> and <code>margin</code>.</p><p>Here’s a code example of actual comment tree rendering in React with TailwindCSS: <a href=https://github.com/rahulakrishna/hackrmn/blob/master/src/app/%5Bstorylist%5D/comments/%5Bcommentid%5D/comment-block.js class=external-link target=_blank rel=noopener>https://github.com/rahulakrishna/hackrmn/blob/master/src/app/[storylist]/comments/[commentid]/comment-block.js</a></p><p><img src=/images/recursion-in-react/real-life-example.png alt=Untitled></p><h3 id=references>References
-<a class=heading-link href=#references><i class="fa-solid fa-link" aria-hidden=true title="Link to heading"></i>
-<span class=sr-only>Link to heading</span></a></h3><hr><ul><li>Thinking in React: <a href=https://react.dev/learn/thinking-in-react class=external-link target=_blank rel=noopener>https://react.dev/learn/thinking-in-react</a></li><li>hackrmn repo: <a href=https://github.com/rahulakrishna/hackrmn/tree/master class=external-link target=_blank rel=noopener>https://github.com/rahulakrishna/hackrmn/tree/master</a></li></ul></article></section></div><footer class=footer><section class=container>©
-2019 -
-2025
-Rahul Krrishna
-·
-Powered by <a href=https://gohugo.io/ target=_blank rel=noopener>Hugo</a> & <a href=https://github.com/luizdepra/hugo-coder/ target=_blank rel=noopener>Coder</a>.</section></footer></main><script src=/js/coder.min.6ae284be93d2d19dad1f02b0039508d9aab3180a12a06dcc71b0b0ef7825a317.js integrity="sha256-auKEvpPS0Z2tHwKwA5UI2aqzGAoSoG3McbCw73gloxc="></script></body></html>
+Result:">
+<meta name="keywords" content="blog,developer,personal">
+
+
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Recursion in React">
+  <meta name="twitter:description" content="TLDR; Link to heading TIL that you can have recursive components in React!
+💡 React uses one-way data flow, passing data down the component hierarchy from parent to child component So while thinking in React, it may not immediately occur that you can call a **parent** inside the **child!** But it is possible Consider a Data Structure like this: Link to heading const comments = [ { content: &#34;Comment 1&#34;, level: 0, comments: [ { content: &#34;Comment 1 &gt; 1&#34;, level: 1, comments: [ { content: &#34;Comment 1 &gt; 1 &gt; 1&#34;, level: 2, comments: [], }, ], }, { content: &#34;Comment 1 &gt; 2&#34;, level: 1, comments: [], }, ], }, { content: &#34;Comment 2&#34;, level: 0, comments: [], }, ]; Doing this in Javascript Link to heading function displayComments(comments) { return comments.reduce((acc, comment) =&gt; { const prefix = Array(comment.level) .fill(&#34;|&#34;) .reduce((acc, item) =&gt; `${acc} ${item}`, &#34;&#34;); const moreComments = displayComments(comment.comments); const stringToReturn = `${prefix} ${comment.content} \n ${moreComments}`; return `${acc} ${stringToReturn}`; }, &#34;&#34;); } Result:">
+
+<meta property="og:url" content="https://rahulkrrrishna.xyz/blog/2024-02-21-recursion-in-react/">
+  <meta property="og:site_name" content="Rahul Krrishna">
+  <meta property="og:title" content="Recursion in React">
+  <meta property="og:description" content="TLDR; Link to heading TIL that you can have recursive components in React!
+💡 React uses one-way data flow, passing data down the component hierarchy from parent to child component So while thinking in React, it may not immediately occur that you can call a **parent** inside the **child!** But it is possible Consider a Data Structure like this: Link to heading const comments = [ { content: &#34;Comment 1&#34;, level: 0, comments: [ { content: &#34;Comment 1 &gt; 1&#34;, level: 1, comments: [ { content: &#34;Comment 1 &gt; 1 &gt; 1&#34;, level: 2, comments: [], }, ], }, { content: &#34;Comment 1 &gt; 2&#34;, level: 1, comments: [], }, ], }, { content: &#34;Comment 2&#34;, level: 0, comments: [], }, ]; Doing this in Javascript Link to heading function displayComments(comments) { return comments.reduce((acc, comment) =&gt; { const prefix = Array(comment.level) .fill(&#34;|&#34;) .reduce((acc, item) =&gt; `${acc} ${item}`, &#34;&#34;); const moreComments = displayComments(comment.comments); const stringToReturn = `${prefix} ${comment.content} \n ${moreComments}`; return `${acc} ${stringToReturn}`; }, &#34;&#34;); } Result:">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="blog">
+    <meta property="article:published_time" content="2024-02-21T11:15:00+05:30">
+    <meta property="article:modified_time" content="2024-02-21T11:15:00+05:30">
+    <meta property="article:tag" content="Javascript">
+    <meta property="article:tag" content="React">
+
+
+
+
+<link rel="canonical" href="https://rahulkrrrishna.xyz/blog/2024-02-21-recursion-in-react/">
+
+
+<link rel="preload" href="/fonts/fa-brands-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/fa-regular-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/fa-solid-900.woff2" as="font" type="font/woff2" crossorigin>
+
+
+  
+  
+  <link rel="stylesheet" href="/css/coder.min.6445a802b9389c9660e1b07b724dcf5718b1065ed2d71b4eeaf981cc7cc5fc46.css" integrity="sha256-ZEWoArk4nJZg4bB7ck3PVxixBl7S1xtO6vmBzHzF/EY=" crossorigin="anonymous" media="screen" />
+
+
+
+
+
+
+  
+    
+    
+    <link rel="stylesheet" href="/css/coder-dark.min.a00e6364bacbc8266ad1cc81230774a1397198f8cfb7bcba29b7d6fcb54ce57f.css" integrity="sha256-oA5jZLrLyCZq0cyBIwd0oTlxmPjPt7y6KbfW/LVM5X8=" crossorigin="anonymous" media="screen" />
+  
+
+
+
+ 
+
+
+
+
+<link rel="icon" type="image/svg+xml" href="/img/favicon.svg" sizes="any">
+<link rel="icon" type="image/png" href="/img/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="/img/favicon-16x16.png" sizes="16x16">
+
+<link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+
+<link rel="manifest" href="/site.webmanifest">
+<link rel="mask-icon" href="/images/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+
+
+
+
+
+
+</head>
+
+
+
+
+
+
+<body class="preload-transitions colorscheme-auto">
+  
+<div class="float-container">
+    <a id="dark-mode-toggle" class="colorscheme-toggle">
+        <i class="fa-solid fa-adjust fa-fw" aria-hidden="true"></i>
+    </a>
+</div>
+
+
+  <main class="wrapper">
+    <nav class="navigation">
+  <section class="container">
+    
+    <a class="navigation-title" href="https://rahulkrrrishna.xyz/">
+      Rahul Krrishna
+    </a>
+    
+    
+      <input type="checkbox" id="menu-toggle" />
+      <label class="menu-button float-right" for="menu-toggle">
+        <i class="fa-solid fa-bars fa-fw" aria-hidden="true"></i>
+      </label>
+      <ul class="navigation-list">
+        
+          
+            <li class="navigation-item">
+              <a class="navigation-link " href="/blog/">Blog</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link " href="/about/">About</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link " href="/resume/">Resume</a>
+            </li>
+          
+        
+        
+      </ul>
+    
+  </section>
+</nav>
+
+
+    <div class="content">
+      
+  <section class="container page">
+  <article>
+    <header>
+      <h1 class="title">
+        <a class="title-link" href="https://rahulkrrrishna.xyz/blog/2024-02-21-recursion-in-react/">
+          Recursion in React
+        </a>
+      </h1>
+    </header>
+
+    <h3 id="tldr">
+  TLDR;
+  <a class="heading-link" href="#tldr">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<hr>
+<p>TIL that you can have recursive components in React!</p>
+<aside>
+💡 React uses one-way data flow, passing data down the component hierarchy from parent to child component
+</aside>
+<br/>
+So while thinking in React, it may not immediately occur that you can call a **parent** inside the **child!** But it is possible
+<h3 id="consider-a-data-structure-like-this">
+  Consider a Data Structure like this:
+  <a class="heading-link" href="#consider-a-data-structure-like-this">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<hr>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-jsx" data-lang="jsx"><span style="display:flex;"><span><span style="color:#ff7b72">const</span> comments <span style="color:#ff7b72;font-weight:bold">=</span> [
+</span></span><span style="display:flex;"><span>  {
+</span></span><span style="display:flex;"><span>    content<span style="color:#ff7b72;font-weight:bold">:</span> <span style="color:#a5d6ff">&#34;Comment 1&#34;</span>,
+</span></span><span style="display:flex;"><span>    level<span style="color:#ff7b72;font-weight:bold">:</span> <span style="color:#a5d6ff">0</span>,
+</span></span><span style="display:flex;"><span>    comments<span style="color:#ff7b72;font-weight:bold">:</span> [
+</span></span><span style="display:flex;"><span>      {
+</span></span><span style="display:flex;"><span>        content<span style="color:#ff7b72;font-weight:bold">:</span> <span style="color:#a5d6ff">&#34;Comment 1 &gt; 1&#34;</span>,
+</span></span><span style="display:flex;"><span>        level<span style="color:#ff7b72;font-weight:bold">:</span> <span style="color:#a5d6ff">1</span>,
+</span></span><span style="display:flex;"><span>        comments<span style="color:#ff7b72;font-weight:bold">:</span> [
+</span></span><span style="display:flex;"><span>          {
+</span></span><span style="display:flex;"><span>            content<span style="color:#ff7b72;font-weight:bold">:</span> <span style="color:#a5d6ff">&#34;Comment 1 &gt; 1 &gt; 1&#34;</span>,
+</span></span><span style="display:flex;"><span>            level<span style="color:#ff7b72;font-weight:bold">:</span> <span style="color:#a5d6ff">2</span>,
+</span></span><span style="display:flex;"><span>            comments<span style="color:#ff7b72;font-weight:bold">:</span> [],
+</span></span><span style="display:flex;"><span>          },
+</span></span><span style="display:flex;"><span>        ],
+</span></span><span style="display:flex;"><span>      },
+</span></span><span style="display:flex;"><span>      {
+</span></span><span style="display:flex;"><span>        content<span style="color:#ff7b72;font-weight:bold">:</span> <span style="color:#a5d6ff">&#34;Comment 1 &gt; 2&#34;</span>,
+</span></span><span style="display:flex;"><span>        level<span style="color:#ff7b72;font-weight:bold">:</span> <span style="color:#a5d6ff">1</span>,
+</span></span><span style="display:flex;"><span>        comments<span style="color:#ff7b72;font-weight:bold">:</span> [],
+</span></span><span style="display:flex;"><span>      },
+</span></span><span style="display:flex;"><span>    ],
+</span></span><span style="display:flex;"><span>  },
+</span></span><span style="display:flex;"><span>  {
+</span></span><span style="display:flex;"><span>    content<span style="color:#ff7b72;font-weight:bold">:</span> <span style="color:#a5d6ff">&#34;Comment 2&#34;</span>,
+</span></span><span style="display:flex;"><span>    level<span style="color:#ff7b72;font-weight:bold">:</span> <span style="color:#a5d6ff">0</span>,
+</span></span><span style="display:flex;"><span>    comments<span style="color:#ff7b72;font-weight:bold">:</span> [],
+</span></span><span style="display:flex;"><span>  },
+</span></span><span style="display:flex;"><span>];
+</span></span></code></pre></div><h3 id="doing-this-in-javascript">
+  Doing this in Javascript
+  <a class="heading-link" href="#doing-this-in-javascript">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<hr>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-jsx" data-lang="jsx"><span style="display:flex;"><span><span style="color:#ff7b72">function</span> displayComments(comments) {
+</span></span><span style="display:flex;"><span>  <span style="color:#ff7b72">return</span> comments.reduce((acc, comment) =&gt; {
+</span></span><span style="display:flex;"><span>    <span style="color:#ff7b72">const</span> prefix <span style="color:#ff7b72;font-weight:bold">=</span> Array(comment.level)
+</span></span><span style="display:flex;"><span>      .fill(<span style="color:#a5d6ff">&#34;|&#34;</span>)
+</span></span><span style="display:flex;"><span>      .reduce((acc, item) =&gt; <span style="color:#a5d6ff">`</span><span style="color:#a5d6ff">${</span>acc<span style="color:#a5d6ff">}</span><span style="color:#a5d6ff"> </span><span style="color:#a5d6ff">${</span>item<span style="color:#a5d6ff">}</span><span style="color:#a5d6ff">`</span>, <span style="color:#a5d6ff">&#34;&#34;</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff7b72">const</span> moreComments <span style="color:#ff7b72;font-weight:bold">=</span> displayComments(comment.comments);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff7b72">const</span> stringToReturn <span style="color:#ff7b72;font-weight:bold">=</span> <span style="color:#a5d6ff">`</span><span style="color:#a5d6ff">${</span>prefix<span style="color:#a5d6ff">}</span><span style="color:#a5d6ff"> </span><span style="color:#a5d6ff">${</span>comment.content<span style="color:#a5d6ff">}</span><span style="color:#a5d6ff"> </span><span style="color:#f85149">\</span><span style="color:#a5d6ff">n </span><span style="color:#a5d6ff">${</span>moreComments<span style="color:#a5d6ff">}</span><span style="color:#a5d6ff">`</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#ff7b72">return</span> <span style="color:#a5d6ff">`</span><span style="color:#a5d6ff">${</span>acc<span style="color:#a5d6ff">}</span><span style="color:#a5d6ff"> </span><span style="color:#a5d6ff">${</span>stringToReturn<span style="color:#a5d6ff">}</span><span style="color:#a5d6ff">`</span>;
+</span></span><span style="display:flex;"><span>  }, <span style="color:#a5d6ff">&#34;&#34;</span>);
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>Result:</p>
+<p><img src="/images/recursion-in-react/javascript-result.png" alt="Javascript Result"></p>
+<h3 id="doing-this-in-react">
+  Doing this in React
+  <a class="heading-link" href="#doing-this-in-react">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<hr>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-jsx" data-lang="jsx"><span style="display:flex;"><span><span style="color:#ff7b72">function</span> Comment({ comment }) {
+</span></span><span style="display:flex;"><span>  <span style="color:#ff7b72">const</span> prefix <span style="color:#ff7b72;font-weight:bold">=</span> Array(comment.level)
+</span></span><span style="display:flex;"><span>    .fill(<span style="color:#a5d6ff">&#34;|&#34;</span>)
+</span></span><span style="display:flex;"><span>    .reduce((acc, item) =&gt; <span style="color:#a5d6ff">`</span><span style="color:#a5d6ff">${</span>acc<span style="color:#a5d6ff">}</span><span style="color:#a5d6ff"> </span><span style="color:#a5d6ff">${</span>item<span style="color:#a5d6ff">}</span><span style="color:#a5d6ff">`</span>, <span style="color:#a5d6ff">&#34;&#34;</span>);
+</span></span><span style="display:flex;"><span>  <span style="color:#ff7b72">return</span> (
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#7ee787">div</span>&gt;
+</span></span><span style="display:flex;"><span>      {prefix} {comment.content}
+</span></span><span style="display:flex;"><span>      &lt;<span style="color:#7ee787">Comments</span> comments<span style="color:#ff7b72;font-weight:bold">=</span>{comment.comments} /&gt;
+</span></span><span style="display:flex;"><span>    &lt;/<span style="color:#7ee787">div</span>&gt;
+</span></span><span style="display:flex;"><span>  );
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#ff7b72">export</span> <span style="color:#ff7b72">default</span> <span style="color:#ff7b72">function</span> Comments({ comments }) {
+</span></span><span style="display:flex;"><span>  <span style="color:#ff7b72">return</span> comments.map((comment) =&gt; {
+</span></span><span style="display:flex;"><span>    <span style="color:#ff7b72">return</span> &lt;<span style="color:#7ee787">Comment</span> comment<span style="color:#ff7b72;font-weight:bold">=</span>{comment} /&gt;;
+</span></span><span style="display:flex;"><span>  });
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>Result:</p>
+<p><img src="/images/recursion-in-react/react-result.png" alt="React Result"></p>
+<h3 id="actual-example-of-rendering-a-comment-tree">
+  Actual example of rendering a comment tree
+  <a class="heading-link" href="#actual-example-of-rendering-a-comment-tree">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<hr>
+<p>It’s unlikely we’ll be using <code>|</code> prefixes when actually building a comment tree. We’ll more likely be playing around with <code>padding</code> and <code>margin</code>.</p>
+<p>Here’s a code example of actual comment tree rendering in React with TailwindCSS: <a href="https://github.com/rahulakrishna/hackrmn/blob/master/src/app/%5Bstorylist%5D/comments/%5Bcommentid%5D/comment-block.js"  class="external-link" target="_blank" rel="noopener">https://github.com/rahulakrishna/hackrmn/blob/master/src/app/[storylist]/comments/[commentid]/comment-block.js</a></p>
+<p><img src="/images/recursion-in-react/real-life-example.png" alt="Untitled"></p>
+<h3 id="references">
+  References
+  <a class="heading-link" href="#references">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<hr>
+<ul>
+<li>Thinking in React: <a href="https://react.dev/learn/thinking-in-react"  class="external-link" target="_blank" rel="noopener">https://react.dev/learn/thinking-in-react</a></li>
+<li>hackrmn repo: <a href="https://github.com/rahulakrishna/hackrmn/tree/master"  class="external-link" target="_blank" rel="noopener">https://github.com/rahulakrishna/hackrmn/tree/master</a></li>
+</ul>
+
+  </article>
+</section>
+
+  
+
+    </div>
+
+    <footer class="footer">
+  <section class="container">
+    ©
+    
+      2019 -
+    
+    2025
+     Rahul Krrishna 
+    ·
+    
+    Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> & <a href="https://github.com/luizdepra/hugo-coder/" target="_blank" rel="noopener">Coder</a>.
+    
+  </section>
+</footer>
+
+  </main>
+
+  
+
+  
+  
+  <script src="/js/coder.min.6ae284be93d2d19dad1f02b0039508d9aab3180a12a06dcc71b0b0ef7825a317.js" integrity="sha256-auKEvpPS0Z2tHwKwA5UI2aqzGAoSoG3McbCw73gloxc="></script>
+  
+
+  
+
+  
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</body>
+</html>

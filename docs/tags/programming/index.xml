@@ -1,52 +1,26 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Programming on Rahul Krrishna</title><link>https://rahulkrrrishna.xyz/tags/programming/</link><description>Recent content in Programming on Rahul Krrishna</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Mon, 01 Jan 2024 11:15:00 +0530</lastBuildDate><atom:link href="https://rahulkrrrishna.xyz/tags/programming/index.xml" rel="self" type="application/rss+xml"/><item><title>Loading vs Fetching</title><link>https://rahulkrrrishna.xyz/blog/2024-01-01-loading-vs-fetching/</link><pubDate>Mon, 01 Jan 2024 11:15:00 +0530</pubDate><guid>https://rahulkrrrishna.xyz/blog/2024-01-01-loading-vs-fetching/</guid><description>&lt;h3 id="the-basics">
- The Basics
- &lt;a class="heading-link" href="#the-basics">
- &lt;i class="fa-solid fa-link" aria-hidden="true" title="Link to heading">&lt;/i>
- &lt;span class="sr-only">Link to heading&lt;/span>
- &lt;/a>
-&lt;/h3>
-&lt;hr>
-&lt;ul>
-&lt;li>No Data + Fetching Data = LOADING&lt;/li>
-&lt;li>Yes Data + Fetching Data = FETCHING&lt;/li>
-&lt;/ul>
-&lt;h3 id="why">
- Why?
- &lt;a class="heading-link" href="#why">
- &lt;i class="fa-solid fa-link" aria-hidden="true" title="Link to heading">&lt;/i>
- &lt;span class="sr-only">Link to heading&lt;/span>
- &lt;/a>
-&lt;/h3>
-&lt;hr>
-&lt;p>As long as the data we have is not invalid. We have no reason to hide it away from the user.&lt;/p>
-&lt;h3 id="examples-from-around-the-world">
- Examples from around the world
- &lt;a class="heading-link" href="#examples-from-around-the-world">
- &lt;i class="fa-solid fa-link" aria-hidden="true" title="Link to heading">&lt;/i>
- &lt;span class="sr-only">Link to heading&lt;/span>
- &lt;/a>
-&lt;/h3>
-&lt;hr>
-&lt;p>Loading | Fetching
-&lt;img src="https://rahulkrrrishna.xyz/images/loading-vs-fetching/Untitled%206.png" alt="YouTube Loading State"> YouTube Loading State |&lt;img src="https://rahulkrrrishna.xyz/images/loading-vs-fetching/Untitled%207.png" alt="YouTube Fetching State"> YouTube Fetching State
-&lt;img src="https://rahulkrrrishna.xyz/images/loading-vs-fetching/Untitled%208.png" alt="Apollo App Loading State"> Apollo App Loading State | &lt;img src="https://rahulkrrrishna.xyz/images/loading-vs-fetching/Untitled%209.png" alt="Apollo App Fetching State"> Apollo App Fetching State
-&lt;img src="https://rahulkrrrishna.xyz/images/loading-vs-fetching/Untitled%2010.png" alt="Fotmob Loading State"> Fotmob Loading State | &lt;img src="https://rahulkrrrishna.xyz/images/loading-vs-fetching/Untitled%2011.png" alt="Fotmob Fetching State"> Fotmob Fetching State&lt;/p></description></item><item><title>Moving to Hugo</title><link>https://rahulkrrrishna.xyz/blog/2025-06-14-moving-to-hugo/</link><pubDate>Wed, 14 Jun 2023 12:17:44 +0530</pubDate><guid>https://rahulkrrrishna.xyz/blog/2025-06-14-moving-to-hugo/</guid><description>&lt;blockquote>
-&lt;p>I moved my Blog from Jekyll to Hugo!&lt;/p>&lt;/blockquote>
-&lt;h3 id="why">
- Why?
- &lt;a class="heading-link" href="#why">
- &lt;i class="fa-solid fa-link" aria-hidden="true" title="Link to heading">&lt;/i>
- &lt;span class="sr-only">Link to heading&lt;/span>
- &lt;/a>
-&lt;/h3>
-&lt;hr>
-&lt;p>Jekyll’s tooling often broke. I found myself upgrading and spending weekends trying to fix something that should’ve felt automatic.&lt;/p>
-&lt;h3 id="markdowns">
- Markdowns
- &lt;a class="heading-link" href="#markdowns">
- &lt;i class="fa-solid fa-link" aria-hidden="true" title="Link to heading">&lt;/i>
- &lt;span class="sr-only">Link to heading&lt;/span>
- &lt;/a>
-&lt;/h3>
-&lt;hr>
-&lt;p>Authors in the book [[The Pragmatic Programmer]] tells us to store as much data as possible in Markdown. And Markdown seems to have won the markup war. (See relevant &lt;a href="https://news.ycombinator.com/item?id=44183923" class="external-link" target="_blank" rel="noopener">Hacker News Discussion&lt;/a>)&lt;/p></description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Programming on Rahul Krrishna</title>
+    <link>https://rahulkrrrishna.xyz/tags/programming/</link>
+    <description>Recent content in Programming on Rahul Krrishna</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 01 Jan 2024 11:15:00 +0530</lastBuildDate>
+    <atom:link href="https://rahulkrrrishna.xyz/tags/programming/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Loading vs Fetching</title>
+      <link>https://rahulkrrrishna.xyz/blog/2024-01-01-loading-vs-fetching/</link>
+      <pubDate>Mon, 01 Jan 2024 11:15:00 +0530</pubDate>
+      <guid>https://rahulkrrrishna.xyz/blog/2024-01-01-loading-vs-fetching/</guid>
+      <description>&lt;h3 id=&#34;the-basics&#34;&gt;&#xA;  The Basics&#xA;  &lt;a class=&#34;heading-link&#34; href=&#34;#the-basics&#34;&gt;&#xA;    &lt;i class=&#34;fa-solid fa-link&#34; aria-hidden=&#34;true&#34; title=&#34;Link to heading&#34;&gt;&lt;/i&gt;&#xA;    &lt;span class=&#34;sr-only&#34;&gt;Link to heading&lt;/span&gt;&#xA;  &lt;/a&gt;&#xA;&lt;/h3&gt;&#xA;&lt;hr&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;No Data + Fetching Data = LOADING&lt;/li&gt;&#xA;&lt;li&gt;Yes Data + Fetching Data = FETCHING&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h3 id=&#34;why&#34;&gt;&#xA;  Why?&#xA;  &lt;a class=&#34;heading-link&#34; href=&#34;#why&#34;&gt;&#xA;    &lt;i class=&#34;fa-solid fa-link&#34; aria-hidden=&#34;true&#34; title=&#34;Link to heading&#34;&gt;&lt;/i&gt;&#xA;    &lt;span class=&#34;sr-only&#34;&gt;Link to heading&lt;/span&gt;&#xA;  &lt;/a&gt;&#xA;&lt;/h3&gt;&#xA;&lt;hr&gt;&#xA;&lt;p&gt;As long as the data we have is not invalid. We have no reason to hide it away from the user.&lt;/p&gt;&#xA;&lt;h3 id=&#34;examples-from-around-the-world&#34;&gt;&#xA;  Examples from around the world&#xA;  &lt;a class=&#34;heading-link&#34; href=&#34;#examples-from-around-the-world&#34;&gt;&#xA;    &lt;i class=&#34;fa-solid fa-link&#34; aria-hidden=&#34;true&#34; title=&#34;Link to heading&#34;&gt;&lt;/i&gt;&#xA;    &lt;span class=&#34;sr-only&#34;&gt;Link to heading&lt;/span&gt;&#xA;  &lt;/a&gt;&#xA;&lt;/h3&gt;&#xA;&lt;hr&gt;&#xA;&lt;p&gt;Loading | Fetching&#xA;&lt;img src=&#34;https://rahulkrrrishna.xyz/images/loading-vs-fetching/Untitled%206.png&#34; alt=&#34;YouTube Loading State&#34;&gt; YouTube Loading State |&lt;img src=&#34;https://rahulkrrrishna.xyz/images/loading-vs-fetching/Untitled%207.png&#34; alt=&#34;YouTube Fetching State&#34;&gt; YouTube Fetching State&#xA;&lt;img src=&#34;https://rahulkrrrishna.xyz/images/loading-vs-fetching/Untitled%208.png&#34; alt=&#34;Apollo App Loading State&#34;&gt; Apollo App Loading State | &lt;img src=&#34;https://rahulkrrrishna.xyz/images/loading-vs-fetching/Untitled%209.png&#34; alt=&#34;Apollo App Fetching State&#34;&gt; Apollo App Fetching State&#xA;&lt;img src=&#34;https://rahulkrrrishna.xyz/images/loading-vs-fetching/Untitled%2010.png&#34; alt=&#34;Fotmob Loading State&#34;&gt; Fotmob Loading State | &lt;img src=&#34;https://rahulkrrrishna.xyz/images/loading-vs-fetching/Untitled%2011.png&#34; alt=&#34;Fotmob Fetching State&#34;&gt; Fotmob Fetching State&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Moving to Hugo</title>
+      <link>https://rahulkrrrishna.xyz/blog/2025-06-14-moving-to-hugo/</link>
+      <pubDate>Wed, 14 Jun 2023 12:17:44 +0530</pubDate>
+      <guid>https://rahulkrrrishna.xyz/blog/2025-06-14-moving-to-hugo/</guid>
+      <description>&lt;blockquote&gt;&#xA;&lt;p&gt;I moved my Blog from Jekyll to Hugo!&lt;/p&gt;&lt;/blockquote&gt;&#xA;&lt;h3 id=&#34;why&#34;&gt;&#xA;  Why?&#xA;  &lt;a class=&#34;heading-link&#34; href=&#34;#why&#34;&gt;&#xA;    &lt;i class=&#34;fa-solid fa-link&#34; aria-hidden=&#34;true&#34; title=&#34;Link to heading&#34;&gt;&lt;/i&gt;&#xA;    &lt;span class=&#34;sr-only&#34;&gt;Link to heading&lt;/span&gt;&#xA;  &lt;/a&gt;&#xA;&lt;/h3&gt;&#xA;&lt;hr&gt;&#xA;&lt;p&gt;Jekyll’s tooling often broke. I found myself upgrading and spending weekends trying to fix something that should’ve felt automatic.&lt;/p&gt;&#xA;&lt;h3 id=&#34;markdowns&#34;&gt;&#xA;  Markdowns&#xA;  &lt;a class=&#34;heading-link&#34; href=&#34;#markdowns&#34;&gt;&#xA;    &lt;i class=&#34;fa-solid fa-link&#34; aria-hidden=&#34;true&#34; title=&#34;Link to heading&#34;&gt;&lt;/i&gt;&#xA;    &lt;span class=&#34;sr-only&#34;&gt;Link to heading&lt;/span&gt;&#xA;  &lt;/a&gt;&#xA;&lt;/h3&gt;&#xA;&lt;hr&gt;&#xA;&lt;p&gt;Authors in the book [[The Pragmatic Programmer]] tells us to store as much data as possible in Markdown. And Markdown seems to have won the markup war. (See relevant &lt;a href=&#34;https://news.ycombinator.com/item?id=44183923&#34;  class=&#34;external-link&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Hacker News Discussion&lt;/a&gt;)&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
