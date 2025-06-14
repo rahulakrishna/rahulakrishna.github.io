@@ -1,19 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-  <title>
-  Memory Leak in Google Maps · Rahul Krrishna
-</title>
-  <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="color-scheme" content="light dark">
-
-
-
-
-<meta name="author" content="Rahul Krrishna">
-<meta name="description" content="
+<!doctype html><html lang=en><head><title>Memory Leak in Google Maps · Rahul Krrishna</title><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta name=color-scheme content="light dark"><meta name=author content="Rahul Krrishna"><meta name=description content="
   Premise
   
     
@@ -24,433 +9,169 @@
 
 In order to visualize geospatial data, we are employing the google-map-react library. However, we have encountered a performance issue when rendering a substantial volume of data points. This issue manifests as a temporary unresponsiveness of the page, followed by a noticeable slowdown in subsequent operations. These symptoms suggest the presence of a memory leak.
 
-This is the code used. The only cleanup happening was setting data to null.">
-<meta name="keywords" content="blog,developer,personal">
-
-
-
-  <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="Memory Leak in Google Maps">
-  <meta name="twitter:description" content="Premise Link to heading In order to visualize geospatial data, we are employing the google-map-react library. However, we have encountered a performance issue when rendering a substantial volume of data points. This issue manifests as a temporary unresponsiveness of the page, followed by a noticeable slowdown in subsequent operations. These symptoms suggest the presence of a memory leak.
-This is the code used. The only cleanup happening was setting data to null.">
-
-<meta property="og:url" content="https://rahulkrrrishna.xyz/blog/2023-10-21-memory-leak-in-google-maps/">
-  <meta property="og:site_name" content="Rahul Krrishna">
-  <meta property="og:title" content="Memory Leak in Google Maps">
-  <meta property="og:description" content="Premise Link to heading In order to visualize geospatial data, we are employing the google-map-react library. However, we have encountered a performance issue when rendering a substantial volume of data points. This issue manifests as a temporary unresponsiveness of the page, followed by a noticeable slowdown in subsequent operations. These symptoms suggest the presence of a memory leak.
-This is the code used. The only cleanup happening was setting data to null.">
-  <meta property="og:locale" content="en_us">
-  <meta property="og:type" content="article">
-    <meta property="article:section" content="blog">
-    <meta property="article:published_time" content="2023-10-21T00:48:44+05:30">
-    <meta property="article:modified_time" content="2023-10-21T00:48:44+05:30">
-
-
-
-
-<link rel="canonical" href="https://rahulkrrrishna.xyz/blog/2023-10-21-memory-leak-in-google-maps/">
-
-
-<link rel="preload" href="/fonts/fa-brands-400.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="/fonts/fa-regular-400.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="/fonts/fa-solid-900.woff2" as="font" type="font/woff2" crossorigin>
-
-
-  
-  
-  <link rel="stylesheet" href="/css/coder.min.6445a802b9389c9660e1b07b724dcf5718b1065ed2d71b4eeaf981cc7cc5fc46.css" integrity="sha256-ZEWoArk4nJZg4bB7ck3PVxixBl7S1xtO6vmBzHzF/EY=" crossorigin="anonymous" media="screen" />
-
-
-
-
-
-
-  
-    
-    
-    <link rel="stylesheet" href="/css/coder-dark.min.a00e6364bacbc8266ad1cc81230774a1397198f8cfb7bcba29b7d6fcb54ce57f.css" integrity="sha256-oA5jZLrLyCZq0cyBIwd0oTlxmPjPt7y6KbfW/LVM5X8=" crossorigin="anonymous" media="screen" />
-  
-
-
-
- 
-
-
-
-
-<link rel="icon" type="image/svg+xml" href="/img/favicon.svg" sizes="any">
-<link rel="icon" type="image/png" href="/img/favicon-32x32.png" sizes="32x32">
-<link rel="icon" type="image/png" href="/img/favicon-16x16.png" sizes="16x16">
-
-<link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
-<link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
-
-<link rel="manifest" href="/site.webmanifest">
-<link rel="mask-icon" href="/images/safari-pinned-tab.svg" color="#5bbad5">
-
-
-
-
-
-
-
-
-
-</head>
-
-
-
-
-
-
-<body class="preload-transitions colorscheme-auto">
-  
-<div class="float-container">
-    <a id="dark-mode-toggle" class="colorscheme-toggle">
-        <i class="fa-solid fa-adjust fa-fw" aria-hidden="true"></i>
-    </a>
-</div>
-
-
-  <main class="wrapper">
-    <nav class="navigation">
-  <section class="container">
-    
-    <a class="navigation-title" href="https://rahulkrrrishna.xyz/">
-      Rahul Krrishna
-    </a>
-    
-    
-      <input type="checkbox" id="menu-toggle" />
-      <label class="menu-button float-right" for="menu-toggle">
-        <i class="fa-solid fa-bars fa-fw" aria-hidden="true"></i>
-      </label>
-      <ul class="navigation-list">
-        
-          
-            <li class="navigation-item">
-              <a class="navigation-link " href="/blog/">Blog</a>
-            </li>
-          
-            <li class="navigation-item">
-              <a class="navigation-link " href="/about/">About</a>
-            </li>
-          
-            <li class="navigation-item">
-              <a class="navigation-link " href="/resume/">Resume</a>
-            </li>
-          
-        
-        
-      </ul>
-    
-  </section>
-</nav>
-
-
-    <div class="content">
-      
-  <section class="container page">
-  <article>
-    <header>
-      <h1 class="title">
-        <a class="title-link" href="https://rahulkrrrishna.xyz/blog/2023-10-21-memory-leak-in-google-maps/">
-          Memory Leak in Google Maps
-        </a>
-      </h1>
-    </header>
-
-    <h3 id="premise">
-  Premise
-  <a class="heading-link" href="#premise">
-    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
-    <span class="sr-only">Link to heading</span>
-  </a>
-</h3>
-<hr>
-<p><img src="https://thisdot.notion.site/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2Feb53edbf-045d-426c-aa09-d626c2816f18%2F0a0376ef-1fed-43b9-b795-a0838c2dc18a%2FUntitled.png?table=block&amp;id=5dbb1e64-43ed-4918-8607-981ca6a374a1&amp;spaceId=eb53edbf-045d-426c-aa09-d626c2816f18&amp;width=2000&amp;userId=&amp;cache=v2" alt="Untitled"></p>
-<p>In order to visualize geospatial data, we are employing the google-map-react library. However, we have encountered a performance issue when rendering a substantial volume of data points. This issue manifests as a temporary unresponsiveness of the page, followed by a noticeable slowdown in subsequent operations. These symptoms suggest the presence of a memory leak.</p>
-<p><img src="https://thisdot.notion.site/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2Feb53edbf-045d-426c-aa09-d626c2816f18%2F0e323202-b790-4d19-9f30-e80445bcea0f%2FUntitled.png?table=block&amp;id=30bf63d9-45c4-4bbe-b5d0-b6d31ee4bff2&amp;spaceId=eb53edbf-045d-426c-aa09-d626c2816f18&amp;width=770&amp;userId=&amp;cache=v2" alt="Untitled"></p>
-<p>This is the code used. The only cleanup happening was setting <code>data</code> to <code>null</code>.</p>
-<h3 id="the-issue">
-  The issue
-  <a class="heading-link" href="#the-issue">
-    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
-    <span class="sr-only">Link to heading</span>
-  </a>
-</h3>
-<hr>
-<p>There are three issues present here.</p>
-<ol>
-<li><strong>Destroying Google Maps instance never frees up memory.</strong> The persistent memory leak issue within the Google Maps JavaScript Library has been a significant concern for developers. Upon visiting the page, approximately 600MB of memory remains unfreed, leading to potential performance degradation. This problem was initially documented in Google&rsquo;s Bug Tracker in 2011, and the most recent update was in February 2023, indicating that this issue has persisted for over a decade.</li>
-<li><strong>A line consists of three drawings.</strong> In an optimal scenario, the &rsquo;trip line&rsquo; should be represented by a single stroke. However, in the current implementation, we are generating three separate drawings: one Polyline and two Markers. It has been observed that the process of rendering the Markers is particularly resource-intensive, leading to a noticeable decrease in performance.</li>
-<li><strong>The <code>Polylines</code> could be made into an Overlay.</strong> In lieu of instantiating classes within the Google Maps environment, we propose the development of a distinct Polyline component. This approach would allow us to isolate and effectively manage any associated memory-related issues within this separate component.</li>
-</ol>
-<h3 id="the-fix-for-google-maps-memory-leak">
-  The fix for Google Maps memory leak
-  <a class="heading-link" href="#the-fix-for-google-maps-memory-leak">
-    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
-    <span class="sr-only">Link to heading</span>
-  </a>
-</h3>
-<hr>
-<p><img src="https://thisdot.notion.site/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2Feb53edbf-045d-426c-aa09-d626c2816f18%2Ff108918c-c184-41f9-b6a7-2af7273ea800%2FUntitled.png?table=block&amp;id=80c8accc-556f-495f-813f-82e5ae28c497&amp;spaceId=eb53edbf-045d-426c-aa09-d626c2816f18&amp;width=2000&amp;userId=&amp;cache=v2" alt="Untitled"></p>
-<p>But we can try to Introduce a function to manually delete all of Google Map’s event listeners.</p>
-<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-jsx" data-lang="jsx"><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic">// Helper function: Removes all event listeners registered with Google&#39;s addDomListener function,
-</span></span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic">// including from __e3_ properties on target objects.
-</span></span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"></span><span style="color:#ff7b72">function</span> removeAllGoogleListeners(target, event) {
-</span></span><span style="display:flex;"><span>  <span style="color:#ff7b72">var</span> listeners <span style="color:#ff7b72;font-weight:bold">=</span> target[<span style="color:#a5d6ff">&#34;__e3_&#34;</span>];
-</span></span><span style="display:flex;"><span>  <span style="color:#ff7b72">if</span> (<span style="color:#ff7b72;font-weight:bold">!</span>listeners) {
-</span></span><span style="display:flex;"><span>    console.warn(
-</span></span><span style="display:flex;"><span>      <span style="color:#a5d6ff">&#34;Couldn&#39;t find property __e3_ containing Google Maps listeners. Perhaps Google updated the Maps SDK?&#34;</span>
-</span></span><span style="display:flex;"><span>    );
-</span></span><span style="display:flex;"><span>    <span style="color:#ff7b72">return</span>;
-</span></span><span style="display:flex;"><span>  }
-</span></span><span style="display:flex;"><span>  <span style="color:#ff7b72">var</span> evListeners <span style="color:#ff7b72;font-weight:bold">=</span> listeners[event];
-</span></span><span style="display:flex;"><span>  <span style="color:#ff7b72">if</span> (evListeners) {
-</span></span><span style="display:flex;"><span>    <span style="color:#ff7b72">for</span> (<span style="color:#ff7b72">var</span> key <span style="color:#ff7b72">in</span> evListeners) {
-</span></span><span style="display:flex;"><span>      <span style="color:#ff7b72">if</span> (evListeners.hasOwnProperty(key)) {
-</span></span><span style="display:flex;"><span>        google.maps.event.removeListener(evListeners[key]);
-</span></span><span style="display:flex;"><span>      }
-</span></span><span style="display:flex;"><span>    }
-</span></span><span style="display:flex;"><span>  }
-</span></span><span style="display:flex;"><span>}
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic">// Removes all DOM listeners for the given target and event.
-</span></span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"></span><span style="color:#ff7b72">function</span> removeAllDOMListeners(target, event) {
-</span></span><span style="display:flex;"><span>  <span style="color:#ff7b72">var</span> listeners <span style="color:#ff7b72;font-weight:bold">=</span> target[<span style="color:#a5d6ff">&#34;__listeners_&#34;</span>];
-</span></span><span style="display:flex;"><span>  <span style="color:#ff7b72">if</span> (<span style="color:#ff7b72;font-weight:bold">!</span>listeners <span style="color:#ff7b72;font-weight:bold">||</span> <span style="color:#ff7b72;font-weight:bold">!</span>listeners.length) {
-</span></span><span style="display:flex;"><span>    <span style="color:#ff7b72">return</span>;
-</span></span><span style="display:flex;"><span>  }
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>  <span style="color:#8b949e;font-style:italic">// Copy to avoid iterating over array that we mutate via removeEventListener
-</span></span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"></span>  <span style="color:#ff7b72">var</span> copy <span style="color:#ff7b72;font-weight:bold">=</span> listeners.slice(<span style="color:#a5d6ff">0</span>);
-</span></span><span style="display:flex;"><span>  <span style="color:#ff7b72">for</span> (<span style="color:#ff7b72">var</span> i <span style="color:#ff7b72;font-weight:bold">=</span> <span style="color:#a5d6ff">0</span>; i <span style="color:#ff7b72;font-weight:bold">&lt;</span> copy.length; i<span style="color:#ff7b72;font-weight:bold">++</span>) {
-</span></span><span style="display:flex;"><span>    target.removeEventListener(event, copy[i]);
-</span></span><span style="display:flex;"><span>  }
-</span></span><span style="display:flex;"><span>}
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic">// Shim addEventListener to capture and store registered event listeners.
-</span></span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"></span><span style="color:#ff7b72">var</span> addEventListener <span style="color:#ff7b72;font-weight:bold">=</span> EventTarget.prototype.addEventListener;
-</span></span><span style="display:flex;"><span>EventTarget.prototype.addEventListener <span style="color:#ff7b72;font-weight:bold">=</span> <span style="color:#ff7b72">function</span> () {
-</span></span><span style="display:flex;"><span>  <span style="color:#ff7b72">var</span> eventName <span style="color:#ff7b72;font-weight:bold">=</span> arguments[<span style="color:#a5d6ff">0</span>];
-</span></span><span style="display:flex;"><span>  <span style="color:#ff7b72">var</span> listener <span style="color:#ff7b72;font-weight:bold">=</span> arguments[<span style="color:#a5d6ff">1</span>];
-</span></span><span style="display:flex;"><span>  <span style="color:#ff7b72">if</span> (<span style="color:#ff7b72;font-weight:bold">!</span><span style="color:#ff7b72">this</span>[<span style="color:#a5d6ff">&#34;__listeners_&#34;</span>]) {
-</span></span><span style="display:flex;"><span>    <span style="color:#ff7b72">this</span>.__listeners_ <span style="color:#ff7b72;font-weight:bold">=</span> {};
-</span></span><span style="display:flex;"><span>  }
-</span></span><span style="display:flex;"><span>  <span style="color:#ff7b72">var</span> listeners <span style="color:#ff7b72;font-weight:bold">=</span> <span style="color:#ff7b72">this</span>.__listeners_;
-</span></span><span style="display:flex;"><span>  <span style="color:#ff7b72">if</span> (<span style="color:#ff7b72;font-weight:bold">!</span>listeners[eventName]) {
-</span></span><span style="display:flex;"><span>    listeners[eventName] <span style="color:#ff7b72;font-weight:bold">=</span> [];
-</span></span><span style="display:flex;"><span>  }
-</span></span><span style="display:flex;"><span>  listeners[eventName].push(listener);
-</span></span><span style="display:flex;"><span>  <span style="color:#ff7b72">return</span> addEventListener.apply(<span style="color:#ff7b72">this</span>, arguments);
-</span></span><span style="display:flex;"><span>};
-</span></span><span style="display:flex;"><span><span style="color:#ff7b72">var</span> removeEventListener <span style="color:#ff7b72;font-weight:bold">=</span> EventTarget.prototype.removeEventListener;
-</span></span><span style="display:flex;"><span>EventTarget.prototype.removeEventListener <span style="color:#ff7b72;font-weight:bold">=</span> <span style="color:#ff7b72">function</span> () {
-</span></span><span style="display:flex;"><span>  <span style="color:#ff7b72">var</span> eventName <span style="color:#ff7b72;font-weight:bold">=</span> arguments[<span style="color:#a5d6ff">0</span>];
-</span></span><span style="display:flex;"><span>  <span style="color:#ff7b72">var</span> listener <span style="color:#ff7b72;font-weight:bold">=</span> arguments[<span style="color:#a5d6ff">1</span>];
-</span></span><span style="display:flex;"><span>  <span style="color:#ff7b72">if</span> (<span style="color:#ff7b72">this</span>[<span style="color:#a5d6ff">&#34;__listeners_&#34;</span>] <span style="color:#ff7b72;font-weight:bold">&amp;&amp;</span> <span style="color:#ff7b72">this</span>.__listeners_[eventName]) {
-</span></span><span style="display:flex;"><span>    <span style="color:#8b949e;font-style:italic">// Loop because the same listener may be added twice with different
-</span></span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"></span>    <span style="color:#8b949e;font-style:italic">// options, and because our simple addEventListener shim doesn&#39;t
-</span></span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"></span>    <span style="color:#8b949e;font-style:italic">// check for duplicates.
-</span></span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"></span>    <span style="color:#ff7b72">while</span> (<span style="color:#79c0ff">true</span>) {
-</span></span><span style="display:flex;"><span>      <span style="color:#ff7b72">var</span> i <span style="color:#ff7b72;font-weight:bold">=</span> <span style="color:#ff7b72">this</span>.__listeners_[eventName].indexOf(listener);
-</span></span><span style="display:flex;"><span>      <span style="color:#ff7b72">if</span> (i <span style="color:#ff7b72;font-weight:bold">===</span> <span style="color:#ff7b72;font-weight:bold">-</span><span style="color:#a5d6ff">1</span>) {
-</span></span><span style="display:flex;"><span>        <span style="color:#ff7b72">break</span>;
-</span></span><span style="display:flex;"><span>      }
-</span></span><span style="display:flex;"><span>      <span style="color:#ff7b72">this</span>.__listeners_[eventName].splice(i, <span style="color:#a5d6ff">1</span>);
-</span></span><span style="display:flex;"><span>    }
-</span></span><span style="display:flex;"><span>  }
-</span></span><span style="display:flex;"><span>  <span style="color:#ff7b72">return</span> removeEventListener.apply(<span style="color:#ff7b72">this</span>, arguments);
-</span></span><span style="display:flex;"><span>};
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic">// After you remove the Google Map from the DOM, call this function to completely free the object.
-</span></span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"></span><span style="color:#ff7b72">export</span> <span style="color:#ff7b72">default</span> <span style="color:#ff7b72">function</span> destroyGoogleMaps(window) {
-</span></span><span style="display:flex;"><span>  removeAllGoogleListeners(window, <span style="color:#a5d6ff">&#34;blur&#34;</span>);
-</span></span><span style="display:flex;"><span>  removeAllGoogleListeners(window, <span style="color:#a5d6ff">&#34;resize&#34;</span>);
-</span></span><span style="display:flex;"><span>  removeAllGoogleListeners(document, <span style="color:#a5d6ff">&#34;click&#34;</span>);
-</span></span><span style="display:flex;"><span>  removeAllGoogleListeners(document, <span style="color:#a5d6ff">&#34;keydown&#34;</span>);
-</span></span><span style="display:flex;"><span>  removeAllGoogleListeners(document, <span style="color:#a5d6ff">&#34;keypress&#34;</span>);
-</span></span><span style="display:flex;"><span>  removeAllGoogleListeners(document, <span style="color:#a5d6ff">&#34;keyup&#34;</span>);
-</span></span><span style="display:flex;"><span>  removeAllGoogleListeners(document, <span style="color:#a5d6ff">&#34;MSFullscreenChange&#34;</span>);
-</span></span><span style="display:flex;"><span>  removeAllGoogleListeners(document, <span style="color:#a5d6ff">&#34;fullscreenchange&#34;</span>);
-</span></span><span style="display:flex;"><span>  removeAllGoogleListeners(document, <span style="color:#a5d6ff">&#34;mozfullscreenchange&#34;</span>);
-</span></span><span style="display:flex;"><span>  removeAllGoogleListeners(document, <span style="color:#a5d6ff">&#34;webkitfullscreenchange&#34;</span>);
-</span></span><span style="display:flex;"><span>  <span style="color:#8b949e;font-style:italic">// ASSUMPTION: No other library registers global resize and scroll event listeners! If this is not true, then you&#39;ll need to add logic to avoid removing these.
-</span></span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"></span>  removeAllDOMListeners(window, <span style="color:#a5d6ff">&#34;resize&#34;</span>);
-</span></span><span style="display:flex;"><span>  removeAllDOMListeners(window, <span style="color:#a5d6ff">&#34;scroll&#34;</span>);
-</span></span><span style="display:flex;"><span>}
-</span></span></code></pre></div><p>Credit to this commenter: <a href="https://issuetracker.google.com/issues/35821412#comment53"  class="external-link" target="_blank" rel="noopener">https://issuetracker.google.com/issues/35821412#comment53</a></p>
-<p>This resolves the memory issue to an extent.</p>
-<p><img src="https://thisdot.notion.site/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2Feb53edbf-045d-426c-aa09-d626c2816f18%2Ffe42a452-2cc2-427c-968f-82db2d143156%2FUntitled.png?table=block&amp;id=0d8af477-8bce-4572-aab4-45dd1c0d31e0&amp;spaceId=eb53edbf-045d-426c-aa09-d626c2816f18&amp;width=1150&amp;userId=&amp;cache=v2" alt="The flow observed is. Landing page → Page with Trips View → Page with another Google Map → Page without Google Map"></p>
-<p>The flow observed is. Landing page → Page with Trips View → Page with another Google Map → Page without Google Map</p>
-<p>In Prod and Staging, the Page without Google Maps hogs up memory while introducing the memory cleanup in dev shows us that it requires way less memory!</p>
-<h3 id="the-fix-for-three-drawings">
-  The fix for three drawings
-  <a class="heading-link" href="#the-fix-for-three-drawings">
-    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
-    <span class="sr-only">Link to heading</span>
-  </a>
-</h3>
-<hr>
-<p>This one happens to be very simple. While creating a <code>Polyline</code>, just specify an icon and set the <code>repeat</code> value as <code>100%</code>.</p>
-<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-jsx" data-lang="jsx"><span style="display:flex;"><span><span style="color:#ff7b72">new</span> google.maps.Polyline({
-</span></span><span style="display:flex;"><span>  strokeColor<span style="color:#ff7b72;font-weight:bold">:</span> props.color,
-</span></span><span style="display:flex;"><span>  geodesic<span style="color:#ff7b72;font-weight:bold">:</span> <span style="color:#79c0ff">true</span>,
-</span></span><span style="display:flex;"><span>  strokeWeight<span style="color:#ff7b72;font-weight:bold">:</span> <span style="color:#a5d6ff">3</span>,
-</span></span><span style="display:flex;"><span>  icons<span style="color:#ff7b72;font-weight:bold">:</span> [
-</span></span><span style="display:flex;"><span>    {
-</span></span><span style="display:flex;"><span>      icon<span style="color:#ff7b72;font-weight:bold">:</span> {
-</span></span><span style="display:flex;"><span>        path<span style="color:#ff7b72;font-weight:bold">:</span> google.maps.SymbolPath.CIRCLE,
-</span></span><span style="display:flex;"><span>      },
-</span></span><span style="display:flex;"><span>      repeat<span style="color:#ff7b72;font-weight:bold">:</span> <span style="color:#a5d6ff">&#34;100%&#34;</span>,
-</span></span><span style="display:flex;"><span>    },
-</span></span><span style="display:flex;"><span>  ],
-</span></span><span style="display:flex;"><span>});
-</span></span></code></pre></div><p>We can even make the <code>icon</code> a <code>SymbolPath.FORWARD_PATH</code> (Reference: <a href="https://developers.google.com/maps/documentation/javascript/reference/marker#SymbolPath"  class="external-link" target="_blank" rel="noopener">https://developers.google.com/maps/documentation/javascript/reference/marker#SymbolPath</a>) indicating the trip direction as well!</p>
-<h3 id="making-the-polylines-an-overlay">
-  Making the Polylines an Overlay
-  <a class="heading-link" href="#making-the-polylines-an-overlay">
-    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
-    <span class="sr-only">Link to heading</span>
-  </a>
-</h3>
-<hr>
-<p>Now all of the computations happen inside the <code>onGoogleApiLoaded</code> method of <code>google-map-react</code>.</p>
-<p><img src="https://thisdot.notion.site/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2Feb53edbf-045d-426c-aa09-d626c2816f18%2Fc21921e8-55ab-43f5-988b-7b687e7d6640%2FUntitled.png?table=block&amp;id=adc3f881-36c7-434c-8519-eefa45454bcc&amp;spaceId=eb53edbf-045d-426c-aa09-d626c2816f18&amp;width=2000&amp;userId=&amp;cache=v2" alt="Untitled"></p>
-<p>First thing, we make this function do nothing but set a state called <code>map</code>. This is for us to later set the <code>PolyLine</code> on to the map.</p>
-<p><code>Polyline.js</code></p>
-<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-jsx" data-lang="jsx"><span style="display:flex;"><span><span style="color:#ff7b72">import</span> { useState } from <span style="color:#a5d6ff">&#34;react&#34;</span>;
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#ff7b72">import</span> useDeepCompareEffect from <span style="color:#a5d6ff">&#34;use-deep-compare-effect&#34;</span>;
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#ff7b72">function</span> pathsDiffer(path1, path2) {
-</span></span><span style="display:flex;"><span>  <span style="color:#ff7b72">if</span> (path1.getLength() <span style="color:#ff7b72;font-weight:bold">!=</span> path2.length) <span style="color:#ff7b72">return</span> <span style="color:#79c0ff">true</span>;
-</span></span><span style="display:flex;"><span>  <span style="color:#ff7b72">for</span> (<span style="color:#ff7b72">const</span> [i, val] <span style="color:#ff7b72">of</span> path2.entries())
-</span></span><span style="display:flex;"><span>    <span style="color:#ff7b72">if</span> (path1.getAt(i).toJSON() <span style="color:#ff7b72;font-weight:bold">!=</span> val) <span style="color:#ff7b72">return</span> <span style="color:#79c0ff">true</span>;
-</span></span><span style="display:flex;"><span>  <span style="color:#ff7b72">return</span> <span style="color:#79c0ff">false</span>;
-</span></span><span style="display:flex;"><span>}
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#ff7b72">export</span> <span style="color:#ff7b72">default</span> <span style="color:#ff7b72">function</span> PolyLine(props) {
-</span></span><span style="display:flex;"><span>  <span style="color:#ff7b72">const</span> [polyline, setPolyline] <span style="color:#ff7b72;font-weight:bold">=</span> useState(<span style="color:#79c0ff">null</span>);
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>  useDeepCompareEffect(() =&gt; {
-</span></span><span style="display:flex;"><span>    <span style="color:#8b949e;font-style:italic">// Create polyline after map initialized.
-</span></span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"></span>    <span style="color:#ff7b72">if</span> (<span style="color:#ff7b72;font-weight:bold">!</span>polyline <span style="color:#ff7b72;font-weight:bold">&amp;&amp;</span> props.map) {
-</span></span><span style="display:flex;"><span>      setPolyline(
-</span></span><span style="display:flex;"><span>        <span style="color:#ff7b72">new</span> google.maps.Polyline({
-</span></span><span style="display:flex;"><span>          strokeColor<span style="color:#ff7b72;font-weight:bold">:</span> props.color,
-</span></span><span style="display:flex;"><span>          geodesic<span style="color:#ff7b72;font-weight:bold">:</span> <span style="color:#79c0ff">true</span>,
-</span></span><span style="display:flex;"><span>          strokeWeight<span style="color:#ff7b72;font-weight:bold">:</span> <span style="color:#a5d6ff">3</span>,
-</span></span><span style="display:flex;"><span>          icons<span style="color:#ff7b72;font-weight:bold">:</span> [
-</span></span><span style="display:flex;"><span>            {
-</span></span><span style="display:flex;"><span>              icon<span style="color:#ff7b72;font-weight:bold">:</span> {
-</span></span><span style="display:flex;"><span>                path<span style="color:#ff7b72;font-weight:bold">:</span> google.maps.SymbolPath.FORWARD_CLOSED_ARROW,
-</span></span><span style="display:flex;"><span>              },
-</span></span><span style="display:flex;"><span>              repeat<span style="color:#ff7b72;font-weight:bold">:</span> <span style="color:#a5d6ff">&#34;100%&#34;</span>,
-</span></span><span style="display:flex;"><span>            },
-</span></span><span style="display:flex;"><span>          ],
-</span></span><span style="display:flex;"><span>        })
-</span></span><span style="display:flex;"><span>      );
-</span></span><span style="display:flex;"><span>    }
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    <span style="color:#8b949e;font-style:italic">// Synchronize map polyline with component props.
-</span></span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"></span>    <span style="color:#ff7b72">if</span> (polyline <span style="color:#ff7b72;font-weight:bold">&amp;&amp;</span> polyline.getMap() <span style="color:#ff7b72;font-weight:bold">!=</span> props.map) polyline.setMap(props.map);
-</span></span><span style="display:flex;"><span>    <span style="color:#ff7b72">if</span> (polyline <span style="color:#ff7b72;font-weight:bold">&amp;&amp;</span> pathsDiffer(polyline.getPath(), props.path))
-</span></span><span style="display:flex;"><span>      polyline.setPath(props.path);
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    <span style="color:#ff7b72">return</span> () =&gt; {
-</span></span><span style="display:flex;"><span>      <span style="color:#8b949e;font-style:italic">// Cleanup: remove line from map
-</span></span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"></span>      <span style="color:#ff7b72">if</span> (polyline) polyline.setMap(<span style="color:#79c0ff">null</span>);
-</span></span><span style="display:flex;"><span>    };
-</span></span><span style="display:flex;"><span>  }, [props, polyline]);
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>  <span style="color:#ff7b72">return</span> <span style="color:#79c0ff">null</span>;
-</span></span><span style="display:flex;"><span>}
-</span></span></code></pre></div><p>Now inside the component,</p>
-<p><img src="https://thisdot.notion.site/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2Feb53edbf-045d-426c-aa09-d626c2816f18%2F06f2f061-7282-4b42-b7bf-05a516c6948a%2FUntitled.png?table=block&amp;id=fb0f015d-24d0-4dda-b856-b0f1071b8920&amp;spaceId=eb53edbf-045d-426c-aa09-d626c2816f18&amp;width=2000&amp;userId=&amp;cache=v2" alt="Untitled"></p>
-<p>Finally, as a sibling to <code>GoogleMapReact</code> we introduce the <code>Polyline</code> component.</p>
-<p><img src="https://thisdot.notion.site/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2Feb53edbf-045d-426c-aa09-d626c2816f18%2F1b6f3ecc-80c9-4b1e-8d59-243dc478a655%2FUntitled.png?table=block&amp;id=fd6242dd-8dd0-4275-9be4-3c536257d5e6&amp;spaceId=eb53edbf-045d-426c-aa09-d626c2816f18&amp;width=770&amp;userId=&amp;cache=v2" alt="Untitled"></p>
-<h3 id="final-result">
-  Final Result
-  <a class="heading-link" href="#final-result">
-    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
-    <span class="sr-only">Link to heading</span>
-  </a>
-</h3>
-<hr>
-<p>Maps look way more meaningful</p>
-<p><img src="https://thisdot.notion.site/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2Feb53edbf-045d-426c-aa09-d626c2816f18%2F31bb1d16-a928-4993-940d-dba7f906cfe8%2FUntitled.png?table=block&amp;id=2614941e-393c-448d-b6cc-87fa477d10e6&amp;spaceId=eb53edbf-045d-426c-aa09-d626c2816f18&amp;width=2000&amp;userId=&amp;cache=v2" alt="Untitled"></p>
-<p>The memory consumption which went from <code>500MB</code> to <code>367MB</code> after memory cleanup, went down to <code>140MB</code> after removing the marker drawings!</p>
-
-  </article>
-</section>
-
-  
-
-    </div>
-
-    <footer class="footer">
-  <section class="container">
-    ©
-    
-      2019 -
-    
-    2025
-     Rahul Krrishna 
-    ·
-    
-    Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> & <a href="https://github.com/luizdepra/hugo-coder/" target="_blank" rel="noopener">Coder</a>.
-    
-  </section>
-</footer>
-
-  </main>
-
-  
-
-  
-  
-  <script src="/js/coder.min.6ae284be93d2d19dad1f02b0039508d9aab3180a12a06dcc71b0b0ef7825a317.js" integrity="sha256-auKEvpPS0Z2tHwKwA5UI2aqzGAoSoG3McbCw73gloxc="></script>
-  
-
-  
-
-  
-
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-</body>
-</html>
+This is the code used. The only cleanup happening was setting data to null."><meta name=keywords content="blog,developer,personal"><meta name=twitter:card content="summary"><meta name=twitter:title content="Memory Leak in Google Maps"><meta name=twitter:description content="Premise Link to heading In order to visualize geospatial data, we are employing the google-map-react library. However, we have encountered a performance issue when rendering a substantial volume of data points. This issue manifests as a temporary unresponsiveness of the page, followed by a noticeable slowdown in subsequent operations. These symptoms suggest the presence of a memory leak.
+This is the code used. The only cleanup happening was setting data to null."><meta property="og:url" content="https://rahulkrrrishna.xyz/blog/2023-10-21-memory-leak-in-google-maps/"><meta property="og:site_name" content="Rahul Krrishna"><meta property="og:title" content="Memory Leak in Google Maps"><meta property="og:description" content="Premise Link to heading In order to visualize geospatial data, we are employing the google-map-react library. However, we have encountered a performance issue when rendering a substantial volume of data points. This issue manifests as a temporary unresponsiveness of the page, followed by a noticeable slowdown in subsequent operations. These symptoms suggest the presence of a memory leak.
+This is the code used. The only cleanup happening was setting data to null."><meta property="og:locale" content="en_us"><meta property="og:type" content="article"><meta property="article:section" content="blog"><meta property="article:published_time" content="2023-10-21T00:48:44+05:30"><meta property="article:modified_time" content="2023-10-21T00:48:44+05:30"><link rel=canonical href=https://rahulkrrrishna.xyz/blog/2023-10-21-memory-leak-in-google-maps/><link rel=preload href=/fonts/fa-brands-400.woff2 as=font type=font/woff2 crossorigin><link rel=preload href=/fonts/fa-regular-400.woff2 as=font type=font/woff2 crossorigin><link rel=preload href=/fonts/fa-solid-900.woff2 as=font type=font/woff2 crossorigin><link rel=stylesheet href=/css/coder.min.6445a802b9389c9660e1b07b724dcf5718b1065ed2d71b4eeaf981cc7cc5fc46.css integrity="sha256-ZEWoArk4nJZg4bB7ck3PVxixBl7S1xtO6vmBzHzF/EY=" crossorigin=anonymous media=screen><link rel=stylesheet href=/css/coder-dark.min.a00e6364bacbc8266ad1cc81230774a1397198f8cfb7bcba29b7d6fcb54ce57f.css integrity="sha256-oA5jZLrLyCZq0cyBIwd0oTlxmPjPt7y6KbfW/LVM5X8=" crossorigin=anonymous media=screen><link rel=icon type=image/svg+xml href=/img/favicon.svg sizes=any><link rel=icon type=image/png href=/img/favicon-32x32.png sizes=32x32><link rel=icon type=image/png href=/img/favicon-16x16.png sizes=16x16><link rel=apple-touch-icon href=/images/apple-touch-icon.png><link rel=apple-touch-icon sizes=180x180 href=/images/apple-touch-icon.png><link rel=manifest href=/site.webmanifest><link rel=mask-icon href=/images/safari-pinned-tab.svg color=#5bbad5></head><body class="preload-transitions colorscheme-auto"><div class=float-container><a id=dark-mode-toggle class=colorscheme-toggle><i class="fa-solid fa-adjust fa-fw" aria-hidden=true></i></a></div><main class=wrapper><nav class=navigation><section class=container><a class=navigation-title href=https://rahulkrrrishna.xyz/>Rahul Krrishna
+</a><input type=checkbox id=menu-toggle>
+<label class="menu-button float-right" for=menu-toggle><i class="fa-solid fa-bars fa-fw" aria-hidden=true></i></label><ul class=navigation-list><li class=navigation-item><a class=navigation-link href=/blog/>Blog</a></li><li class=navigation-item><a class=navigation-link href=/about/>About</a></li><li class=navigation-item><a class=navigation-link href=/resume/>Resume</a></li></ul></section></nav><div class=content><section class="container page"><article><header><h1 class=title><a class=title-link href=https://rahulkrrrishna.xyz/blog/2023-10-21-memory-leak-in-google-maps/>Memory Leak in Google Maps</a></h1></header><h3 id=premise>Premise
+<a class=heading-link href=#premise><i class="fa-solid fa-link" aria-hidden=true title="Link to heading"></i>
+<span class=sr-only>Link to heading</span></a></h3><hr><p><img src="https://thisdot.notion.site/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2Feb53edbf-045d-426c-aa09-d626c2816f18%2F0a0376ef-1fed-43b9-b795-a0838c2dc18a%2FUntitled.png?table=block&amp;id=5dbb1e64-43ed-4918-8607-981ca6a374a1&amp;spaceId=eb53edbf-045d-426c-aa09-d626c2816f18&amp;width=2000&amp;userId=&amp;cache=v2" alt=Untitled></p><p>In order to visualize geospatial data, we are employing the google-map-react library. However, we have encountered a performance issue when rendering a substantial volume of data points. This issue manifests as a temporary unresponsiveness of the page, followed by a noticeable slowdown in subsequent operations. These symptoms suggest the presence of a memory leak.</p><p><img src="https://thisdot.notion.site/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2Feb53edbf-045d-426c-aa09-d626c2816f18%2F0e323202-b790-4d19-9f30-e80445bcea0f%2FUntitled.png?table=block&amp;id=30bf63d9-45c4-4bbe-b5d0-b6d31ee4bff2&amp;spaceId=eb53edbf-045d-426c-aa09-d626c2816f18&amp;width=770&amp;userId=&amp;cache=v2" alt=Untitled></p><p>This is the code used. The only cleanup happening was setting <code>data</code> to <code>null</code>.</p><h3 id=the-issue>The issue
+<a class=heading-link href=#the-issue><i class="fa-solid fa-link" aria-hidden=true title="Link to heading"></i>
+<span class=sr-only>Link to heading</span></a></h3><hr><p>There are three issues present here.</p><ol><li><strong>Destroying Google Maps instance never frees up memory.</strong> The persistent memory leak issue within the Google Maps JavaScript Library has been a significant concern for developers. Upon visiting the page, approximately 600MB of memory remains unfreed, leading to potential performance degradation. This problem was initially documented in Google&rsquo;s Bug Tracker in 2011, and the most recent update was in February 2023, indicating that this issue has persisted for over a decade.</li><li><strong>A line consists of three drawings.</strong> In an optimal scenario, the &rsquo;trip line&rsquo; should be represented by a single stroke. However, in the current implementation, we are generating three separate drawings: one Polyline and two Markers. It has been observed that the process of rendering the Markers is particularly resource-intensive, leading to a noticeable decrease in performance.</li><li><strong>The <code>Polylines</code> could be made into an Overlay.</strong> In lieu of instantiating classes within the Google Maps environment, we propose the development of a distinct Polyline component. This approach would allow us to isolate and effectively manage any associated memory-related issues within this separate component.</li></ol><h3 id=the-fix-for-google-maps-memory-leak>The fix for Google Maps memory leak
+<a class=heading-link href=#the-fix-for-google-maps-memory-leak><i class="fa-solid fa-link" aria-hidden=true title="Link to heading"></i>
+<span class=sr-only>Link to heading</span></a></h3><hr><p><img src="https://thisdot.notion.site/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2Feb53edbf-045d-426c-aa09-d626c2816f18%2Ff108918c-c184-41f9-b6a7-2af7273ea800%2FUntitled.png?table=block&amp;id=80c8accc-556f-495f-813f-82e5ae28c497&amp;spaceId=eb53edbf-045d-426c-aa09-d626c2816f18&amp;width=2000&amp;userId=&amp;cache=v2" alt=Untitled></p><p>But we can try to Introduce a function to manually delete all of Google Map’s event listeners.</p><div class=highlight><pre tabindex=0 style=color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-jsx data-lang=jsx><span style=display:flex><span><span style=color:#8b949e;font-style:italic>// Helper function: Removes all event listeners registered with Google&#39;s addDomListener function,
+</span></span></span><span style=display:flex><span><span style=color:#8b949e;font-style:italic>// including from __e3_ properties on target objects.
+</span></span></span><span style=display:flex><span><span style=color:#8b949e;font-style:italic></span><span style=color:#ff7b72>function</span> removeAllGoogleListeners(target, event) {
+</span></span><span style=display:flex><span>  <span style=color:#ff7b72>var</span> listeners <span style=color:#ff7b72;font-weight:700>=</span> target[<span style=color:#a5d6ff>&#34;__e3_&#34;</span>];
+</span></span><span style=display:flex><span>  <span style=color:#ff7b72>if</span> (<span style=color:#ff7b72;font-weight:700>!</span>listeners) {
+</span></span><span style=display:flex><span>    console.warn(
+</span></span><span style=display:flex><span>      <span style=color:#a5d6ff>&#34;Couldn&#39;t find property __e3_ containing Google Maps listeners. Perhaps Google updated the Maps SDK?&#34;</span>
+</span></span><span style=display:flex><span>    );
+</span></span><span style=display:flex><span>    <span style=color:#ff7b72>return</span>;
+</span></span><span style=display:flex><span>  }
+</span></span><span style=display:flex><span>  <span style=color:#ff7b72>var</span> evListeners <span style=color:#ff7b72;font-weight:700>=</span> listeners[event];
+</span></span><span style=display:flex><span>  <span style=color:#ff7b72>if</span> (evListeners) {
+</span></span><span style=display:flex><span>    <span style=color:#ff7b72>for</span> (<span style=color:#ff7b72>var</span> key <span style=color:#ff7b72>in</span> evListeners) {
+</span></span><span style=display:flex><span>      <span style=color:#ff7b72>if</span> (evListeners.hasOwnProperty(key)) {
+</span></span><span style=display:flex><span>        google.maps.event.removeListener(evListeners[key]);
+</span></span><span style=display:flex><span>      }
+</span></span><span style=display:flex><span>    }
+</span></span><span style=display:flex><span>  }
+</span></span><span style=display:flex><span>}
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#8b949e;font-style:italic>// Removes all DOM listeners for the given target and event.
+</span></span></span><span style=display:flex><span><span style=color:#8b949e;font-style:italic></span><span style=color:#ff7b72>function</span> removeAllDOMListeners(target, event) {
+</span></span><span style=display:flex><span>  <span style=color:#ff7b72>var</span> listeners <span style=color:#ff7b72;font-weight:700>=</span> target[<span style=color:#a5d6ff>&#34;__listeners_&#34;</span>];
+</span></span><span style=display:flex><span>  <span style=color:#ff7b72>if</span> (<span style=color:#ff7b72;font-weight:700>!</span>listeners <span style=color:#ff7b72;font-weight:700>||</span> <span style=color:#ff7b72;font-weight:700>!</span>listeners.length) {
+</span></span><span style=display:flex><span>    <span style=color:#ff7b72>return</span>;
+</span></span><span style=display:flex><span>  }
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>  <span style=color:#8b949e;font-style:italic>// Copy to avoid iterating over array that we mutate via removeEventListener
+</span></span></span><span style=display:flex><span><span style=color:#8b949e;font-style:italic></span>  <span style=color:#ff7b72>var</span> copy <span style=color:#ff7b72;font-weight:700>=</span> listeners.slice(<span style=color:#a5d6ff>0</span>);
+</span></span><span style=display:flex><span>  <span style=color:#ff7b72>for</span> (<span style=color:#ff7b72>var</span> i <span style=color:#ff7b72;font-weight:700>=</span> <span style=color:#a5d6ff>0</span>; i <span style=color:#ff7b72;font-weight:700>&lt;</span> copy.length; i<span style=color:#ff7b72;font-weight:700>++</span>) {
+</span></span><span style=display:flex><span>    target.removeEventListener(event, copy[i]);
+</span></span><span style=display:flex><span>  }
+</span></span><span style=display:flex><span>}
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#8b949e;font-style:italic>// Shim addEventListener to capture and store registered event listeners.
+</span></span></span><span style=display:flex><span><span style=color:#8b949e;font-style:italic></span><span style=color:#ff7b72>var</span> addEventListener <span style=color:#ff7b72;font-weight:700>=</span> EventTarget.prototype.addEventListener;
+</span></span><span style=display:flex><span>EventTarget.prototype.addEventListener <span style=color:#ff7b72;font-weight:700>=</span> <span style=color:#ff7b72>function</span> () {
+</span></span><span style=display:flex><span>  <span style=color:#ff7b72>var</span> eventName <span style=color:#ff7b72;font-weight:700>=</span> arguments[<span style=color:#a5d6ff>0</span>];
+</span></span><span style=display:flex><span>  <span style=color:#ff7b72>var</span> listener <span style=color:#ff7b72;font-weight:700>=</span> arguments[<span style=color:#a5d6ff>1</span>];
+</span></span><span style=display:flex><span>  <span style=color:#ff7b72>if</span> (<span style=color:#ff7b72;font-weight:700>!</span><span style=color:#ff7b72>this</span>[<span style=color:#a5d6ff>&#34;__listeners_&#34;</span>]) {
+</span></span><span style=display:flex><span>    <span style=color:#ff7b72>this</span>.__listeners_ <span style=color:#ff7b72;font-weight:700>=</span> {};
+</span></span><span style=display:flex><span>  }
+</span></span><span style=display:flex><span>  <span style=color:#ff7b72>var</span> listeners <span style=color:#ff7b72;font-weight:700>=</span> <span style=color:#ff7b72>this</span>.__listeners_;
+</span></span><span style=display:flex><span>  <span style=color:#ff7b72>if</span> (<span style=color:#ff7b72;font-weight:700>!</span>listeners[eventName]) {
+</span></span><span style=display:flex><span>    listeners[eventName] <span style=color:#ff7b72;font-weight:700>=</span> [];
+</span></span><span style=display:flex><span>  }
+</span></span><span style=display:flex><span>  listeners[eventName].push(listener);
+</span></span><span style=display:flex><span>  <span style=color:#ff7b72>return</span> addEventListener.apply(<span style=color:#ff7b72>this</span>, arguments);
+</span></span><span style=display:flex><span>};
+</span></span><span style=display:flex><span><span style=color:#ff7b72>var</span> removeEventListener <span style=color:#ff7b72;font-weight:700>=</span> EventTarget.prototype.removeEventListener;
+</span></span><span style=display:flex><span>EventTarget.prototype.removeEventListener <span style=color:#ff7b72;font-weight:700>=</span> <span style=color:#ff7b72>function</span> () {
+</span></span><span style=display:flex><span>  <span style=color:#ff7b72>var</span> eventName <span style=color:#ff7b72;font-weight:700>=</span> arguments[<span style=color:#a5d6ff>0</span>];
+</span></span><span style=display:flex><span>  <span style=color:#ff7b72>var</span> listener <span style=color:#ff7b72;font-weight:700>=</span> arguments[<span style=color:#a5d6ff>1</span>];
+</span></span><span style=display:flex><span>  <span style=color:#ff7b72>if</span> (<span style=color:#ff7b72>this</span>[<span style=color:#a5d6ff>&#34;__listeners_&#34;</span>] <span style=color:#ff7b72;font-weight:700>&amp;&amp;</span> <span style=color:#ff7b72>this</span>.__listeners_[eventName]) {
+</span></span><span style=display:flex><span>    <span style=color:#8b949e;font-style:italic>// Loop because the same listener may be added twice with different
+</span></span></span><span style=display:flex><span><span style=color:#8b949e;font-style:italic></span>    <span style=color:#8b949e;font-style:italic>// options, and because our simple addEventListener shim doesn&#39;t
+</span></span></span><span style=display:flex><span><span style=color:#8b949e;font-style:italic></span>    <span style=color:#8b949e;font-style:italic>// check for duplicates.
+</span></span></span><span style=display:flex><span><span style=color:#8b949e;font-style:italic></span>    <span style=color:#ff7b72>while</span> (<span style=color:#79c0ff>true</span>) {
+</span></span><span style=display:flex><span>      <span style=color:#ff7b72>var</span> i <span style=color:#ff7b72;font-weight:700>=</span> <span style=color:#ff7b72>this</span>.__listeners_[eventName].indexOf(listener);
+</span></span><span style=display:flex><span>      <span style=color:#ff7b72>if</span> (i <span style=color:#ff7b72;font-weight:700>===</span> <span style=color:#ff7b72;font-weight:700>-</span><span style=color:#a5d6ff>1</span>) {
+</span></span><span style=display:flex><span>        <span style=color:#ff7b72>break</span>;
+</span></span><span style=display:flex><span>      }
+</span></span><span style=display:flex><span>      <span style=color:#ff7b72>this</span>.__listeners_[eventName].splice(i, <span style=color:#a5d6ff>1</span>);
+</span></span><span style=display:flex><span>    }
+</span></span><span style=display:flex><span>  }
+</span></span><span style=display:flex><span>  <span style=color:#ff7b72>return</span> removeEventListener.apply(<span style=color:#ff7b72>this</span>, arguments);
+</span></span><span style=display:flex><span>};
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#8b949e;font-style:italic>// After you remove the Google Map from the DOM, call this function to completely free the object.
+</span></span></span><span style=display:flex><span><span style=color:#8b949e;font-style:italic></span><span style=color:#ff7b72>export</span> <span style=color:#ff7b72>default</span> <span style=color:#ff7b72>function</span> destroyGoogleMaps(window) {
+</span></span><span style=display:flex><span>  removeAllGoogleListeners(window, <span style=color:#a5d6ff>&#34;blur&#34;</span>);
+</span></span><span style=display:flex><span>  removeAllGoogleListeners(window, <span style=color:#a5d6ff>&#34;resize&#34;</span>);
+</span></span><span style=display:flex><span>  removeAllGoogleListeners(document, <span style=color:#a5d6ff>&#34;click&#34;</span>);
+</span></span><span style=display:flex><span>  removeAllGoogleListeners(document, <span style=color:#a5d6ff>&#34;keydown&#34;</span>);
+</span></span><span style=display:flex><span>  removeAllGoogleListeners(document, <span style=color:#a5d6ff>&#34;keypress&#34;</span>);
+</span></span><span style=display:flex><span>  removeAllGoogleListeners(document, <span style=color:#a5d6ff>&#34;keyup&#34;</span>);
+</span></span><span style=display:flex><span>  removeAllGoogleListeners(document, <span style=color:#a5d6ff>&#34;MSFullscreenChange&#34;</span>);
+</span></span><span style=display:flex><span>  removeAllGoogleListeners(document, <span style=color:#a5d6ff>&#34;fullscreenchange&#34;</span>);
+</span></span><span style=display:flex><span>  removeAllGoogleListeners(document, <span style=color:#a5d6ff>&#34;mozfullscreenchange&#34;</span>);
+</span></span><span style=display:flex><span>  removeAllGoogleListeners(document, <span style=color:#a5d6ff>&#34;webkitfullscreenchange&#34;</span>);
+</span></span><span style=display:flex><span>  <span style=color:#8b949e;font-style:italic>// ASSUMPTION: No other library registers global resize and scroll event listeners! If this is not true, then you&#39;ll need to add logic to avoid removing these.
+</span></span></span><span style=display:flex><span><span style=color:#8b949e;font-style:italic></span>  removeAllDOMListeners(window, <span style=color:#a5d6ff>&#34;resize&#34;</span>);
+</span></span><span style=display:flex><span>  removeAllDOMListeners(window, <span style=color:#a5d6ff>&#34;scroll&#34;</span>);
+</span></span><span style=display:flex><span>}
+</span></span></code></pre></div><p>Credit to this commenter: <a href=https://issuetracker.google.com/issues/35821412#comment53 class=external-link target=_blank rel=noopener>https://issuetracker.google.com/issues/35821412#comment53</a></p><p>This resolves the memory issue to an extent.</p><p><img src="https://thisdot.notion.site/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2Feb53edbf-045d-426c-aa09-d626c2816f18%2Ffe42a452-2cc2-427c-968f-82db2d143156%2FUntitled.png?table=block&amp;id=0d8af477-8bce-4572-aab4-45dd1c0d31e0&amp;spaceId=eb53edbf-045d-426c-aa09-d626c2816f18&amp;width=1150&amp;userId=&amp;cache=v2" alt="The flow observed is. Landing page → Page with Trips View → Page with another Google Map → Page without Google Map"></p><p>The flow observed is. Landing page → Page with Trips View → Page with another Google Map → Page without Google Map</p><p>In Prod and Staging, the Page without Google Maps hogs up memory while introducing the memory cleanup in dev shows us that it requires way less memory!</p><h3 id=the-fix-for-three-drawings>The fix for three drawings
+<a class=heading-link href=#the-fix-for-three-drawings><i class="fa-solid fa-link" aria-hidden=true title="Link to heading"></i>
+<span class=sr-only>Link to heading</span></a></h3><hr><p>This one happens to be very simple. While creating a <code>Polyline</code>, just specify an icon and set the <code>repeat</code> value as <code>100%</code>.</p><div class=highlight><pre tabindex=0 style=color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-jsx data-lang=jsx><span style=display:flex><span><span style=color:#ff7b72>new</span> google.maps.Polyline({
+</span></span><span style=display:flex><span>  strokeColor<span style=color:#ff7b72;font-weight:700>:</span> props.color,
+</span></span><span style=display:flex><span>  geodesic<span style=color:#ff7b72;font-weight:700>:</span> <span style=color:#79c0ff>true</span>,
+</span></span><span style=display:flex><span>  strokeWeight<span style=color:#ff7b72;font-weight:700>:</span> <span style=color:#a5d6ff>3</span>,
+</span></span><span style=display:flex><span>  icons<span style=color:#ff7b72;font-weight:700>:</span> [
+</span></span><span style=display:flex><span>    {
+</span></span><span style=display:flex><span>      icon<span style=color:#ff7b72;font-weight:700>:</span> {
+</span></span><span style=display:flex><span>        path<span style=color:#ff7b72;font-weight:700>:</span> google.maps.SymbolPath.CIRCLE,
+</span></span><span style=display:flex><span>      },
+</span></span><span style=display:flex><span>      repeat<span style=color:#ff7b72;font-weight:700>:</span> <span style=color:#a5d6ff>&#34;100%&#34;</span>,
+</span></span><span style=display:flex><span>    },
+</span></span><span style=display:flex><span>  ],
+</span></span><span style=display:flex><span>});
+</span></span></code></pre></div><p>We can even make the <code>icon</code> a <code>SymbolPath.FORWARD_PATH</code> (Reference: <a href=https://developers.google.com/maps/documentation/javascript/reference/marker#SymbolPath class=external-link target=_blank rel=noopener>https://developers.google.com/maps/documentation/javascript/reference/marker#SymbolPath</a>) indicating the trip direction as well!</p><h3 id=making-the-polylines-an-overlay>Making the Polylines an Overlay
+<a class=heading-link href=#making-the-polylines-an-overlay><i class="fa-solid fa-link" aria-hidden=true title="Link to heading"></i>
+<span class=sr-only>Link to heading</span></a></h3><hr><p>Now all of the computations happen inside the <code>onGoogleApiLoaded</code> method of <code>google-map-react</code>.</p><p><img src="https://thisdot.notion.site/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2Feb53edbf-045d-426c-aa09-d626c2816f18%2Fc21921e8-55ab-43f5-988b-7b687e7d6640%2FUntitled.png?table=block&amp;id=adc3f881-36c7-434c-8519-eefa45454bcc&amp;spaceId=eb53edbf-045d-426c-aa09-d626c2816f18&amp;width=2000&amp;userId=&amp;cache=v2" alt=Untitled></p><p>First thing, we make this function do nothing but set a state called <code>map</code>. This is for us to later set the <code>PolyLine</code> on to the map.</p><p><code>Polyline.js</code></p><div class=highlight><pre tabindex=0 style=color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-jsx data-lang=jsx><span style=display:flex><span><span style=color:#ff7b72>import</span> { useState } from <span style=color:#a5d6ff>&#34;react&#34;</span>;
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#ff7b72>import</span> useDeepCompareEffect from <span style=color:#a5d6ff>&#34;use-deep-compare-effect&#34;</span>;
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#ff7b72>function</span> pathsDiffer(path1, path2) {
+</span></span><span style=display:flex><span>  <span style=color:#ff7b72>if</span> (path1.getLength() <span style=color:#ff7b72;font-weight:700>!=</span> path2.length) <span style=color:#ff7b72>return</span> <span style=color:#79c0ff>true</span>;
+</span></span><span style=display:flex><span>  <span style=color:#ff7b72>for</span> (<span style=color:#ff7b72>const</span> [i, val] <span style=color:#ff7b72>of</span> path2.entries())
+</span></span><span style=display:flex><span>    <span style=color:#ff7b72>if</span> (path1.getAt(i).toJSON() <span style=color:#ff7b72;font-weight:700>!=</span> val) <span style=color:#ff7b72>return</span> <span style=color:#79c0ff>true</span>;
+</span></span><span style=display:flex><span>  <span style=color:#ff7b72>return</span> <span style=color:#79c0ff>false</span>;
+</span></span><span style=display:flex><span>}
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#ff7b72>export</span> <span style=color:#ff7b72>default</span> <span style=color:#ff7b72>function</span> PolyLine(props) {
+</span></span><span style=display:flex><span>  <span style=color:#ff7b72>const</span> [polyline, setPolyline] <span style=color:#ff7b72;font-weight:700>=</span> useState(<span style=color:#79c0ff>null</span>);
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>  useDeepCompareEffect(() =&gt; {
+</span></span><span style=display:flex><span>    <span style=color:#8b949e;font-style:italic>// Create polyline after map initialized.
+</span></span></span><span style=display:flex><span><span style=color:#8b949e;font-style:italic></span>    <span style=color:#ff7b72>if</span> (<span style=color:#ff7b72;font-weight:700>!</span>polyline <span style=color:#ff7b72;font-weight:700>&amp;&amp;</span> props.map) {
+</span></span><span style=display:flex><span>      setPolyline(
+</span></span><span style=display:flex><span>        <span style=color:#ff7b72>new</span> google.maps.Polyline({
+</span></span><span style=display:flex><span>          strokeColor<span style=color:#ff7b72;font-weight:700>:</span> props.color,
+</span></span><span style=display:flex><span>          geodesic<span style=color:#ff7b72;font-weight:700>:</span> <span style=color:#79c0ff>true</span>,
+</span></span><span style=display:flex><span>          strokeWeight<span style=color:#ff7b72;font-weight:700>:</span> <span style=color:#a5d6ff>3</span>,
+</span></span><span style=display:flex><span>          icons<span style=color:#ff7b72;font-weight:700>:</span> [
+</span></span><span style=display:flex><span>            {
+</span></span><span style=display:flex><span>              icon<span style=color:#ff7b72;font-weight:700>:</span> {
+</span></span><span style=display:flex><span>                path<span style=color:#ff7b72;font-weight:700>:</span> google.maps.SymbolPath.FORWARD_CLOSED_ARROW,
+</span></span><span style=display:flex><span>              },
+</span></span><span style=display:flex><span>              repeat<span style=color:#ff7b72;font-weight:700>:</span> <span style=color:#a5d6ff>&#34;100%&#34;</span>,
+</span></span><span style=display:flex><span>            },
+</span></span><span style=display:flex><span>          ],
+</span></span><span style=display:flex><span>        })
+</span></span><span style=display:flex><span>      );
+</span></span><span style=display:flex><span>    }
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    <span style=color:#8b949e;font-style:italic>// Synchronize map polyline with component props.
+</span></span></span><span style=display:flex><span><span style=color:#8b949e;font-style:italic></span>    <span style=color:#ff7b72>if</span> (polyline <span style=color:#ff7b72;font-weight:700>&amp;&amp;</span> polyline.getMap() <span style=color:#ff7b72;font-weight:700>!=</span> props.map) polyline.setMap(props.map);
+</span></span><span style=display:flex><span>    <span style=color:#ff7b72>if</span> (polyline <span style=color:#ff7b72;font-weight:700>&amp;&amp;</span> pathsDiffer(polyline.getPath(), props.path))
+</span></span><span style=display:flex><span>      polyline.setPath(props.path);
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    <span style=color:#ff7b72>return</span> () =&gt; {
+</span></span><span style=display:flex><span>      <span style=color:#8b949e;font-style:italic>// Cleanup: remove line from map
+</span></span></span><span style=display:flex><span><span style=color:#8b949e;font-style:italic></span>      <span style=color:#ff7b72>if</span> (polyline) polyline.setMap(<span style=color:#79c0ff>null</span>);
+</span></span><span style=display:flex><span>    };
+</span></span><span style=display:flex><span>  }, [props, polyline]);
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>  <span style=color:#ff7b72>return</span> <span style=color:#79c0ff>null</span>;
+</span></span><span style=display:flex><span>}
+</span></span></code></pre></div><p>Now inside the component,</p><p><img src="https://thisdot.notion.site/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2Feb53edbf-045d-426c-aa09-d626c2816f18%2F06f2f061-7282-4b42-b7bf-05a516c6948a%2FUntitled.png?table=block&amp;id=fb0f015d-24d0-4dda-b856-b0f1071b8920&amp;spaceId=eb53edbf-045d-426c-aa09-d626c2816f18&amp;width=2000&amp;userId=&amp;cache=v2" alt=Untitled></p><p>Finally, as a sibling to <code>GoogleMapReact</code> we introduce the <code>Polyline</code> component.</p><p><img src="https://thisdot.notion.site/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2Feb53edbf-045d-426c-aa09-d626c2816f18%2F1b6f3ecc-80c9-4b1e-8d59-243dc478a655%2FUntitled.png?table=block&amp;id=fd6242dd-8dd0-4275-9be4-3c536257d5e6&amp;spaceId=eb53edbf-045d-426c-aa09-d626c2816f18&amp;width=770&amp;userId=&amp;cache=v2" alt=Untitled></p><h3 id=final-result>Final Result
+<a class=heading-link href=#final-result><i class="fa-solid fa-link" aria-hidden=true title="Link to heading"></i>
+<span class=sr-only>Link to heading</span></a></h3><hr><p>Maps look way more meaningful</p><p><img src="https://thisdot.notion.site/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2Feb53edbf-045d-426c-aa09-d626c2816f18%2F31bb1d16-a928-4993-940d-dba7f906cfe8%2FUntitled.png?table=block&amp;id=2614941e-393c-448d-b6cc-87fa477d10e6&amp;spaceId=eb53edbf-045d-426c-aa09-d626c2816f18&amp;width=2000&amp;userId=&amp;cache=v2" alt=Untitled></p><p>The memory consumption which went from <code>500MB</code> to <code>367MB</code> after memory cleanup, went down to <code>140MB</code> after removing the marker drawings!</p></article></section></div><footer class=footer><section class=container>©
+2019 -
+2025
+Rahul Krrishna
+·
+Powered by <a href=https://gohugo.io/ target=_blank rel=noopener>Hugo</a> & <a href=https://github.com/luizdepra/hugo-coder/ target=_blank rel=noopener>Coder</a>.</section></footer></main><script src=/js/coder.min.6ae284be93d2d19dad1f02b0039508d9aab3180a12a06dcc71b0b0ef7825a317.js integrity="sha256-auKEvpPS0Z2tHwKwA5UI2aqzGAoSoG3McbCw73gloxc="></script></body></html>
