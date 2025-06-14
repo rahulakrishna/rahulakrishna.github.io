@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Moving to Hugo
+title: "Moving to Hugo"
 author: "Rahul Krishna"
 date: 2023-06-14 12:17:44 +0530
 categories: blog
