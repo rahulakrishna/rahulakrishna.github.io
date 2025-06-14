@@ -5,25 +5,31 @@
     <loc>https://rahulkrrrishna.xyz/blog/</loc>
     <lastmod>2025-06-14T12:17:44+05:30</lastmod>
   </url><url>
+    <loc>https://rahulkrrrishna.xyz/categories/blog/</loc>
+    <lastmod>2025-06-14T12:17:44+05:30</lastmod>
+  </url><url>
+    <loc>https://rahulkrrrishna.xyz/categories/</loc>
+    <lastmod>2025-06-14T12:17:44+05:30</lastmod>
+  </url><url>
+    <loc>https://rahulkrrrishna.xyz/blog/2025-06-14-moving-to-hugo/</loc>
+    <lastmod>2025-06-14T12:17:44+05:30</lastmod>
+  </url><url>
+    <loc>https://rahulkrrrishna.xyz/tags/programming/</loc>
+    <lastmod>2025-06-14T12:17:44+05:30</lastmod>
+  </url><url>
     <loc>https://rahulkrrrishna.xyz/</loc>
     <lastmod>2025-06-14T12:17:44+05:30</lastmod>
   </url><url>
-    <loc>https://rahulkrrrishna.xyz/categories/blog/</loc>
-    <lastmod>2025-01-08T19:32:44+05:30</lastmod>
+    <loc>https://rahulkrrrishna.xyz/tags/</loc>
+    <lastmod>2025-06-14T12:17:44+05:30</lastmod>
   </url><url>
     <loc>https://rahulkrrrishna.xyz/tags/career/</loc>
-    <lastmod>2025-01-08T19:32:44+05:30</lastmod>
-  </url><url>
-    <loc>https://rahulkrrrishna.xyz/categories/</loc>
     <lastmod>2025-01-08T19:32:44+05:30</lastmod>
   </url><url>
     <loc>https://rahulkrrrishna.xyz/blog/2025-01-08-looking-ahead-at-2025/</loc>
     <lastmod>2025-01-08T19:32:44+05:30</lastmod>
   </url><url>
     <loc>https://rahulkrrrishna.xyz/tags/professional/</loc>
-    <lastmod>2025-01-08T19:32:44+05:30</lastmod>
-  </url><url>
-    <loc>https://rahulkrrrishna.xyz/tags/</loc>
     <lastmod>2025-01-08T19:32:44+05:30</lastmod>
   </url><url>
     <loc>https://rahulkrrrishna.xyz/tags/life/</loc>
@@ -105,9 +111,6 @@
     <lastmod>2024-01-02T11:15:00+05:30</lastmod>
   </url><url>
     <loc>https://rahulkrrrishna.xyz/blog/2024-01-01-loading-vs-fetching/</loc>
-    <lastmod>2024-01-01T11:15:00+05:30</lastmod>
-  </url><url>
-    <loc>https://rahulkrrrishna.xyz/tags/programming/</loc>
     <lastmod>2024-01-01T11:15:00+05:30</lastmod>
   </url><url>
     <loc>https://rahulkrrrishna.xyz/blog/2023-11-27-illusion-of-touch/</loc>
