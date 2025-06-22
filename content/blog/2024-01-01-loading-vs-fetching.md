@@ -24,11 +24,12 @@ As long as the data we have is not invalid. We have no reason to hide it away fr
 
 ---
 
-Loading | Fetching
-![YouTube Loading State](/images/loading-vs-fetching/Untitled%206.png) YouTube Loading State |![YouTube Fetching State](/images/loading-vs-fetching/Untitled%207.png) YouTube Fetching State
+| Loading | Fetching |
+| --- | --- |
+| ![YouTube Loading State](/images/loading-vs-fetching/Untitled%206.png) YouTube Loading State | ![YouTube Fetching State](/images/loading-vs-fetching/Untitled%207.png) YouTube Fetching State |
 ![Apollo App Loading State](/images/loading-vs-fetching/Untitled%208.png) Apollo App Loading State | ![Apollo App Fetching State](/images/loading-vs-fetching/Untitled%209.png) Apollo App Fetching State
 ![Fotmob Loading State](/images/loading-vs-fetching/Untitled%2010.png) Fotmob Loading State | ![Fotmob Fetching State](/images/loading-vs-fetching/Untitled%2011.png) Fotmob Fetching State
-
+---
 ### Important Exception
 
 ---

@@ -50,17 +50,17 @@ From Julia Evans’ blog article titled **Some miscellaneous git facts**
 
 ---
 
-For individuals accustomed to the command-line interface of Git, the concept of committing instead of stashing may seem unconventional. However, when one's Git workflow is seamlessly integrated into their Integrated Development Environment (IDE), particularly Visual Studio Code, this approach becomes highly beneficial.
+For people accustomed to the command-line interface of Git, the concept of committing instead of stashing may seem unconventional. However, when your Git workflow is integrated into  Integrated Development Environment (IDE), particularly Visual Studio Code, this approach becomes beneficial.
 
 #### The User Interface of Atom
 
-The user interface of Atom is commendable, particularly due to its tri-pane design that consistently displays the File Explorer, Code, and Git.
+The user interface of Atom was great, particularly its tri-pane design that always keeps the File Explorer, Code, and Git in view.
 
 ![The Atom UI with File Explorer, Code Area and Git/Github Panel](https://thisdot.notion.site/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2Feb53edbf-045d-426c-aa09-d626c2816f18%2F30eb89c7-3a26-44ee-b2f2-68ee6c0aa485%2FUntitled.png?table=block&id=d8d6eda7-64ee-407a-80bc-5008f3df3411&spaceId=eb53edbf-045d-426c-aa09-d626c2816f18&width=2000&userId=&cache=v2)
 
 The Atom UI with File Explorer, Code Area and Git/Github Panel
 
-This design is advantageous as it continually updates a list of changes made to files on the right side of the screen, providing a general overview of the magnitude of your modifications. This visibility encourages experimental changes, which can be easily cherry-picked or discarded.
+The most useful part of this is that it continually updates a list of changes made to files on the right side of the screen, providing a general overview of the magnitude of your modifications. This visibility encourages experimental changes, which can be easily cherry-picked or discarded.
 
 ![Atom Git Pane](https://thisdot.notion.site/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2Feb53edbf-045d-426c-aa09-d626c2816f18%2Fa0cac6ea-b1a1-4188-88f2-bcd93e7ae264%2FUntitled.png?table=block&id=a43d04df-ecd0-4ece-bb34-c6249ef0ace4&spaceId=eb53edbf-045d-426c-aa09-d626c2816f18&width=2000&userId=&cache=v2)
 
@@ -108,7 +108,7 @@ The primary advantage of a stash commit is that it is local to a branch. This is
 
 ---
 
-- `git stash` effectively clears your branch of changes for later use, which is necessary if you do not have a branch to perform a `stash commit`.
+- `git stash` effectively clears your branch of changes for later use, which is necessary if you do not have a branch to perform a stash commit.
 - If you have a piece of code that is frequently needed but cannot be committed, `git stash` is the preferred method.
 
 ### References

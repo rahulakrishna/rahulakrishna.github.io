@@ -29,9 +29,9 @@ In other words, we’re “doing more things” with our browsers than “readin
 
 Every Operating Systems have some kind of “Launcher”.
 
-<img src='/assets/images/arc-browser/Untitled%202.png' alt="Spotlight on Mac" style="width: 50%;" />
+<img src='/images/arc-browser/Untitled%202.png' alt="Spotlight on Mac" style="width: 50%;" />
 
-<img src="/assets/images/arc-browser/Untitled%204.png" alt="Start Menu on Windows" style="width: 50%;"/>
+<img src="/images/arc-browser/Untitled%204.png" alt="Start Menu on Windows" style="width: 50%;"/>
 
 Probably the biggest upgrade in Browser terms is when Google made the URL bar of Chrome work more like a “Launcher”. You weren’t any more expected to precisely type in the URL of the page you had to go to. Google would actually prefer it if you first went to [google.com](http://google.com) and clicked on a link from there.
 

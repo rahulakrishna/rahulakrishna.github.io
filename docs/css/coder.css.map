@@ -1,7 +1,7 @@
 {
 	"version": 3,
 	"file": "coder.css",
-	"sourceRoot": "/Users/rahulk/Works/rahulakrishna.github.io",
+	"sourceRoot": "/Users/rahulk/Library/Mobile Documents/com~apple~CloudDocs/rahulakrishna.github.io",
 	"sources": [
 		"themes/hugo-coder/assets/scss/coder.scss",
 		"themes/hugo-coder/assets/scss/css/normalize.css",

@@ -2,143 +2,87 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on Rahul Krrishna</title>
-    <link>https://rahulkrrrishna.xyz/tags/</link>
+    <link>http://localhost:1313/tags/</link>
     <description>Recent content in Tags on Rahul Krrishna</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 14 Jun 2025 12:17:44 +0530</lastBuildDate>
-    <atom:link href="https://rahulkrrrishna.xyz/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 20 Jun 2025 12:17:44 +0530</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Productivity</title>
+      <link>http://localhost:1313/tags/productivity/</link>
+      <pubDate>Fri, 20 Jun 2025 12:17:44 +0530</pubDate>
+      <guid>http://localhost:1313/tags/productivity/</guid>
+      <description></description>
+    </item>
     <item>
       <title>Programming</title>
-      <link>https://rahulkrrrishna.xyz/tags/programming/</link>
-      <pubDate>Sat, 14 Jun 2025 12:17:44 +0530</pubDate>
-      <guid>https://rahulkrrrishna.xyz/tags/programming/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Career</title>
-      <link>https://rahulkrrrishna.xyz/tags/career/</link>
-      <pubDate>Wed, 08 Jan 2025 19:32:44 +0530</pubDate>
-      <guid>https://rahulkrrrishna.xyz/tags/career/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Professional</title>
-      <link>https://rahulkrrrishna.xyz/tags/professional/</link>
-      <pubDate>Wed, 08 Jan 2025 19:32:44 +0530</pubDate>
-      <guid>https://rahulkrrrishna.xyz/tags/professional/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Life</title>
-      <link>https://rahulkrrrishna.xyz/tags/life/</link>
-      <pubDate>Tue, 03 Dec 2024 10:18:44 +0530</pubDate>
-      <guid>https://rahulkrrrishna.xyz/tags/life/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Relationships</title>
-      <link>https://rahulkrrrishna.xyz/tags/relationships/</link>
-      <pubDate>Tue, 03 Dec 2024 10:18:44 +0530</pubDate>
-      <guid>https://rahulkrrrishna.xyz/tags/relationships/</guid>
+      <link>http://localhost:1313/tags/programming/</link>
+      <pubDate>Mon, 16 Jun 2025 12:17:44 +0530</pubDate>
+      <guid>http://localhost:1313/tags/programming/</guid>
       <description></description>
     </item>
     <item>
       <title>Friendship</title>
-      <link>https://rahulkrrrishna.xyz/tags/friendship/</link>
+      <link>http://localhost:1313/tags/friendship/</link>
       <pubDate>Tue, 03 Dec 2024 09:22:44 +0530</pubDate>
-      <guid>https://rahulkrrrishna.xyz/tags/friendship/</guid>
+      <guid>http://localhost:1313/tags/friendship/</guid>
       <description></description>
     </item>
     <item>
       <title>Personal</title>
-      <link>https://rahulkrrrishna.xyz/tags/personal/</link>
+      <link>http://localhost:1313/tags/personal/</link>
       <pubDate>Tue, 03 Dec 2024 09:22:44 +0530</pubDate>
-      <guid>https://rahulkrrrishna.xyz/tags/personal/</guid>
+      <guid>http://localhost:1313/tags/personal/</guid>
       <description></description>
     </item>
     <item>
       <title>Apple</title>
-      <link>https://rahulkrrrishna.xyz/tags/apple/</link>
+      <link>http://localhost:1313/tags/apple/</link>
       <pubDate>Sun, 03 Nov 2024 09:50:44 +0530</pubDate>
-      <guid>https://rahulkrrrishna.xyz/tags/apple/</guid>
+      <guid>http://localhost:1313/tags/apple/</guid>
       <description></description>
     </item>
     <item>
       <title>Design</title>
-      <link>https://rahulkrrrishna.xyz/tags/design/</link>
+      <link>http://localhost:1313/tags/design/</link>
       <pubDate>Sun, 03 Nov 2024 09:50:44 +0530</pubDate>
-      <guid>https://rahulkrrrishna.xyz/tags/design/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Book</title>
-      <link>https://rahulkrrrishna.xyz/tags/book/</link>
-      <pubDate>Sat, 12 Oct 2024 09:50:44 +0530</pubDate>
-      <guid>https://rahulkrrrishna.xyz/tags/book/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Fiction</title>
-      <link>https://rahulkrrrishna.xyz/tags/fiction/</link>
-      <pubDate>Sat, 12 Oct 2024 09:50:44 +0530</pubDate>
-      <guid>https://rahulkrrrishna.xyz/tags/fiction/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Review</title>
-      <link>https://rahulkrrrishna.xyz/tags/review/</link>
-      <pubDate>Sat, 12 Oct 2024 09:50:44 +0530</pubDate>
-      <guid>https://rahulkrrrishna.xyz/tags/review/</guid>
+      <guid>http://localhost:1313/tags/design/</guid>
       <description></description>
     </item>
     <item>
       <title>Javascript</title>
-      <link>https://rahulkrrrishna.xyz/tags/javascript/</link>
+      <link>http://localhost:1313/tags/javascript/</link>
       <pubDate>Wed, 21 Feb 2024 11:15:00 +0530</pubDate>
-      <guid>https://rahulkrrrishna.xyz/tags/javascript/</guid>
+      <guid>http://localhost:1313/tags/javascript/</guid>
       <description></description>
     </item>
     <item>
       <title>React</title>
-      <link>https://rahulkrrrishna.xyz/tags/react/</link>
+      <link>http://localhost:1313/tags/react/</link>
       <pubDate>Wed, 21 Feb 2024 11:15:00 +0530</pubDate>
-      <guid>https://rahulkrrrishna.xyz/tags/react/</guid>
+      <guid>http://localhost:1313/tags/react/</guid>
       <description></description>
     </item>
     <item>
       <title>TIL</title>
-      <link>https://rahulkrrrishna.xyz/tags/til/</link>
+      <link>http://localhost:1313/tags/til/</link>
       <pubDate>Wed, 21 Feb 2024 11:15:00 +0530</pubDate>
-      <guid>https://rahulkrrrishna.xyz/tags/til/</guid>
+      <guid>http://localhost:1313/tags/til/</guid>
       <description></description>
     </item>
     <item>
       <title>Browsers</title>
-      <link>https://rahulkrrrishna.xyz/tags/browsers/</link>
+      <link>http://localhost:1313/tags/browsers/</link>
       <pubDate>Sat, 10 Feb 2024 11:15:00 +0530</pubDate>
-      <guid>https://rahulkrrrishna.xyz/tags/browsers/</guid>
+      <guid>http://localhost:1313/tags/browsers/</guid>
       <description></description>
     </item>
     <item>
       <title>Ux</title>
-      <link>https://rahulkrrrishna.xyz/tags/ux/</link>
+      <link>http://localhost:1313/tags/ux/</link>
       <pubDate>Sat, 10 Feb 2024 11:15:00 +0530</pubDate>
-      <guid>https://rahulkrrrishna.xyz/tags/ux/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Logo</title>
-      <link>https://rahulkrrrishna.xyz/tags/logo/</link>
-      <pubDate>Tue, 02 Jan 2024 11:15:00 +0530</pubDate>
-      <guid>https://rahulkrrrishna.xyz/tags/logo/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Science</title>
-      <link>https://rahulkrrrishna.xyz/tags/science/</link>
-      <pubDate>Wed, 15 Nov 2023 20:00:44 +0530</pubDate>
-      <guid>https://rahulkrrrishna.xyz/tags/science/</guid>
+      <guid>http://localhost:1313/tags/ux/</guid>
       <description></description>
     </item>
   </channel>

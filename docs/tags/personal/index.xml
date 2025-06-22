@@ -2,25 +2,25 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Personal on Rahul Krrishna</title>
-    <link>https://rahulkrrrishna.xyz/tags/personal/</link>
+    <link>http://localhost:1313/tags/personal/</link>
     <description>Recent content in Personal on Rahul Krrishna</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Tue, 03 Dec 2024 09:22:44 +0530</lastBuildDate>
-    <atom:link href="https://rahulkrrrishna.xyz/tags/personal/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/personal/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>The Wednesday Waffle</title>
-      <link>https://rahulkrrrishna.xyz/blog/2024-12-03-wednesday-waffles/</link>
+      <link>http://localhost:1313/blog/2024-12-03-wednesday-waffles/</link>
       <pubDate>Tue, 03 Dec 2024 09:22:44 +0530</pubDate>
-      <guid>https://rahulkrrrishna.xyz/blog/2024-12-03-wednesday-waffles/</guid>
+      <guid>http://localhost:1313/blog/2024-12-03-wednesday-waffles/</guid>
       <description>&lt;p&gt;My friend Nami send me this Instagram Reel about a concept called The Wednesday Waffle. I found the whole concept intriguing. Sort of like a weekly accountability update — with friends.&lt;/p&gt;&#xA;&lt;p&gt;I missed the first one due to my best friend’s wedding. However, I did send her an update as soon as I could. As of writing this, the next update is due tomorrow.&lt;/p&gt;&#xA;&lt;p&gt;I haven’t done much this week. But I’m hoping that having this ritual in the back of my mind is going to make me more productive, connected and content in life.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Budgeting Tool with Numbers &#43; Shortcuts</title>
-      <link>https://rahulkrrrishna.xyz/blog/2023-11-18-simple-budgeting-tool-with-numbers-shortcuts/</link>
+      <link>http://localhost:1313/blog/2023-11-18-simple-budgeting-tool-with-numbers-shortcuts/</link>
       <pubDate>Sat, 18 Nov 2023 11:15:00 +0530</pubDate>
-      <guid>https://rahulkrrrishna.xyz/blog/2023-11-18-simple-budgeting-tool-with-numbers-shortcuts/</guid>
-      <description>&lt;h3 id=&#34;the-case-for-default-applications&#34;&gt;&#xA;  The Case for Default Applications&#xA;  &lt;a class=&#34;heading-link&#34; href=&#34;#the-case-for-default-applications&#34;&gt;&#xA;    &lt;i class=&#34;fa-solid fa-link&#34; aria-hidden=&#34;true&#34; title=&#34;Link to heading&#34;&gt;&lt;/i&gt;&#xA;    &lt;span class=&#34;sr-only&#34;&gt;Link to heading&lt;/span&gt;&#xA;  &lt;/a&gt;&#xA;&lt;/h3&gt;&#xA;&lt;hr&gt;&#xA;&lt;p&gt;Simple, built-in apps often outperform complex specialized tools because they’re easier to use, more efficient, and more reliable. They’re designed for common tasks, optimized for usability, and focused on getting the job done without unnecessary complexity.&lt;/p&gt;&#xA;&lt;h3 id=&#34;prerequisite&#34;&gt;&#xA;  Prerequisite&#xA;  &lt;a class=&#34;heading-link&#34; href=&#34;#prerequisite&#34;&gt;&#xA;    &lt;i class=&#34;fa-solid fa-link&#34; aria-hidden=&#34;true&#34; title=&#34;Link to heading&#34;&gt;&lt;/i&gt;&#xA;    &lt;span class=&#34;sr-only&#34;&gt;Link to heading&lt;/span&gt;&#xA;  &lt;/a&gt;&#xA;&lt;/h3&gt;&#xA;&lt;hr&gt;&#xA;&lt;div style=&#34;float: right;&#34;&gt;&#xA;&lt;img src=&#34;https://rahulkrrrishna.xyz/images/budgeting-tool/numbers-icon.png&#34; alt=&#34;Numbers Icon&#34; /&gt;&#xA;&lt;br/&gt;&#xA;&lt;img src=&#34;https://rahulkrrrishna.xyz/images/budgeting-tool/shortcuts-icon.png&#34; alt=&#34;Shortcuts icon&#34; /&gt;&#xA;&lt;/div&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;An Apple Device - (iPhone, Mac or iPad)&lt;/p&gt;</description>
+      <guid>http://localhost:1313/blog/2023-11-18-simple-budgeting-tool-with-numbers-shortcuts/</guid>
+      <description>&lt;h3 id=&#34;the-case-for-default-applications&#34;&gt;&#xA;  The Case for Default Applications&#xA;  &lt;a class=&#34;heading-link&#34; href=&#34;#the-case-for-default-applications&#34;&gt;&#xA;    &lt;i class=&#34;fa-solid fa-link&#34; aria-hidden=&#34;true&#34; title=&#34;Link to heading&#34;&gt;&lt;/i&gt;&#xA;    &lt;span class=&#34;sr-only&#34;&gt;Link to heading&lt;/span&gt;&#xA;  &lt;/a&gt;&#xA;&lt;/h3&gt;&#xA;&lt;hr&gt;&#xA;&lt;p&gt;Simple, built-in apps often outperform complex specialized tools because they’re easier to use, more efficient, and more reliable. They’re designed for common tasks, optimized for usability, and focused on getting the job done without unnecessary complexity.&lt;/p&gt;&#xA;&lt;h3 id=&#34;prerequisite&#34;&gt;&#xA;  Prerequisite&#xA;  &lt;a class=&#34;heading-link&#34; href=&#34;#prerequisite&#34;&gt;&#xA;    &lt;i class=&#34;fa-solid fa-link&#34; aria-hidden=&#34;true&#34; title=&#34;Link to heading&#34;&gt;&lt;/i&gt;&#xA;    &lt;span class=&#34;sr-only&#34;&gt;Link to heading&lt;/span&gt;&#xA;  &lt;/a&gt;&#xA;&lt;/h3&gt;&#xA;&lt;hr&gt;&#xA;&lt;div style=&#34;float: right;&#34;&gt;&#xA;&lt;img src=&#34;http://localhost:1313/images/budgeting-tool/numbers-icon.png&#34; alt=&#34;Numbers Icon&#34; /&gt;&#xA;&lt;br/&gt;&#xA;&lt;img src=&#34;http://localhost:1313/images/budgeting-tool/shortcuts-icon.png&#34; alt=&#34;Shortcuts icon&#34; /&gt;&#xA;&lt;/div&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;An Apple Device - (iPhone, Mac or iPad)&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>
