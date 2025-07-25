@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Productivity on Rahul Krrishna</title>
-    <link>http://localhost:1313/tags/productivity/</link>
+    <link>https://rahulkrrrishna.xyz/tags/productivity/</link>
     <description>Recent content in Productivity on Rahul Krrishna</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 20 Jun 2025 12:17:44 +0530</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/productivity/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://rahulkrrrishna.xyz/tags/productivity/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Forever Notes on Obsidian</title>
-      <link>http://localhost:1313/blog/2025-06-20-forever-notes-on-obsidian/</link>
+      <link>https://rahulkrrrishna.xyz/blog/2025-06-20-forever-notes-on-obsidian/</link>
       <pubDate>Fri, 20 Jun 2025 12:17:44 +0530</pubDate>
-      <guid>http://localhost:1313/blog/2025-06-20-forever-notes-on-obsidian/</guid>
-      <description>&lt;blockquote&gt;&#xA;&lt;p&gt;WIP. Architecture is still not finalised&lt;/p&gt;&lt;/blockquote&gt;&#xA;&lt;h2 id=&#34;forever-notes&#34;&gt;&#xA;  Forever Notes&#xA;  &lt;a class=&#34;heading-link&#34; href=&#34;#forever-notes&#34;&gt;&#xA;    &lt;i class=&#34;fa-solid fa-link&#34; aria-hidden=&#34;true&#34; title=&#34;Link to heading&#34;&gt;&lt;/i&gt;&#xA;    &lt;span class=&#34;sr-only&#34;&gt;Link to heading&lt;/span&gt;&#xA;  &lt;/a&gt;&#xA;&lt;/h2&gt;&#xA;&lt;hr&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://www.myforevernotes.com/&#34;  class=&#34;external-link&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Forever Notes&lt;/a&gt; is a framework for Apple Notes. It introduces a concept that is very similar to &lt;a href=&#34;https://github.com/liamcain/obsidian-periodic-notes&#34;  class=&#34;external-link&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Periodic Notes&lt;/a&gt; in Obsidian. However, one major difference is how Daily Notes are organised. Forever Notes takes inspiration from the concept of &lt;a href=&#34;https://www.midori-japan.co.jp/english/products/multi-year-diary-gate/&#34;  class=&#34;external-link&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Multi Year Diaries&lt;/a&gt; where a page for a date has sections for multiple years.&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;http://localhost:1313/images/forever-notes-on-obsidian/multi-year-diary.png&#34; alt=&#34;A Multi Year Diary&#34;&gt;&lt;/p&gt;</description>
+      <guid>https://rahulkrrrishna.xyz/blog/2025-06-20-forever-notes-on-obsidian/</guid>
+      <description>&lt;blockquote&gt;&#xA;&lt;p&gt;WIP. Architecture is still not finalised&lt;/p&gt;&lt;/blockquote&gt;&#xA;&lt;h2 id=&#34;forever-notes&#34;&gt;&#xA;  Forever Notes&#xA;  &lt;a class=&#34;heading-link&#34; href=&#34;#forever-notes&#34;&gt;&#xA;    &lt;i class=&#34;fa-solid fa-link&#34; aria-hidden=&#34;true&#34; title=&#34;Link to heading&#34;&gt;&lt;/i&gt;&#xA;    &lt;span class=&#34;sr-only&#34;&gt;Link to heading&lt;/span&gt;&#xA;  &lt;/a&gt;&#xA;&lt;/h2&gt;&#xA;&lt;hr&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://www.myforevernotes.com/&#34;  class=&#34;external-link&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Forever Notes&lt;/a&gt; is a framework for Apple Notes. It introduces a concept that is very similar to &lt;a href=&#34;https://github.com/liamcain/obsidian-periodic-notes&#34;  class=&#34;external-link&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Periodic Notes&lt;/a&gt; in Obsidian. However, one major difference is how Daily Notes are organised. Forever Notes takes inspiration from the concept of &lt;a href=&#34;https://www.midori-japan.co.jp/english/products/multi-year-diary-gate/&#34;  class=&#34;external-link&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Multi Year Diaries&lt;/a&gt; where a page for a date has sections for multiple years.&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://rahulkrrrishna.xyz/images/forever-notes-on-obsidian/multi-year-diary.png&#34; alt=&#34;A Multi Year Diary&#34;&gt;&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>
