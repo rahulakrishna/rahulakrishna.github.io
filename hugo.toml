@@ -61,7 +61,7 @@ style = "github-dark"
   name = "Mastodon"
   icon = "fa-brands fa-mastodon fa-2x"
   weight = 5
-  url = "https://mastodon.social/@_thisdot"
+  url = "https://infosec.exchange/@_thisdot"
 [[params.social]]
   name = "LinkedIn"
   icon = "fa-brands fa-linkedin fa-2x"

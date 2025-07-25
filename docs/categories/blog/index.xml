@@ -2,45 +2,45 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Blog on Rahul Krrishna</title>
-    <link>https://rahulkrrrishna.xyz/categories/blog/</link>
+    <link>http://localhost:1313/categories/blog/</link>
     <description>Recent content in Blog on Rahul Krrishna</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 20 Jun 2025 12:17:44 +0530</lastBuildDate>
-    <atom:link href="https://rahulkrrrishna.xyz/categories/blog/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/categories/blog/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Forever Notes on Obsidian</title>
-      <link>https://rahulkrrrishna.xyz/blog/2025-06-20-forever-notes-on-obsidian/</link>
+      <link>http://localhost:1313/blog/2025-06-20-forever-notes-on-obsidian/</link>
       <pubDate>Fri, 20 Jun 2025 12:17:44 +0530</pubDate>
-      <guid>https://rahulkrrrishna.xyz/blog/2025-06-20-forever-notes-on-obsidian/</guid>
-      <description>&lt;blockquote&gt;&#xA;&lt;p&gt;WIP. Architecture is still not finalised&lt;/p&gt;&lt;/blockquote&gt;&#xA;&lt;h2 id=&#34;forever-notes&#34;&gt;&#xA;  Forever Notes&#xA;  &lt;a class=&#34;heading-link&#34; href=&#34;#forever-notes&#34;&gt;&#xA;    &lt;i class=&#34;fa-solid fa-link&#34; aria-hidden=&#34;true&#34; title=&#34;Link to heading&#34;&gt;&lt;/i&gt;&#xA;    &lt;span class=&#34;sr-only&#34;&gt;Link to heading&lt;/span&gt;&#xA;  &lt;/a&gt;&#xA;&lt;/h2&gt;&#xA;&lt;hr&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://www.myforevernotes.com/&#34;  class=&#34;external-link&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Forever Notes&lt;/a&gt; is a framework for Apple Notes. It introduces a concept that is very similar to &lt;a href=&#34;https://github.com/liamcain/obsidian-periodic-notes&#34;  class=&#34;external-link&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Periodic Notes&lt;/a&gt; in Obsidian. However, one major difference is how Daily Notes are organised. Forever Notes takes inspiration from the concept of &lt;a href=&#34;https://www.midori-japan.co.jp/english/products/multi-year-diary-gate/&#34;  class=&#34;external-link&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Multi Year Diaries&lt;/a&gt; where a page for a date has sections for multiple years.&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://rahulkrrrishna.xyz/images/forever-notes-on-obsidian/multi-year-diary.png&#34; alt=&#34;A Multi Year Diary&#34;&gt;&lt;/p&gt;</description>
+      <guid>http://localhost:1313/blog/2025-06-20-forever-notes-on-obsidian/</guid>
+      <description>&lt;blockquote&gt;&#xA;&lt;p&gt;WIP. Architecture is still not finalised&lt;/p&gt;&lt;/blockquote&gt;&#xA;&lt;h2 id=&#34;forever-notes&#34;&gt;&#xA;  Forever Notes&#xA;  &lt;a class=&#34;heading-link&#34; href=&#34;#forever-notes&#34;&gt;&#xA;    &lt;i class=&#34;fa-solid fa-link&#34; aria-hidden=&#34;true&#34; title=&#34;Link to heading&#34;&gt;&lt;/i&gt;&#xA;    &lt;span class=&#34;sr-only&#34;&gt;Link to heading&lt;/span&gt;&#xA;  &lt;/a&gt;&#xA;&lt;/h2&gt;&#xA;&lt;hr&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://www.myforevernotes.com/&#34;  class=&#34;external-link&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Forever Notes&lt;/a&gt; is a framework for Apple Notes. It introduces a concept that is very similar to &lt;a href=&#34;https://github.com/liamcain/obsidian-periodic-notes&#34;  class=&#34;external-link&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Periodic Notes&lt;/a&gt; in Obsidian. However, one major difference is how Daily Notes are organised. Forever Notes takes inspiration from the concept of &lt;a href=&#34;https://www.midori-japan.co.jp/english/products/multi-year-diary-gate/&#34;  class=&#34;external-link&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Multi Year Diaries&lt;/a&gt; where a page for a date has sections for multiple years.&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;http://localhost:1313/images/forever-notes-on-obsidian/multi-year-diary.png&#34; alt=&#34;A Multi Year Diary&#34;&gt;&lt;/p&gt;</description>
     </item>
     <item>
       <title>My App Defaults (2025)</title>
-      <link>https://rahulkrrrishna.xyz/blog/2025-06-16-my-default-apps-2025/</link>
+      <link>http://localhost:1313/blog/2025-06-16-my-default-apps-2025/</link>
       <pubDate>Mon, 16 Jun 2025 12:17:44 +0530</pubDate>
-      <guid>https://rahulkrrrishna.xyz/blog/2025-06-16-my-default-apps-2025/</guid>
+      <guid>http://localhost:1313/blog/2025-06-16-my-default-apps-2025/</guid>
       <description>&lt;p&gt;📨 Mail Client: Apple Mail&lt;/p&gt;&#xA;&lt;p&gt;📮 Mail Server: iCloud&lt;/p&gt;&#xA;&lt;p&gt;📝 Notes: Obsidian&lt;/p&gt;&#xA;&lt;p&gt;✅ To-Do: Todoist&lt;/p&gt;&#xA;&lt;p&gt;📷 iPhone Photo Shooting: iOS Camera&lt;/p&gt;&#xA;&lt;p&gt;🟦 Photo Management: Apple Photos&lt;/p&gt;&#xA;&lt;p&gt;📆 Calendar: Apple Calendar&lt;/p&gt;&#xA;&lt;p&gt;📁 Cloud File Storage: iCloud&lt;/p&gt;&#xA;&lt;p&gt;📖 RSS: NetNewsWire&lt;/p&gt;&#xA;&lt;p&gt;🙍🏻‍♂️ Contacts: iCloud&lt;/p&gt;&#xA;&lt;p&gt;🌐 Browser: Arc Browser&lt;/p&gt;&#xA;&lt;p&gt;💬 Chat: iMessage&lt;/p&gt;&#xA;&lt;p&gt;🔖 Bookmarks: Raindrop&lt;/p&gt;&#xA;&lt;p&gt;📑 Read It Later: Raindrop&lt;/p&gt;&#xA;&lt;p&gt;📜 Word Processing: Pages&lt;/p&gt;&#xA;&lt;p&gt;📈 Spreadsheets: Numbers&lt;/p&gt;&#xA;&lt;p&gt;📊 Presentations: Keynotes&lt;/p&gt;&#xA;&lt;p&gt;🛒 Shopping Lists: Obsidian&lt;/p&gt;</description>
     </item>
     <item>
       <title>Moving to Hugo</title>
-      <link>https://rahulkrrrishna.xyz/blog/2025-06-14-moving-to-hugo/</link>
+      <link>http://localhost:1313/blog/2025-06-14-moving-to-hugo/</link>
       <pubDate>Sat, 14 Jun 2025 12:17:44 +0530</pubDate>
-      <guid>https://rahulkrrrishna.xyz/blog/2025-06-14-moving-to-hugo/</guid>
+      <guid>http://localhost:1313/blog/2025-06-14-moving-to-hugo/</guid>
       <description>&lt;blockquote&gt;&#xA;&lt;p&gt;I moved my Blog from Jekyll to Hugo!&lt;/p&gt;&lt;/blockquote&gt;&#xA;&lt;h3 id=&#34;why&#34;&gt;&#xA;  Why?&#xA;  &lt;a class=&#34;heading-link&#34; href=&#34;#why&#34;&gt;&#xA;    &lt;i class=&#34;fa-solid fa-link&#34; aria-hidden=&#34;true&#34; title=&#34;Link to heading&#34;&gt;&lt;/i&gt;&#xA;    &lt;span class=&#34;sr-only&#34;&gt;Link to heading&lt;/span&gt;&#xA;  &lt;/a&gt;&#xA;&lt;/h3&gt;&#xA;&lt;hr&gt;&#xA;&lt;p&gt;Jekyll’s tooling often broke. I found myself upgrading and spending weekends trying to fix something that should’ve felt automatic.&lt;/p&gt;&#xA;&lt;h3 id=&#34;markdowns&#34;&gt;&#xA;  Markdowns&#xA;  &lt;a class=&#34;heading-link&#34; href=&#34;#markdowns&#34;&gt;&#xA;    &lt;i class=&#34;fa-solid fa-link&#34; aria-hidden=&#34;true&#34; title=&#34;Link to heading&#34;&gt;&lt;/i&gt;&#xA;    &lt;span class=&#34;sr-only&#34;&gt;Link to heading&lt;/span&gt;&#xA;  &lt;/a&gt;&#xA;&lt;/h3&gt;&#xA;&lt;hr&gt;&#xA;&lt;p&gt;Authors in the book [[The Pragmatic Programmer]] tells us to store as much data as possible in Markdown. And Markdown seems to have won the markup war. (See relevant &lt;a href=&#34;https://news.ycombinator.com/item?id=44183923&#34;  class=&#34;external-link&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Hacker News Discussion&lt;/a&gt;)&lt;/p&gt;</description>
     </item>
     <item>
       <title>The Wednesday Waffle</title>
-      <link>https://rahulkrrrishna.xyz/blog/2024-12-03-wednesday-waffles/</link>
+      <link>http://localhost:1313/blog/2024-12-03-wednesday-waffles/</link>
       <pubDate>Tue, 03 Dec 2024 09:22:44 +0530</pubDate>
-      <guid>https://rahulkrrrishna.xyz/blog/2024-12-03-wednesday-waffles/</guid>
+      <guid>http://localhost:1313/blog/2024-12-03-wednesday-waffles/</guid>
       <description>&lt;p&gt;My friend Nami send me this Instagram Reel about a concept called The Wednesday Waffle. I found the whole concept intriguing. Sort of like a weekly accountability update — with friends.&lt;/p&gt;&#xA;&lt;p&gt;I missed the first one due to my best friend’s wedding. However, I did send her an update as soon as I could. As of writing this, the next update is due tomorrow.&lt;/p&gt;&#xA;&lt;p&gt;I haven’t done much this week. But I’m hoping that having this ritual in the back of my mind is going to make me more productive, connected and content in life.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Apple’s Bold Design Choice of Making Things Look Bad</title>
-      <link>https://rahulkrrrishna.xyz/blog/2024-11-03-apples-bold-design-choice/</link>
+      <link>http://localhost:1313/blog/2024-11-03-apples-bold-design-choice/</link>
       <pubDate>Sun, 03 Nov 2024 09:50:44 +0530</pubDate>
-      <guid>https://rahulkrrrishna.xyz/blog/2024-11-03-apples-bold-design-choice/</guid>
+      <guid>http://localhost:1313/blog/2024-11-03-apples-bold-design-choice/</guid>
       <description>&lt;h3 id=&#34;introduction&#34;&gt;&#xA;  Introduction&#xA;  &lt;a class=&#34;heading-link&#34; href=&#34;#introduction&#34;&gt;&#xA;    &lt;i class=&#34;fa-solid fa-link&#34; aria-hidden=&#34;true&#34; title=&#34;Link to heading&#34;&gt;&lt;/i&gt;&#xA;    &lt;span class=&#34;sr-only&#34;&gt;Link to heading&lt;/span&gt;&#xA;  &lt;/a&gt;&#xA;&lt;/h3&gt;&#xA;&lt;hr&gt;&#xA;&lt;p&gt;Apple enjoys a unique position in the mobile business. It manages a platform that runs on an exclusive range of devices. For developers, this means they can expect their app to run similarly to how it runs on their own devices.&lt;/p&gt;&#xA;&lt;p&gt;This allows Apple to make design choices that make &amp;rsquo;things look bad&amp;rsquo; and reasonably expect developers to make the necessary changes so their apps look good on Apple devices.&lt;/p&gt;</description>
     </item>
   </channel>

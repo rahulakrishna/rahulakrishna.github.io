@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
   <title>
   Forever Notes on Obsidian · Rahul Krrishna
 </title>
@@ -34,7 +34,7 @@ Forever Notes is a framework for Apple Notes. It introduces a concept that is ve
   <meta name="twitter:description" content="WIP. Architecture is still not finalised
 Forever Notes Link to heading Forever Notes is a framework for Apple Notes. It introduces a concept that is very similar to Periodic Notes in Obsidian. However, one major difference is how Daily Notes are organised. Forever Notes takes inspiration from the concept of Multi Year Diaries where a page for a date has sections for multiple years.">
 
-<meta property="og:url" content="https://rahulkrrrishna.xyz/blog/2025-06-20-forever-notes-on-obsidian/">
+<meta property="og:url" content="http://localhost:1313/blog/2025-06-20-forever-notes-on-obsidian/">
   <meta property="og:site_name" content="Rahul Krrishna">
   <meta property="og:title" content="Forever Notes on Obsidian">
   <meta property="og:description" content="WIP. Architecture is still not finalised
@@ -49,7 +49,7 @@ Forever Notes Link to heading Forever Notes is a framework for Apple Notes. It i
 
 
 
-<link rel="canonical" href="https://rahulkrrrishna.xyz/blog/2025-06-20-forever-notes-on-obsidian/">
+<link rel="canonical" href="http://localhost:1313/blog/2025-06-20-forever-notes-on-obsidian/">
 
 
 <link rel="preload" href="/fonts/fa-brands-400.woff2" as="font" type="font/woff2" crossorigin>
@@ -59,7 +59,7 @@ Forever Notes Link to heading Forever Notes is a framework for Apple Notes. It i
 
   
   
-  <link rel="stylesheet" href="/css/coder.min.6445a802b9389c9660e1b07b724dcf5718b1065ed2d71b4eeaf981cc7cc5fc46.css" integrity="sha256-ZEWoArk4nJZg4bB7ck3PVxixBl7S1xtO6vmBzHzF/EY=" crossorigin="anonymous" media="screen" />
+  <link rel="stylesheet" href="/css/coder.css" media="screen">
 
 
 
@@ -69,7 +69,7 @@ Forever Notes Link to heading Forever Notes is a framework for Apple Notes. It i
   
     
     
-    <link rel="stylesheet" href="/css/coder-dark.min.a00e6364bacbc8266ad1cc81230774a1397198f8cfb7bcba29b7d6fcb54ce57f.css" integrity="sha256-oA5jZLrLyCZq0cyBIwd0oTlxmPjPt7y6KbfW/LVM5X8=" crossorigin="anonymous" media="screen" />
+    <link rel="stylesheet" href="/css/coder-dark.css" media="screen">
   
 
 
@@ -117,7 +117,7 @@ Forever Notes Link to heading Forever Notes is a framework for Apple Notes. It i
     <nav class="navigation">
   <section class="container">
     
-    <a class="navigation-title" href="https://rahulkrrrishna.xyz/">
+    <a class="navigation-title" href="http://localhost:1313/">
       Rahul Krrishna
     </a>
     
@@ -155,7 +155,7 @@ Forever Notes Link to heading Forever Notes is a framework for Apple Notes. It i
   <article>
     <header>
       <h1 class="title">
-        <a class="title-link" href="https://rahulkrrrishna.xyz/blog/2025-06-20-forever-notes-on-obsidian/">
+        <a class="title-link" href="http://localhost:1313/blog/2025-06-20-forever-notes-on-obsidian/">
           Forever Notes on Obsidian
         </a>
       </h1>
@@ -173,8 +173,8 @@ Forever Notes Link to heading Forever Notes is a framework for Apple Notes. It i
 <hr>
 <p><a href="https://www.myforevernotes.com/"  class="external-link" target="_blank" rel="noopener">Forever Notes</a> is a framework for Apple Notes. It introduces a concept that is very similar to <a href="https://github.com/liamcain/obsidian-periodic-notes"  class="external-link" target="_blank" rel="noopener">Periodic Notes</a> in Obsidian. However, one major difference is how Daily Notes are organised. Forever Notes takes inspiration from the concept of <a href="https://www.midori-japan.co.jp/english/products/multi-year-diary-gate/"  class="external-link" target="_blank" rel="noopener">Multi Year Diaries</a> where a page for a date has sections for multiple years.</p>
 <p><img src="/images/forever-notes-on-obsidian/multi-year-diary.png" alt="A Multi Year Diary"></p>
-<p><img src="/images/forever-notes-on-obsidian/Pasted%20image%2020250620223855.png" alt="A Day entry in Forever Notes">
-I tried to bring this feature to Obsidian</p>
+<p><img src="/images/forever-notes-on-obsidian/Pasted%20image%2020250620223855.png" alt="A Day entry in Forever Notes"></p>
+<p>I tried to bring this feature to Obsidian</p>
 <h2 id="plugins">
   Plugins
   <a class="heading-link" href="#plugins">
@@ -210,8 +210,8 @@ I tried to bring this feature to Obsidian</p>
     <span class="sr-only">Link to heading</span>
   </a>
 </h4>
-<p>By default, the title of a Daily Note in Obsidian contains a year. You just need to drop the year part of the name to make a single day work across multiple years. I went with <code>MMMM Do</code>(June 21st) for the format.
-<img src="/images/forever-notes-on-obsidian/Pasted%20image%2020250621092050.png" alt=""></p>
+<p>By default, the title of a Daily Note in Obsidian contains a year. You just need to drop the year part of the name to make a single day work across multiple years. I went with <code>MMMM Do</code>(June 21st) for the format.</p>
+<p><img src="/images/forever-notes-on-obsidian/Pasted%20image%2020250621092050.png" alt=""></p>
 <h4 id="template">
   Template
   <a class="heading-link" href="#template">
@@ -219,11 +219,13 @@ I tried to bring this feature to Obsidian</p>
     <span class="sr-only">Link to heading</span>
   </a>
 </h4>
-<p><img src="/images/forever-notes-on-obsidian/Pasted%20image%2020250621092604.png" alt="Daily Entry on Obsidian">
-The links at the beginning, the quote and section headers can be generated in a Templater template.
-<img src="/images/forever-notes-on-obsidian/Pasted%20image%2020250621092705.png" alt="">
-However, the current year is not part of this template. So before starting the entry, you must invoke another template or manually type the current year and day of the week in <code>h2</code> format (<code>YYYY dddd</code>).</p>
-<p><img src="/images/forever-notes-on-obsidian/Pasted%20image%2020250621092845.png" alt="Invoking the template to fill in the Year title in Daily Notes"><img src="/images/forever-notes-on-obsidian/Pasted%20image%2020250621092912.png" alt=""> <img src="/images/forever-notes-on-obsidian/Pasted%20image%2020250621093059.png" alt=""></p>
+<p><img src="/images/forever-notes-on-obsidian/Pasted%20image%2020250621092604.png" alt="Daily Entry on Obsidian"></p>
+<p>The links at the beginning, the quote and section headers can be generated in a Templater template.
+<img src="/images/forever-notes-on-obsidian/Pasted%20image%2020250621092705.png" alt=""></p>
+<p>However, the current year is not part of this template. So before starting the entry, you must invoke another template or manually type the current year and day of the week in <code>h2</code> format (<code>YYYY dddd</code>).</p>
+<p><img src="/images/forever-notes-on-obsidian/Pasted%20image%2020250621092845.png" alt="Invoking the template to fill in the Year title in Daily Notes">
+<img src="/images/forever-notes-on-obsidian/Pasted%20image%2020250621092912.png" alt="">
+<img src="/images/forever-notes-on-obsidian/Pasted%20image%2020250621093059.png" alt=""></p>
 <blockquote>
 <p>Find all the templates and scripts at <a href="https://github.com/rahulakrishna/forever-notes-on-obsidian/"  class="external-link" target="_blank" rel="noopener">https://github.com/rahulakrishna/forever-notes-on-obsidian/</a></p></blockquote>
 <h3 id="weekly">
@@ -249,8 +251,8 @@ However, the current year is not part of this template. So before starting the e
     <span class="sr-only">Link to heading</span>
   </a>
 </h4>
-<p><img src="/images/forever-notes-on-obsidian/Pasted%20image%2020250621093716.png" alt="">
-Notice the header links and the section called &lsquo;Days,&rsquo; which links to individual days in the week. Template to be found here: <a href="https://github.com/rahulakrishna/forever-notes-on-obsidian/blob/main/scripts/weeklyHeader.js"  class="external-link" target="_blank" rel="noopener">https://github.com/rahulakrishna/forever-notes-on-obsidian/blob/main/scripts/weeklyHeader.js</a></p>
+<p><img src="/images/forever-notes-on-obsidian/Pasted%20image%2020250621093716.png" alt=""></p>
+<p>Notice the header links and the section called &lsquo;Days,&rsquo; which links to individual days in the week. Template to be found <a href="https://github.com/rahulakrishna/forever-notes-on-obsidian/blob/main/scripts/weeklyHeader.js"  class="external-link" target="_blank" rel="noopener">here</a></p>
 <h3 id="monthly">
   Monthly
   <a class="heading-link" href="#monthly">
@@ -274,8 +276,8 @@ Notice the header links and the section called &lsquo;Days,&rsquo; which links t
     <span class="sr-only">Link to heading</span>
   </a>
 </h4>
-<p><img src="/images/forever-notes-on-obsidian/Pasted%20image%2020250622124854.png" alt="">
-Add as many sections as you need.</p>
+<p><img src="/images/forever-notes-on-obsidian/Pasted%20image%2020250622124854.png" alt=""></p>
+<p>Add as many sections as you need.</p>
 <h3 id="quarterly">
   Quarterly
   <a class="heading-link" href="#quarterly">
@@ -290,8 +292,8 @@ Add as many sections as you need.</p>
     <span class="sr-only">Link to heading</span>
   </a>
 </h4>
-<p><img src="/images/forever-notes-on-obsidian/Pasted%20image%2020250621092212.png" alt="">
-The title for a quarterly note is simply the letter &lsquo;Q&rsquo; followed by the quarter number (e.g., Q2).</p>
+<p><img src="/images/forever-notes-on-obsidian/Pasted%20image%2020250621092212.png" alt=""></p>
+<p>The title for a quarterly note is simply the letter &lsquo;Q&rsquo; followed by the quarter number (e.g., Q2).</p>
 <h4 id="template-3">
   Template
   <a class="heading-link" href="#template-3">
@@ -314,8 +316,8 @@ The title for a quarterly note is simply the letter &lsquo;Q&rsquo; followed by 
     <span class="sr-only">Link to heading</span>
   </a>
 </h4>
-<p><img src="/images/forever-notes-on-obsidian/Pasted%20image%2020250621092226.png" alt="">
-The title is simply the year in the YYYY format.</p>
+<p><img src="/images/forever-notes-on-obsidian/Pasted%20image%2020250621092226.png" alt=""></p>
+<p>The title is simply the year in the YYYY format.</p>
 <h4 id="template-4">
   Template
   <a class="heading-link" href="#template-4">
@@ -323,8 +325,8 @@ The title is simply the year in the YYYY format.</p>
     <span class="sr-only">Link to heading</span>
   </a>
 </h4>
-<p><img src="/images/forever-notes-on-obsidian/Pasted%20image%2020250622125256.png" alt="">
-Contains a list of months and quarters of the year.</p>
+<p><img src="/images/forever-notes-on-obsidian/Pasted%20image%2020250622125256.png" alt=""></p>
+<p>Contains a list of months and quarters of the year.</p>
 <h2 id="resources">
   Resources
   <a class="heading-link" href="#resources">
@@ -363,7 +365,7 @@ Contains a list of months and quarters of the year.</p>
 
   
   
-  <script src="/js/coder.min.6ae284be93d2d19dad1f02b0039508d9aab3180a12a06dcc71b0b0ef7825a317.js" integrity="sha256-auKEvpPS0Z2tHwKwA5UI2aqzGAoSoG3McbCw73gloxc="></script>
+  <script src="/js/coder.js"></script>
   
 
   
