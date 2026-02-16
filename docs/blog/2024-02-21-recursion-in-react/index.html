@@ -94,7 +94,7 @@ Result:">
   <meta name="twitter:description" content="TLDR; Link to heading TIL that you can have recursive components in React!
 💡 React uses one-way data flow, passing data down the component hierarchy from parent to child component So while thinking in React, it may not immediately occur that you can call a **parent** inside the **child!** But it is possible Consider a Data Structure like this: Link to heading const comments = [ { content: &#34;Comment 1&#34;, level: 0, comments: [ { content: &#34;Comment 1 &gt; 1&#34;, level: 1, comments: [ { content: &#34;Comment 1 &gt; 1 &gt; 1&#34;, level: 2, comments: [], }, ], }, { content: &#34;Comment 1 &gt; 2&#34;, level: 1, comments: [], }, ], }, { content: &#34;Comment 2&#34;, level: 0, comments: [], }, ]; Doing this in Javascript Link to heading function displayComments(comments) { return comments.reduce((acc, comment) =&gt; { const prefix = Array(comment.level) .fill(&#34;|&#34;) .reduce((acc, item) =&gt; `${acc} ${item}`, &#34;&#34;); const moreComments = displayComments(comment.comments); const stringToReturn = `${prefix} ${comment.content} \n ${moreComments}`; return `${acc} ${stringToReturn}`; }, &#34;&#34;); } Result:">
 
-<meta property="og:url" content="https://rahulkrrrishna.xyz/blog/2024-02-21-recursion-in-react/">
+<meta property="og:url" content="https://rahulkrrishna.xyz/blog/2024-02-21-recursion-in-react/">
   <meta property="og:site_name" content="Rahul Krrishna">
   <meta property="og:title" content="Recursion in React">
   <meta property="og:description" content="TLDR; Link to heading TIL that you can have recursive components in React!
@@ -112,7 +112,7 @@ Result:">
 <link rel="me" href="https://infosec.exchange/@_thisdot">
 
 
-<link rel="canonical" href="https://rahulkrrrishna.xyz/blog/2024-02-21-recursion-in-react/">
+<link rel="canonical" href="https://rahulkrrishna.xyz/blog/2024-02-21-recursion-in-react/">
 
 
 <link rel="preload" href="/fonts/fa-brands-400.woff2" as="font" type="font/woff2" crossorigin>
@@ -179,7 +179,7 @@ Result:">
     <nav class="navigation">
   <section class="container">
     
-    <a class="navigation-title" href="https://rahulkrrrishna.xyz/">
+    <a class="navigation-title" href="https://rahulkrrishna.xyz/">
       Rahul Krrishna
     </a>
     
@@ -217,7 +217,7 @@ Result:">
   <article>
     <header>
       <h1 class="title">
-        <a class="title-link" href="https://rahulkrrrishna.xyz/blog/2024-02-21-recursion-in-react/">
+        <a class="title-link" href="https://rahulkrrishna.xyz/blog/2024-02-21-recursion-in-react/">
           Recursion in React
         </a>
       </h1>
@@ -360,7 +360,7 @@ So while thinking in React, it may not immediately occur that you can call a **p
     
       2019 -
     
-    2025
+    2026
      Rahul Krrishna 
     ·
     

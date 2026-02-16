@@ -1,4 +1,4 @@
-baseURL = 'https://rahulkrrrishna.xyz/'
+baseURL = 'https://rahulkrrishna.xyz/'
 languageCode = 'en-us'
 title = 'Rahul Krrishna'
 theme = 'hugo-coder'
@@ -76,7 +76,7 @@ style = "github-dark"
   name = "Bluesky"
   icon = "fa-brands fa-bluesky fa-2x"
   weight = 11
-  url = "https://bsky.app/profile/rahulkrrrishna.xyz"
+  url = "https://bsky.app/profile/rahulkrrishna.xyz"
 [[params.social]]
   name = "RSS"
   icon = "fa-solid fa-rss fa-2x"
